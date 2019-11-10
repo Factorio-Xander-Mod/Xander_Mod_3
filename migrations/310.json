@@ -1,0 +1,24 @@
+{
+	"item":
+	[
+		["ingot-tin", "tin"],
+		["ingot-lead", "lead"],
+		["ingot-solder", "solder"],
+		["wood-fibers", "wood"]
+	],
+	"recipe":
+	[
+		["tin-ingot-0", "tin-0"],
+		["tin-ingot-1", "tin-1"],
+		["lead-ingot-0", "lead-0"],
+		["lead-ingot-1", "lead-1"],
+		["solder-ingot-0", "solder-0"],
+		["piston-unit", "piston-unit-0"],
+		["powder-black", "powder-black-0"]
+	],
+	"technology":
+	[
+		["xm-furnace-steel", "advanced-material-processing"],
+		["chemistry1", "sulfur-processing"]
+	]
+}

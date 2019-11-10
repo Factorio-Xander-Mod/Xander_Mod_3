@@ -1,0 +1,17 @@
+{
+	"item":
+	[
+		["stock-alloy-steel", "stock-alloy"],
+		["oxide-tungsten", "tungsten-oxide"],
+		["blank-1", "laminate-1"],
+		["blank-2", "laminate-1"]
+	],
+	"recipe":
+	[
+		["stock-alloy-steel-0", "stock-alloy-0"],
+		["phenol", "phenol-0"],
+		["oxide-tungsten", "tungsten-oxide"],
+		["blank-1-0", "laminate-1"],
+		["blank-2-0", "laminate-1"]
+	]
+}

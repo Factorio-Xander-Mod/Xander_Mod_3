@@ -1,0 +1,6 @@
+xm_resource_names = {"coal", "copper-ore", "crude-oil", "evaporites", "igneous-sulfide", "iron-ore", "laterite", "magnetic", "massive-sulfide", "natural-gas", "phosphorite", "sand-heavy", "skarn", "stone", "uranium-ore"}
+xm_resource_parents = {"coal", "iron-ore", "crude-oil", "uranium-ore", "iron-ore", "stone", "stone", "copper-ore", "iron-ore", "crude-oil", "stone", "iron-ore", "uranium-ore", "stone", "uranium-ore"}
+xm_resource_categories = {"basic-solid", "basic-solid", "basic-fluid", "basic-solid", "basic-solid", "basic-solid", "basic-solid", "basic-solid", "basic-solid", "basic-fluid", "basic-solid", "basic-solid", "basic-solid", "basic-solid", "basic-solid"}
+xm_resource_times = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+xm_resource_starts = {true, true, true, true, false, true, true, false, true, false, false, true, true, true, false}
+xm_resource_map_colors = {{r = 0, g = 0, b = 0}, {r = 0.35, g = 0.48, b = 0.54}, {r = 0.78, g = 0.2, b = 0.77}, {r = 0.9, g = 0.9, b = 0.9}, {r = 0.9, g = 0.9, b = 0.5}, {r = 0.52, g = 0.24, b = 0.2}, {r = 0.8, g = 0.45, b = 0.1}, {r = 0.2, g = 0.5, b = 0.26}, {r = 0.35, g = 0.35, b = 0.35}, {r = 0, g = 1, b = 1}, {r = 0.07, g = 0.35, b = 0.33}, {r = 0.7, g = 0.42, b = 0.47}, {r = 1, g = 1, b = 0}, {r = 0.69, g = 0.611, b = 0.427}, {r = 0, g = 0.7, b = 0}}
