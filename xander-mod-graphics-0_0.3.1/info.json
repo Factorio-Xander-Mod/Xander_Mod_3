@@ -1,0 +1,10 @@
+{
+  "name": "xander-mod-graphics-0",
+  "version": "0.3.1",
+  "factorio_version": "0.17",
+  "title": "Xander Mod Graphics Pack 0",
+  "author": "Repofme1",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=97&t=51868",
+  "dependencies": ["base"],
+  "description": "Graphics pack 0 for Xander Mod."
+}
