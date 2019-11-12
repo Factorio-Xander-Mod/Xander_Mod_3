@@ -17,7 +17,7 @@ xm_all_fluids_to_impose["fluid-element"] = {
 
 xm_all_fluids_to_impose["fluid-hydrogenated"] = {
 	{"ammonia", {r = 3/4, g = 3/4, b = 1}, {r = 3/8, g = 1/2, b = 1}},
-	--{"hydrogen-fluoride", {r = 7/8, g = 1, b = 0}, {r = 5/8, g = 3/4, b = 1/4}},
+	{"hydrogen-fluoride", {r = 7/8, g = 1, b = 0}, {r = 5/8, g = 3/4, b = 1/4}},
 	--{"hydrogen-sulfide", {r = 1, g = 1, b = 0}, {r = 3/4, g = 3/4, b = 0}},
 	--{"hydrogen-chloride", {r = 1/2, g = 1, b = 0}, {r = 0, g = 1/2, b = 0}},
 }

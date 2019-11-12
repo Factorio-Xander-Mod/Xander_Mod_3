@@ -12,11 +12,14 @@ for index, force in pairs(game.forces) do
 	end
 	if recipes["coil-2-0"] and technologies["motor2"] then
 		recipes["coil-2-0"].enabled = technologies["motor2"].researched
-	end"", 
+	end
 	if recipes["motor-1-1"] and technologies["motor2"] then
 		recipes["motor-1-1"].enabled = technologies["motor2"].researched
 	end
 	if recipes["motor-2-0"] and technologies["motor2"] then
 		recipes["motor-2-0"].enabled = technologies["motor2"].researched
+	end
+	if recipes["nitric-acid"] and technologies["nitrogen"] then
+		recipes["nitric-acid"].enabled = technologies["nitrogen"].researched
 	end
 end

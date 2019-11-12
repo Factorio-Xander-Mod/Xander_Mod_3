@@ -19,9 +19,13 @@ xm_material_technologies["ingot"] = {
 	{"tin-lead1", 50, {"automation-science-pack"}, 15, {"tin-1", "lead-1"}, {"solder", "washing1", "advanced-material-processing"}},
 	{"iron-refining1", 25, {"automation-science-pack"}, 20, {"raw-iron-0", "iron-plate-1", "stock-cast-iron-1"}, {"automation-science-pack"}},
 	{"steel-processing", 30, {"crude-science-pack"}, 10, {"steel-plate", "steel-chest"}, {"fuels0"}},
-	--{"aluminum", 120, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 30, {"conc-bauxite", "aluminum-hydroxide", "aluminum", "stock-duralumin"}, {"advanced-material-processing-2", "fluorine"}},
+	--{"aluminum", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-bauxite", "aluminum-hydroxide", "cryolite", "aluminum", "stock-duralumin"}, {"advanced-material-processing-2", "fluorine"}},
 	{"nickel", 80, {"automation-science-pack"}, 30, {"conc-millerite-0", "nickel-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing"}},
 	{"tungsten", 120, {"automation-science-pack", "logistic-science-pack"}, 40, {"conc-scheelite-0", "tungsten-oxide", "tungsten", "stock-alloy-0"}, {"advanced-material-processing-2"}}
+}
+
+xm_material_technologies["nonmetal"] = {
+	{"boron", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-borax", "glass-1"}, {"washing1", "chlorine"}}
 }
 
 xm_material_technologies["terrain"] = {
@@ -30,12 +34,13 @@ xm_material_technologies["terrain"] = {
 }
 
 xm_material_technologies["ceramic"] = {
-	{"ceramics1", 50, {"automation-science-pack"}, 15, {"brick-clay-1", "brick-magnesia", "glass-1", "porcelain"}, {"washing1", "advanced-material-processing"}}
+	{"ceramics1", 50, {"automation-science-pack"}, 15, {"brick-clay-1", "brick-magnesia", "porcelain"}, {"washing1", "advanced-material-processing"}},
+	--{"ceramics2", 50, {"automation-science-pack"}, 15, {"brick-clay-1", "brick-magnesia", "porcelain"}, {"washing1", "advanced-material-processing"}},
 }
 
 xm_material_technologies["fluid-recipes"] = {
-	{"nitrogen", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"distillation-air", "ammonia"}, {"electrolysis1", "oil-processing"}},
-	--{"fluorine", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-fluorite-0", "hydrogen-fluoride", "cryolite"}, {"chlorine", "railway"}},
+	{"nitrogen", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"distillation-air", "ammonia", "nitric-acid"}, {"electrolysis1", "oil-processing"}},
+	{"fluorine", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-fluorite-0", "hydrogen-fluoride"}, {"washing1", "chlorine", "railway"}},
 	{"chlorine", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"distillation-water", "electrolysis-brine"}, {"electrolysis1", "oil-processing"}}--, "hydrogen-chloride"
 }
 
@@ -49,7 +54,7 @@ xm_material_technologies["polymer"] = {
 
 xm_material_technologies["energetic"] = {
 	{"flammables", 80, {"automation-science-pack", "logistic-science-pack"}, 30, {"solid-fuel-from-light-oil", "solid-fuel-from-petroleum-gas"}, {"oil-processing"}},
-	{"explosives", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"explosives", "nitric-acid-0"}, {"oil-processing"}}
+	{"explosives", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"explosives"}, {"nitrogen"}}
 }
 
 xm_all_technologies_to_impose["material"] = xm_material_technologies
@@ -74,13 +79,13 @@ xm_intermediate_products_technologies["electrical"] = {
 xm_intermediate_products_technologies["data"] = {
 	{"circuit0", 20, {"automation-science-pack"}, 15, {"board-1-0", "components-1-0", "electronic-circuit", "inserter-1"}, {"solder", "automation-science-pack"}},
 	{"electronics", 80, {"automation-science-pack"}, 30, {"wire-solder-1", "board-1-1", "components-1-1"}, {"phenolic", "ceramics1", "automation"}},
-	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "electronics"}}--, "plastics"
-	--, "laminate-2"
+	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "nitrogen", "electronics"}}
 }
 
 xm_intermediate_products_technologies["science-pack"] = {
 	{"automation-science-pack", 40, {"crude-science-pack"}, 15, {"automation-science-pack"}, {"electricity"}},
-	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {"logistic-science-pack"}, {"electric-engine", "automation"}}
+	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {"logistic-science-pack"}, {"electric-engine", "automation"}},
+	--{"chemical-science-pack", 200, {"automation-science-pack", "logistic-science-pack"}, 60, {"chemical-science-pack"}, {"engine", "boron", "fluorine", "phenolic"}},
 }
 
 xm_all_technologies_to_impose["intermediate-products"] = xm_intermediate_products_technologies
@@ -102,8 +107,8 @@ xm_production_technologies["energy"] = {
 
 xm_production_technologies["extraction-machine"] = {
 	{"washing0", 5, {"crude-science-pack"}, 5, {"ore-processor-0", "gravel", "limestone-0"}, nil},
-	{"washing1", 40, {"automation-science-pack"}, 30, {"ore-processor-1", "magnesite", "graphite-0", "sodium-carbonate", "kaolin"}, {"sulfur-processing", "circuit0"}},
-	--{"washing2", 40, {"automation-science-pack"}, 30, {"ore-processor-2", "surfactant-0"}, {"oil-processing", "fluorine"}},--, "conc-scheelite-1", "conc-millerite-1", "conc-fluorite-1"
+	{"washing1", 40, {"automation-science-pack"}, 20, {"ore-processor-1", "magnesite", "graphite-0", "kaolin"}, {"sulfur-processing", "circuit0"}},--, "sodium-carbonate"
+	{"washing2", 160, {"automation-science-pack", "logistic-science-pack"}, 45, {"ore-processor-2", "surfactant-0"}, {"advanced-electronics", "motor2", "oil-processing"}},--, "conc-scheelite-1", "conc-millerite-1", "conc-fluorite-1"
 }
 
 xm_production_technologies["smelting-machine"] = {

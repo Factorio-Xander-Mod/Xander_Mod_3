@@ -31,7 +31,7 @@ data.raw.recipe["distillation-air"].icon_size = 32
 data.raw.recipe["distillation-air"].main_product = ""
 
 data.raw.recipe["ammonia"].localised_name = {"recipe-name.ammonia"}
-data.raw.recipe["ammonia"].icon = "__xander-mod__/graphics/fluid/fluid-hydrogenated/ammonia.png"
+data.raw.recipe["ammonia"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrogenated/ammonia.png"
 data.raw.recipe["ammonia"].icon_size = 32
 data.raw.recipe["ammonia"].main_product = ""
 
@@ -39,6 +39,10 @@ data.raw.recipe["sulfuric-acid"].localised_name = {"recipe-name.sulfuric-acid"}
 data.raw.recipe["sulfuric-acid"].icon = "__base__/graphics/icons/fluid/sulfuric-acid.png"
 data.raw.recipe["sulfuric-acid"].icon_size = 32
 data.raw.recipe["sulfuric-acid"].main_product = ""
+data.raw.recipe["nitric-acid"].localised_name = {"recipe-name.nitric-acid"}
+data.raw.recipe["nitric-acid"].icon = "__xander-mod__/graphics/recipe/fluid/fluid/nitric-acid.png"
+data.raw.recipe["nitric-acid"].icon_size = 32
+data.raw.recipe["nitric-acid"].main_product = ""
 
 
 --==========  INTERMEDIATE PRODUCTS  ==========
