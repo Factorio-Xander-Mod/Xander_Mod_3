@@ -13,6 +13,7 @@
 		["oxide-tungsten", "tungsten-oxide"],
 		["blank-1-0", "laminate-1"],
 		["blank-2-0", "laminate-1"],
-		["nitric-acid-0", "nitric-acid"]
+		["nitric-acid-0", "nitric-acid"],
+		["formaldehyde", "formaldehyde-0"]
 	]
 }
