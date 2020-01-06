@@ -35,10 +35,12 @@ data.raw.item["electric-engine-unit"].icon = "__xander-mod__/graphics/item/inter
 data.raw.tool["space-science-pack"].stack_size = 2000
 
 
---==========  LOGISTICS  ==========
+--==========  PRODUCTION  ==========
 
 data.raw["repair-tool"]["repair-pack"].speed = 1
 data.raw["repair-tool"]["repair-pack"].durability = 100
+
+data.raw.item["chemical-plant"].icon = "__xander-mod__/graphics/item/production/chemical-machine/chemical-plant.png"
 
 
 --==========  LOGISTICS  ==========

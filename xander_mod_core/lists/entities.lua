@@ -105,6 +105,64 @@ xm_production_entities["extraction-machine"] = {
 			}
 		} }},
 		fast_replaceable_group = "ore-processor"
+	},
+	{
+		type = "assembling-machine",
+		name = "waste-dump",
+		parent_type = "assembling-machine",
+		parent_name = "chemical-plant",
+		collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
+		selection_box = {{-5, -5}, {5, 5}},
+		crafting_categories = {"waste"},
+		crafting_speed = 1,
+		energy_usage = "80kW",
+		emissions_per_minute = 6,
+		fluid_boxes = 
+		{
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = -1,
+				pipe_connections = {{type = "input", position = {5.5, 3.5}}}
+			},
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = 1,
+				pipe_connections = {{type = "input", position = {3.5, -5.5}}}
+			},
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = 1,
+				pipe_connections = {{type = "input", position = {-5.5, -3.5}}}
+			},
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_area = 10,
+				base_level = -1,
+				pipe_connections = {{type = "input", position = {-3.5, 5.5}}}
+			}
+		},
+		animation = {layers = { {
+			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/waste-dump.png",
+			priority = "high",
+			width = 384,
+			height = 384,
+			frame_count = 1,
+			hr_version = {
+				filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/waste-dump-hr.png",
+				priority = "high",
+				width = 768,
+				height = 768,
+				frame_count = 1,
+				scale = 0.5
+			}
+		} }}
 	}
 }
 
@@ -180,6 +238,19 @@ xm_production_entities["chemical-machine"] = {
 		type = "assembling-machine",
 		name = "chemical-plant"
 	},
+	
+	{
+		type = "assembling-machine",
+		name = "chem-reactor-2",
+		parent_type = "assembling-machine",
+		parent_name = "chemical-plant",
+		crafting_categories = {"chemistry"},
+		crafting_speed = 1.5,
+		emissions_per_minute = 4,
+		energy_usage = "360kW",
+		fast_replaceable_group = "chemical-plant"
+	},
+	
 	{
 		type = "assembling-machine",
 		name = "electrolyzer-1",

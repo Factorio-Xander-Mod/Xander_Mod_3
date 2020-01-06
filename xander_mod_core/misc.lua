@@ -1,5 +1,5 @@
 --Add new recipe categories
-local xm_recipe_categories_new = {"empty", "hand", "washing", "kiln", "refining", "refining-electric", "electrolysis", "basic-machine", "machine"}
+local xm_recipe_categories_new = {"empty", "hand", "washing", "kiln", "refining", "refining-electric", "electrolysis", "basic-machine", "machine", "waste"}
 for _, category_name in ipairs(xm_recipe_categories_new) do
 	data:extend({
 		{type = "recipe-category", name = category_name}

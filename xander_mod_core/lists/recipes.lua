@@ -76,6 +76,7 @@ xm_material_recipes["stock"] = {
 xm_material_recipes["nonmetal"] = {
 	{"coke", "smelting", 8, false, {{"coal", 4}}, {{"coke", 9}}},--1
 	{"sulfur-0", "chemistry", 1, false, {{"evaporites", 1}, {type = "fluid", name = "steam", amount = 5}}, {{"sulfur", 1}}},--1
+	--{"sulfur-1", "chemistry", 1, false, {{"evaporites", 1}, {type = "fluid", name = "steam", amount = 5}}, {{"sulfur", 1}}},--1
 	{"graphite-0", "washing", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
 	{"graphite-1", "refining-electric", 1.5, false, {{"coke", 1}}, {{"graphite", 1}}},--1
 	{"silicon", "refining-electric", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
@@ -279,19 +280,21 @@ xm_production_recipes["extraction-machine"] = {
 	{"pumpjack", "crafting", 5, false, {{"electric-engine-unit", 3}, {"iron-gear-wheel", 4}, {"pipe", 16}, {"steel-plate", 8}, {"electronic-circuit", 2}}, {{"pumpjack", 1}}},--60
 	{"ore-processor-0", "basic-crafting", 1, false, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"stone-brick", 8}, {"stock-bronze", 4}}, {{"ore-processor-0", 2}}},--18
 	{"ore-processor-1", "crafting", 1.5, false, {{"pump", 1}, {"iron-gear-wheel", 4}, {"steel-plate", 2}, {"electronic-circuit", 1}}, {{"ore-processor-1", 1}}},--24
-	{"ore-processor-2", "crafting", 3, false, {{"ore-processor-1", 1}, {"motor-2", 1}, {"parts-steel", 8}, {"stock-alloy", 6}, {"advanced-circuit", 1}}, {{"ore-processor-2", 1}}}--60
+	{"ore-processor-2", "crafting", 3, false, {{"ore-processor-1", 1}, {"motor-2", 1}, {"parts-steel", 8}, {"stock-alloy", 6}, {"advanced-circuit", 1}}, {{"ore-processor-2", 1}}},--60
+	{"waste-dump", "crafting", 6, false, {{"electric-mining-drill", 1}, {"gravel", 10}, {"pipe", 4}, {"transport-belt", 3}}, {{"waste-dump", 1}}},--48
 }
 
 xm_production_recipes["smelting-machine"] = {
 	{"xm-furnace-stone", "basic-crafting", 1, true, {{"stone-brick", 5}}, {{"xm-furnace-stone", 1}}},--5
 	{"xm-furnace-brick", "crafting", 2, true, {{"brick-clay", 8}, {"stock-bronze", 4}}, {{"xm-furnace-brick", 1}}},--12
 	{"xm-furnace-steel", "crafting", 4, false, {{"brick-clay", 12}, {"steel-plate", 4}, {"pipe", 4}}, {{"xm-furnace-steel", 1}}},--24
-	{"xm-furnace-electric", "advanced-crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 20}, {"graphite", 20}, {"stock-cupronickel", 18}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}}--96
+	{"xm-furnace-electric", "crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 20}, {"graphite", 20}, {"stock-cupronickel", 18}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}}--96
 }
 
 xm_production_recipes["chemical-machine"] = {
 	{"chemical-plant", "crafting", 3, false, {{"pump", 2}, {"copper-cable", 8}, {"glass", 8}, {"steel-plate", 2}}, {{"chemical-plant", 1}}},--32
-	--{"reactor-2", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 10}, {"advanced-circuit", 1}}, {{"reactor-2", 1}}},--72
+	{"chem-reactor-2", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-2", 1}}},--72
+	--{"chem-reactor-3", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-2", 1}}},--72
 	{"electrolyzer-1", "crafting", 4, false, {{"pump", 1}, {"coil-1", 2}, {"lead", 8}, {"glass", 4}}, {{"electrolyzer-1", 1}}},--24
 	--{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"ingot-platinum", 6}, {"plastic-bar", 12}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--64
 	{"oil-refinery", "crafting", 8, false, {{"chemical-plant", 1}, {"xm-furnace-steel", 1}, {"pump", 3}, {"pipe", 32}, {"electronic-circuit", 8}}, {{"oil-refinery", 1}}}--144

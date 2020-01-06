@@ -47,9 +47,9 @@ local xm_production_items = {}
 
 --xm_production_items["tool"] = {"repair-pack", "repair-pack-2"} --Types other than "item"
 xm_production_items["energy"] = {"boiler", "heat-exchanger", "steam-engine", "steam-turbine", "heat-pipe", "nuclear-reactor", "solar-panel", "accumulator", "small-lamp"}
-xm_production_items["extraction-machine"] = {"offshore-pump", "burner-mining-drill", "electric-mining-drill", "pumpjack", "ore-processor-0", "ore-processor-1", "ore-processor-2"}
+xm_production_items["extraction-machine"] = {"offshore-pump", "burner-mining-drill", "electric-mining-drill", "pumpjack", "ore-processor-0", "ore-processor-1", "ore-processor-2", "waste-dump"}
 xm_production_items["smelting-machine"] = {"xm-furnace-stone", "xm-furnace-brick", "xm-furnace-steel", "xm-furnace-electric", "stone-furnace", "steel-furnace", "electric-furnace"}
-xm_production_items["chemical-machine"] = {"chemical-plant", "electrolyzer-1", "oil-refinery", "centrifuge"}--, "reactor-2"
+xm_production_items["chemical-machine"] = {"chemical-plant", "chem-reactor-2", "chem-reactor-3", "electrolyzer-1", "oil-refinery", "centrifuge"}
 xm_production_items["production-machine"] = {"machine-tool-0", "machine-tool-1", "machine-tool-2", "assembling-machine-0", "assembling-machine-1", "assembling-machine-2", "assembling-machine-3", "lab-burner", "lab"}--, "machine-tool-3"
 
 xm_all_items_to_impose["production"] = xm_production_items

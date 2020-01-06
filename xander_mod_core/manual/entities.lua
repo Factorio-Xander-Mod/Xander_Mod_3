@@ -29,6 +29,8 @@ data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = ni
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = assembler_1_fluid_boxes
+data.raw["assembling-machine"]["waste-dump"].module_specification = nil
+data.raw["assembling-machine"]["waste-dump"].working_visualisations = nil
 
 --smelting-machine
 data.raw.furnace["stone-furnace"].crafting_categories = {"empty"}
@@ -37,6 +39,15 @@ data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_category = nil
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["xm-furnace-electric"].fluid_boxes = assembler_1_fluid_boxes
+--chemical-machine
+data.raw["assembling-machine"]["chemical-plant"].icon = "__xander-mod__/graphics/item/production/chemical-machine/chemical-plant.png"
+find_replace_graphics(data.raw["assembling-machine"]["chemical-plant"],
+	{"__base__/graphics/entity/chemical-plant/chemical-plant.png", "__base__/graphics/entity/chemical-plant/hr-chemical-plant.png"},
+	{"__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chemical-plant.png", "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chemical-plant-hr.png"})
+data.raw["assembling-machine"]["chemical-plant"].module_specification.module_slots = 2
+data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 3
+data.raw["assembling-machine"]["chemical-plant"].energy_usage = "180kW"
+data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
 --production-machine
 data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2

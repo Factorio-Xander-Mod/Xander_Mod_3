@@ -92,8 +92,6 @@ data.raw.recipe["nitric-acid"].icon_size = 32
 data.raw.recipe["nitric-acid"].main_product = ""
 
 
-
-
 --==========  INTERMEDIATE PRODUCTS  ==========
 
 data.raw.recipe["iron-gear-wheel"].normal = nil
