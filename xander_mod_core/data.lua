@@ -241,37 +241,6 @@ for i, group_name in pairs(xm_groups_to_impose) do
 	
 end
 
-
-
-
---[[
-
-------
-for i, group_name in pairs(xm_groups_to_impose) do
-	
-	if xm_all_items_to_impose[group_name] then
-	for j, subgroup_name in ipairs(xm_subgroups_to_impose[i]) do
-		
-		if xm_all_items_to_impose[group_name][subgroup_name] then
-		for k, item_name in ipairs(xm_all_items_to_impose[group_name][subgroup_name]) do
-			xm_simple_item_impose(i, j, k, item_name)
-		end
-		end
-		
-	end
-	end
-	
-end
-]]--
-------
---[[
-for subgroup_name, subgroup_list in ipairs(xm_all_items_to_impose["material"]) do
-	for j, item_name in ipairs(subgroup_list) do
-		
-	end
-end
-]]--
-
 --Manual changes
 require("manual.recipes")
 ------------

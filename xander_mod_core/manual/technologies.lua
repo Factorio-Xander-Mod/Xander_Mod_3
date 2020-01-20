@@ -22,6 +22,9 @@ data.raw.technology["research-speed-1"].prerequisites = {"electronics", "electri
 
 data.raw.technology["toolbelt"].unit.count = 150
 data.raw.technology["landfill"].prerequisites = {"washing1", "logistic-science-pack"}
+data.raw.technology["circuit-network"].unit.count = 150
+data.raw.technology["circuit-network"].unit.time = 30
+data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric-energy-distribution-1"}
 
 
 --==========  COMBAT  ==========

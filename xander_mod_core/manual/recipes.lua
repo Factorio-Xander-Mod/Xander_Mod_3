@@ -128,6 +128,13 @@ data.raw.recipe["pipe"].normal = nil
 data.raw.recipe["pipe"].expensive = nil
 data.raw.recipe["small-electric-pole"].enabled = false
 data.raw.recipe["inserter"].enabled = false
+data.raw.recipe["red-wire"].ingredients = {{"electronic-circuit", 1}, {"copper-cable", 2}}
+data.raw.recipe["green-wire"].ingredients = {{"electronic-circuit", 1}, {"copper-cable", 2}}
+data.raw.recipe["arithmetic-combinator"].ingredients = {{"steel-plate", 1}, {"electronic-circuit", 2}, {"copper-cable", 4}}--12
+data.raw.recipe["decider-combinator"].ingredients = {{"steel-plate", 1}, {"electronic-circuit", 2}, {"copper-cable", 4}}--12
+data.raw.recipe["constant-combinator"].ingredients = {{"steel-plate", 1}, {"electronic-circuit", 1}, {"copper-cable", 4}}--8
+data.raw.recipe["power-switch"].ingredients = {{"steel-plate", 2}, {"porcelain", 2}, {"electronic-circuit", 2}, {"copper-cable", 8}}--18
+data.raw.recipe["programmable-speaker"].ingredients = {{"steel-plate", 2}, {"steel-rod", 6}, {"electronic-circuit", 2}, {"copper-cable", 2}}--16
 
 
 --==========  COMBAT  ==========

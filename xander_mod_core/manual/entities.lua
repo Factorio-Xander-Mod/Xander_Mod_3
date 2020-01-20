@@ -48,6 +48,8 @@ data.raw["assembling-machine"]["chemical-plant"].module_specification.module_slo
 data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 3
 data.raw["assembling-machine"]["chemical-plant"].energy_usage = "180kW"
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
+
+data.raw["assembling-machine"]["electrolyzer-1"].next_upgrade = nil
 --production-machine
 data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2

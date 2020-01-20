@@ -156,8 +156,9 @@ xm_fluid_recipes["fluid-element"] = {
 }
 
 xm_fluid_recipes["fluid-hydrogenated"] = {
-	{"ammonia", "chemistry", 12, false, {{type = "fluid", name = "nitrogen", amount = 10}, {type = "fluid", name = "hydrogen", amount = 30}}, {{type = "fluid", name = "ammonia", amount = 40}}},
+	{"ammonia", "chemistry", 12, false, {{type = "fluid", name = "nitrogen", amount = 10}, {type = "fluid", name = "hydrogen", amount = 30}}, {{type = "fluid", name = "ammonia", amount = 40}}},--1
 	{"hydrogen-fluoride", "chemistry", 2, false, {{"conc-fluorite", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{type = "fluid", name = "hydrogen-fluoride", amount = 20}}},--1
+	--{"hydrogen-sulfide", "chemistry", 2, false, {{type = "fluid", name = "crude-oil", amount = 10}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}}},--1
 }
 
 xm_fluid_recipes["fluid-oxide"] = {
@@ -167,6 +168,7 @@ xm_fluid_recipes["fluid-oxide"] = {
 	--XX{"gas-shift-rvs", "chemistry", 1, false, {{type = "fluid", name = "carbon-dioxide", amount = 30}, {type = "fluid", name = "hydrogen", amount = 20}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "water-distilled", amount = 30}}},
 	{"carbon-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}},
 	{"carbon-rvs", "chemistry", 1, false, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}},
+	{"carbon-monoxide", "chemistry", 0.5, false, {{"coke", 1}, {type = "fluid", name = "oxygen", amount = 10}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}}},--1
 	{"sulfur-dioxide", "chemistry", 4, false, {{"sulfur", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}}},--1
 }
 

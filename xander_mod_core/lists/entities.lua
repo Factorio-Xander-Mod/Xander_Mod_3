@@ -238,7 +238,6 @@ xm_production_entities["chemical-machine"] = {
 		type = "assembling-machine",
 		name = "chemical-plant"
 	},
-	
 	{
 		type = "assembling-machine",
 		name = "chem-reactor-2",
@@ -250,30 +249,70 @@ xm_production_entities["chemical-machine"] = {
 		energy_usage = "360kW",
 		fast_replaceable_group = "chemical-plant"
 	},
-	
+	{
+		type = "assembling-machine",
+		name = "chem-reactor-3",
+		parent_type = "assembling-machine",
+		parent_name = "chemical-plant",
+		crafting_categories = {"chemistry"},
+		module_slots = 4,
+		crafting_speed = 2,
+		emissions_per_minute = 5,
+		energy_usage = "480kW",
+		fast_replaceable_group = "chemical-plant",
+		graphics_from = {"__base__/graphics/entity/chemical-plant/chemical-plant.png", "__base__/graphics/entity/chemical-plant/hr-chemical-plant.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chem-reactor-3.png", "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chem-reactor-3-hr.png"}
+	},
 	{
 		type = "assembling-machine",
 		name = "electrolyzer-1",
 		parent_type = "assembling-machine",
-		parent_name = "chemical-plant",
+		parent_name = "assembling-machine-2",
 		crafting_categories = {"electrolysis"},
 		emissions_per_minute = 0.75,
 		crafting_speed = 0.75,
+		fluid_boxes = {
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_level = -1,
+				pipe_connections = {{type = "input", position = {0, 2}}}
+			},
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "input", position = {0, -2}}}
+			},
+			{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "output", position = {2, 0}}}
+			},
+			{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "output", position = {-2, 0}}}
+			}
+		},
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1.png",
 			priority = "high",
-			width = 100,
-			height = 105,
+			width = 113,
+			height = 113,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1-hr.png",
 				priority = "high",
-				width = 200,
-				height = 210,
+				width = 227,
+				height = 227,
 				frame_count = 1,
 				scale = 0.5
 			}
 		} }},
+		--next_upgrade = "electrolyzer-2",
 		fast_replaceable_group = "electrolyzer"
 	},
 	{
