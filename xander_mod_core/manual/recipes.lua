@@ -18,6 +18,10 @@ data.raw.recipe["steel-plate-2"].icon = "__xander-mod__/graphics/item/material/s
 data.raw.recipe["steel-plate-2"].icon_size = 32
 data.raw.recipe["steel-plate-2"].main_product = ""
 
+data.raw.recipe["sulfur-1"].localised_name = {"recipe-name.sulfur-1"}
+data.raw.recipe["sulfur-1"].icon = "__xander-mod__/graphics/recipe/material/nonmetal/sulfur-1.png"
+data.raw.recipe["sulfur-1"].icon_size = 32
+data.raw.recipe["sulfur-1"].main_product = ""
 data.raw.recipe["graphite-1"].localised_name = {"recipe-name.graphite-1"}
 data.raw.recipe["graphite-1"].icon = "__xander-mod__/graphics/item/material/nonmetal/graphite.png"
 data.raw.recipe["graphite-1"].icon_size = 32
@@ -75,6 +79,14 @@ data.raw.recipe["carbon-rvs"].localised_name = {"recipe-name.carbon-rvs"}
 data.raw.recipe["carbon-rvs"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-oxide/carbon-rvs.png"
 data.raw.recipe["carbon-rvs"].icon_size = 32
 data.raw.recipe["carbon-rvs"].main_product = ""
+data.raw.recipe["sulfur-dioxide-direct"].localised_name = {"recipe-name.sulfur-dioxide-direct"}
+data.raw.recipe["sulfur-dioxide-direct"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-oxide/sulfur-dioxide-direct.png"
+data.raw.recipe["sulfur-dioxide-direct"].icon_size = 32
+data.raw.recipe["sulfur-dioxide-direct"].main_product = ""
+data.raw.recipe["sulfur-dioxide-h2s"].localised_name = {"recipe-name.sulfur-dioxide-h2s"}
+data.raw.recipe["sulfur-dioxide-h2s"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-oxide/sulfur-dioxide-h2s.png"
+data.raw.recipe["sulfur-dioxide-h2s"].icon_size = 32
+data.raw.recipe["sulfur-dioxide-h2s"].main_product = ""
 
 data.raw.recipe["distillation-water"].icon = "__xander-mod__/graphics/recipe/fluid/fluid/distillation-water.png"
 data.raw.recipe["distillation-water"].icon_size = 32

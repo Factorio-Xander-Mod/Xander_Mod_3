@@ -83,7 +83,7 @@ for i, subgroup_name in ipairs(xm_subgroups_to_impose[4]) do
 end
 
 --Manual changes
---nil for now
+require("manual.fluids")
 ------------
 
 

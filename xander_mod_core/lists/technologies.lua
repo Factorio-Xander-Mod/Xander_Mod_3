@@ -43,7 +43,7 @@ xm_material_technologies["ceramic"] = {
 
 xm_material_technologies["fluid-recipes"] = {
 	{"lubricant", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"lubricant"}, {"parts1", "oil-processing"}},
-	{"carbon", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"carbon-fwd", "carbon-rvs", "carbon-monoxide", "formaldehyde-1"}, {"chlorine"}},
+	{"carbon", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"carbon-fwd", "carbon-rvs", "formaldehyde-1"}, {"electrolysis1", "oil-processing"}},--, "carbon-monoxide"
 	{"nitrogen", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"distillation-air", "ammonia", "nitric-acid"}, {"electrolysis1", "oil-processing"}},
 	{"fluorine", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-fluorite-0", "hydrogen-fluoride"}, {"washing1", "chlorine", "railway"}},
 	{"chlorine", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"distillation-water", "electrolysis-brine", "phenol-1"}, {"electrolysis1", "oil-processing"}},
@@ -122,7 +122,7 @@ xm_production_technologies["smelting-machine"] = {
 
 xm_production_technologies["chemical-machine"] = {
 	{"sulfur-processing", 40, {"automation-science-pack"}, 20, {"chemical-plant", "sulfur-0", "sulfuric-acid", "rubber-vulcanized-0"}, {"fluid-handling", "machines0"}},
-	{"chemistry2", 280, {"automation-science-pack", "logistic-science-pack"}, 30, {"chem-reactor-2", "sulfur-dioxide", "sulfuric-acid-1"}, {"advanced-electronics", "motor2", "chlorine"}},
+	{"chemistry2", 280, {"automation-science-pack", "logistic-science-pack"}, 30, {"chem-reactor-2", "sulfur-dioxide-direct", "sulfur-dioxide-h2s", "sulfuric-acid-1"}, {"advanced-electronics", "motor2", "chlorine"}},
 	{"oil-processing", 90, {"automation-science-pack", "logistic-science-pack"}, 25, {"pumpjack", "oil-refinery", "basic-oil-processing"}, {"sulfur-processing", "advanced-material-processing", "logistic-science-pack"}},
 	{"electrolysis1", 90, {"automation-science-pack"}, 20, {"electrolyzer-1", "electrolysis-acid"}, {"sulfur-processing"}}
 	--{"electrolysis2", 90, {"automation-science-pack"}, 20, {"electrolyzer-2", "electrolysis-base"}, {"electrolysis1", "chemistry2"}}
