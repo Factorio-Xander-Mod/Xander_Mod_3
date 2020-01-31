@@ -39,10 +39,10 @@ xm_all_fluids_to_impose["fluid"] = {
 
 xm_all_fluids_to_impose["fluid-hydrocarbon"] = {
 	{"crude-oil", {r = 0, g = 1/8, b = 0}, {r = 1/2, g = 1/2, b = 1/4}},
-	{"natural-gas", {r = 1, g = 1, b = 1/2}, {r = 3/4, g = 7/8, b = 1}},
+	{"natural-gas", {r = 1, g = 7/8, b = 1/2}, {r = 3/4, g = 7/8, b = 1}},
 	{"crude-oil-desulf", {r = 0, g = 0, b = 0}, {r = 1/2, g = 1/2, b = 1/2}},
-	{"natural-gas-desulf", {r = 1, g = 1, b = 3/4}, {r = 1/2, g = 1, b = 1}},
-	--{"petroleum-gas", {r = 3/8, g = 1/8, b = 3/8}, {r = 7/8, g = 7/8, b = 7/8}},
+	{"natural-gas-desulf", {r = 1, g = 1, b = 5/8}, {r = 1/2, g = 1, b = 1}},
+	{"petroleum-gas", {r = 3/8, g = 1/8, b = 3/8}, {r = 7/8, g = 7/8, b = 7/8}},
 	{"methane", {r = 1, g = 0, b = 1/2}, {r = 0, g = 1, b = 1}},
 	{"ethylene", {r = 3/4, g = 3/4, b = 3/4}, {r = 1, g = 3/4, b = 1}},
 	{"light-oil", {r = 5/8, g = 3/8, b = 0}, {r = 1, g = 3/4, b = 1/8}},

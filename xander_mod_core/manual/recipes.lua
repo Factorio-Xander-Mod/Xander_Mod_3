@@ -18,10 +18,10 @@ data.raw.recipe["steel-plate-2"].icon = "__xander-mod__/graphics/item/material/s
 data.raw.recipe["steel-plate-2"].icon_size = 32
 data.raw.recipe["steel-plate-2"].main_product = ""
 
-data.raw.recipe["sulfur-1"].localised_name = {"recipe-name.sulfur-1"}
-data.raw.recipe["sulfur-1"].icon = "__xander-mod__/graphics/recipe/material/nonmetal/sulfur-1.png"
-data.raw.recipe["sulfur-1"].icon_size = 32
-data.raw.recipe["sulfur-1"].main_product = ""
+data.raw.recipe["sulfur"].localised_name = {"recipe-name.sulfur-1"}
+data.raw.recipe["sulfur"].icon = "__xander-mod__/graphics/recipe/material/nonmetal/sulfur-1.png"
+data.raw.recipe["sulfur"].icon_size = 32
+data.raw.recipe["sulfur"].main_product = ""
 data.raw.recipe["graphite-1"].localised_name = {"recipe-name.graphite-1"}
 data.raw.recipe["graphite-1"].icon = "__xander-mod__/graphics/item/material/nonmetal/graphite.png"
 data.raw.recipe["graphite-1"].icon_size = 32
@@ -44,10 +44,14 @@ data.raw.recipe["phenol-1"].main_product = ""
 data.raw.recipe["explosives"].normal = nil
 data.raw.recipe["explosives"].expensive = nil
 
-data.raw.recipe["diesel"].localised_name = {"recipe-name.diesel"}
-data.raw.recipe["diesel"].icon = "__xander-mod__/graphics/item/material/energetic/solid-fuel.png"
-data.raw.recipe["diesel"].icon_size = 32
-data.raw.recipe["diesel"].main_product = ""
+data.raw.recipe["diesel-1"].localised_name = {"recipe-name.diesel-1"}
+data.raw.recipe["diesel-1"].icon = "__xander-mod__/graphics/item/material/energetic/solid-fuel.png"
+data.raw.recipe["diesel-1"].icon_size = 32
+data.raw.recipe["diesel-1"].main_product = ""
+data.raw.recipe["diesel-2"].localised_name = {"recipe-name.diesel-2"}
+data.raw.recipe["diesel-2"].icon = "__xander-mod__/graphics/item/material/energetic/solid-fuel.png"
+data.raw.recipe["diesel-2"].icon_size = 32
+data.raw.recipe["diesel-2"].main_product = ""
 
 
 --==========  FLUID  ==========
@@ -102,6 +106,23 @@ data.raw.recipe["nitric-acid"].localised_name = {"recipe-name.nitric-acid"}
 data.raw.recipe["nitric-acid"].icon = "__xander-mod__/graphics/recipe/fluid/fluid/nitric-acid.png"
 data.raw.recipe["nitric-acid"].icon_size = 32
 data.raw.recipe["nitric-acid"].main_product = ""
+
+data.raw.recipe["crude-oil-desulf"].localised_name = {"recipe-name.crude-oil-desulf"}
+data.raw.recipe["crude-oil-desulf"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/crude-oil-desulf.png"
+data.raw.recipe["crude-oil-desulf"].icon_size = 32
+data.raw.recipe["crude-oil-desulf"].main_product = ""
+data.raw.recipe["natural-gas-desulf"].localised_name = {"recipe-name.natural-gas-desulf"}
+data.raw.recipe["natural-gas-desulf"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/natural-gas-desulf.png"
+data.raw.recipe["natural-gas-desulf"].icon_size = 32
+data.raw.recipe["natural-gas-desulf"].main_product = ""
+data.raw.recipe["light-oil-distillation"].localised_name = {"recipe-name.light-oil-distillation"}
+data.raw.recipe["light-oil-distillation"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/light-oil-distillation.png"
+data.raw.recipe["light-oil-distillation"].icon_size = 32
+data.raw.recipe["light-oil-distillation"].main_product = ""
+data.raw.recipe["petroleum-gas-distillation"].localised_name = {"recipe-name.petroleum-gas-distillation"}
+data.raw.recipe["petroleum-gas-distillation"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/petroleum-gas-distillation.png"
+data.raw.recipe["petroleum-gas-distillation"].icon_size = 32
+data.raw.recipe["petroleum-gas-distillation"].main_product = ""
 
 
 --==========  INTERMEDIATE PRODUCTS  ==========

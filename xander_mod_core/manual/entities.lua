@@ -3,23 +3,23 @@
 local assembler_1_fluid_boxes = {
 	{
 		production_type = "input",
-		--pipe_picture = assembler1pipepictures(),
+		pipe_picture = assembler1pipepictures(),
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = -1,
 		pipe_connections = {{ type = "input", position = {0, -2} }},
-		--secondary_draw_orders = {north = -1}
+		secondary_draw_orders = {north = -1}
 	},
 	{
 		production_type = "output",
-		--pipe_picture = assembler1pipepictures(),
+		pipe_picture = assembler1pipepictures(),
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = 1,
 		pipe_connections = {{ type = "output", position = {0, 2} }},
-		--secondary_draw_orders = {north = -1}
+		secondary_draw_orders = {north = -1}
 	},
-	--off_when_no_fluid_recipe = true
+	off_when_no_fluid_recipe = true
 }
 
 local xm_4fluid_boxes_input = {
