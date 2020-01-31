@@ -36,14 +36,14 @@ xm_production_entities["extraction-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-0.png",
 			priority = "high",
-			width = 100,
-			height = 94,
+			width = 108,
+			height = 130,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-0-hr.png",
 				priority = "high",
-				width = 200,
-				height = 188,
+				width = 216,
+				height = 260,
 				frame_count = 1,
 				scale = 0.5
 			}
@@ -64,14 +64,14 @@ xm_production_entities["extraction-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-1.png",
 			priority = "high",
-			width = 100,
-			height = 92,
+			width = 108,
+			height = 130,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-1-hr.png",
 				priority = "high",
-				width = 200,
-				height = 184,
+				width = 216,
+				height = 260,
 				frame_count = 1,
 				scale = 0.5
 			}
@@ -92,14 +92,14 @@ xm_production_entities["extraction-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-2.png",
 			priority = "high",
-			width = 100,
-			height = 136,
+			width = 108,
+			height = 133,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-2-hr.png",
 				priority = "high",
-				width = 200,
-				height = 272,
+				width = 216,
+				height = 266,
 				frame_count = 1,
 				scale = 0.5
 			}
@@ -312,6 +312,11 @@ xm_production_entities["chemical-machine"] = {
 				scale = 0.5
 			}
 		} }},
+		working_sound = {
+			sound = {{filename = "__base__/sound/chemical-plant.ogg", volume = 0.8}},
+			idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+			apparent_volume = 1.5
+		},
 		--next_upgrade = "electrolyzer-2",
 		fast_replaceable_group = "electrolyzer"
 	},
@@ -340,14 +345,14 @@ xm_production_entities["production-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-0.png",
 			priority = "high",
-			width = 100,
-			height = 90,
+			width = 108,
+			height = 130,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-0-hr.png",
 				priority = "high",
-				width = 200,
-				height = 180,
+				width = 216,
+				height = 260,
 				frame_count = 1,
 				scale = 0.5
 			}
@@ -368,13 +373,13 @@ xm_production_entities["production-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-1.png",
 			priority = "high",
-			width = 100,
+			width = 108,
 			height = 130,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-1-hr.png",
 				priority = "high",
-				width = 200,
+				width = 216,
 				height = 260,
 				frame_count = 1,
 				scale = 0.5
@@ -396,14 +401,14 @@ xm_production_entities["production-machine"] = {
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-2.png",
 			priority = "high",
-			width = 100,
-			height = 128,
+			width = 108,
+			height = 130,
 			frame_count = 1,
 			hr_version = {
 				filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-2-hr.png",
 				priority = "high",
-				width = 200,
-				height = 256,
+				width = 216,
+				height = 260,
 				frame_count = 1,
 				scale = 0.5
 			}

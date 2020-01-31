@@ -3,32 +3,62 @@
 local assembler_1_fluid_boxes = {
 	{
 		production_type = "input",
-		pipe_picture = assembler1pipepictures(),
+		--pipe_picture = assembler1pipepictures(),
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = -1,
 		pipe_connections = {{ type = "input", position = {0, -2} }},
-		secondary_draw_orders = {north = -1}
+		--secondary_draw_orders = {north = -1}
 	},
 	{
 		production_type = "output",
-		pipe_picture = assembler1pipepictures(),
+		--pipe_picture = assembler1pipepictures(),
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = 1,
 		pipe_connections = {{ type = "output", position = {0, 2} }},
-		secondary_draw_orders = {north = -1}
+		--secondary_draw_orders = {north = -1}
 	},
-	off_when_no_fluid_recipe = true
+	--off_when_no_fluid_recipe = true
 }
+
+local xm_4fluid_boxes_input = {
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = -1,
+		pipe_connections = {{type = "input", position = {0, 2}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {0, -2}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {2, 0}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {-2, 0}}}
+	}
+}
+
 --energy
 data.raw.boiler["boiler"].energy_source.fuel_category = nil
 data.raw.boiler["boiler"].energy_source.fuel_categories = {"crude", "chemical"}
+
 --extraction-machine
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"crude", "chemical"}
-data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = assembler_1_fluid_boxes
-data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = assembler_1_fluid_boxes
+data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-2"].fluid_boxes = xm_4fluid_boxes_input
 data.raw["assembling-machine"]["waste-dump"].module_specification = nil
 data.raw["assembling-machine"]["waste-dump"].working_visualisations = nil
 
@@ -39,6 +69,7 @@ data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_category = nil
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["xm-furnace-electric"].fluid_boxes = assembler_1_fluid_boxes
+
 --chemical-machine
 data.raw["assembling-machine"]["chemical-plant"].icon = "__xander-mod__/graphics/item/production/chemical-machine/chemical-plant.png"
 find_replace_graphics(data.raw["assembling-machine"]["chemical-plant"],
@@ -50,8 +81,11 @@ data.raw["assembling-machine"]["chemical-plant"].energy_usage = "180kW"
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
 
 data.raw["assembling-machine"]["electrolyzer-1"].next_upgrade = nil
+
 --production-machine
-data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = assembler_1_fluid_boxes
+data.raw["assembling-machine"]["machine-tool-0"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["machine-tool-2"].fluid_boxes = xm_4fluid_boxes_input
 data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
