@@ -142,10 +142,10 @@ xm_all_recipes_to_impose["material"] = xm_material_recipes
 
 
 
---==========  FLUID  ==========
-local xm_fluid_recipes = {}
+--==========  FLUIDS  ==========
+local xm_fluids_recipes = {}
 
-xm_fluid_recipes["fluid-element"] = {
+xm_fluids_recipes["fluid-element"] = {
 	{"distillation-air", "oil-processing", 10, false, {}, {{type = "fluid", name = "nitrogen", amount = 40}, {type = "fluid", name = "oxygen", amount = 10}}},--1
 	{"solid-fuel-from-heavy-oil", "refining-electric", 0.5, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
 	{"solid-fuel-from-light-oil", "refining-electric", 0.5, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
@@ -155,13 +155,13 @@ xm_fluid_recipes["fluid-element"] = {
 	{"electrolysis-brine", "electrolysis", 12, false, {{type = "fluid", name = "water-brine", amount = 20}}, {{"sodium-hydroxide", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}},--1
 }
 
-xm_fluid_recipes["fluid-hydrogenated"] = {
+xm_fluids_recipes["fluid-hydrogenated"] = {
 	{"ammonia", "chemistry", 12, false, {{type = "fluid", name = "nitrogen", amount = 10}, {type = "fluid", name = "hydrogen", amount = 30}}, {{type = "fluid", name = "ammonia", amount = 40}}},--1
 	{"hydrogen-fluoride", "chemistry", 2, false, {{"conc-fluorite", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{type = "fluid", name = "hydrogen-fluoride", amount = 20}}},--1
 	
 }
 
-xm_fluid_recipes["fluid-oxide"] = {
+xm_fluids_recipes["fluid-oxide"] = {
 	--XX{"bodouard-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 40}}, {{"coke", 1}, {type = "fluid", name = "carbon-dioxide", amount = 30}}},
 	--XX{"bodouard-rvs", "chemistry", 1, false, {{"coke", 1}, {type = "fluid", name = "carbon-dioxide", amount = 30}}, {{type = "fluid", name = "carbon-monoxide", amount = 40}}},
 	--XX{"gas-shift-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "water-distilled", amount = 30}}, {{type = "fluid", name = "carbon-dioxide", amount = 30}, {type = "fluid", name = "hydrogen", amount = 20}}},
@@ -173,39 +173,37 @@ xm_fluid_recipes["fluid-oxide"] = {
 	{"sulfur-dioxide-h2s", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 30}, {type = "fluid", name = "oxygen", amount = 30}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 30, temperature = 300}}},--1
 }
 
-xm_fluid_recipes["fluid"] = {
+xm_fluids_recipes["fluid"] = {
 	{"distillation-water", "oil-processing", 5, false, {{type = "fluid", name = "water", amount = 50}}, {{type = "fluid", name = "water-brine", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "water-distilled", amount = 40, fluidbox_index = 2}}},
 	{"sulfuric-acid", "chemistry", 5, false, {{"sulfur", 1}, {"saltpeter", 2}, {type = "fluid", name = "water", amount = 20}}, {{type = "fluid", name = "sulfuric-acid", amount = 10}}},--1
 	{"sulfuric-acid-1", "chemistry", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 300}}},--1 --, {type = "fluid", name = "water-distilled", amount = 6}
 	{"nitric-acid", "chemistry", 6, false, {{type = "fluid", name = "ammonia", amount = 10}, {type = "fluid", name = "oxygen", amount = 20}}, {{type = "fluid", name = "nitric-acid", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 165}}},--1
 }
 
-xm_fluid_recipes["fluid-hydrocarbon"] = {
+xm_fluids_recipes["fluid-hydrocarbon"] = {
 	{"crude-oil-desulf", "chemistry", 4, false, {{type = "fluid", name = "crude-oil", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "crude-oil-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
 	{"natural-gas-desulf", "chemistry", 4, false, {{type = "fluid", name = "natural-gas", amount = 100}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "natural-gas-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
 	{"basic-oil-processing", "oil-processing", 10, false, {{type = "fluid", name = "crude-oil", amount = 100}}, {{type = "fluid", name = "heavy-oil", amount = 40, fluidbox_index = 1}, {type = "fluid", name = "btx", amount = 25, fluidbox_index = 2}, {type = "fluid", name = "ethylene", amount = 15, fluidbox_index = 3}}},
 	{"advanced-oil-processing", "oil-processing", 8, false, {{type = "fluid", name = "crude-oil-desulf", amount = 100}, {type = "fluid", name = "water-distilled", amount = 50}}, {{type = "fluid", name = "heavy-oil", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "light-oil", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "petroleum-gas", amount = 30, fluidbox_index = 3}}},
-	--{"natural-gas-distillation", "oil-processing", 12, false, {{type = "fluid", name = "natural-gas-desulf", amount = 100}}, {{type = "fluid", name = "light-oil", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "ethylene", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "methane", amount = 50, fluidbox_index = 3}}},
+	{"natural-gas-distillation", "oil-processing", 12, false, {{type = "fluid", name = "natural-gas-desulf", amount = 100}}, {{type = "fluid", name = "light-oil", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "ethylene", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "methane", amount = 50, fluidbox_index = 3}}},
 	{"light-oil-distillation", "oil-processing", 6, false, {{type = "fluid", name = "light-oil", amount = 50}}, {{type = "fluid", name = "btx", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "light-aliphatic", amount = 20, fluidbox_index = 2}}},
 	{"petroleum-gas-distillation", "oil-processing", 6, false, {{type = "fluid", name = "petroleum-gas", amount = 50}}, {{type = "fluid", name = "ethylene", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "methane", amount = 20, fluidbox_index = 2}}},
-	--heavy-oil-cracking
 	{"heavy-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "heavy-oil", amount = 80}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "steam", amount = 40, temperature = 300}}},--1
 	{"light-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "petroleum-gas", amount = 40}, {type = "fluid", name = "steam", amount = 40, temperature = 300}}},--1
-	--light-oil-cracking
-	--"reform-btx"
-	--"reform-light-aliphatic"
-	--"reform-ethylene"
-	--"reform-methane"
+	{"reform-btx", "chemistry", 5, false, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "light-aliphatic", amount = 40}}},--1
+	{"reform-light-aliphatic", "chemistry", 5, false, {{type = "fluid", name = "light-aliphatic", amount = 40}}, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
+	{"reform-ethylene", "chemistry", 5, false, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "methane", amount = 40}}},--1
+	{"reform-methane", "chemistry", 5, false, {{type = "fluid", name = "methane", amount = 40}}, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
 	{"lubricant", "chemistry", 6, false, {{type = "fluid", name = "heavy-oil", amount = 30}, {"graphite", 1}}, {{type = "fluid", name = "lubricant", amount = 40}}},--1
 }
 
-xm_fluid_recipes["fluid-organic"] = {
+xm_fluids_recipes["fluid-organic"] = {
 	{"formaldehyde-0", "chemistry", 2, false, {{"coke", 1}, {type = "fluid", name = "steam", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 10}}},
 	{"formaldehyde-1", "chemistry", 2, false, {{type = "fluid", name = "carbon-monoxide", amount = 10}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 20}}},
 	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}, {type = "fluid", name = "water", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}}--1
 }
 
-xm_all_recipes_to_impose["fluids"] = xm_fluid_recipes
+xm_all_recipes_to_impose["fluids"] = xm_fluids_recipes
 
 
 

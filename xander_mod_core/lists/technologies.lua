@@ -65,6 +65,21 @@ xm_all_technologies_to_impose["material"] = xm_material_technologies
 
 
 
+--==========  FLUIDS  ==========
+local xm_fluid_technologies = {}
+
+xm_fluid_technologies["fluid-hydrocarbon"] = {
+	{"advanced-oil-processing", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"crude-oil-desulf", "advanced-oil-processing", "light-oil-distillation", "petroleum-gas-distillation"}, {"chemistry2", "flammables", "chemical-science-pack"}},
+	{"natural-gas", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"natural-gas-desulf", "natural-gas-distillation"}, {"chemistry2", "carbon", "chemical-science-pack"}}
+	--{"advanced-hydrocarbon-reforming", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"heavy-oil-cracking", "light-oil-cracking", "reform-btx", "reform-light-aliphatic", "reform-ethylene", "reform-methane", "diesel-2"}, {"advanced-oil-processing", "aluminum"}}
+	--"coal-liquefaction", {}, {"advanced-hydrocarbon-reforming", "natural-gas-processing"}
+}
+
+xm_all_technologies_to_impose["fluids"] = xm_fluid_technologies
+
+
+
+
 --==========  INTERMEDIATE PRODUCTS  ==========
 local xm_intermediate_products_technologies = {}
 
@@ -124,10 +139,6 @@ xm_production_technologies["chemical-machine"] = {
 	{"sulfur-processing", 40, {"automation-science-pack"}, 20, {"chemical-plant", "sulfur-0", "sulfuric-acid", "rubber-vulcanized-0"}, {"fluid-handling", "machines0"}},
 	{"chemistry2", 280, {"automation-science-pack", "logistic-science-pack"}, 30, {"chem-reactor-2", "sulfur-dioxide-direct", "sulfur-dioxide-h2s", "sulfur", "sulfuric-acid-1"}, {"advanced-electronics", "motor2", "chlorine"}},
 	{"oil-processing", 90, {"automation-science-pack", "logistic-science-pack"}, 25, {"pumpjack", "oil-refinery", "basic-oil-processing"}, {"sulfur-processing", "advanced-material-processing", "logistic-science-pack"}},
-	{"advanced-oil-processing", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"crude-oil-desulf", "advanced-oil-processing", "light-oil-distillation", "petroleum-gas-distillation"}, {"chemistry2", "flammables", "chemical-science-pack"}},
-	--{"natural-gas-processing", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, , {"natural-gas-desulf", "natural-gas-distillation"}, {"chemistry2", "carbon", "chemical-science-pack"}}
-	--{"advanced-hydrocarbon-reforming", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"heavy-oil-cracking", "light-oil-cracking", "reform-btx", "reform-light-aliphatic", "reform-ethylene", "reform-methane", "diesel-2"}, {"advanced-oil-processing", "aluminum"}}
-	--"coal-liquefaction", {}, {"advanced-hydrocarbon-reforming", "natural-gas-processing"}
 	{"electrolysis1", 90, {"automation-science-pack"}, 20, {"electrolyzer-1", "electrolysis-acid"}, {"sulfur-processing"}}
 	--{"electrolysis2", 90, {"automation-science-pack"}, 20, {"electrolyzer-2", "electrolysis-base"}, {"electrolysis1", "chemistry2"}}
 }

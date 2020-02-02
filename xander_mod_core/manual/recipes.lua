@@ -115,6 +115,10 @@ data.raw.recipe["natural-gas-desulf"].localised_name = {"recipe-name.natural-gas
 data.raw.recipe["natural-gas-desulf"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/natural-gas-desulf.png"
 data.raw.recipe["natural-gas-desulf"].icon_size = 32
 data.raw.recipe["natural-gas-desulf"].main_product = ""
+data.raw.recipe["natural-gas-distillation"].localised_name = {"recipe-name.natural-gas-distillation"}
+data.raw.recipe["natural-gas-distillation"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/natural-gas-distillation.png"
+data.raw.recipe["natural-gas-distillation"].icon_size = 32
+data.raw.recipe["natural-gas-distillation"].main_product = ""
 data.raw.recipe["light-oil-distillation"].localised_name = {"recipe-name.light-oil-distillation"}
 data.raw.recipe["light-oil-distillation"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/light-oil-distillation.png"
 data.raw.recipe["light-oil-distillation"].icon_size = 32
@@ -123,6 +127,22 @@ data.raw.recipe["petroleum-gas-distillation"].localised_name = {"recipe-name.pet
 data.raw.recipe["petroleum-gas-distillation"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/petroleum-gas-distillation.png"
 data.raw.recipe["petroleum-gas-distillation"].icon_size = 32
 data.raw.recipe["petroleum-gas-distillation"].main_product = ""
+data.raw.recipe["reform-btx"].localised_name = {"recipe-name.reform-btx"}
+data.raw.recipe["reform-btx"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/reform-btx.png"
+data.raw.recipe["reform-btx"].icon_size = 32
+data.raw.recipe["reform-btx"].main_product = ""
+data.raw.recipe["reform-light-aliphatic"].localised_name = {"recipe-name.reform-light-aliphatic"}
+data.raw.recipe["reform-light-aliphatic"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/reform-light-aliphatic.png"
+data.raw.recipe["reform-light-aliphatic"].icon_size = 32
+data.raw.recipe["reform-light-aliphatic"].main_product = ""
+data.raw.recipe["reform-ethylene"].localised_name = {"recipe-name.reform-ethylene"}
+data.raw.recipe["reform-ethylene"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/reform-ethylene.png"
+data.raw.recipe["reform-ethylene"].icon_size = 32
+data.raw.recipe["reform-ethylene"].main_product = ""
+data.raw.recipe["reform-methane"].localised_name = {"recipe-name.reform-methane"}
+data.raw.recipe["reform-methane"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/reform-methane.png"
+data.raw.recipe["reform-methane"].icon_size = 32
+data.raw.recipe["reform-methane"].main_product = ""
 
 
 --==========  INTERMEDIATE PRODUCTS  ==========
