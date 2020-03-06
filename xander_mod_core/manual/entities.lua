@@ -1,9 +1,12 @@
 --==========  PRODUCTION  ==========
 
+--Bring in the variable assembler_1_pipepictures to use in defining assembler_1_fluid_boxes
+require("functions.entities")
+
 local assembler_1_fluid_boxes = {
 	{
 		production_type = "input",
-		pipe_picture = assembler1pipepictures(),
+		pipe_picture = assembler_1_pipepictures,
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = -1,
@@ -12,7 +15,7 @@ local assembler_1_fluid_boxes = {
 	},
 	{
 		production_type = "output",
-		pipe_picture = assembler1pipepictures(),
+		pipe_picture = assembler_1_pipepictures,
 		pipe_covers = pipecoverspictures(),
 		base_area = 10,
 		base_level = 1,
@@ -22,7 +25,7 @@ local assembler_1_fluid_boxes = {
 	off_when_no_fluid_recipe = true
 }
 
-local xm_4fluid_boxes_input = {
+local xm_4_fluid_boxes_input = {
 	{
 		production_type = "input",
 		pipe_covers = pipecoverspictures(),
@@ -56,9 +59,9 @@ data.raw.boiler["boiler"].energy_source.fuel_categories = {"crude", "chemical"}
 --extraction-machine
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"crude", "chemical"}
-data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = xm_4fluid_boxes_input
-data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = xm_4fluid_boxes_input
-data.raw["assembling-machine"]["ore-processor-2"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-2"].fluid_boxes = xm_4_fluid_boxes_input
 data.raw["assembling-machine"]["waste-dump"].module_specification = nil
 data.raw["assembling-machine"]["waste-dump"].working_visualisations = nil
 
@@ -83,9 +86,9 @@ data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemi
 data.raw["assembling-machine"]["electrolyzer-1"].next_upgrade = nil
 
 --production-machine
-data.raw["assembling-machine"]["machine-tool-0"].fluid_boxes = xm_4fluid_boxes_input
-data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = xm_4fluid_boxes_input
-data.raw["assembling-machine"]["machine-tool-2"].fluid_boxes = xm_4fluid_boxes_input
+data.raw["assembling-machine"]["machine-tool-0"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["machine-tool-2"].fluid_boxes = xm_4_fluid_boxes_input
 data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes

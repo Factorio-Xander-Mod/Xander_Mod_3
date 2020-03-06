@@ -7,7 +7,7 @@ xm_all_items_to_impose = {}
 --==========  MATERIAL  ==========
 local xm_material_items = {}
 
-xm_material_items["raw-material"] = {"raw-iron", "raw-titanium", "raw-zirconium"}
+xm_material_items["raw-material"] = {"raw-iron"}--, "raw-titanium", "raw-zirconium"
 xm_material_items["raw-resource"] = {"coal", "copper-ore", "evaporites", "igneous-sulfide", "iron-ore", "laterite", "magnetic", "massive-sulfide", "phosphorite", "sand-heavy", "skarn", "stone", "uranium-ore"}
 xm_material_items["milled-resource"] = {}
 xm_material_items["concentrate"] = {"conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-fluorite", "sand", "conc-scheelite", "gravel", "limestone", "magnesite"}

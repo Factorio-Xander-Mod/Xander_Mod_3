@@ -78,7 +78,7 @@ xm_material_recipes["nonmetal"] = {
 	{"sulfur-0", "chemistry", 1, false, {{"evaporites", 1}, {type = "fluid", name = "steam", amount = 5}}, {{"sulfur", 1}}},--1
 	{"sulfur", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}, {{"sulfur", 1}, {type = "fluid", name = "steam", amount = 10, temperature = 300}}},--1
 	{"graphite-0", "washing", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
-	{"graphite-1", "refining-electric", 1.5, false, {{"coke", 1}}, {{"graphite", 1}}},--1
+	{"graphite-1", "refining-electric", 2, false, {{"coke", 1}}, {{"graphite", 1}}},--1
 	{"silicon", "refining-electric", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
 }
 
@@ -200,7 +200,7 @@ xm_fluids_recipes["fluid-hydrocarbon"] = {
 xm_fluids_recipes["fluid-organic"] = {
 	{"formaldehyde-0", "chemistry", 2, false, {{"coke", 1}, {type = "fluid", name = "steam", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 10}}},
 	{"formaldehyde-1", "chemistry", 2, false, {{type = "fluid", name = "carbon-monoxide", amount = 10}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 20}}},
-	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}, {type = "fluid", name = "water", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}}--1
+	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}}--1
 }
 
 xm_all_recipes_to_impose["fluids"] = xm_fluids_recipes

@@ -1,14 +1,5 @@
 --==========  MATERIAL  ==========
 
-find_replace_graphics(data.raw.item["copper-ore"],
-	{"__base__/graphics/icons/mip/copper-ore.png", "__base__/graphics/icons/mip/copper-ore-1.png", "__base__/graphics/icons/mip/copper-ore-2.png", "__base__/graphics/icons/mip/copper-ore-3.png"},
-	{"__xander-mod__/graphics/item/material/raw-resource/copper-ore-0.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-1.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-2.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-3.png"}
-)
-find_replace_graphics(data.raw.item["iron-ore"],
-	{"__base__/graphics/icons/mip/iron-ore.png", "__base__/graphics/icons/mip/iron-ore-1.png", "__base__/graphics/icons/mip/iron-ore-2.png", "__base__/graphics/icons/mip/iron-ore-3.png"},
-	{"__xander-mod__/graphics/item/material/raw-resource/iron-ore-0.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-1.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-2.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-3.png"}
-)
-
 data.raw.item["steel-plate"].icon = "__xander-mod__/graphics/item/material/stock/steel-plate.png"
 data.raw.item["copper-plate"].icon = "__xander-mod__/graphics/item/material/stock/copper-plate.png"
 
@@ -28,9 +19,9 @@ data.raw.item["solid-fuel"].fuel_top_speed_multiplier = 1.2
 
 --==========  INTERMEDIATE PRODUCTS  ==========
 
-data.raw.item["electronic-circuit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/electronic-circuit.png"
-data.raw.item["advanced-circuit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/advanced-circuit.png"
-data.raw.item["processing-unit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/processing-unit.png"
+--data.raw.item["electronic-circuit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/electronic-circuit.png"
+--data.raw.item["advanced-circuit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/advanced-circuit.png"
+--data.raw.item["processing-unit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/processing-unit.png"
 data.raw.item["electric-engine-unit"].icon = "__xander-mod__/graphics/item/intermediate-products/intermediate-product/electric-engine-unit.png"
 data.raw.tool["space-science-pack"].stack_size = 2000
 

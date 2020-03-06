@@ -131,7 +131,7 @@ require("functions.resources")
 for i, resource_name in ipairs(xm_resource_names) do
 	xm_resource_autoplace_impose(resource_name, i)
 	if ((not data.raw.resource[resource_name]) and (string.find(xm_resource_categories[i], "solid"))) then
-		xm_resource_particle_add(resource_name)
+		xm_resource_particle_add(resource_name, i)
 	end
 	if not data.raw.resource[resource_name] then
 		xm_noise_layer_add(resource_name)

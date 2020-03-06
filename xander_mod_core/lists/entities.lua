@@ -452,7 +452,7 @@ xm_production_entities["production-machine"] = {
 		energy_usage = "40kW",
 		inputs = {"crude-science-pack", "automation-science-pack"},
 		graphics_from = {"__base__/graphics/entity/lab/lab.png", "__base__/graphics/entity/lab/hr-lab.png"},
-		graphics_to = {"__base__/graphics/entity/lab/lab-red.png", "__base__/graphics/entity/lab/hr-lab-red.png"}
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/production-machine/lab-red.png", "__xander-mod-graphics-1__/graphics/entity/production/production-machine/lab-red-hr.png"}
 	}
 }
 

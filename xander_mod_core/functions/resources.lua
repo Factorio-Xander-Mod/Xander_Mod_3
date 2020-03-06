@@ -22,12 +22,13 @@ function xm_resource_autoplace_impose(resource_name, n)
 end
 
 --Adds a resource-particle entity, created when hand mining
-function xm_resource_particle_add(resource_name)
-	local temp = table.deepcopy(data.raw.particle[xm_resource_parents[i] or "copper-ore-particle"])
+function xm_resource_particle_add(resource_name, i)
+	--if not data.raw["optimized-particle"][xm_resource_parents[i]] then error("wtf" .. xm_resource_parents[i]) end
+	local temp = table.deepcopy(data.raw["optimized-particle"][xm_resource_parents[i]] or data.raw["optimized-particle"]["copper-ore-particle"])
 	temp.name = resource_name .. "-particle"
-	for i, _ in ipairs(temp.pictures) do
-		temp.pictures[i].filename = "__xander-mod-graphics-0__/graphics/entity/particle/" .. resource_name .. "/" .. i .. ".png"
-		temp.pictures[i].hr_version.filename = "__xander-mod-graphics-0__/graphics/entity/particle/" .. resource_name .. "/" .. i .. "-hr.png"
+	for j, _ in ipairs(temp.pictures) do
+		temp.pictures[j].filename = "__xander-mod-graphics-0__/graphics/entity/particle/" .. resource_name .. "/" .. j .. ".png"
+		temp.pictures[j].hr_version.filename = "__xander-mod-graphics-0__/graphics/entity/particle/" .. resource_name .. "/" .. j .. "-hr.png"
 	end
 	data:extend({temp})
 end
@@ -46,6 +47,12 @@ function xm_resource_add(resource_name, n)
 	--
 	temp.name = resource_name
 	temp.icon = "__xander-mod__/graphics/item/material/raw-resource/" .. xm_resource_names[n] .. ".png"
+	temp.pictures = {
+		{size = 64, filename = "__xander-mod__/graphics/item/material/raw-resource/" .. xm_resource_names[n] .. ".png", scale = 0.25, mipmap_count = 4},
+		{size = 64, filename = "__xander-mod__/graphics/item/material/raw-resource/" .. xm_resource_names[n] .. "-1.png", scale = 0.25, mipmap_count = 4},
+		{size = 64, filename = "__xander-mod__/graphics/item/material/raw-resource/" .. xm_resource_names[n] .. "-2.png", scale = 0.25, mipmap_count = 4},
+		{size = 64, filename = "__xander-mod__/graphics/item/material/raw-resource/" .. xm_resource_names[n] .. "-3.png", scale = 0.25, mipmap_count = 4}
+	}
 	temp.category = xm_resource_categories[n]
 	temp.order = n_str
 	--Minable parameters
