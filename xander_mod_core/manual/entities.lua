@@ -3,6 +3,7 @@
 --Bring in the variable assembler_1_pipepictures to use in defining assembler_1_fluid_boxes
 require("functions.entities")
 
+--Define fluid boxes list for assembling machine 1: present in Factorio 0.17, removed from base in 0.18 but still needed by Xander Mod
 local assembler_1_fluid_boxes = {
 	{
 		production_type = "input",
@@ -25,6 +26,7 @@ local assembler_1_fluid_boxes = {
 	off_when_no_fluid_recipe = true
 }
 
+--List of fluid boxes: one in the middle of each side, each opposing pair has the same input/output type
 local xm_4_fluid_boxes_input = {
 	{
 		production_type = "input",
@@ -53,8 +55,14 @@ local xm_4_fluid_boxes_input = {
 }
 
 --energy
+data.raw.boiler["boiler"].icon = "__xander-mod__/graphics/item/production/energy/boiler.png"
 data.raw.boiler["boiler"].energy_source.fuel_category = nil
 data.raw.boiler["boiler"].energy_source.fuel_categories = {"crude", "chemical"}
+find_replace_graphics(data.raw.boiler["boiler"],
+{"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
+{"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"}
+)
+data.raw.generator["steam-turbine"].maximum_temperature = 300
 
 --extraction-machine
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil

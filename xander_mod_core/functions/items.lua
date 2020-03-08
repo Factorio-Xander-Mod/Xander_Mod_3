@@ -45,7 +45,8 @@ function xm_simple_item_impose(group_no, subgroup_no, item_no, item_name)
 			order = group_str .. "-" .. subgroup_str .. "-" .. item_str,
 			stack_size = size_calc,
 			icon = "__xander-mod__/graphics/item/" .. group_name .. "/" .. subgroup_name .. "/" .. item_name .. ".png",
-			icon_size = 32
+			icon_size = 64,
+			icon_mipmaps = 4
 		}
 		})
 	end

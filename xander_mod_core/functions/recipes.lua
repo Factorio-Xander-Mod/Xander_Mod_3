@@ -77,7 +77,8 @@ function xm_add_waste_recipe(group_no, subgroup_no, substance_no, substance_grou
 		order = group_str .. "-" .. recipe_group_str .. "-" .. recipe_str,
 		subgroup = xm_subgroups_to_impose[group_no][table.maxn(xm_subgroups_to_impose[group_no])],
 		icon = icon_path,
-		icon_size = 32,
+		icon_size = 64,
+		icon_mipmaps = 4,
 		hide_from_stats = true,
 		localised_name = recipe_name
 	}

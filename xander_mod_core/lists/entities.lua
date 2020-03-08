@@ -5,19 +5,65 @@ xm_all_entities_to_impose = {}
 --==========  PRODUCTION  ==========
 local xm_production_entities = {}
 
+xm_production_entities["energy"] = {
+	--order placeholder
+	{
+		type = "boiler",
+		name = "boiler"
+	},
+	{
+		type = "boiler",
+		name = "boiler-1",
+		parent_type = "boiler",
+		parent_name = "boiler",
+		target_temperature = 300,
+		energy_consumption = "3.6MW",
+		emissions_per_minute = 40,
+		graphics_from = {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W-hr.png"}
+	},
+	--order placeholder
+	{
+		type = "boiler",
+		name = "heat-exchanger",
+	},
+	--order placeholder
+	{
+		type = "generator",
+		name = "steam-engine",
+	},
+	--order placeholder
+	{
+		type = "generator",
+		name = "steam-turbine",
+	},
+	{
+		type = "generator",
+		name = "steam-turbine-1",
+		parent_type = "generator",
+		parent_name = "steam-turbine",
+		graphics_from = {"__base__/graphics/entity/steam-turbine/steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/steam-turbine-V.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V-hr.png"}
+	},
+}
+
 xm_production_entities["extraction-machine"] = {
+	--order placeholder
 	{
 		type = "offshore-pump",
 		name = "offshore-pump"
 	},
+	--order placeholder
 	{
 		type = "mining-drill",
 		name = "burner-mining-drill"
 	},
+	--order placeholder
 	{
 		type = "mining-drill",
 		name = "electric-mining-drill"
 	},
+	--order placeholder
 	{
 		type = "mining-drill",
 		name = "pumpjack"
@@ -219,14 +265,17 @@ xm_production_entities["smelting-machine"] = {
 		crafting_speed = 2,
 		ingredient_count = 5
 	},
+	--order placeholder
 	{
 		type = "furnace",
 		name = "stone-furnace"
 	},
+	--order placeholder
 	{
 		type = "furnace",
 		name = "steel-furnace"
 	},
+	--order placeholder
 	{
 		type = "furnace",
 		name = "electric-furnace"
@@ -234,6 +283,7 @@ xm_production_entities["smelting-machine"] = {
 }
 
 xm_production_entities["chemical-machine"] = {
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "chemical-plant"
@@ -320,10 +370,12 @@ xm_production_entities["chemical-machine"] = {
 		--next_upgrade = "electrolyzer-2",
 		fast_replaceable_group = "electrolyzer"
 	},
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "oil-refinery"
 	},
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "centrifuge"
@@ -429,14 +481,17 @@ xm_production_entities["production-machine"] = {
 		graphics_from = {"__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png", "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/production-machine/assembling-machine-0.png", "__xander-mod-graphics-1__/graphics/entity/production/production-machine/assembling-machine-0-hr.png"}
 	},
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-1"
 	},
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-2"
 	},
+	--order placeholder
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-3"
@@ -472,14 +527,17 @@ xm_logistics_entities["belt"] = {
 		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png"}
 	},
+	--orer placeholder
 	{
 		type = "transport-belt",
 		name = "transport-belt"
 	},
+	--orer placeholder
 	{
 		type = "transport-belt",
 		name = "fast-transport-belt"
 	},
+	--orer placeholder
 	{
 		type = "transport-belt",
 		name = "express-transport-belt"
@@ -495,14 +553,17 @@ xm_logistics_entities["belt"] = {
 		graphics_from = {"__base__/graphics/entity/underground-belt/underground-belt-structure.png", "__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
 	},
+	--orer placeholder
 	{
 		type = "underground-belt",
 		name = "underground-belt"
 	},
+	--orer placeholder
 	{
 		type = "underground-belt",
 		name = "fast-underground-belt"
 	},
+	--orer placeholder
 	{
 		type = "underground-belt",
 		name = "express-underground-belt"
@@ -536,14 +597,17 @@ xm_logistics_entities["belt"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-hr.png",
 		}
 	},
+	--orer placeholder
 	{
 		type = "splitter",
 		name = "splitter"
 	},
+	--orer placeholder
 	{
 		type = "splitter",
 		name = "fast-splitter"
 	},
+	--orer placeholder
 	{
 		type = "splitter",
 		name = "express-splitter"
