@@ -62,16 +62,20 @@ find_replace_graphics(data.raw.boiler["boiler"],
 {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
 {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"}
 )
-data.raw.generator["steam-turbine"].maximum_temperature = 300
+data.raw.generator["steam-turbine"].maximum_temperature = 315
 
 --extraction-machine
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-0"].working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound
 data.raw["assembling-machine"]["ore-processor-1"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-1"].working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound
 data.raw["assembling-machine"]["ore-processor-2"].fluid_boxes = xm_4_fluid_boxes_input
+data.raw["assembling-machine"]["ore-processor-2"].working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound
 data.raw["assembling-machine"]["waste-dump"].module_specification = nil
 data.raw["assembling-machine"]["waste-dump"].working_visualisations = nil
+data.raw["assembling-machine"]["waste-dump"].working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound
 
 --smelting-machine
 data.raw.furnace["stone-furnace"].crafting_categories = {"empty"}
@@ -122,8 +126,21 @@ data.raw.lab["lab"].fast_replaceable_group = "lab"
 data.raw.inserter["burner-inserter"].energy_source.fuel_category = nil
 data.raw.inserter["burner-inserter"].energy_source.fuel_categories = {"crude", "chemical"}
 
+data.raw.locomotive["locomotive"].icon = "__xander-mod__/graphics/item/logistics/transport/locomotive-1.png"
 data.raw.locomotive["locomotive"].max_speed = 0.6
-data.raw.locomotive["locomotive"].max_power = "300kW"
+data.raw.locomotive["locomotive"].max_power = "400kW"
 data.raw.locomotive["locomotive"].braking_force = 8
 data.raw.locomotive["locomotive"].friction_force = 1
 data.raw.locomotive["locomotive"].burner.effectivity = 0.5
+data.raw.locomotive["locomotive"].burner.fuel_category = nil
+data.raw.locomotive["locomotive"].burner.fuel_categories = {"crude", "chemical"}
+data.raw.locomotive["locomotive"].sound_minimum_speed = 0.2
+
+for i = 1, 8 do
+	data.raw.locomotive["locomotive"].pictures.layers[1].filenames[i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-" .. i .. ".png"
+	data.raw.locomotive["locomotive"].pictures.layers[1].hr_version.filenames[2 * i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-hr-" .. (2 * i) .. ".png"
+	data.raw.locomotive["locomotive"].pictures.layers[1].hr_version.filenames[(2 * i) - 1] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-hr-" .. ((2 * i) - 1) .. ".png"
+	data.raw.locomotive["locomotive"].pictures.layers[2].filenames[i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask.png"
+	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[2 * i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
+	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[(2 * i) - 1] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
+end

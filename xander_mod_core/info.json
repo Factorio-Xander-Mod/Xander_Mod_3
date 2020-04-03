@@ -1,10 +1,10 @@
 {
   "name": "xander-mod",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "factorio_version": "0.18",
   "title": "Xander Mod",
   "author": "Repofme1",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=97&t=51868",
-  "dependencies": ["base", "xander-mod-graphics-0 = 0.4.0", "xander-mod-graphics-1 = 0.4.0"],
+  "dependencies": ["base", "xander-mod-graphics-0 = 0.5.0", "xander-mod-graphics-1 = 0.5.0"],
   "description": "An extensive overhaul of intermediate production, emphasizing realistic chemistry, materials, and processes."
 }

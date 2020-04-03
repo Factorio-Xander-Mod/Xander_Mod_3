@@ -36,6 +36,14 @@ function xm_simple_item_impose(group_no, subgroup_no, item_no, item_name)
 		data.raw.item[item_name].subgroup = xm_subgroups_to_impose[group_no][subgroup_no]
 		data.raw.item[item_name].order = group_str .. "-" .. subgroup_str .. "-" .. item_str
 		data.raw.item[item_name].stack_size = size_calc
+	elseif data.raw["item-with-entity-data"][item_name] then
+		data.raw["item-with-entity-data"][item_name].subgroup = xm_subgroups_to_impose[group_no][subgroup_no]
+		data.raw["item-with-entity-data"][item_name].order = group_str .. "-" .. subgroup_str .. "-" .. item_str
+		data.raw["item-with-entity-data"][item_name].stack_size = size_calc
+	elseif data.raw["rail-planner"][item_name] then
+		data.raw["rail-planner"][item_name].subgroup = xm_subgroups_to_impose[group_no][subgroup_no]
+		data.raw["rail-planner"][item_name].order = group_str .. "-" .. subgroup_str .. "-" .. item_str
+		data.raw["rail-planner"][item_name].stack_size = size_calc
 	elseif subgroup_name ~= "science-pack" then
 		data:extend({
 		{

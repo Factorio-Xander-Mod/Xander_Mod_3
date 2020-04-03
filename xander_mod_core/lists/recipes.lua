@@ -76,7 +76,7 @@ xm_material_recipes["stock"] = {
 xm_material_recipes["nonmetal"] = {
 	{"coke", "smelting", 8, false, {{"coal", 4}}, {{"coke", 9}}},--1
 	{"sulfur-0", "chemistry", 1, false, {{"evaporites", 1}, {type = "fluid", name = "steam", amount = 5}}, {{"sulfur", 1}}},--1
-	{"sulfur", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}, {{"sulfur", 1}, {type = "fluid", name = "steam", amount = 10, temperature = 300}}},--1
+	{"sulfur", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}, {{"sulfur", 1}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
 	{"graphite-0", "washing", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
 	{"graphite-1", "refining-electric", 2, false, {{"coke", 1}}, {{"graphite", 1}}},--1
 	{"silicon", "refining-electric", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
@@ -162,21 +162,17 @@ xm_fluids_recipes["fluid-hydrogenated"] = {
 }
 
 xm_fluids_recipes["fluid-oxide"] = {
-	--XX{"bodouard-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 40}}, {{"coke", 1}, {type = "fluid", name = "carbon-dioxide", amount = 30}}},
-	--XX{"bodouard-rvs", "chemistry", 1, false, {{"coke", 1}, {type = "fluid", name = "carbon-dioxide", amount = 30}}, {{type = "fluid", name = "carbon-monoxide", amount = 40}}},
-	--XX{"gas-shift-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "water-distilled", amount = 30}}, {{type = "fluid", name = "carbon-dioxide", amount = 30}, {type = "fluid", name = "hydrogen", amount = 20}}},
-	--XX{"gas-shift-rvs", "chemistry", 1, false, {{type = "fluid", name = "carbon-dioxide", amount = 30}, {type = "fluid", name = "hydrogen", amount = 20}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "water-distilled", amount = 30}}},
 	{"carbon-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}},
 	{"carbon-rvs", "chemistry", 1, false, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}},
 	--XX{"carbon-monoxide", "chemistry", 0.5, false, {{"coke", 1}, {type = "fluid", name = "oxygen", amount = 10}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}}},--1
-	{"sulfur-dioxide-direct", "chemistry", 1, false, {{"sulfur", 1}, {type = "fluid", name = "oxygen", amount = 20}, {type = "fluid", name = "water-distilled", amount = 10}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 300}}},--1
-	{"sulfur-dioxide-h2s", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 30}, {type = "fluid", name = "oxygen", amount = 30}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 30, temperature = 300}}},--1
+	{"sulfur-dioxide-direct", "chemistry", 1, false, {{"sulfur", 1}, {type = "fluid", name = "oxygen", amount = 20}, {type = "fluid", name = "water-distilled", amount = 10}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
+	{"sulfur-dioxide-h2s", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 30}, {type = "fluid", name = "oxygen", amount = 30}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 30, temperature = 315}}},--1
 }
 
 xm_fluids_recipes["fluid"] = {
 	{"distillation-water", "oil-processing", 5, false, {{type = "fluid", name = "water", amount = 50}}, {{type = "fluid", name = "water-brine", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "water-distilled", amount = 40, fluidbox_index = 2}}},
 	{"sulfuric-acid", "chemistry", 5, false, {{"sulfur", 1}, {"saltpeter", 2}, {type = "fluid", name = "water", amount = 20}}, {{type = "fluid", name = "sulfuric-acid", amount = 10}}},--1
-	{"sulfuric-acid-1", "chemistry", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 300}}},--1 --, {type = "fluid", name = "water-distilled", amount = 6}
+	{"sulfuric-acid-1", "chemistry", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 315}}},--1 --, {type = "fluid", name = "water-distilled", amount = 6}
 	{"nitric-acid", "chemistry", 6, false, {{type = "fluid", name = "ammonia", amount = 10}, {type = "fluid", name = "oxygen", amount = 20}}, {{type = "fluid", name = "nitric-acid", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 165}}},--1
 }
 
@@ -188,8 +184,8 @@ xm_fluids_recipes["fluid-hydrocarbon"] = {
 	{"natural-gas-distillation", "oil-processing", 12, false, {{type = "fluid", name = "natural-gas-desulf", amount = 100}}, {{type = "fluid", name = "light-oil", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "ethylene", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "methane", amount = 50, fluidbox_index = 3}}},
 	{"light-oil-distillation", "oil-processing", 6, false, {{type = "fluid", name = "light-oil", amount = 50}}, {{type = "fluid", name = "btx", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "light-aliphatic", amount = 20, fluidbox_index = 2}}},
 	{"petroleum-gas-distillation", "oil-processing", 6, false, {{type = "fluid", name = "petroleum-gas", amount = 50}}, {{type = "fluid", name = "ethylene", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "methane", amount = 20, fluidbox_index = 2}}},
-	{"heavy-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "heavy-oil", amount = 80}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "steam", amount = 40, temperature = 300}}},--1
-	{"light-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "petroleum-gas", amount = 40}, {type = "fluid", name = "steam", amount = 40, temperature = 300}}},--1
+	{"heavy-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "heavy-oil", amount = 80}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1
+	{"light-oil-cracking", "chemistry", 4, false, {{"aluminum-hydroxide", 1}, {type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "petroleum-gas", amount = 40}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1
 	{"reform-btx", "chemistry", 5, false, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "light-aliphatic", amount = 40}}},--1
 	{"reform-light-aliphatic", "chemistry", 5, false, {{type = "fluid", name = "light-aliphatic", amount = 40}}, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
 	{"reform-ethylene", "chemistry", 5, false, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "methane", amount = 40}}},--1
@@ -217,7 +213,7 @@ xm_intermediate_products_recipes["mechanical"] = {
 	{"iron-gear-wheel", "basic-machine", 2, true, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
 	{"iron-gear-1", "machine", 2, false, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
 	{"parts-steel", "machine", 7.5, false, {{"steel-plate", 2}, {"stock-bronze", 1}}, {{"parts-steel", 5}}},--1
-	--{"parts-alloy", "machine", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
+	{"parts-alloy", "machine", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
 	--{"parts-ceramic", "machine", 5, false, {{"stock-alloy", 1}, {"silicon-nitride", 8}, {"plastic-bar", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-ceramic", 2}}},--6
 }
 
@@ -268,6 +264,8 @@ xm_intermediate_products_recipes["science-pack"] = {
 	{"automation-science-pack", "crafting", 4, false, {{"iron-gear-wheel", 1}, {"coil-1", 1}}, {{"automation-science-pack", 1}}},--4
 	{"logistic-science-pack", "crafting", 6, false, {{"transport-belt", 1}, {"inserter", 1}}, {{"logistic-science-pack", 1}}},--8
 	{"chemical-science-pack", "chemistry", 12, false, {{"engine-unit", 2}, {"glass", 4}, {type = "fluid", name = "hydrogen-fluoride", amount = 20}, {"phenol", 8}}, {{"chemical-science-pack", 1}}},--24
+	{"production-science-pack", "advanced-crafting", 24, false, {{"xm-furnace-electric", 1}, {"productivity-module", 2}, {"rail", 20}}, {{"production-science-pack", 3}}},--96 (288 per 3)
+	--{"utility-science-pack", "advanced-crafting", 24, false, {{"low-density-structure", 3}, {"processing-unit", 2}, {"flying-robot-frame", 1}}, {{"utility-science-pack", 3}}},--96 (288 per 3)
 }
 
 xm_all_recipes_to_impose["intermediate-products"] = xm_intermediate_products_recipes
@@ -284,7 +282,11 @@ xm_production_recipes["tool"] = {
 
 xm_production_recipes["energy"] = {
 	{"boiler", "crafting", 1, true, {{"xm-furnace-brick", 1}, {"pipe", 4}}, {{"boiler", 1}}},--16
+	{"boiler-1", "crafting", 1, false, {{"boiler", 1}, {"stock-cupronickel", 8}, {"steel-plate", 4}}, {{"boiler-1", 1}}},--32
+	--{"heat-exchanger", "crafting", 1, false, {{"boiler", 1}, {"stock-cupronickel", 8}, {"steel-plate", 4}}, {{"boiler-1", 1}}},--32
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
+	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
+	--{"steam-turbine-2", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
 	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 1}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}}--6(1/72) --> 6
 }
 
@@ -328,6 +330,18 @@ xm_production_recipes["production-machine"] = {
 	--assembling-machine-4  --stack filter inserter
 	{"lab-burner", "basic-crafting", 1, true, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"crude-transport-belt", 8}, {"copper-plate", 4}}, {{"lab-burner", 1}}},--36
 	{"lab", "crafting", 2, false, {{"electric-engine-unit", 2}, {"steel-plate", 4}, {"iron-gear-wheel", 4}, {"transport-belt", 6}, {"electronic-circuit", 3}}, {{"lab", 1}}}--48
+}
+
+xm_production_recipes["module"] = {
+	{"speed-module", "crafting", 15, false, {{"motor-2", 4}, {"electronic-circuit", 8}}, {{"speed-module", 1}}},--56 (base = 57.5)
+	{"speed-module-2", "advanced-crafting", 30, false, {{"speed-module", 4}, {"stock-duralumin", 136}, {"advanced-circuit", 24}}, {{"speed-module-2", 1}}},--600 (base = 615)
+	--{"speed-module-3", "advanced-crafting", 60, false, {{"speed-module-2", 5}, {"", 88} {"processing-unit", 8}}, {{"speed-module-3", 1}}},--3600 (base = 3460)
+	{"productivity-module", "crafting", 15, false, {{"fast-transport-belt", 3}, {"electronic-circuit", 8}}, {{"productivity-module", 1}}},--56 (base = 57.5)
+	--{"productivity-module-2", "advanced-crafting", 30, false, {{"productivity-module", 4}, {"", 136}, {"advanced-circuit", 24}}, {{"productivity-module-2", 1}}},--600 (base = 615)
+	--{"productivity-module-3", "advanced-crafting", 60, false, {{"productivity-module-2", 5}, {"stack-filter-inserter", }, {"processing-unit", 8}}, {{"productivity-module-3", 1}}},--3600 (base = 3460)
+	{"effectivity-module", "crafting", 15, false, {{"fiber-glass", 48}, {"electronic-circuit", 8}}, {{"effectivity-module", 1}}},--56 (base = 57.5)
+	{"effectivity-module-2", "advanced-crafting", 30, false, {{"effectivity-module", 4}, {"parts-alloy", 34}, {"advanced-circuit", 24}}, {{"effectivity-module-2", 1}}},--600 (base = 615)
+	--{"effectivity-module-3", "advanced-crafting", 60, false, {{"effectivity-module-2", 5}, {"", 88} {"processing-unit", 8}}, {{"effectivity-module-3", 1}}},--3600 (base = 3460)
 }
 
 xm_all_recipes_to_impose["production"] = xm_production_recipes
@@ -374,10 +388,11 @@ xm_logistics_recipes["inserter"] = {
 
 xm_logistics_recipes["transport"] = {
 	{"rail", "crafting", 0.5, false, {{"gravel", 2}, {"iron-stick", 2}, {"steel-plate", 1}}, {{"rail", 1}}},--5
-	--{"rail-1", "advanced-crafting", 0.5, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
+	{"rail-1", "crafting", 0.5, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
 	{"locomotive", "crafting", 8, false, {{"boiler", 1}, {"piston-unit", 8}, {"iron-gear-wheel", 12}, {"pipe", 28}, {"steel-plate", 12}, {"electronic-circuit", 3}}, {{"locomotive", 1}}},--120
-	{"cargo-wagon", "crafting", 4, false, {{"iron-gear-wheel", 8}, {"parts-steel", 12}, {"steel-plate", 16}}, {{"cargo-wagon", 1}}},--60
-	{"fluid-wagon", "crafting", 4, false, {{"iron-gear-wheel", 6}, {"parts-steel", 12}, {"steel-plate", 4}, {"storage-tank", 1}}, {{"fluid-wagon", 1}}},--64
+	{"locomotive-1", "crafting", 8, false, {{"engine-unit", 16}, {"motor-2", 8}, {"parts-alloy", 10}, {"steel-plate", 10}, {"advanced-circuit", 6}}, {{"locomotive-1", 1}}},--248
+	{"cargo-wagon", "crafting", 4, false, {{"iron-gear-wheel", 12}, {"parts-steel", 12}, {"steel-plate", 8}}, {{"cargo-wagon", 1}}},--60
+	{"fluid-wagon", "crafting", 4, false, {{"iron-gear-wheel", 10}, {"parts-steel", 12}, {"storage-tank", 1}}, {{"fluid-wagon", 1}}},--64
 	{"rail-signal", "crafting", 1, false, {{"electronic-circuit", 1}, {"small-lamp", 1}}, {{"rail-signal", 2}}},--8
 	{"rail-chain-signal", "crafting", 1, false, {{"electronic-circuit", 1}, {"small-lamp", 1}}, {{"rail-chain-signal", 2}}},--8
 	{"train-stop", "crafting", 2, false, {{"stock-cast-iron", 10}, {"steel-rod", 16}, {"parts-steel", 6}, {"electronic-circuit", 3}}, {{"train-stop", 1}}},--36

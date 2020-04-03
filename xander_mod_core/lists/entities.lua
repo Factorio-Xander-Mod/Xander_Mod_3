@@ -16,7 +16,7 @@ xm_production_entities["energy"] = {
 		name = "boiler-1",
 		parent_type = "boiler",
 		parent_name = "boiler",
-		target_temperature = 300,
+		target_temperature = 315,
 		energy_consumption = "3.6MW",
 		emissions_per_minute = 40,
 		graphics_from = {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
@@ -644,6 +644,18 @@ xm_logistics_entities["inserter"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/inserter/long-fast-platform.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/inserter/long-fast-platform-hr.png"
 		}
+	}
+}
+
+xm_logistics_entities["transport"] = {
+	{
+		type = "locomotive",
+		name = "locomotive-1",
+		parent_type = "locomotive",
+		parent_name = "locomotive",
+		icon = data.raw.locomotive["locomotive"].icon,
+		max_health = 1500,
+		sound_minimum_speed = 0.5
 	}
 }
 

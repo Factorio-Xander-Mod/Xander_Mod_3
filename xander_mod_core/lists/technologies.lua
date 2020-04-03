@@ -85,6 +85,7 @@ local xm_intermediate_products_technologies = {}
 
 xm_intermediate_products_technologies["mechanical"] = {
 	{"parts1", 30, {"automation-science-pack"}, 15, {"iron-gear-1", "steel-rod", "parts-steel", "piston-unit-1"}, {"automation", "advanced-material-processing"}},
+	{"parts2", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {"parts-alloy"}, {"tungsten", "plastics", "lubricant"}},
 	{"engine", 100, {"automation-science-pack", "logistic-science-pack"}, 20, {"engine-unit", "pump-1"}, {"sulfur-processing", "logistic-science-pack", "parts1"}}
 }
 
@@ -103,7 +104,8 @@ xm_intermediate_products_technologies["data"] = {
 xm_intermediate_products_technologies["science-pack"] = {
 	{"automation-science-pack", 40, {"crude-science-pack"}, 15, {"automation-science-pack"}, {"electricity"}},
 	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {"logistic-science-pack"}, {"electric-engine", "automation"}},
-	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {"chemical-science-pack"}, {"engine", "boron", "fluorine"}},--, "chemistry2"
+	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {"chemical-science-pack"}, {"engine", "boron", "fluorine"}},
+	{"production-science-pack", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"production-science-pack"}, {"productivity-module", "railway-2"}},
 }
 
 xm_all_technologies_to_impose["intermediate-products"] = xm_intermediate_products_technologies
@@ -119,14 +121,15 @@ xm_production_technologies["tool"] = {
 }
 
 xm_production_technologies["energy"] = {
-	{"optics", 30, {"automation-science-pack"}, 20, {"small-lamp"}, {"washing1"}}
+	{"optics", 30, {"automation-science-pack"}, 20, {"small-lamp"}, {"washing1"}},
+	{"electric-gen2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"boiler-1", "steam-turbine"}, {"motor2", "advanced-material-processing-2", "chemical-science-pack"}},
 	--solar energy
 }
 
 xm_production_technologies["extraction-machine"] = {
 	{"washing0", 5, {"crude-science-pack"}, 5, {"ore-processor-0", "gravel", "limestone-0"}, nil},
 	{"washing1", 40, {"automation-science-pack"}, 20, {"ore-processor-1", "magnesite", "graphite-0", "kaolin"}, {"sulfur-processing", "circuit0"}},--, "sodium-carbonate"
-	{"washing2", 160, {"automation-science-pack", "logistic-science-pack"}, 45, {"ore-processor-2", "surfactant-0"}, {"advanced-electronics", "motor2"}},--, "conc-scheelite-1", "conc-millerite-1", "conc-fluorite-1"
+	{"washing2", 180, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"ore-processor-2", "surfactant-0"}, {"chemical-science-pack", "advanced-electronics", "motor2"}},--, "conc-scheelite-1", "conc-millerite-1", "conc-fluorite-1"
 	{"waste", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"waste-dump"}, {"landfill"}},
 }
 
@@ -150,6 +153,19 @@ xm_production_technologies["production-machine"] = {
 	{"automation-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"machine-tool-2", "assembling-machine-2"}, {"advanced-electronics", "motor2", "fast-inserter"}}
 }
 
+xm_production_technologies["module"] = {
+	{"modules", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"toolbelt"}},
+	{"speed-module", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"speed-module"}, {"modules", "motor2"}},
+	{"speed-module-2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"speed-module-2"}, {"automation-2", "speed-module", "aluminum"}},
+	--{"speed-module-3", 1200, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"speed-module-3"}, {"speed-module-2", ""}},
+	{"productivity-module", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"productivity-module"}, {"modules", "logistics-2"}},
+	--{"productivity-module-2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"productivity-module-2"}, {"productivity-module", "aluminum"}},
+	--{"productivity-module-3", 1200, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"productivity-module-3"}, {"productivity-module-2", ""}},
+	{"effectivity-module", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"effectivity-module"}, {"modules", "advanced-material-processing-2"}},
+	{"effectivity-module-2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"effectivity-module-2"}, {"chemical-science-pack", "automation-2", "effectivity-module", "parts2"}},
+	--{"effectivity-module-3", 1200, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"effectivity-module-3"}, {"effectivity-module-2", ""}},
+}
+
 xm_all_technologies_to_impose["production"] = xm_production_technologies
 
 
@@ -160,7 +176,7 @@ local xm_logistics_technologies = {}
 
 xm_logistics_technologies["belt"] = {
 	{"logistics", 40, {"automation-science-pack"}, 15, {"transport-belt", "underground-belt", "splitter"}, {"automation-science-pack", "steel-processing"}},
-	{"logistics-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"fast-transport-belt", "fast-underground-belt", "fast-splitter"}, {"concrete"}},
+	{"logistics-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"fast-transport-belt", "fast-underground-belt", "fast-splitter"}, {"logistic-science-pack", "concrete"}},
 	--{"logistics-3", 240, {"automation-science-pack"}, 30, {"express-transport-belt", "express-underground-belt", "express-splitter"}, {"concrete-2"}},
 }
 
@@ -175,7 +191,7 @@ xm_logistics_technologies["energy-pipe-distribution"] = {
 
 xm_logistics_technologies["transport"] = {
 	{"railway", 80, {"automation-science-pack"}, 30, {"rail", "locomotive", "cargo-wagon"}, {"logistics", "parts1"}},
-	--{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1", "cargo-wagon-1"}, {"railway", "engine", "automation-2"}},
+	{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1"}, {"rail-signals", "chemical-science-pack", "automation-2", "parts2"}},
 	{"automated-rail-transportation", 120, {"automation-science-pack"}, 30, {"train-stop"}, {"railway", "parts1"}},
 	{"rail-signals", 100, {"automation-science-pack", "logistic-science-pack"}, 40, {"rail-signal", "rail-chain-signal"}, {"automated-rail-transportation", "electronics", "optics"}},
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {"car"}, {"engine"}},
