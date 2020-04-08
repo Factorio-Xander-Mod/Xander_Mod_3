@@ -25,8 +25,11 @@ data.raw.technology["landfill"].prerequisites = {"washing1", "logistic-science-p
 data.raw.technology["circuit-network"].unit.count = 150
 data.raw.technology["circuit-network"].unit.time = 30
 data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric-energy-distribution-1"}
+table.insert(data.raw.technology["stack-inserter"].effects, data.raw.technology["inserter-capacity-bonus-2"].effects[2])
+table.remove(data.raw.technology["inserter-capacity-bonus-2"].effects, 2)
 
 
 --==========  COMBAT  ==========
 
 data.raw.technology["military-science-pack"].unit.count = 100
+data.raw.technology["land-mine"].unit.count = 240

@@ -14,8 +14,13 @@ function xm_simple_technology_impose(group_no, subgroup_no, technology_no, tech_
 	if data.raw.technology[tech_entry[1]] then
 		data.raw.technology[tech_entry[1]].order = group_str .. "-" .. subgroup_str .. "-" .. technology_str
 		data.raw.technology[tech_entry[1]].unit = {count = tech_entry[2], ingredients = {}, time = tech_entry[4]}
-		data.raw.technology[tech_entry[1]].effects = {}
 		data.raw.technology[tech_entry[1]].prerequisites = tech_entry[6]
+		if tech_entry[5][1] then
+			data.raw.technology[tech_entry[1]].effects = {}
+			for _, unlock_recipe in ipairs(tech_entry[5]) do
+				table.insert(data.raw.technology[tech_entry[1]].effects, {type = "unlock-recipe", recipe = unlock_recipe})
+			end
+		end
 	else
 		data:extend({
 		{
@@ -29,13 +34,12 @@ function xm_simple_technology_impose(group_no, subgroup_no, technology_no, tech_
 			prerequisites = tech_entry[6]
 		}
 		})
+		for _, unlock_recipe in ipairs(tech_entry[5]) do
+			table.insert(data.raw.technology[tech_entry[1]].effects, {type = "unlock-recipe", recipe = unlock_recipe})
+		end
 	end
 	
 	for _, pack in ipairs(tech_entry[3]) do
 		table.insert(data.raw.technology[tech_entry[1]].unit.ingredients, {pack, 1})
 	end
-	for _, unlock_recipe in ipairs(tech_entry[5]) do
-		table.insert(data.raw.technology[tech_entry[1]].effects, {type = "unlock-recipe", recipe = unlock_recipe})
-	end
-	
 end

@@ -54,8 +54,8 @@ xm_material_recipes["stock"] = {
 	{"iron-plate", "smelting", 6, true, {{"iron-ore", 1}}, {{"iron-plate", 1}}},--1
 	{"iron-plate-1", "smelting", 2, false, {{"raw-iron", 1}}, {{"iron-plate", 1}}},
 	{"stock-cast-iron-0", "smelting", 4, true, {{"iron-ore", 1}}, {{"stock-cast-iron", 1}}},--1
-	{"stock-cast-iron-1", "smelting", 1, false, {{"raw-iron", 1}}, {{"stock-cast-iron", 1}}},
-	--{"stock-cast-iron-2", "refining-electric", 12, false, {{"raw-iron", 7}, {"silicon", 1}}, {{"stock-cast-iron", 8}}},
+	{"stock-cast-iron-1", "refining", 1, false, {{"raw-iron", 1}}, {{"stock-cast-iron", 1}}},--1
+	--XX{"stock-cast-iron-2", "refining-electric", 12, false, {{"raw-iron", 7}, {"silicon", 1}}, {{"stock-cast-iron", 8}}},
 	{"steel-plate", "smelting", 8, false, {{"iron-plate", 4}}, {{"steel-plate", 1}}},--4
 	{"steel-plate-1", "refining", 24, false, {{"raw-iron", 18}, {"clay", 1}}, {{"steel-plate", 6}}},--3 --> final version = 2
 	{"steel-plate-2", "refining-electric", 18, false, {{"raw-iron", 12}, {"magnesite", 1}, {type = "fluid", name = "oxygen", amount = 12}}, {{"steel-plate", 6}}},--2
@@ -124,8 +124,8 @@ xm_material_recipes["organic"] = {
 xm_material_recipes["polymer"] = {
 	{"rubber-vulcanized-0", "chemistry", 5, false, {{"rubber-raw", 3}, {"sulfur", 1}}, {{"rubber-vulcanized", 4}}},--0.25(1/16)
 	{"rubber-vulcanized-1", "chemistry", 3, false, {{"rubber-sbr", 4}, {"sulfur", 1}, {"graphite", 1}}, {{"rubber-vulcanized", 6}}},--1
-	{"plastic-pellets", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 10}}, {{"plastic-pellets", 2}}},--0.5
-	{"plastic-bar", "machine", 0.5, false, {{"plastic-pellets", 2}}, {{"plastic-bar", 1}}}--1
+	{"plastic-pellets", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 10}}, {{"plastic-pellets", 1}}},--1
+	{"plastic-bar", "machine", 0.5, false, {{"plastic-pellets", 2}}, {{"plastic-bar", 1}}}--2
 }
 
 xm_material_recipes["energetic"] = {
@@ -210,7 +210,7 @@ local xm_intermediate_products_recipes = {}
 xm_intermediate_products_recipes["mechanical"] = {
 	{"iron-stick", "basic-machine", 1, true, {{"iron-plate", 1}}, {{"iron-stick", 2}}},--0.5
 	{"steel-rod", "machine", 1, false, {{"steel-plate", 1}}, {{"steel-rod", 4}}},--0.5
-	{"iron-gear-wheel", "basic-machine", 2, true, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
+	{"iron-gear-wheel", "basic-machine", 2, true, {{"stock-cast-iron", 3}}, {{"iron-gear-wheel", 1}}},--2
 	{"iron-gear-1", "machine", 2, false, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
 	{"parts-steel", "machine", 7.5, false, {{"steel-plate", 2}, {"stock-bronze", 1}}, {{"parts-steel", 5}}},--1
 	{"parts-alloy", "machine", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
@@ -226,7 +226,7 @@ xm_intermediate_products_recipes["electrical"] = {
 	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
 	--{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
-	{"battery", "crafting-with-fluid", 6, false, {{"lead", 2}, {"glass", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 2}}},--2
+	{"battery", "crafting-with-fluid", 4, false, {{"lead", 2}, {"glass", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 1}}},--4
 }
 
 xm_intermediate_products_recipes["data"] = {
@@ -287,7 +287,8 @@ xm_production_recipes["energy"] = {
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
 	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
 	--{"steam-turbine-2", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
-	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 1}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}}--6(1/72) --> 6
+	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
+	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 1}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--6(1/72) --> 6
 }
 
 xm_production_recipes["extraction-machine"] = {
@@ -337,11 +338,11 @@ xm_production_recipes["module"] = {
 	{"speed-module-2", "advanced-crafting", 30, false, {{"speed-module", 4}, {"stock-duralumin", 136}, {"advanced-circuit", 24}}, {{"speed-module-2", 1}}},--600 (base = 615)
 	--{"speed-module-3", "advanced-crafting", 60, false, {{"speed-module-2", 5}, {"", 88} {"processing-unit", 8}}, {{"speed-module-3", 1}}},--3600 (base = 3460)
 	{"productivity-module", "crafting", 15, false, {{"fast-transport-belt", 3}, {"electronic-circuit", 8}}, {{"productivity-module", 1}}},--56 (base = 57.5)
-	--{"productivity-module-2", "advanced-crafting", 30, false, {{"productivity-module", 4}, {"", 136}, {"advanced-circuit", 24}}, {{"productivity-module-2", 1}}},--600 (base = 615)
+	{"productivity-module-2", "advanced-crafting", 30, false, {{"productivity-module", 4}, {"plastic-bar", 68}, {"advanced-circuit", 24}}, {{"productivity-module-2", 1}}},--600 (base = 615)
 	--{"productivity-module-3", "advanced-crafting", 60, false, {{"productivity-module-2", 5}, {"stack-filter-inserter", }, {"processing-unit", 8}}, {{"productivity-module-3", 1}}},--3600 (base = 3460)
 	{"effectivity-module", "crafting", 15, false, {{"fiber-glass", 48}, {"electronic-circuit", 8}}, {{"effectivity-module", 1}}},--56 (base = 57.5)
 	{"effectivity-module-2", "advanced-crafting", 30, false, {{"effectivity-module", 4}, {"parts-alloy", 34}, {"advanced-circuit", 24}}, {{"effectivity-module-2", 1}}},--600 (base = 615)
-	--{"effectivity-module-3", "advanced-crafting", 60, false, {{"effectivity-module-2", 5}, {"", 88} {"processing-unit", 8}}, {{"effectivity-module-3", 1}}},--3600 (base = 3460)
+	--{"effectivity-module-3", "advanced-crafting", 60, false, {{"effectivity-module-2", 5}, {"substation?", 88} {"processing-unit", 8}}, {{"effectivity-module-3", 1}}},--3600 (base = 3460)
 }
 
 xm_all_recipes_to_impose["production"] = xm_production_recipes
@@ -383,7 +384,9 @@ xm_logistics_recipes["inserter"] = {
 	{"long-handed-inserter", "crafting", 0.5, false, {{"inserter", 1}, {"iron-gear-wheel", 1}, {"steel-plate", 1}}, {{"long-handed-inserter", 1}}},--10
 	{"fast-inserter", "crafting", 1, false, {{"inserter", 1}, {"parts-steel", 2}, {"electronic-circuit", 1}}, {{"fast-inserter", 1}}},--12
 	{"long-fast-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"steel-plate", 2}}, {{"long-fast-inserter", 1}}},--16
-	{"filter-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"electronic-circuit", 3}}, {{"filter-inserter", 1}}}--24
+	{"filter-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"electronic-circuit", 3}}, {{"filter-inserter", 1}}},--24
+	{"stack-inserter", "crafting", 1, false, {{"fast-inserter", 1}, {"stock-duralumin", 20}, {"parts-alloy", 12}, {"advanced-circuit", 4}}, {{"stack-inserter", 1}}},--84
+	{"stack-filter-inserter", "crafting", 0.5, false, {{"stack-inserter", 1}, {"electronic-circuit", 3}}, {{"stack-filter-inserter", 1}}},--96
 }
 
 xm_logistics_recipes["transport"] = {
@@ -410,7 +413,8 @@ local xm_combat_recipes = {}
 xm_combat_recipes["gun"] = {
 	{"pistol", "basic-crafting", 2, false, {{"iron-plate", 8}, {"stock-bronze", 4}}, {{"pistol", 1}}},--12
 	{"submachine-gun", "crafting", 10, false, {{"steel-plate", 8}, {"iron-gear-wheel", 6}, {"stock-bronze", 8}}, {{"submachine-gun", 1}}},--36
-	{"shotgun", "crafting", 10, false, {{"steel-plate", 6}, {"iron-gear-wheel", 4}, {"stock-bronze", 16}}, {{"shotgun", 1}}}--36
+	{"shotgun", "crafting", 10, false, {{"steel-plate", 6}, {"iron-gear-wheel", 4}, {"stock-bronze", 16}}, {{"shotgun", 1}}},--36
+	{"land-mine", "crafting", 5, false, {{"steel-plate", 2}, {"explosives", 2}}, {{"land-mine", 4}}},--8 (2 per land mine)
 }
 
 xm_combat_recipes["ammo"] = {
