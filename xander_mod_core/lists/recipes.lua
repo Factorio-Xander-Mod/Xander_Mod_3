@@ -92,7 +92,7 @@ xm_material_recipes["terrain"] = {
 xm_material_recipes["ceramic"] = {
 	{"brick-clay-0", "kiln", 3, true, {{"clay", 1}}, {{"brick-clay", 1}}},--1
 	{"brick-clay-1", "refining", 4, false, {{"clay", 1}, {"kaolin", 1}}, {{"brick-clay", 2}}},--1
-	{"brick-magnesia", "refining", 4, false, {{"magnesite", 1}, {"graphite", 1}}, {{"brick-magnesia", 1}}},--2
+	{"brick-magnesia", "refining", 6, false, {{"magnesite", 1}, {"graphite", 1}}, {{"brick-magnesia", 1}}},--2
 	{"silicon-carbide", "refining-electric", 8, false, {{"sand", 1}, {"coke", 3}}, {{"silicon-carbide", 2}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
 	
 	{"glass-0", "smelting", 24, false, {{"sand", 6}, {"potash", 1}, {"limestone", 1}}, {{"glass", 6}}},--1.333(1/72)
@@ -390,7 +390,7 @@ xm_logistics_recipes["inserter"] = {
 }
 
 xm_logistics_recipes["transport"] = {
-	{"rail", "crafting", 0.5, false, {{"gravel", 2}, {"iron-stick", 2}, {"steel-plate", 1}}, {{"rail", 1}}},--5
+	{"rail", "crafting", 0.5, false, {{"gravel", 2}, {"wood", 1}, {"steel-plate", 1}}, {{"rail", 1}}},--4 + (1)
 	{"rail-1", "crafting", 0.5, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
 	{"locomotive", "crafting", 8, false, {{"boiler", 1}, {"piston-unit", 8}, {"iron-gear-wheel", 12}, {"pipe", 28}, {"steel-plate", 12}, {"electronic-circuit", 3}}, {{"locomotive", 1}}},--120
 	{"locomotive-1", "crafting", 8, false, {{"engine-unit", 16}, {"motor-2", 8}, {"parts-alloy", 10}, {"steel-plate", 10}, {"advanced-circuit", 6}}, {{"locomotive-1", 1}}},--248

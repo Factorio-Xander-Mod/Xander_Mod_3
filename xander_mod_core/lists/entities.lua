@@ -550,8 +550,8 @@ xm_logistics_entities["belt"] = {
 		max_distance = 3,
 		next_upgrade = "underground-belt",
 		speed = 0.015625,--1/64, half of the 1/32 for the base transport-belt
-		graphics_from = {"__base__/graphics/entity/underground-belt/underground-belt-structure.png", "__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
+		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png", "__base__/graphics/entity/underground-belt/underground-belt-structure.png", "__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
 	},
 	--orer placeholder
 	{
@@ -577,24 +577,36 @@ xm_logistics_entities["belt"] = {
 		next_upgrade = "splitter",
 		speed = 0.015625,--1/64, half of the 1/32 for the base transport-belt
 		graphics_from = {
+			"__base__/graphics/entity/transport-belt/transport-belt.png",
+			"__base__/graphics/entity/transport-belt/hr-transport-belt.png",
 			"__base__/graphics/entity/splitter/splitter-north.png",
 			"__base__/graphics/entity/splitter/hr-splitter-north.png",
 			"__base__/graphics/entity/splitter/splitter-east.png",
+			"__base__/graphics/entity/splitter/splitter-east-top_patch.png",
 			"__base__/graphics/entity/splitter/hr-splitter-east.png",
+			"__base__/graphics/entity/splitter/hr-splitter-east-top_patch.png",
 			"__base__/graphics/entity/splitter/splitter-south.png",
 			"__base__/graphics/entity/splitter/hr-splitter-south.png",
 			"__base__/graphics/entity/splitter/splitter-west.png",
-			"__base__/graphics/entity/splitter/hr-splitter-west.png"
+			"__base__/graphics/entity/splitter/splitter-west-top_patch.png",
+			"__base__/graphics/entity/splitter/hr-splitter-west.png",
+			"__base__/graphics/entity/splitter/hr-splitter-west-top_patch.png"
 		},
 		graphics_to = {
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-north.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-north-hr.png",
-			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east.png",
-			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east-bottom.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east-top.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east-bottom-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-east-top-hr.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-south.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-south-hr.png",
-			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west.png",
-			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-bottom.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-top.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-bottom-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-top-hr.png"
 		}
 	},
 	--orer placeholder

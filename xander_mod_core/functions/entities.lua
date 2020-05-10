@@ -53,7 +53,7 @@ end
 
 
 --Pipe pictures that fit with the assembling machine 1
-local assembler_1_pipepictures = 
+assembler_1_pipepictures = 
 {
 	north =
 	{
@@ -122,5 +122,56 @@ local assembler_1_pipepictures =
 			shift = util.by_pixel(25.75, 1.25),
 			scale = 0.5
 		}
+	}
+}
+
+--Define fluid boxes list for assembling machine 1: present in Factorio 0.17, removed from base in 0.18 but still needed by Xander Mod
+assembler_1_fluid_boxes = {
+	{
+		production_type = "input",
+		pipe_picture = assembler_1_pipepictures,
+		pipe_covers = pipecoverspictures(),
+		base_area = 10,
+		base_level = -1,
+		pipe_connections = {{ type = "input", position = {0, -2} }},
+		secondary_draw_orders = {north = -1}
+	},
+	{
+		production_type = "output",
+		pipe_picture = assembler_1_pipepictures,
+		pipe_covers = pipecoverspictures(),
+		base_area = 10,
+		base_level = 1,
+		pipe_connections = {{ type = "output", position = {0, 2} }},
+		secondary_draw_orders = {north = -1}
+	},
+	off_when_no_fluid_recipe = true
+}
+
+--List of fluid boxes: one in the middle of each side, each opposing pair has the same input/output type
+xm_4_fluid_boxes_input = {
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = -1,
+		pipe_connections = {{type = "input", position = {0, 2}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {0, -2}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {2, 0}}}
+	},
+	{
+		production_type = "input",
+		pipe_covers = pipecoverspictures(),
+		base_level = 1,
+		pipe_connections = {{type = "input", position = {-2, 0}}}
 	}
 }

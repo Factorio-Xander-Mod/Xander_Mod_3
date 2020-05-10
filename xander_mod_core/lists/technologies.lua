@@ -102,7 +102,7 @@ xm_intermediate_products_technologies["data"] = {
 }
 
 xm_intermediate_products_technologies["science-pack"] = {
-	{"automation-science-pack", 40, {"crude-science-pack"}, 15, {}, {"electricity"}},
+	{"automation-science-pack", 40, {"crude-science-pack"}, 15, {"automation-science-pack"}, {"electricity"}},
 	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {}, {"electric-engine", "automation"}},
 	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {}, {"engine", "boron", "fluorine"}},
 	{"production-science-pack", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"productivity-module", "railway-2"}},

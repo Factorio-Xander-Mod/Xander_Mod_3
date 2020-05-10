@@ -1,5 +1,8 @@
 --==========  MATERIAL  ==========
 
+find_replace_graphics(data.raw.item["iron-ore"].pictures, {"__base__/graphics/icons/iron-ore.png", "__base__/graphics/icons/iron-ore-1.png", "__base__/graphics/icons/iron-ore-2.png", "__base__/graphics/icons/iron-ore-3.png"}, {"__xander-mod__/graphics/item/material/raw-resource/iron-ore.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-1.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-2.png", "__xander-mod__/graphics/item/material/raw-resource/iron-ore-3.png"})
+find_replace_graphics(data.raw.item["copper-ore"].pictures, {"__base__/graphics/icons/copper-ore.png", "__base__/graphics/icons/copper-ore-1.png", "__base__/graphics/icons/copper-ore-2.png", "__base__/graphics/icons/copper-ore-3.png"}, {"__xander-mod__/graphics/item/material/raw-resource/copper-ore.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-1.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-2.png", "__xander-mod__/graphics/item/material/raw-resource/copper-ore-3.png"})
+
 data.raw.item["steel-plate"].icon = "__xander-mod__/graphics/item/material/stock/steel-plate.png"
 data.raw.item["copper-plate"].icon = "__xander-mod__/graphics/item/material/stock/copper-plate.png"
 

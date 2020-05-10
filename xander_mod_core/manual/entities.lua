@@ -1,58 +1,5 @@
 --==========  PRODUCTION  ==========
 
---Bring in the variable assembler_1_pipepictures to use in defining assembler_1_fluid_boxes
-require("functions.entities")
-
---Define fluid boxes list for assembling machine 1: present in Factorio 0.17, removed from base in 0.18 but still needed by Xander Mod
-local assembler_1_fluid_boxes = {
-	{
-		production_type = "input",
-		pipe_picture = assembler_1_pipepictures,
-		pipe_covers = pipecoverspictures(),
-		base_area = 10,
-		base_level = -1,
-		pipe_connections = {{ type = "input", position = {0, -2} }},
-		secondary_draw_orders = {north = -1}
-	},
-	{
-		production_type = "output",
-		pipe_picture = assembler_1_pipepictures,
-		pipe_covers = pipecoverspictures(),
-		base_area = 10,
-		base_level = 1,
-		pipe_connections = {{ type = "output", position = {0, 2} }},
-		secondary_draw_orders = {north = -1}
-	},
-	off_when_no_fluid_recipe = true
-}
-
---List of fluid boxes: one in the middle of each side, each opposing pair has the same input/output type
-local xm_4_fluid_boxes_input = {
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = -1,
-		pipe_connections = {{type = "input", position = {0, 2}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {0, -2}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {2, 0}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {-2, 0}}}
-	}
-}
 
 --energy
 data.raw.boiler["boiler"].icon = "__xander-mod__/graphics/item/production/energy/boiler.png"
@@ -101,6 +48,7 @@ data.raw["assembling-machine"]["electrolyzer-1"].next_upgrade = nil
 data.raw["assembling-machine"]["machine-tool-0"].fluid_boxes = xm_4_fluid_boxes_input
 data.raw["assembling-machine"]["machine-tool-1"].fluid_boxes = xm_4_fluid_boxes_input
 data.raw["assembling-machine"]["machine-tool-2"].fluid_boxes = xm_4_fluid_boxes_input
+--
 data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
