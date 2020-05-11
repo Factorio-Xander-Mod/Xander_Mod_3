@@ -91,7 +91,7 @@ xm_intermediate_products_technologies["mechanical"] = {
 
 xm_intermediate_products_technologies["electrical"] = {
 	{"electricity", 20, {"crude-science-pack"}, 10, {"copper-cable", "coil-1-0", "electric-engine-unit", "steam-engine", "small-electric-pole", "inserter"}, {"glass0"}},
-	{"motor2", 60, {"automation-science-pack", "logistic-science-pack"}, 30, {"coil-1-1", "coil-2-0", "motor-1-1", "motor-2-0"}, {"parts1", "sulfur-processing", "logistic-science-pack"}},
+	{"motor2", 60, {"automation-science-pack", "logistic-science-pack"}, 30, {"coil-1-1", "coil-2-0", "motor-1-1", "motor-2-0"}, {"parts1", "plastics"}},
 	{"battery", 180, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"tin-lead1", "electrolysis1", "logistic-science-pack"}},
 }
 
@@ -213,10 +213,12 @@ xm_combat_technologies["gun"] = {
 	{"firearms", 10, {"crude-science-pack"}, 5, {"powder-black-0", "firearm-magazine", "pistol", "light-armor"}},
 	{"military", 40, {"automation-science-pack"}, 15, {"submachine-gun", "shotgun", "powder-black-1", "shotgun-shell", "radar"}, {"stone-walls", "turrets", "sulfur-processing", "electric-engine"}},
 	{"military-2", 80, {"automation-science-pack", "logistic-science-pack"}, 20, {}, {"military", "advanced-material-processing"}},
+	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "piercing-magazine-1", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}}
 }
 
 xm_combat_technologies["armor"] = {
-	{"heavy-armor", 45, {"automation-science-pack"}, 30, {}, {"military"}}
+	{"heavy-armor", 45, {"automation-science-pack"}, 30, {}, {"military"}},
+	{"modular-armor", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"modular-armor"}, {"aluminum", "parts2", "advanced-electronics"}}
 }
 
 xm_combat_technologies["defensive-structure"] = {

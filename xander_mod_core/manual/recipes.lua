@@ -229,5 +229,9 @@ data.raw.recipe["pistol"].enabled = false
 data.raw.recipe["submachine-gun"].normal = nil
 data.raw.recipe["submachine-gun"].expensive = nil
 data.raw.recipe["firearm-magazine"].enabled = false
+data.raw.recipe["poison-capsule"].category = "crafting-with-fluid"
+data.raw.recipe["poison-capsule"].ingredients = {{"parts-steel", 10}, {type = "fluid", name = "chlorine", amount = 100}, {"glass", 2}}
+data.raw.recipe["slowdown-capsule"].category = "crafting-with-fluid"
+data.raw.recipe["slowdown-capsule"].ingredients = {{"parts-steel", 4}, {type = "fluid", name = "uncured-phenolic", amount = 100}, {"glass", 2}}
 data.raw.recipe["light-armor"].enabled = false
 data.raw.recipe["radar"].enabled = false
