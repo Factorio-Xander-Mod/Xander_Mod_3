@@ -1,7 +1,11 @@
 --Override some base resource parameters
 
+--base "coal"
+--find_replace_param(data.raw.resource["coal"], param_name, new_value)
+
 --Base "copper-ore"
 data.raw.resource["copper-ore"].icon = "__xander-mod__/graphics/item/material/raw-resource/copper-ore.png"
+
 data.raw.resource["copper-ore"].stages.sheet.filename = "__xander-mod-graphics-0__/graphics/entity/resource/copper-ore.png"
 data.raw.resource["copper-ore"].stages.sheet.hr_version.filename = "__xander-mod-graphics-0__/graphics/entity/resource/copper-ore-hr.png"
 
@@ -21,7 +25,6 @@ for i, _ in ipairs(data.raw["optimized-particle"]["iron-ore-particle"].pictures)
 end
 
 --Base "stone"
---data.raw.resource["stone"].icon = "__base__/graphics/icons/icons-new/stone.png"
 data.raw.resource["stone"].stages.sheet.filename = "__xander-mod-graphics-0__/graphics/entity/resource/stone.png"
 data.raw.resource["stone"].stages.sheet.hr_version.filename = "__xander-mod-graphics-0__/graphics/entity/resource/stone-hr.png"
 

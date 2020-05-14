@@ -1,8 +1,5 @@
 --==========  MATERIAL  ==========
 
-data.raw.recipe["stone-brick"].category = "basic-machine"
-data.raw.recipe["stone-brick"].energy_required = 2
-
 data.raw.recipe["aluminum"].localised_name = {"recipe-name.aluminum"}
 data.raw.recipe["aluminum"].icon = "__xander-mod__/graphics/item/material/ingot/aluminum.png"
 data.raw.recipe["aluminum"].icon_size = 64
@@ -49,6 +46,9 @@ data.raw.recipe["phenol-1"].icon_size = 64
 data.raw.recipe["phenol-1"].icon_mipmaps = 4
 data.raw.recipe["phenol-1"].main_product = ""
 
+data.raw.recipe["powder-black-0"].localised_name = {"recipe-name.powder-black-0"}
+data.raw.recipe["powder-black-1"].localised_name = {"recipe-name.powder-black-1"}
+data.raw.recipe["powder-smokeless"].localised_name = {"recipe-name.powder-smokeless"}
 data.raw.recipe["explosives"].normal = nil
 data.raw.recipe["explosives"].expensive = nil
 
@@ -231,7 +231,9 @@ data.raw.recipe["submachine-gun"].expensive = nil
 data.raw.recipe["firearm-magazine"].enabled = false
 data.raw.recipe["poison-capsule"].category = "crafting-with-fluid"
 data.raw.recipe["poison-capsule"].ingredients = {{"parts-steel", 10}, {type = "fluid", name = "chlorine", amount = 100}, {"glass", 2}}
+data.raw.recipe["poison-capsule"].always_show_made_in = true
 data.raw.recipe["slowdown-capsule"].category = "crafting-with-fluid"
 data.raw.recipe["slowdown-capsule"].ingredients = {{"parts-steel", 4}, {type = "fluid", name = "uncured-phenolic", amount = 100}, {"glass", 2}}
+data.raw.recipe["slowdown-capsule"].always_show_made_in = true
 data.raw.recipe["light-armor"].enabled = false
 data.raw.recipe["radar"].enabled = false

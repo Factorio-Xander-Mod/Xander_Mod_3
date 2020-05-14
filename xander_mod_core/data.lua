@@ -190,7 +190,7 @@ require("manual.entities")
 require("lists.recipes")
 require("functions.recipes")
 
---Add main group of recipes to data.raw
+--Add main collection of recipes to data.raw
 for i, group_name in pairs(xm_groups_to_impose) do
 	
 	if xm_all_recipes_to_impose[group_name] then

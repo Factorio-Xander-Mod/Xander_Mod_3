@@ -517,6 +517,7 @@ xm_all_entities_to_impose["production"] = xm_production_entities
 local xm_logistics_entities = {}
 
 xm_logistics_entities["belt"] = {
+	--crude belt
 	{
 		type = "transport-belt",
 		name = "crude-transport-belt",
@@ -527,21 +528,33 @@ xm_logistics_entities["belt"] = {
 		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png"}
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "transport-belt",
 		name = "transport-belt"
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "transport-belt",
 		name = "fast-transport-belt"
 	},
-	--orer placeholder
+	--expedited belt
+	{
+		type = "transport-belt",
+		name = "expedited-transport-belt",
+		parent_type = "transport-belt",
+		parent_name = "express-transport-belt",
+		next_upgrade = "express-transport-belt",
+		speed = 0.09375,--3/32, same as the base express-transport-belt
+		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png", "__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png"}
+	},
+	--order placeholder
 	{
 		type = "transport-belt",
 		name = "express-transport-belt"
 	},
+	--crude underground
 	{
 		type = "underground-belt",
 		name = "crude-underground-belt",
@@ -553,21 +566,34 @@ xm_logistics_entities["belt"] = {
 		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png", "__base__/graphics/entity/underground-belt/underground-belt-structure.png", "__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "underground-belt",
 		name = "underground-belt"
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "underground-belt",
 		name = "fast-underground-belt"
 	},
-	--orer placeholder
+	--expedited underground
+	{
+		type = "underground-belt",
+		name = "expedited-underground-belt",
+		parent_type = "underground-belt",
+		parent_name = "express-underground-belt",
+		max_distance = 9,
+		next_upgrade = "express-underground-belt",
+		speed = 0.09375,--3/32, same as the base express-transport-belt
+		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png", "__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png", "__base__/graphics/entity/express-underground-belt/express-underground-belt-structure.png", "__base__/graphics/entity/express-underground-belt/hr-express-underground-belt-structure.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt-hr.png"}
+	},
+	--order placeholder
 	{
 		type = "underground-belt",
 		name = "express-underground-belt"
 	},
+	--crude splitter
 	{
 		type = "splitter",
 		name = "crude-splitter",
@@ -609,17 +635,59 @@ xm_logistics_entities["belt"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-top-hr.png"
 		}
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "splitter",
 		name = "splitter"
 	},
-	--orer placeholder
+	--order placeholder
 	{
 		type = "splitter",
 		name = "fast-splitter"
 	},
-	--orer placeholder
+	--expedited splitter
+	{
+		type = "splitter",
+		name = "expedited-splitter",
+		parent_type = "splitter",
+		parent_name = "express-splitter",
+		structure_animation_speed_coefficient = 0.35,
+		next_upgrade = "express-splitter",
+		speed = 0.09375,--3/32, same as the base express-transport-belt
+		graphics_from = {
+			"__base__/graphics/entity/express-transport-belt/express-transport-belt.png",
+			"__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png",
+			"__base__/graphics/entity/express-splitter/splitter-north.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-north.png",
+			"__base__/graphics/entity/express-splitter/express-splitter-east.png",
+			"__base__/graphics/entity/express-splitter/express-splitter-east-top_patch.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-east.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-east-top_patch.png",
+			"__base__/graphics/entity/express-splitter/express-splitter-south.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-south.png",
+			"__base__/graphics/entity/express-splitter/express-splitter-west.png",
+			"__base__/graphics/entity/express-splitter/express-splitter-west-top_patch.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-west.png",
+			"__base__/graphics/entity/express-splitter/hr-express-splitter-west-top_patch.png"
+		},
+		graphics_to = {
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-north.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-north-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-east-bottom.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-east-top.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-east-bottom-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-east-top-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-south.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-south-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-west-bottom.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-west-top.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-west-bottom-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-west-top-hr.png"
+		}
+	},
+	--order placeholder
 	{
 		type = "splitter",
 		name = "express-splitter"

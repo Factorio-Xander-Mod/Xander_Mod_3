@@ -71,6 +71,11 @@ data.raw.lab["lab"].fast_replaceable_group = "lab"
 
 --==========  LOGISTICS  ==========
 
+data.raw["transport-belt"]["express-transport-belt"].speed = 0.125
+data.raw["underground-belt"]["express-underground-belt"].speed = 0.125
+data.raw["underground-belt"]["express-underground-belt"].max_distance = 11
+data.raw["splitter"]["express-splitter"].speed = 0.125
+
 data.raw.inserter["burner-inserter"].energy_source.fuel_category = nil
 data.raw.inserter["burner-inserter"].energy_source.fuel_categories = {"crude", "chemical"}
 

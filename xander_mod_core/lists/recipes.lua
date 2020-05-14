@@ -83,6 +83,7 @@ xm_material_recipes["nonmetal"] = {
 }
 
 xm_material_recipes["terrain"] = {
+	{"stone-brick", "basic-machine", 2, true, {{"stone", 2}}, {{"stone-brick", 1}}},--2
 	{"landfill", "washing", 3, false, {{"stone", 12}, {"gravel", 6}}, {{"landfill", 1}}},--18
 	{"cement", "refining", 9, false, {{"limestone", 2}, {"sand", 1}}, {{"cement", 3}}},--1
 	{"concrete", "crafting-with-fluid", 10, false, {{"gravel", 5}, {"cement", 4}, {"steel-rod", 2}, {type = "fluid", name = "water", amount = 20}}, {{"concrete", 10}}},--1
@@ -131,9 +132,9 @@ xm_material_recipes["polymer"] = {
 xm_material_recipes["energetic"] = {
 	{"diesel-1", "crafting-with-fluid", 0.2, false, {{type = "fluid", name = "heavy-oil", amount = 15}}, {{"solid-fuel", 1}}},--1
 	{"diesel-2", "chemistry", 1.5, false, {{type = "fluid", name = "heavy-oil", amount = 10}, {type = "fluid", name = "light-aliphatic", amount = 20}}, {{"solid-fuel", 3}}},--1
-	{"powder-black-0", "basic-machine", 4, false, {{"charcoal", 1}, {"evaporites", 4}}, {{"powder-black", 4}}},--1(1/24)
-	{"powder-black-1", "machine", 6, false, {{"coal", 1}, {"sulfur", 1}, {"saltpeter", 6}}, {{"powder-black", 8}}},--1
-	{"powder-smokeless", "machine", 10, false, {{"nitrated-organics", 3}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"powder-smokeless", 4}}},--1
+	{"powder-black-0", "basic-machine", 4, false, {{"charcoal", 1}, {"evaporites", 4}}, {{"gunpowder", 4}}},--1(1/24)
+	{"powder-black-1", "machine", 6, false, {{"coal", 1}, {"sulfur", 1}, {"saltpeter", 6}}, {{"gunpowder", 8}}},--1
+	{"powder-smokeless", "machine", 10, false, {{"nitrated-organics", 3}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"gunpowder", 4}}},--1
 	{"explosives", "chemistry", 1, false, {{"nitrated-organics", 1}, {type = "fluid", name = "nitric-acid", amount = 10}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"explosives", 1}}},-- ~ 2
 }
 
@@ -419,14 +420,14 @@ xm_combat_recipes["gun"] = {
 }
 
 xm_combat_recipes["ammo"] = {
-	{"firearm-magazine", "crafting", 1, false, {{"stock-bronze", 1}, {"lead", 1}, {"powder-black", 1}}, {{"firearm-magazine", 1}}},--3(1/24) -> 3
-	{"piercing-rounds-magazine", "crafting", 3, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"powder-black", 3}}, {{"piercing-rounds-magazine", 1}}},--12
-	{"piercing-magazine-1", "crafting", 4, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"powder-smokeless", 3}}, {{"piercing-rounds-magazine", 1}}},--12
-	{"shotgun-shell", "crafting", 3, false, {{"stock-bronze", 1}, {"lead", 2}, {"powder-black", 1}}, {{"shotgun-shell", 1}}}--4(1/24) -> 4
+	{"firearm-magazine", "crafting", 1, false, {{"stock-bronze", 1}, {"lead", 1}, {"gunpowder", 1}}, {{"firearm-magazine", 1}}},--3(1/24) -> 3
+	{"piercing-rounds-magazine", "crafting", 3, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"gunpowder", 3}}, {{"piercing-rounds-magazine", 1}}},--12
+	{"piercing-magazine-1", "crafting", 4, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"gunpowder", 3}}, {{"piercing-rounds-magazine", 1}}},--12
+	{"shotgun-shell", "crafting", 3, false, {{"stock-bronze", 1}, {"lead", 2}, {"gunpowder", 1}}, {{"shotgun-shell", 1}}}--4(1/24) -> 4
 }
 
 xm_combat_recipes["capsule"] = {
-	{"grenade", "crafting", 8, false, {{"stock-cast-iron", 8}, {"powder-black", 8}}, {{"grenade", 1}}},--16
+	{"grenade", "crafting", 8, false, {{"stock-cast-iron", 8}, {"gunpowder", 8}}, {{"grenade", 1}}},--16
 	{"grenade-1", "crafting", 8, false, {{"stock-cast-iron", 8}, {"explosives", 4}}, {{"grenade", 1}}},--16
 	--{"antibiotics", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "water-distilled", amount = 30}}, {{"antibiotics", 1}}},
 }

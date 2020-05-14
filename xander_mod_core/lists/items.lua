@@ -21,7 +21,7 @@ xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolit
 xm_material_items["fluid-recipes"] = {}
 xm_material_items["organic"] = {"wood", "charcoal", "resin", "phenol", "surfactant", "nitrated-organics"}
 xm_material_items["polymer"] = {"plastic-pellets", "plastic-bar", "rubber-raw", "rubber-sbr", "rubber-vulcanized"}
-xm_material_items["energetic"] = {"coke", "solid-fuel", "powder-black", "powder-smokeless", "explosives"}
+xm_material_items["energetic"] = {"coke", "solid-fuel", "gunpowder", "explosives"}--, "powder-black", "powder-smokeless"
 
 xm_all_items_to_impose["material"] = xm_material_items
 
@@ -61,7 +61,7 @@ xm_all_items_to_impose["production"] = xm_production_items
 local xm_logistics_items = {}
 
 xm_logistics_items["storage"] = {"wooden-chest", "iron-chest", "steel-chest"}
-xm_logistics_items["belt"] = {"crude-transport-belt", "transport-belt", "fast-transport-belt", "express-transport-belt", "crude-underground-belt", "underground-belt", "fast-underground-belt", "express-underground-belt", "crude-splitter", "splitter", "fast-splitter", "express-splitter"}
+xm_logistics_items["belt"] = {"crude-transport-belt", "transport-belt", "fast-transport-belt", "expedited-transport-belt", "express-transport-belt", "crude-underground-belt", "underground-belt", "fast-underground-belt", "expedited-underground-belt", "express-underground-belt", "crude-splitter", "splitter", "fast-splitter", "expedited-splitter", "express-splitter"}
 xm_logistics_items["inserter"] = {"burner-inserter", "inserter", "long-handed-inserter", "fast-inserter", "long-fast-inserter", "filter-inserter", "stack-inserter", "stack-filter-inserter"}
 xm_logistics_items["energy-pipe-distribution"] = {"pipe", "pipe-to-ground", "storage-tank", "pump", "small-electric-pole", "medium-electric-pole", "big-electric-pole", "substation"}
 xm_logistics_items["transport"] = {"rail", "train-stop", "rail-signal", "rail-chain-signal", "locomotive", "locomotive-1", "cargo-wagon", "fluid-wagon", "artillery-wagon", "car", "tank"}

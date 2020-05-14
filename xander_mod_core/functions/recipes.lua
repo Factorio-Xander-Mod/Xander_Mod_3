@@ -18,6 +18,7 @@ function xm_simple_recipe_impose(group_no, subgroup_no, recipe_no, recipe_entry)
 		data.raw.recipe[recipe_entry[1]].enabled = recipe_entry[4]
 		data.raw.recipe[recipe_entry[1]].ingredients = recipe_entry[5]
 		data.raw.recipe[recipe_entry[1]].results = recipe_entry[6]
+		data.raw.recipe[recipe_entry[1]].always_show_made_in = true
 		data.raw.recipe[recipe_entry[1]].order = group_str .. "-" .. subgroup_str .. "-" .. recipe_str
 		data.raw.recipe[recipe_entry[1]].subgroup = xm_subgroups_to_impose[group_no][subgroup_no]
 	else
@@ -30,6 +31,7 @@ function xm_simple_recipe_impose(group_no, subgroup_no, recipe_no, recipe_entry)
 			enabled = recipe_entry[4],
 			ingredients = recipe_entry[5],
 			results = recipe_entry[6],
+			always_show_made_in = true,
 			order = group_str .. "-" .. subgroup_str .. "-" .. recipe_str,
 			subgroup = xm_subgroups_to_impose[group_no][subgroup_no]
 		}
@@ -74,12 +76,14 @@ function xm_add_waste_recipe(group_no, subgroup_no, substance_no, substance_grou
 		enabled = true,
 		ingredients = {ingredient_entry},
 		results = {},
+		hidden_from_player_crafting = true,
 		order = group_str .. "-" .. recipe_group_str .. "-" .. recipe_str,
 		subgroup = xm_subgroups_to_impose[group_no][table.maxn(xm_subgroups_to_impose[group_no])],
 		icon = icon_path,
 		icon_size = 64,
 		icon_mipmaps = 4,
 		hide_from_stats = true,
+		hide_from_player_crafting = true,
 		localised_name = recipe_name
 	}
 	})
