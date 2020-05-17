@@ -37,6 +37,7 @@ xm_production_entities["energy"] = {
 		type = "generator",
 		name = "steam-turbine",
 	},
+	--high-temperature steam turbine
 	{
 		type = "generator",
 		name = "steam-turbine-1",
@@ -743,5 +744,24 @@ xm_all_entities_to_impose["logistics"] = xm_logistics_entities
 
 --==========  COMBAT  ==========
 local xm_combat_entities = {}
+
+xm_combat_entities["defensive-structure"] = {
+	--order placeholder
+	{
+		type = "ammo-turret",
+		name = "gun-turret"
+	},
+	--high-power gun turret
+	{
+		type = "ammo-turret",
+		name = "gun-turret-2",
+		parent_type = "ammo-turret",
+		parent_name = "gun-turret",
+		max_health = 600,
+		preparing_speed = 0.1,
+		cooldown = 4,
+		range = 24
+	}
+}
 
 xm_all_entities_to_impose["combat"] = xm_combat_entities

@@ -37,6 +37,11 @@ function xm_simple_recipe_impose(group_no, subgroup_no, recipe_no, recipe_entry)
 		}
 		})
 	end
+	data.raw.recipe[recipe_entry[1]].allow_decomposition = true
+	data.raw.recipe[recipe_entry[1]].allow_as_intermediate = true
+	data.raw.recipe[recipe_entry[1]].allow_intermediates = true
+	--if group_no == 5 then--data.raw.recipe[recipe_entry[1]] and 
+	--end
 end
 
 --

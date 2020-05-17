@@ -213,7 +213,8 @@ xm_combat_technologies["gun"] = {
 	{"firearms", 10, {"crude-science-pack"}, 5, {"powder-black-0", "firearm-magazine", "pistol", "light-armor"}},
 	{"military", 40, {"automation-science-pack"}, 15, {"submachine-gun", "shotgun", "powder-black-1", "shotgun-shell", "radar"}, {"stone-walls", "turrets", "sulfur-processing", "electric-engine"}},
 	{"military-2", 80, {"automation-science-pack", "logistic-science-pack"}, 20, {}, {"military", "advanced-material-processing"}},
-	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "piercing-magazine-1", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}}
+	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "piercing-magazine-1", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}},
+	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
 }
 
 xm_combat_technologies["armor"] = {
@@ -223,7 +224,8 @@ xm_combat_technologies["armor"] = {
 
 xm_combat_technologies["defensive-structure"] = {
 	{"stone-walls", 10, {"crude-science-pack"}, 5, {}, nil},
-	{"turrets", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}}
+	{"turrets", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
+	{"turrets-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
 }
 
 xm_all_technologies_to_impose["combat"] = xm_combat_technologies

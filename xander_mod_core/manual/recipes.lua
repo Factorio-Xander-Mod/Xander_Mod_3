@@ -210,6 +210,7 @@ data.raw.recipe["lab"].enabled = false
 
 --==========  LOGISTICS  ==========
 
+data.raw.recipe["iron-chest"].ingredients = {{"stock-cast-iron", 8}}
 data.raw.recipe["pipe"].normal = nil
 data.raw.recipe["pipe"].expensive = nil
 data.raw.recipe["small-electric-pole"].enabled = false
