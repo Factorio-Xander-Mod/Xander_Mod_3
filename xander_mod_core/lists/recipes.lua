@@ -125,8 +125,8 @@ xm_material_recipes["organic"] = {
 xm_material_recipes["polymer"] = {
 	{"rubber-vulcanized-0", "chemistry", 5, false, {{"rubber-raw", 3}, {"sulfur", 1}}, {{"rubber-vulcanized", 4}}},--0.25(1/16)
 	{"rubber-vulcanized-1", "chemistry", 3, false, {{"rubber-sbr", 4}, {"sulfur", 1}, {"graphite", 1}}, {{"rubber-vulcanized", 6}}},--1
-	{"plastic-pellets", "chemistry", 1, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"plastic-pellets", 1}}},--0.5
-	{"plastic-bar", "machine", 0.5, false, {{"plastic-pellets", 2}}, {{"plastic-bar", 1}}}--1
+	{"plastic-pellets", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"plastic-pellets", 1}}},--0.5
+	{"plastic-bar", "machine", 0.8, false, {{"plastic-pellets", 2}}, {{"plastic-bar", 1}}}--1
 }
 
 xm_material_recipes["energetic"] = {
@@ -363,7 +363,8 @@ xm_logistics_recipes["energy-pipe-distribution"] = {
 	{"pump-1", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 1}, {"rubber-vulcanized", 2}}, {{"pump", 1}}},--8
 	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
 	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"porcelain", 1}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
-	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}}--32
+	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
+	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 12}, {"advanced-circuit", 4}}, {{"substation", 1}}},--100
 }
 
 xm_logistics_recipes["belt"] = {

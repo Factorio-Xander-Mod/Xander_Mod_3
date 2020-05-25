@@ -18,6 +18,7 @@ xm_production_entities["energy"] = {
 		parent_name = "boiler",
 		target_temperature = 315,
 		energy_consumption = "3.6MW",
+		--effectivity = 0.8,
 		emissions_per_minute = 40,
 		graphics_from = {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W-hr.png"}
@@ -760,7 +761,8 @@ xm_combat_entities["defensive-structure"] = {
 		max_health = 600,
 		preparing_speed = 0.1,
 		cooldown = 4,
-		range = 24
+		range = 24,
+		inventory_size = 2
 	}
 }
 

@@ -2,14 +2,19 @@
 
 
 --energy
+data.raw.boiler["boiler-1"].fast_replaceable_group = "boiler"
 data.raw.boiler["boiler"].icon = "__xander-mod__/graphics/item/production/energy/boiler.png"
+data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
+data.raw.boiler["boiler"].next_upgrade = "boiler-1"
 data.raw.boiler["boiler"].energy_source.fuel_category = nil
 data.raw.boiler["boiler"].energy_source.fuel_categories = {"crude", "chemical"}
+--data.raw.boiler["boiler"].energy_source.effectivity = 0.6
 find_replace_graphics(data.raw.boiler["boiler"],
 {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
 {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"}
 )
 data.raw.generator["steam-turbine"].maximum_temperature = 315
+data.raw.generator["steam-turbine"].fluid_usage_per_tick = 0.5
 
 --extraction-machine
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
@@ -97,3 +102,10 @@ for i = 1, 8 do
 	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[2 * i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
 	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[(2 * i) - 1] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
 end
+
+
+--==========  COMBAT  ==========
+
+data.raw["ammo-turret"]["gun-turret-2"].fast_replaceable_group = "gun-turret"
+data.raw["ammo-turret"]["gun-turret"].fast_replaceable_group = "gun-turret"
+data.raw["ammo-turret"]["gun-turret"].next_upgrade = "gun-turret-2"
