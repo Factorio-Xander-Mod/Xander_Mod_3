@@ -14,7 +14,7 @@ xm_material_items["concentrate"] = {"conc-borax", "conc-millerite", "clay", "kao
 xm_material_items["oxide"] = {"sodium-hydroxide", "aluminum-hydroxide", "tungsten-oxide"}
 xm_material_items["ingot"] = {"aluminum", "nickel", "tin", "tungsten", "lead", "solder"}--, "titanium", "chromium", "silver", "platinum", "gold"
 xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin"}--, "stock-stainless", "stock-titanium"
-xm_material_items["nonmetal"] = {"graphite", "silicon", "sulfur"}
+xm_material_items["nonmetal"] = {"graphite", "silicon", "silicon-boule", "sulfur"}
 xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete"}
 xm_material_items["ceramic"] = {"brick-clay", "brick-magnesia", "silicon-carbide", "glass", "fiber-glass", "porcelain"}--, "brick-azs"
 xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite"}
@@ -33,7 +33,7 @@ local xm_intermediate_products_items = {}
 
 xm_intermediate_products_items["mechanical"] = {"iron-stick", "steel-rod", "iron-gear-wheel", "parts-steel", "parts-alloy"}--, "parts-ceramic"
 xm_intermediate_products_items["electrical"] = {"copper-cable", "coil-1", "coil-2", "wire-solder", "battery"}--, "wire-gold"
-xm_intermediate_products_items["data"] = {"laminate-1", "laminate-2", "board-1", "board-2", "board-3", "components-1", "components-2", "components-3", "electronic-circuit", "advanced-circuit", "processing-unit"}--, "wafer-0", "wafer-1", "wafer-2"
+xm_intermediate_products_items["data"] = {"laminate-1", "laminate-2", "board-1", "board-2", "board-3", "wafer-0", "wafer-data-1", "wafer-data-2", "components-1", "components-2", "components-3", "electronic-circuit", "advanced-circuit", "processing-unit"}--, "wafer-1", "wafer-2"
 xm_intermediate_products_items["intermediate-product"] = {"piston-unit", "mechanical-steam-engine", "engine-unit", "electric-engine-unit", "motor-2"}
 xm_intermediate_products_items["science-pack"] = {"crude-science-pack", "automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack", "space-science-pack"}
 
