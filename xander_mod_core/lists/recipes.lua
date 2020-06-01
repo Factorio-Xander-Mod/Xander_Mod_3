@@ -70,7 +70,7 @@ xm_material_recipes["stock"] = {
 	{"stock-cupronickel", "refining", 7.5, false, {{"copper-plate", 3}, {"nickel", 2}}, {{"stock-cupronickel", 5}}},--1
 	{"stock-duralumin", "refining", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
 	--{"stock-titanium", "refining", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 20}}},--1
-	--{"silicon-boule", "refining-electric", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
+	--XX{"silicon-boule", "refining-electric", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
 }
 
 xm_material_recipes["nonmetal"] = {
@@ -80,7 +80,8 @@ xm_material_recipes["nonmetal"] = {
 	{"graphite-0", "washing", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
 	{"graphite-1", "refining-electric", 2, false, {{"coke", 1}}, {{"graphite", 1}}},--1
 	{"silicon", "refining-electric", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
-	--{"silicon-boule", "refining-electric", 96, false, {{"silicon", 12}}, {{"silicon-boule", 1}}},--12
+	{"silicon-boule", "refining-electric", 192, false, {{"silicon", 23}, {"phosphorus", 1}, {type = "fluid", name = "chlorine", amount = 24}}, {{"silicon-boule", 2}}},--12
+	{"phosphorus", "refining-electric", 10, false, {{"phosphorite", 1}, {"coke", 5}}, {{"phosphorus", 2}, {type = "fluid", name = "carbon-monoxide", amount = 100}}},--1
 }
 
 xm_material_recipes["terrain"] = {
@@ -115,11 +116,10 @@ xm_material_recipes["organic"] = {
 	{"resin", "kiln", 2, false, {{"wood", 1}}, {{"resin", 4}}},--(1/4)
 	{"rubber-raw", "basic-machine", 8, false, {{"wood", 1}}, {{"rubber-raw", 12}}},--(1/12)
 	{"rubber-sbr", "chemistry", 9, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "ethylene", amount = 20}}, {{"rubber-sbr", 3}}},--1
-	
 	{"phenol-0", "chemistry", 2, false, {{"coal", 1}, {type = "fluid", name = "water", amount = 10}}, {{"phenol", 1}}},--1
 	{"phenol-1", "chemistry", 2, false, {{"sodium-hydroxide", 1}, {type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}, {{"phenol", 2}, {type = "fluid", name = "water-brine", amount = 10}}},--1
-	{"surfactant-0", "chemistry", 2, false, {{"sulfur", 1}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"surfactant", 1}}},--2 --> 1
-	--{"surfactant-1", "chemistry", 2, false, {{"nitrated-organics", 1}, {"sodium-hydroxide", 1}, {"sulfur", 1}}, {{"surfactant", 2}}},--1.5?
+	{"surfactant-0", "chemistry", 2, false, {{"sulfur", 1}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"surfactant", 1}}},--2
+	--{"surfactant-1", "chemistry", 2, false, {{"nitrated-organics", 1}, {"sodium-hydroxide", 1}, {"sulfur", 1}, {type = "fluid", name = "water-distilled", amount = 50}}, {{"surfactant", 2}}},--1.5?
 	{"nitrated-organics", "chemistry", 3, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "nitric-acid", amount = 20}}, {{"nitrated-organics", 1}}},--1
 }
 
@@ -239,7 +239,10 @@ xm_intermediate_products_recipes["data"] = {
 	{"board-1-2", "chemistry", 0.75, false, {{"laminate-1", 1}, {type = "fluid", name = "sulfuric-acid", amount = 1}}, {{"board-1", 1}}},--1.1 ~= 1
 	{"board-2-0", "electrolysis", 1, false, {{"laminate-1", 2}, {"solder", 1}, {type = "fluid", name = "nitric-acid", amount = 3}}, {{"board-2", 1}}},--3.3 ~= 3
 	--{"board-3-0", "electrolysis", 3, false, {{"laminate-2", 2}, {"nickel", 1}, {"gold", 1}, {type = "fluid", name = "chlorine", amount = 6}}, {{"board-3", 2}}},--4.3 ~= 4
-	--{"wafer-0", "chemistry", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 12}}, {{"wafer-0", 12}}},--1
+	{"wafer-0", "machine", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 12}}, {{"wafer-0", 12}}},--1
+	{"wafer-data-1", "machine", 5, false, {{"wafer-0", 1}, {"sodium-hydroxide", 1}, {"aluminum", 1}, {type = "fluid", name = "water-distilled", amount = 30}}, {{"wafer-data-1", 1}}},--2
+	{"wafer-data-2", "chemistry", 10, false, {{"wafer-data-1", 1}, {"copper-plate", 1}, {"tungsten", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}, {type = "fluid", name = "hydrogen-fluoride", amount = 20}}, {{"wafer-data-2", 1}}},--6
+	{"wafer-solar", "machine", 4, false, {{"wafer-0", 2}, {"silver", 1}, {type = "fluid", name = "nitric-acid", amount = 20}}, {{"wafer-solar", 1}}},--3
 	--XX{"wafer-doped", "chemistry", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 3}, {type = "fluid", name = "uncured-epoxy", amount = 2}}, {{"wafer-doped", 2}}},--2.25 ~= 2
 	--XX{"wafer-solar", "chemistry", 16, false, {{"wafer-doped", 4}, {"silver", 1}, {type = "fluid", name = "nitric-acid", amount = 8}}, {{"wafer-solar", 4}}},--2.25 ~= 2
 	--XX{"wafer-integrated", "chemistry", 16, false, {{"wafer-doped", 3}, {"copper-plate", 1}, {"tungsten", 1}, {type = "fluid", name = "phosphine", amount = 3}, {type = "fluid", name = "hydrogen-fluoride", amount = 3}}, {{"wafer-integrated", 1}}},--8.6 ~= 8
