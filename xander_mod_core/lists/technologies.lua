@@ -29,6 +29,7 @@ xm_material_technologies["ingot"] = {
 xm_material_technologies["nonmetal"] = {
 	{"boron", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-borax", "glass-1"}, {"washing1", "chlorine"}},
 	{"silicon", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"silicon-carbide", "silicon", "graphite-1"}, {"advanced-material-processing-2", "carbon"}},
+	{"semiconductors", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"silicon-boule", "wafer-0", "phosphorus"}, {"chemistry2", "automation-2", "chemical-science-pack", "silicon"}},
 }
 
 xm_material_technologies["terrain"] = {
@@ -123,7 +124,7 @@ xm_production_technologies["tool"] = {
 xm_production_technologies["energy"] = {
 	{"optics", 30, {"automation-science-pack"}, 20, {}, {"washing1"}},
 	{"electric-gen2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"boiler-1", "steam-turbine"}, {"motor2", "advanced-material-processing-2", "chemical-science-pack"}},
-	--solar energy
+	--{"solar-energy", 480, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"silver", "wafer-solar", "solar-panel"}, {"semiconductors", "aluminum", "chemical-science-pack"}},
 	{"electric-energy-accumulators", 200, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"battery", "electric-energy-distribution-1"}},
 }
 
