@@ -1,5 +1,11 @@
 --==========  MATERIAL  ==========
 
+data.raw.recipe["raw-copper"].localised_name = {"recipe-name.raw-copper"}
+data.raw.recipe["raw-copper"].icon = "__xander-mod__/graphics/recipe/material/raw-material/raw-copper.png"
+data.raw.recipe["raw-copper"].icon_size = 64
+data.raw.recipe["raw-copper"].icon_mipmaps = 4
+data.raw.recipe["raw-copper"].main_product = ""
+
 data.raw.recipe["aluminum"].localised_name = {"recipe-name.aluminum"}
 data.raw.recipe["aluminum"].icon = "__xander-mod__/graphics/item/material/ingot/aluminum.png"
 data.raw.recipe["aluminum"].icon_size = 64
@@ -17,6 +23,11 @@ data.raw.recipe["steel-plate-2"].icon = "__xander-mod__/graphics/item/material/s
 data.raw.recipe["steel-plate-2"].icon_size = 64
 data.raw.recipe["steel-plate-2"].icon_mipmaps = 4
 data.raw.recipe["steel-plate-2"].main_product = ""
+data.raw.recipe["copper-plate-2"].localised_name = {"recipe-name.copper-plate-2"}
+data.raw.recipe["copper-plate-2"].icon = "__xander-mod__/graphics/recipe/material/stock/copper-plate-2.png"
+data.raw.recipe["copper-plate-2"].icon_size = 64
+data.raw.recipe["copper-plate-2"].icon_mipmaps = 4
+data.raw.recipe["copper-plate-2"].main_product = ""
 
 data.raw.recipe["sulfur"].localised_name = {"recipe-name.sulfur-1"}
 data.raw.recipe["sulfur"].icon = "__xander-mod__/graphics/recipe/material/nonmetal/sulfur-1.png"

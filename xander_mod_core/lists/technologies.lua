@@ -21,9 +21,13 @@ xm_material_technologies["ingot"] = {
 	{"steel-processing", 30, {"crude-science-pack"}, 10, {"steel-plate", "steel-chest"}, {"fuels0"}},
 	{"aluminum", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-bauxite", "aluminum-hydroxide", "cryolite", "aluminum", "stock-duralumin", "stock-bronze-2"}, {"advanced-material-processing-2", "chemical-science-pack"}},
 	{"nickel", 80, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-millerite-0", "nickel-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
-	--{"tin2", 80, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-millerite-0", "nickel-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
+	--{"nickel2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-millerite-1", "nickel-oxide", "nickel-1"}, {"washing2"}},
+	{"copper2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-chalcocite", "raw-copper", "copper-plate-2"}, {"washing2", "cupellation"}},
+	--{"zinc", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-sphalerite-0", "zinc-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
+	{"cupellation", 200, {"automation-science-pack", "logistic-science-pack"}, 30, {"silver-0", "gold-0"}, {"tin-lead1", "nickel"}},
+	--{"tin2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-cassiterite", "tin-1"}, {"washing2"}},
 	{"tungsten", 120, {"automation-science-pack", "logistic-science-pack"}, 40, {"conc-scheelite-0", "tungsten-oxide", "tungsten", "stock-alloy-0"}, {"advanced-material-processing-2"}},
-	--{"lead2", 80, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-millerite-0", "nickel-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
+	--{"lead2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-galena", "lead-oxide", "lead-1"}, {"washing2"}},
 }
 
 xm_material_technologies["nonmetal"] = {
@@ -124,7 +128,7 @@ xm_production_technologies["tool"] = {
 xm_production_technologies["energy"] = {
 	{"optics", 30, {"automation-science-pack"}, 20, {}, {"washing1"}},
 	{"electric-gen2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"boiler-1", "steam-turbine"}, {"motor2", "advanced-material-processing-2", "chemical-science-pack"}},
-	--{"solar-energy", 480, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"silver", "wafer-solar", "solar-panel"}, {"semiconductors", "aluminum", "chemical-science-pack"}},
+	{"solar-energy", 480, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"wafer-solar", "solar-panel"}, {"semiconductors", "aluminum", "cupellation"}},
 	{"electric-energy-accumulators", 200, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"battery", "electric-energy-distribution-1"}},
 }
 

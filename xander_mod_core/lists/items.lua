@@ -7,10 +7,10 @@ xm_all_items_to_impose = {}
 --==========  MATERIAL  ==========
 local xm_material_items = {}
 
-xm_material_items["raw-material"] = {"raw-iron"}--, "raw-titanium", "raw-zirconium"
+xm_material_items["raw-material"] = {"raw-iron", "raw-copper", "raw-anode-mud"}--, "raw-titanium", "raw-zirconium"
 xm_material_items["raw-resource"] = {"coal", "copper-ore", "evaporites", "igneous-sulfide", "iron-ore", "laterite", "magnetic", "massive-sulfide", "phosphorite", "sand-heavy", "skarn", "stone", "uranium-ore"}
 xm_material_items["milled-resource"] = {}
-xm_material_items["concentrate"] = {"conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-fluorite", "sand", "conc-scheelite", "gravel", "limestone", "magnesite"}
+xm_material_items["concentrate"] = {"conc-chalcocite", "conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-fluorite", "sand", "conc-scheelite", "gravel", "limestone", "magnesite"}
 xm_material_items["oxide"] = {"sodium-hydroxide", "aluminum-hydroxide", "tungsten-oxide"}
 xm_material_items["ingot"] = {"aluminum", "nickel", "silver", "tin", "tungsten", "gold", "lead", "solder"}--, "titanium", "chromium", "platinum", "zinc"
 xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin"}--, "stock-stainless", "stock-titanium"

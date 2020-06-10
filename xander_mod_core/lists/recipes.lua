@@ -11,10 +11,12 @@ local xm_material_recipes = {}
 xm_material_recipes["raw-material"] = {
 	{"raw-iron-0", "smelting", 27, false, {{"iron-ore", 6}, {"limestone", 1}}, {{"raw-iron", 9}}},
 	{"raw-iron-1", "refining-electric", 36, false, {{"iron-ore", 6}, {"coke", 3}, {"limestone", 1}}, {{"raw-iron", 12}}},
+	{"raw-copper", "refining-electric", 3, false, {{"conc-chalcocite", 1}, {"coke", 1}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-copper", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
 	--XX{"raw-iron-2", "refining-electric", 4, false, {{"conc-hematite", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}, {{"raw-iron", 1}, {type = "fluid", name = "carbon-dioxide", amount = 10}}},
 }
 
 xm_material_recipes["concentrate"] = {
+	{"conc-chalcocite", "washing", 12, false, {{"copper-ore", 8}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-chalcocite", 8}}},
 	{"conc-borax", "washing", 1.25, false, {{"evaporites", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"conc-borax", 1}}},
 	{"conc-millerite-0", "washing", 4, false, {{"igneous-sulfide", 3}, {type = "fluid", name = "water", amount = 30}}, {{"conc-millerite", 1}}},
 	--{"conc-millerite-1", "washing", 8, false, {{"igneous-sulfide", 4}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 40}}, {{"conc-millerite", 4}}},
@@ -42,9 +44,11 @@ xm_material_recipes["ingot"] = {
 	{"aluminum", "refining-electric", 120, false, {{"aluminum-hydroxide", 23}, {"cryolite", 1}, {"graphite", 12}}, {{"aluminum", 24}, {type = "fluid", name = "carbon-monoxide", amount = 240}}},
 	{"nickel-0", "refining", 5, false, {{"conc-millerite", 1}}, {{"nickel", 1}}},
 	--{"nickel-1", "chemistry", 2, false, {{"oxide-nickel", 1}, {type = "fluid", name = "carbon-monoxide", amount = 15}}, {{"nickel", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}},
+	{"silver-0", "refining", 6, false, {{"lead", 5}, {"phosphorite", 1}}, {{"silver", 1}}},--6 -> 1
 	{"tin-0", "smelting", 4, true, {{"skarn", 2}}, {{"tin", 1}}},
 	{"tin-1", "refining", 24, false, {{"skarn", 12}, {"evaporites", 1}}, {{"tin", 8}}},
 	{"tungsten", "refining-electric", 2, false, {{"tungsten-oxide", 1}, {type = "fluid", name = "hydrogen", amount = 30}}, {{"tungsten", 1}}},
+	{"gold-0", "refining", 6, false, {{"copper-plate", 5}, {"magnesite", 1}}, {{"gold", 1}}},--6 -> 1
 	{"lead-0", "smelting", 4, true, {{"massive-sulfide", 2}}, {{"lead", 1}}},
 	{"lead-1", "refining", 24, false, {{"massive-sulfide", 12}, {"evaporites", 1}}, {{"lead", 8}}},
 	{"solder-0", "smelting", 5, false, {{"tin", 3}, {"lead", 2}}, {{"solder", 5}}}
@@ -64,11 +68,12 @@ xm_material_recipes["stock"] = {
 	
 	{"copper-plate", "smelting", 4, true, {{"copper-ore", 1}}, {{"copper-plate", 1}}},--1
 	{"copper-plate-1", "refining", 36, false, {{"copper-ore", 6}, {"limestone", 1}}, {{"copper-plate", 9}}},
+	{"copper-plate-2", "electrolysis", 24, false, {{"raw-copper", 12}, {type = "fluid", name = "sulfuric-acid", amount = 12}}, {{"copper-plate", 12}, {"raw-anode-mud", 1}}},
 	{"stock-bronze-0", "kiln", 20, true, {{"copper-ore", 5}, {"skarn", 2}}, {{"stock-bronze", 4}}},--1.5
 	{"stock-bronze-1", "smelting", 16, false, {{"copper-plate", 8}, {"tin", 1}}, {{"stock-bronze", 8}}},--1.125
 	{"stock-bronze-2", "refining-electric", 12, false, {{"copper-plate", 6}, {"nickel", 1}, {"aluminum", 1}}, {{"stock-bronze", 8}}},--1
 	{"stock-cupronickel", "refining", 7.5, false, {{"copper-plate", 3}, {"nickel", 2}}, {{"stock-cupronickel", 5}}},--1
-	{"stock-duralumin", "refining", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
+	{"stock-duralumin", "refining-electric", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
 	--{"stock-titanium", "refining", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 20}}},--1
 	--XX{"silicon-boule", "refining-electric", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
 }
@@ -222,6 +227,7 @@ xm_intermediate_products_recipes["mechanical"] = {
 xm_intermediate_products_recipes["electrical"] = {
 	{"copper-cable", "basic-machine", 1, false, {{"copper-plate", 1}}, {{"copper-cable", 1}}},--1
 	{"copper-cable-1", "machine", 0.5, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 1}}, {{"copper-cable", 2}}},--0.55 ~= 0.5
+	--{"copper-cable-2", "machine", 2, false, {{"copper-plate", 5}, {"plastic-pellets", 1}}, {{"copper-cable", 10}}},--0.55 ~= 0.5
 	{"coil-1-0", "basic-crafting", 1.5, false, {{"iron-stick", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-1-1", "crafting", 1, false, {{"steel-rod", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
@@ -293,7 +299,7 @@ xm_production_recipes["energy"] = {
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
 	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
 	--{"steam-turbine-2", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
-	--{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 16}, {"wafer-solar", 10}, {"glass", 10}}, {{"solar-panel", 1}}},--72
+	--{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 12}, {"copper-cable", 16}, {"wafer-solar", 10}, {"glass", 10}}, {{"solar-panel", 1}}},--72
 	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
 	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 1}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--6(1/72) --> 6
 }
