@@ -7,12 +7,12 @@ xm_all_items_to_impose = {}
 --==========  MATERIAL  ==========
 local xm_material_items = {}
 
-xm_material_items["raw-material"] = {"raw-iron", "raw-copper", "raw-anode-mud"}--, "raw-titanium", "raw-zirconium"
+xm_material_items["raw-material"] = {"raw-iron", "raw-nickel", "raw-copper", "raw-silver", "raw-platinum", "raw-gold"}--, "raw-titanium", "raw-zirconium"
 xm_material_items["raw-resource"] = {"coal", "copper-ore", "evaporites", "igneous-sulfide", "iron-ore", "laterite", "magnetic", "massive-sulfide", "phosphorite", "sand-heavy", "skarn", "stone", "uranium-ore"}
 xm_material_items["milled-resource"] = {}
 xm_material_items["concentrate"] = {"conc-chalcocite", "conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-fluorite", "sand", "conc-scheelite", "gravel", "limestone", "magnesite"}
 xm_material_items["oxide"] = {"sodium-hydroxide", "aluminum-hydroxide", "tungsten-oxide"}
-xm_material_items["ingot"] = {"aluminum", "nickel", "silver", "tin", "tungsten", "gold", "lead", "solder"}--, "titanium", "chromium", "platinum", "zinc"
+xm_material_items["ingot"] = {"aluminum", "nickel", "silver", "tin", "tungsten", "platinum", "gold", "lead", "solder"}--, "titanium", "chromium", "platinum", "zinc"
 xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin"}--, "stock-stainless", "stock-titanium"
 xm_material_items["nonmetal"] = {"graphite", "silicon", "silicon-boule", "phosphorus", "sulfur"}
 xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete"}
@@ -49,7 +49,7 @@ local xm_production_items = {}
 xm_production_items["energy"] = {"boiler", "boiler-1", "heat-exchanger", "steam-engine", "steam-turbine", "steam-turbine-1", "heat-pipe", "nuclear-reactor", "solar-panel", "accumulator", "small-lamp"}
 xm_production_items["extraction-machine"] = {"offshore-pump", "burner-mining-drill", "electric-mining-drill", "pumpjack", "ore-processor-0", "ore-processor-1", "ore-processor-2", "waste-dump"}
 xm_production_items["smelting-machine"] = {"xm-furnace-stone", "xm-furnace-brick", "xm-furnace-steel", "xm-furnace-electric", "stone-furnace", "steel-furnace", "electric-furnace"}
-xm_production_items["chemical-machine"] = {"chemical-plant", "chem-reactor-2", "chem-reactor-3", "electrolyzer-1", "oil-refinery", "centrifuge"}
+xm_production_items["chemical-machine"] = {"chemical-plant", "chem-reactor-2", "chem-reactor-3", "electrolyzer-1", "electrolyzer-2", "oil-refinery", "centrifuge"}
 xm_production_items["production-machine"] = {"machine-tool-0", "machine-tool-1", "machine-tool-2", "assembling-machine-0", "assembling-machine-1", "assembling-machine-2", "assembling-machine-3", "lab-burner", "lab"}--, "machine-tool-3"
 
 xm_all_items_to_impose["production"] = xm_production_items

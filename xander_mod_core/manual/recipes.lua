@@ -1,10 +1,21 @@
 --==========  MATERIAL  ==========
 
+data.raw.recipe["raw-nickel"].localised_name = {"recipe-name.raw-nickel"}
+data.raw.recipe["raw-nickel"].icon = "__xander-mod__/graphics/recipe/material/raw-material/raw-nickel.png"
+data.raw.recipe["raw-nickel"].icon_size = 64
+data.raw.recipe["raw-nickel"].icon_mipmaps = 4
+data.raw.recipe["raw-nickel"].main_product = ""
 data.raw.recipe["raw-copper"].localised_name = {"recipe-name.raw-copper"}
 data.raw.recipe["raw-copper"].icon = "__xander-mod__/graphics/recipe/material/raw-material/raw-copper.png"
 data.raw.recipe["raw-copper"].icon_size = 64
 data.raw.recipe["raw-copper"].icon_mipmaps = 4
 data.raw.recipe["raw-copper"].main_product = ""
+
+data.raw.recipe["nickel-1"].localised_name = {"recipe-name.nickel-1"}
+data.raw.recipe["nickel-1"].icon = "__xander-mod__/graphics/recipe/material/ingot/nickel-1.png"
+data.raw.recipe["nickel-1"].icon_size = 64
+data.raw.recipe["nickel-1"].icon_mipmaps = 4
+data.raw.recipe["nickel-1"].main_product = ""
 
 data.raw.recipe["aluminum"].localised_name = {"recipe-name.aluminum"}
 data.raw.recipe["aluminum"].icon = "__xander-mod__/graphics/item/material/ingot/aluminum.png"

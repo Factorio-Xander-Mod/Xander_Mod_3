@@ -299,6 +299,7 @@ xm_production_entities["chemical-machine"] = {
 		crafting_speed = 1.5,
 		emissions_per_minute = 4,
 		energy_usage = "360kW",
+		next_upgrade = "chem-reactor-3",
 		fast_replaceable_group = "chemical-plant"
 	},
 	{
@@ -369,7 +370,64 @@ xm_production_entities["chemical-machine"] = {
 			idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
 			apparent_volume = 1.5
 		},
-		--next_upgrade = "electrolyzer-2",
+		next_upgrade = "electrolyzer-2",
+		fast_replaceable_group = "electrolyzer"
+	},
+	{
+		type = "assembling-machine",
+		name = "electrolyzer-2",
+		parent_type = "assembling-machine",
+		parent_name = "assembling-machine-2",
+		crafting_categories = {"electrolysis"},
+		emissions_per_minute = 1.5,
+		crafting_speed = 1.5,
+		fluid_boxes = {
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_level = -1,
+				pipe_connections = {{type = "input", position = {0, 2}}}
+			},
+			{
+				production_type = "input",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "input", position = {0, -2}}}
+			},
+			{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "output", position = {2, 0}}}
+			},
+			{
+				production_type = "output",
+				pipe_covers = pipecoverspictures(),
+				base_level = 1,
+				pipe_connections = {{type = "output", position = {-2, 0}}}
+			}
+		},
+		animation = {layers = { {
+			filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1.png",
+			priority = "high",
+			width = 113,
+			height = 113,
+			frame_count = 1,
+			hr_version = {
+				filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1-hr.png",
+				priority = "high",
+				width = 227,
+				height = 227,
+				frame_count = 1,
+				scale = 0.5
+			}
+		} }},
+		working_sound = {
+			sound = {{filename = "__base__/sound/chemical-plant.ogg", volume = 0.8}},
+			idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
+			apparent_volume = 1.5
+		},
+		--next_upgrade = "electrolyzer-3",
 		fast_replaceable_group = "electrolyzer"
 	},
 	--order placeholder
