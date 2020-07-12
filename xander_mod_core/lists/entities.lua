@@ -391,7 +391,7 @@ xm_production_entities["chemical-machine"] = {
 			{
 				production_type = "input",
 				pipe_covers = pipecoverspictures(),
-				base_level = 1,
+				base_level = -1,
 				pipe_connections = {{type = "input", position = {0, -2}}}
 			},
 			{
