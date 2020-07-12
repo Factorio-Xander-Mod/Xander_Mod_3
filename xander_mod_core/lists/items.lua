@@ -32,7 +32,7 @@ xm_all_items_to_impose["material"] = xm_material_items
 local xm_intermediate_products_items = {}
 
 xm_intermediate_products_items["mechanical"] = {"iron-stick", "steel-rod", "iron-gear-wheel", "parts-steel", "parts-alloy"}--, "parts-ceramic"
-xm_intermediate_products_items["electrical"] = {"copper-cable", "coil-1", "coil-2", "wire-solder", "battery"}--, "wire-gold"
+xm_intermediate_products_items["electrical"] = {"copper-cable", "coil-1", "coil-2", "wire-solder", "wire-gold", "battery"}
 xm_intermediate_products_items["data"] = {"laminate-1", "laminate-2", "board-1", "board-2", "board-3", "wafer-0", "wafer-data-1", "wafer-data-2", "wafer-solar", "components-1", "components-2", "components-3", "electronic-circuit", "advanced-circuit", "processing-unit"}
 xm_intermediate_products_items["intermediate-product"] = {"piston-unit", "mechanical-steam-engine", "engine-unit", "electric-engine-unit", "motor-2"}
 xm_intermediate_products_items["science-pack"] = {"crude-science-pack", "automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack", "space-science-pack"}

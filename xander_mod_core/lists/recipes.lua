@@ -238,7 +238,7 @@ xm_intermediate_products_recipes["electrical"] = {
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
 	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
-	--{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
+	{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
 	{"battery", "crafting-with-fluid", 4, false, {{"lead", 2}, {"glass", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 1}}},--4
 }
 
@@ -260,8 +260,8 @@ xm_intermediate_products_recipes["data"] = {
 	{"components-1-0", "basic-crafting", 1.5, false, {{"coil-1", 1}, {"coke", 1}, {"glass", 1}}, {{"components-1", 1}}},--4 --> 2.5
 	{"components-1-1", "crafting-with-fluid", 2, false, {{"coil-1", 1}, {"graphite", 2}, {type = "fluid", name = "uncured-phenolic", amount = 10}}, {{"components-1", 2}}},--2.5
 	{"components-2-0", "crafting", 3, false, {{"copper-cable", 3}, {"tungsten", 1}, {"glass", 1}}, {{"components-2", 1}}},--3.5
-	--{"components-2-1", "crafting", 2, false, {{"wafer-doped", 1}, {type = "fluid", name = "diborane", amount = 2}, {"copper-cable", 2}, {"plastic-pellets", 2}}, {{"components-2", 1}}},--3.5
-	--{"components-3-0", "crafting", 3, false, {{"wafer-integrated", 1}, {"aluminum", 3}, {"wire-gold", 2}, {"plastic-pellets", 8}}, {{"components-2", 2}}},--14
+	{"components-2-1", "advanced-crafting", 2, false, {{"wafer-data-1", 1}, {"wire-gold", 2}, {"plastic-pellets", 1}}, {{"components-2", 1}}},--3.5
+	--{"components-3-0", "crafting", 3, false, {{"wafer-data-2", 1}, {"copper-plate", 2}, {"wire-gold", 6}, {"plastic-pellets", 6}}, {{"components-2", 2}}},--14
 	{"electronic-circuit", "crafting", 2, false, {{"board-1", 1}, {"components-1", 1}, {"wire-solder", 1}}, {{"electronic-circuit", 1}}},--5.5(1/4) --> 4
 	{"advanced-circuit", "crafting", 6, false, {{"board-2", 1}, {"components-1", 1}, {"components-2", 1}, {"wire-solder", 2}}, {{"advanced-circuit", 1}}},--10 (3 + 2.5 + 3.5 + 1)
 	--{"processing-unit", "advanced-crafting", 12, false, {{"board-3", 2}, {"components-1", 4}, {"components-2", 4}, {"components-3", 2}, {"wire-solder", 8}}, {{"advanced-circuit", 1}}},--64
