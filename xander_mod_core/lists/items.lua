@@ -19,7 +19,7 @@ xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-con
 xm_material_items["ceramic"] = {"brick-clay", "brick-magnesia", "silicon-carbide", "glass", "fiber-glass", "porcelain"}--, "brick-azs"
 xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite"}
 xm_material_items["fluid-recipes"] = {}
-xm_material_items["organic"] = {"wood", "charcoal", "resin", "phenol", "surfactant", "nitrated-organics"}
+xm_material_items["organic"] = {"wood", "charcoal", "resin", "phenol", "aromatic", "surfactant", "nitrated-organics"}
 xm_material_items["polymer"] = {"plastic-pellets", "plastic-bar", "rubber-raw", "rubber-sbr", "rubber-vulcanized"}
 xm_material_items["energetic"] = {"coke", "solid-fuel", "gunpowder", "explosives"}--, "powder-black", "powder-smokeless"
 

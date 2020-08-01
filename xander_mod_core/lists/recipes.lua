@@ -16,8 +16,8 @@ xm_material_recipes["raw-material"] = {
 	{"raw-nickel", "refining-electric", 4, false, {{"conc-millerite", 1}, {"coke", 1}, {type = "fluid", name = "oxygen", amount = 5}}, {{"raw-nickel", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}},
 	{"raw-copper", "refining-electric", 3, false, {{"conc-chalcocite", 1}, {"coke", 1}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-copper", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
 	{"raw-silver-0", "refining-electric", 4, false, {{"igneous-sulfide", 4}, {"lead", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{"raw-silver", 1}}},--1
-	{"raw-platinum-0", "washing", 30, false, {{"magnetic", 20}, {type = "fluid", name = "sulfuric-acid", amount = 100}}, {{"raw-platinum", 5}}},--1
-	{"raw-gold-0", "washing", 25, false, {{"skarn", 20}, {type = "fluid", name = "sulfuric-acid", amount = 100}}, {{"raw-gold", 5}}},--1
+	{"raw-platinum-0", "washing", 6, false, {{"magnetic", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-platinum", 1}}},--1
+	{"raw-gold-0", "washing", 5, false, {{"skarn", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-gold", 1}}},--1
 }
 
 xm_material_recipes["concentrate"] = {
@@ -132,6 +132,7 @@ xm_material_recipes["organic"] = {
 	{"rubber-sbr", "chemistry", 9, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "ethylene", amount = 20}}, {{"rubber-sbr", 3}}},--1
 	{"phenol-0", "chemistry", 2, false, {{"coal", 1}, {type = "fluid", name = "water", amount = 10}}, {{"phenol", 1}}},--1
 	{"phenol-1", "chemistry", 2, false, {{"sodium-hydroxide", 1}, {type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}, {{"phenol", 2}, {type = "fluid", name = "water-brine", amount = 10}}},--1
+	{"aromatic", "chemistry", 4.5, false, {{type = "fluid", name = "btx", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}, {{"aromatic", 3}}},--1
 	{"surfactant-0", "chemistry", 2, false, {{"sulfur", 1}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"surfactant", 1}}},--2
 	--{"surfactant-1", "chemistry", 2, false, {{"nitrated-organics", 1}, {"sodium-hydroxide", 1}, {"sulfur", 1}, {type = "fluid", name = "water-distilled", amount = 50}}, {{"surfactant", 2}}},--1.5?
 	{"nitrated-organics", "chemistry", 3, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "nitric-acid", amount = 20}}, {{"nitrated-organics", 1}}},--1
@@ -212,7 +213,11 @@ xm_fluids_recipes["fluid-hydrocarbon"] = {
 xm_fluids_recipes["fluid-organic"] = {
 	{"formaldehyde-0", "chemistry", 2, false, {{"coke", 1}, {type = "fluid", name = "steam", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 10}}},
 	{"formaldehyde-1", "chemistry", 2, false, {{type = "fluid", name = "carbon-monoxide", amount = 10}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 20}}},
-	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}}--1
+	{"epichlorohydrin", "chemistry", 4, false, {{type = "fluid", name = "ethylene", amount = 40}, {type = "fluid", name = "chlorine", amount = 10}}, {{type = "fluid", name = "epichlorohydrin", amount = 50}}},
+	{"amine", "chemistry", 10, false, {{type = "fluid", name = "ethylene", amount = 10}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "amine", amount = 20}}},
+	{"epoxide", "chemistry", 4, false, {{"aromatic", 1}, {type = "fluid", name = "epichlorohydrin", amount = 5}}, {{type = "fluid", name = "epoxide", amount = 15}}},
+	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}},--1
+	{"uncured-epoxy", "chemistry", 3, false, {{type = "fluid", name = "epoxide", amount = 20}, {type = "fluid", name = "amine", amount = 10}}, {{type = "fluid", name = "uncured-epoxy", amount = 30}}},--1
 }
 
 xm_all_recipes_to_impose["fluids"] = xm_fluids_recipes

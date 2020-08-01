@@ -54,5 +54,9 @@ xm_all_fluids_to_impose["fluid-hydrocarbon"] = {
 
 xm_all_fluids_to_impose["fluid-organic"] = {
 	{"formaldehyde", {r = 1, g = 1/2, b = 1/2}, {r = 1, g = 0, b = 1/2}},
+	{"epichlorohydrin", {r = 1/4, g = 3/8, b = 1/4}, {r = 3/8, g = 3/8, b = 3/8}},
+	{"amine", {r = 1/4, g = 3/4, b = 3/4}, {r = 3/8, g = 3/8, b = 5/8}},
+	{"epoxide", {r = 1/2, g = 0, b = 1/4}, {r = 1, g = 0, b = 0}},
 	{"uncured-phenolic", {r = 1, g = 3/4, b = 0}, {r = 1/2, g = 1/8, b = 0}},
+	{"uncured-epoxy", {r = 7/8, g = 3/4, b = 3/8}, {r = 1, g = 7/8, b = 5/8}},
 }
