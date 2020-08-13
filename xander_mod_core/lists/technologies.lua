@@ -27,7 +27,7 @@ xm_material_technologies["ingot"] = {
 	--{"zinc", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-sphalerite-0", "zinc-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
 	{"nobles", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"raw-silver-0", "raw-platinum-0", "raw-gold-0", "silver", "platinum", "gold"}, {"tin-lead1", "chemistry2", "chemical-science-pack"}},
 	--{"tin2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-cassiterite", "tin-1"}, {"washing2"}},
-	{"tungsten", 120, {"automation-science-pack", "logistic-science-pack"}, 40, {"conc-scheelite-0", "tungsten-oxide", "tungsten", "stock-alloy-0"}, {"advanced-material-processing-2"}},
+	{"tungsten", 120, {"automation-science-pack", "logistic-science-pack"}, 40, {"conc-scheelite-0", "tungsten-oxide", "tungsten", "stock-alloy-0", "small-lamp-1"}, {"advanced-material-processing-2"}},
 	--{"lead2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"conc-galena", "lead-oxide", "lead-1"}, {"washing2"}},
 }
 
@@ -57,7 +57,8 @@ xm_material_technologies["fluid-recipes"] = {
 
 xm_material_technologies["polymer"] = {
 	{"phenolic", 40, {"automation-science-pack"}, 20, {"phenol-0", "formaldehyde-0", "uncured-phenolic", "copper-cable-1"}, {"sulfur-processing"}},
-	{"plastics", 200, {"automation-science-pack", "logistic-science-pack"}, 30, {"plastic-pellets", "plastic-bar", "rubber-sbr", "rubber-vulcanized-1"}, {"oil-processing"}}
+	{"plastics", 200, {"automation-science-pack", "logistic-science-pack"}, 30, {"plastic-pellets", "plastic-bar", "rubber-sbr", "rubber-vulcanized-1"}, {"oil-processing"}},
+	{"plastics-2", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"aromatic", "epichlorohydrin", "epoxide", "amine", "uncured-epoxy"}, {"advanced-oil-processing"}},
 }
 
 xm_material_technologies["energetic"] = {
@@ -75,10 +76,10 @@ xm_all_technologies_to_impose["material"] = xm_material_technologies
 local xm_fluid_technologies = {}
 
 xm_fluid_technologies["fluid-hydrocarbon"] = {
-	{"advanced-oil-processing", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"crude-oil-desulf", "advanced-oil-processing", "light-oil-distillation", "petroleum-gas-distillation"}, {"chemistry2", "flammables", "chemical-science-pack"}},
-	{"natural-gas", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"natural-gas-desulf", "natural-gas-distillation"}, {"chemistry2", "carbon", "chemical-science-pack"}}
-	--{"advanced-hydrocarbon-reforming", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"heavy-oil-cracking", "light-oil-cracking", "reform-btx", "reform-light-aliphatic", "reform-ethylene", "reform-methane", "diesel-2"}, {"advanced-oil-processing", "aluminum"}}
-	--"coal-liquefaction", {}, {"advanced-hydrocarbon-reforming", "natural-gas-processing"}
+	{"advanced-oil-processing", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"crude-oil-desulf", "advanced-oil-processing", "light-oil-distillation", "petroleum-gas-distillation"}, {"chemistry2", "flammables", "chemical-science-pack", "carbon"}},
+	{"natural-gas", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 75, {"natural-gas-desulf", "natural-gas-distillation"}, {"chemistry2", "carbon", "chemical-science-pack"}},
+	{"advanced-hydrocarbon-reforming", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"heavy-oil-cracking", "light-oil-cracking", "reform-btx", "reform-light-aliphatic", "reform-ethylene", "reform-methane", "diesel-2"}, {"advanced-oil-processing", "kvaerner-process", "production-science-pack"}},
+	--"coal-liquefaction", {}, {""}
 }
 
 xm_all_technologies_to_impose["fluids"] = xm_fluid_technologies
@@ -104,7 +105,8 @@ xm_intermediate_products_technologies["electrical"] = {
 xm_intermediate_products_technologies["data"] = {
 	{"circuit0", 20, {"automation-science-pack"}, 15, {"board-1-0", "components-1-0", "electronic-circuit", "inserter-1"}, {"solder", "automation-science-pack"}},
 	{"electronics", 80, {"automation-science-pack"}, 30, {"wire-solder-1", "board-1-1", "components-1-1"}, {"phenolic", "ceramics1", "automation"}},
-	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "nitrogen", "electronics"}}
+	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "nitrogen", "electronics"}},
+	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"semiconductors", "plastics-2", "electrolysis2"}},
 }
 
 xm_intermediate_products_technologies["science-pack"] = {
@@ -150,7 +152,7 @@ xm_production_technologies["chemical-machine"] = {
 	{"chemistry2", 280, {"automation-science-pack", "logistic-science-pack"}, 30, {"chem-reactor-2", "sulfur-dioxide-direct", "sulfur-dioxide-h2s", "sulfur", "sulfuric-acid-1"}, {"advanced-electronics", "motor2", "chlorine"}},
 	{"oil-processing", 90, {"automation-science-pack", "logistic-science-pack"}, 25, {"pumpjack", "oil-refinery", "basic-oil-processing"}, {"sulfur-processing", "advanced-material-processing", "logistic-science-pack"}},
 	{"electrolysis1", 90, {"automation-science-pack"}, 20, {"electrolyzer-1", "electrolysis-acid"}, {"sulfur-processing"}},
-	{"electrolysis2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"electrolyzer-2", "electrolysis-base"}, {"chemistry2", "nobles"}}
+	{"electrolysis2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"electrolyzer-2", "electrolysis-base"}, {"nobles"}}
 }
 
 xm_production_technologies["production-machine"] = {
