@@ -235,16 +235,18 @@ xm_intermediate_products_recipes["mechanical"] = {
 	{"iron-gear-1", "machine", 2, false, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
 	{"parts-steel", "machine", 7.5, false, {{"steel-plate", 2}, {"stock-bronze", 1}}, {{"parts-steel", 5}}},--1
 	{"parts-alloy", "machine", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
-	--{"parts-ceramic", "machine", 5, false, {{"stock-alloy", 1}, {"silicon-nitride", 8}, {"plastic-bar", 2}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-ceramic", 2}}},--6
+	--XX{"parts-ceramic", "machine", 5, false, {{"stock-alloy", 1}, {"silicon-nitride", 8}, {"plastic-bar", 2}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-ceramic", 2}}},--6
 }
 
 xm_intermediate_products_recipes["electrical"] = {
 	{"copper-cable", "basic-machine", 1, false, {{"copper-plate", 1}}, {{"copper-cable", 1}}},--1
-	{"copper-cable-1", "machine", 0.5, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 1}}, {{"copper-cable", 2}}},--0.55 ~= 0.5
-	--{"copper-cable-2", "machine", 2, false, {{"copper-plate", 5}, {"plastic-pellets", 1}}, {{"copper-cable", 10}}},--0.55 ~= 0.5
+	--**Copper cable gets both kinds of insulation**
+	{"copper-cable-1", "machine", 0.5, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 2}}, {{"copper-cable", 2}}},--0.6
+	--{"copper-cable-2", "machine", 2, false, {{"copper-plate", 5}, {type = "fluid", name = "uncured-epoxy", amount = 2}}, {{"copper-cable", 10}}},--0.52
 	{"coil-1-0", "basic-crafting", 1.5, false, {{"iron-stick", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-1-1", "crafting", 1, false, {{"steel-rod", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
+	--{"coil-3-0", "crafting-with-fluid", 2, false, {{"steel-rod", 3}, {"copper-cable", 4}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-3", 1}}},--4
 	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
 	{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
@@ -283,7 +285,9 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	{"engine-unit", "crafting", 12, false, {{"piston-unit", 2}, {"iron-gear-wheel", 1}, {"parts-steel", 2}, {"rubber-vulcanized", 2}}, {{"engine-unit", 2}}},--5
 	{"electric-engine-unit", "crafting", 3, false, {{"coil-1", 1}, {"glass", 2}, {"stock-bronze", 2}}, {{"electric-engine-unit", 1}}},--6(1/72) --> 4
 	{"motor-1-1", "crafting", 2, false, {{"coil-1", 1}, {"rubber-vulcanized", 1}, {"iron-gear-wheel", 1}}, {{"electric-engine-unit", 1}}},--4
-	{"motor-2-0", "crafting", 3, false, {{"coil-2", 1}, {"plastic-bar", 1}, {"parts-steel", 1}}, {{"motor-2", 1}}}--6
+	{"motor-2-0", "crafting", 3, false, {{"coil-2", 1}, {"plastic-bar", 1}, {"parts-steel", 2}}, {{"motor-2", 1}}},--6
+	--{"motor-3-0", "advanced-crafting", 5, false, {{"coil-3", 2}, {"stock-duralumin", 2}, {"parts-alloy", 1}}, {{"motor-3", 2}}},--8
+	--{"flying-robot-frame", "advanced-crafting", 20, false, {{"motor-3", 1}, {"battery", 4}, {"stock-duralumin", 3}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--40
 }
 xm_intermediate_products_recipes["science-pack"] = {
 	{"crude-science-pack", "basic-crafting", 2, true, {{"stone-brick", 1}, {"stock-bronze", 1}}, {{"crude-science-pack", 1}}},--2
@@ -291,7 +295,7 @@ xm_intermediate_products_recipes["science-pack"] = {
 	{"logistic-science-pack", "crafting", 6, false, {{"transport-belt", 1}, {"inserter", 1}}, {{"logistic-science-pack", 1}}},--8
 	{"chemical-science-pack", "chemistry", 12, false, {{"engine-unit", 2}, {"glass", 4}, {type = "fluid", name = "hydrogen-fluoride", amount = 20}, {"phenol", 8}}, {{"chemical-science-pack", 1}}},--24
 	{"production-science-pack", "advanced-crafting", 24, false, {{"xm-furnace-electric", 1}, {"productivity-module", 2}, {"rail", 20}}, {{"production-science-pack", 3}}},--96 (288 per 3)
-	--{"utility-science-pack", "advanced-crafting", 24, false, {{"low-density-structure", 3}, {"processing-unit", 2}, {"flying-robot-frame", 1}}, {{"utility-science-pack", 3}}},--96 (288 per 3)
+	--{"utility-science-pack", "advanced-crafting", 24, false, {{"low-density-structure", (80 unit)}, {"processing-unit", 2}, {"flying-robot-frame", 2}}, {{"utility-science-pack", 3}}},--96 (288 per 3)
 }
 
 xm_all_recipes_to_impose["intermediate-products"] = xm_intermediate_products_recipes
@@ -313,7 +317,8 @@ xm_production_recipes["energy"] = {
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
 	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
 	--{"steam-turbine-2", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
-	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 12}, {"copper-cable", 16}, {"wafer-solar", 10}, {"glass", 10}}, {{"solar-panel", 1}}},--72
+	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 10}, {"copper-cable", 16}, {"wafer-solar", 12}, {"glass", 8}}, {{"solar-panel", 1}}},--72
+	--{"solar-panel-2", "crafting", 16, false, {{"stock-stainless", 12}, {"copper-cable", 16}, {"advanced-circuit", 2}, {"wafer-solar", 12}, {"glass", 20}}, {{"solar-panel", 1}}},--108
 	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
 	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 3}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--6(1/72) --> 8
 	{"small-lamp-1", "crafting", 1, false, {{"stock-cast-iron", 2}, {"glass", 1}, {"tungsten", 1}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--5
@@ -324,6 +329,7 @@ xm_production_recipes["extraction-machine"] = {
 	{"offshore-pump-1", "crafting", 0.5, false, {{"pump", 1}, {"brick-clay", 8}, {"stock-bronze", 8}}, {{"offshore-pump", 1}}},--24
 	{"burner-mining-drill", "basic-crafting", 1, true, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"iron-plate", 4}}, {{"burner-mining-drill", 2}}},--16
 	{"electric-mining-drill", "crafting", 2, false, {{"electric-engine-unit", 2}, {"iron-gear-wheel", 4}, {"steel-plate", 4}, {"electronic-circuit", 1}}, {{"electric-mining-drill", 1}}},--28
+	--{"electric-mining-drill-2", "crafting", 3, false, {{"motor-2", 3}, {"parts-steel", 16}, {"stock-alloy", 10}, {"advanced-circuit", 1}}, {{"electric-mining-drill-2", 1}}},--64
 	{"pumpjack", "crafting", 5, false, {{"electric-engine-unit", 3}, {"iron-gear-wheel", 4}, {"pipe", 16}, {"steel-plate", 8}, {"electronic-circuit", 2}}, {{"pumpjack", 1}}},--60
 	{"ore-processor-0", "basic-crafting", 1, false, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"stone-brick", 8}, {"stock-bronze", 4}}, {{"ore-processor-0", 2}}},--18
 	{"ore-processor-1", "crafting", 1.5, false, {{"pump", 1}, {"iron-gear-wheel", 4}, {"steel-plate", 2}, {"electronic-circuit", 1}}, {{"ore-processor-1", 1}}},--24
@@ -335,15 +341,15 @@ xm_production_recipes["smelting-machine"] = {
 	{"xm-furnace-stone", "basic-crafting", 1, true, {{"stone-brick", 5}}, {{"xm-furnace-stone", 1}}},--5
 	{"xm-furnace-brick", "crafting", 2, true, {{"brick-clay", 8}, {"stock-bronze", 4}}, {{"xm-furnace-brick", 1}}},--12
 	{"xm-furnace-steel", "crafting", 4, false, {{"brick-clay", 12}, {"steel-plate", 4}, {"pipe", 4}}, {{"xm-furnace-steel", 1}}},--24
-	{"xm-furnace-electric", "crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 20}, {"graphite", 20}, {"stock-cupronickel", 18}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}}--96
+	{"xm-furnace-electric", "crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 10}, {"graphite", 20}, {"stock-cupronickel", 18}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}}--100
 }
 
 xm_production_recipes["chemical-machine"] = {
 	{"chemical-plant", "crafting", 3, false, {{"pump", 2}, {"copper-cable", 8}, {"glass", 8}, {"steel-plate", 2}}, {{"chemical-plant", 1}}},--32
 	{"chem-reactor-2", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 8}, {"advanced-circuit", 2}}, {{"chem-reactor-2", 1}}},--80
-	--{"chem-reactor-3", "crafting", 4, false, {{"chem-reactor-2", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-2", 1}}},--160
+	--{"chem-reactor-3", "crafting", 4, false, {{"chem-reactor-2", 1}, {"motor-2", 2}, {"porcelain", 8}, {"platinum", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-3", 1}}},--160
 	{"electrolyzer-1", "crafting", 4, false, {{"pump", 1}, {"coil-1", 2}, {"lead", 8}, {"glass", 4}}, {{"electrolyzer-1", 1}}},--24
-	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"platinum", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
+	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"gold", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
 	{"oil-refinery", "crafting", 8, false, {{"chemical-plant", 1}, {"xm-furnace-steel", 1}, {"pump", 3}, {"pipe", 32}, {"electronic-circuit", 8}}, {{"oil-refinery", 1}}}--144
 }
 
@@ -355,8 +361,7 @@ xm_production_recipes["production-machine"] = {
 	{"assembling-machine-0", "basic-crafting", 1, false, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"burner-inserter", 2}, {"iron-gear-wheel", 4}}, {{"assembling-machine-0", 2}}},--18
 	{"assembling-machine-1", "crafting", 2, false, {{"electric-engine-unit", 1}, {"inserter", 1}, {"iron-gear-wheel", 3}, {"electronic-circuit", 3}}, {{"assembling-machine-1", 1}}},--28
 	{"assembling-machine-2", "crafting", 4, false, {{"assembling-machine-1", 1}, {"fast-inserter", 1}, {"motor-2", 2}, {"parts-steel", 8}, {"advanced-circuit", 2}}, {{"assembling-machine-2", 1}}},--80
-	--{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 2}}, {{"assembling-machine-3", 1}}},--n = ?
-	--assembling-machine-4  --stack filter inserter
+	--{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 2}}, {{"assembling-machine-3", 1}}},--n = ? --stack filter inserter?
 	{"lab-burner", "basic-crafting", 1, true, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"crude-transport-belt", 8}, {"copper-plate", 4}}, {{"lab-burner", 1}}},--36
 	{"lab", "crafting", 2, false, {{"electric-engine-unit", 2}, {"steel-plate", 4}, {"iron-gear-wheel", 4}, {"transport-belt", 6}, {"electronic-circuit", 3}}, {{"lab", 1}}}--48
 }
@@ -391,7 +396,7 @@ xm_logistics_recipes["energy-pipe-distribution"] = {
 	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
 	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"porcelain", 1}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
 	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
-	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 12}, {"advanced-circuit", 4}}, {{"substation", 1}}},--100
+	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 10}, {"advanced-circuit", 4}}, {{"substation", 1}}},--94
 }
 
 xm_logistics_recipes["belt"] = {
@@ -414,7 +419,7 @@ xm_logistics_recipes["inserter"] = {
 	{"fast-inserter", "crafting", 1, false, {{"inserter", 1}, {"parts-steel", 2}, {"electronic-circuit", 1}}, {{"fast-inserter", 1}}},--12
 	{"long-fast-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"steel-plate", 2}}, {{"long-fast-inserter", 1}}},--16
 	{"filter-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"electronic-circuit", 3}}, {{"filter-inserter", 1}}},--24
-	{"stack-inserter", "crafting", 1, false, {{"fast-inserter", 1}, {"stock-duralumin", 10}, {"parts-alloy", 12}, {"advanced-circuit", 4}}, {{"stack-inserter", 1}}},--84
+	{"stack-inserter", "crafting", 1, false, {{"fast-inserter", 1}, {"stock-duralumin", 10}, {"parts-alloy", 3}, {"advanced-circuit", 4}}, {{"stack-inserter", 1}}},--84
 	{"stack-filter-inserter", "crafting", 0.5, false, {{"stack-inserter", 1}, {"electronic-circuit", 3}}, {{"stack-filter-inserter", 1}}},--96
 }
 
@@ -422,7 +427,7 @@ xm_logistics_recipes["transport"] = {
 	{"rail", "crafting", 0.5, false, {{"gravel", 2}, {"wood", 1}, {"steel-plate", 1}}, {{"rail", 1}}},--4 + (1)
 	{"rail-1", "crafting", 0.5, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
 	{"locomotive", "crafting", 8, false, {{"boiler", 1}, {"piston-unit", 8}, {"iron-gear-wheel", 12}, {"pipe", 28}, {"steel-plate", 12}, {"electronic-circuit", 3}}, {{"locomotive", 1}}},--120
-	{"locomotive-1", "crafting", 8, false, {{"engine-unit", 16}, {"motor-2", 8}, {"parts-alloy", 10}, {"steel-plate", 10}, {"advanced-circuit", 6}}, {{"locomotive-1", 1}}},--248
+	{"locomotive-1", "crafting", 8, false, {{"engine-unit", 16}, {"motor-2", 8}, {"parts-alloy", 10}, {"steel-plate", 15}, {"advanced-circuit", 5}}, {{"locomotive-1", 1}}},--248
 	{"cargo-wagon", "crafting", 4, false, {{"iron-gear-wheel", 12}, {"parts-steel", 12}, {"steel-plate", 8}}, {{"cargo-wagon", 1}}},--60
 	{"fluid-wagon", "crafting", 4, false, {{"iron-gear-wheel", 10}, {"parts-steel", 12}, {"storage-tank", 1}}, {{"fluid-wagon", 1}}},--64
 	{"rail-signal", "crafting", 1, false, {{"electronic-circuit", 1}, {"small-lamp", 1}}, {{"rail-signal", 2}}},--8
@@ -443,9 +448,9 @@ xm_combat_recipes["gun"] = {
 	{"pistol", "basic-crafting", 2, false, {{"iron-plate", 8}, {"stock-bronze", 4}}, {{"pistol", 1}}},--12
 	{"submachine-gun", "crafting", 10, false, {{"steel-plate", 8}, {"iron-gear-wheel", 6}, {"stock-bronze", 8}}, {{"submachine-gun", 1}}},--36
 	{"shotgun", "crafting", 10, false, {{"steel-plate", 6}, {"iron-gear-wheel", 4}, {"stock-bronze", 16}}, {{"shotgun", 1}}},--36
-	{"combat-shotgun", "crafting", 10, false, {{"parts-steel", 12}, {"parts-alloy", 12}, {"plastic-bar", 24}}, {{"combat-shotgun", 1}}},--96
+	{"combat-shotgun", "crafting", 10, false, {{"parts-steel", 24}, {"parts-alloy", 12}, {"plastic-bar", 24}}, {{"combat-shotgun", 1}}},--96
 	{"flamethrower", "crafting", 10, false, {{"parts-steel", 24}, {"stock-cupronickel", 12}}, {{"flamethrower", 1}}},--36
-	{"land-mine", "crafting", 5, false, {{"steel-plate", 2}, {"explosives", 2}}, {{"land-mine", 4}}},--8 (2 per land mine)
+	{"land-mine", "crafting", 5, false, {{"steel-plate", 2}, {"explosives", 2}}, {{"land-mine", 4}}},--2 (8 per recipe)
 }
 
 xm_combat_recipes["ammo"] = {
@@ -465,13 +470,12 @@ xm_combat_recipes["capsule"] = {
 xm_combat_recipes["armor"] = {
 	{"light-armor", "basic-crafting", 4, false, {{"iron-plate", 36}}, {{"light-armor", 1}}},--36
 	{"heavy-armor", "crafting", 4, false, {{"steel-plate", 90}, {"stock-bronze", 60}}, {{"heavy-armor", 1}}},--240
-	{"modular-armor", "crafting", 20, false, {{"stock-duralumin", 100}, {"parts-alloy", 50}, {"advanced-circuit", 20}}, {{"modular-armor", 1}}}--600
+	{"modular-armor", "crafting", 20, false, {{"stock-duralumin", 100}, {"parts-alloy", 30}, {"plastic-bar", 100}, {"advanced-circuit", 18}}, {{"modular-armor", 1}}}--600
 }
 
 xm_combat_recipes["defensive-structure"] = {
 	{"gun-turret", "crafting", 8, false, {{"iron-plate", 8}, {"iron-gear-wheel", 10}, {"stock-bronze", 8}}, {{"gun-turret", 1}}},--36
 	{"gun-turret-2", "crafting", 20, false, {{"iron-gear-wheel", 15}, {"parts-steel", 48}, {"plastic-bar", 18}}, {{"gun-turret-2", 1}}},--96
-	--{"gun-turret-2", "crafting", 8, false, {{"steel-plate", 10}, {"parts-steel", 24}, {"iron-gear-wheel", 10}}, {{"gun-turret", 1}}},--64
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}}--32
 }
