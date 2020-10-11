@@ -251,7 +251,8 @@ xm_intermediate_products_recipes["electrical"] = {
 	{"coil-1-0", "basic-crafting", 1.5, false, {{"iron-stick", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-1-1", "crafting", 1, false, {{"steel-rod", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
-	--{"coil-3-0", "crafting-with-fluid", 2, false, {{"steel-rod", 3}, {"copper-cable", 4}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-3", 1}}},--4
+	{"coil-2-1", "crafting-with-fluid", 1.25, false, {{"steel-rod", 2}, {"copper-cable", 3}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-2", 1}}},--3
+	{"coil-3", "crafting-with-fluid", 1.6, false, {{"steel-rod", 3}, {"copper-cable", 4}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-3", 1}}},--4
 	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
 	{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
@@ -291,7 +292,7 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	{"electric-engine-unit", "crafting", 3, false, {{"coil-1", 1}, {"glass", 2}, {"stock-bronze", 2}}, {{"electric-engine-unit", 1}}},--6(1/72) --> 4
 	{"motor-1-1", "crafting", 2, false, {{"coil-1", 1}, {"rubber-vulcanized", 1}, {"iron-gear-wheel", 1}}, {{"electric-engine-unit", 1}}},--4
 	{"motor-2-0", "crafting", 3, false, {{"coil-2", 1}, {"plastic-bar", 1}, {"parts-steel", 2}}, {{"motor-2", 1}}},--6
-	--{"motor-3-0", "advanced-crafting", 5, false, {{"coil-2", 2}, {"stock-duralumin", 2}, {"parts-alloy", 2}}, {{"motor-3", 2}}},--8
+	{"motor-3", "advanced-crafting", 6, false, {{"coil-3", 2}, {"stock-duralumin", 2}, {"parts-alloy", 1}}, {{"motor-3", 2}}},--8
 	--{"flying-robot-frame", "advanced-crafting", 20, false, {{"motor-3", 1}, {"battery", 4}, {"stock-duralumin", 3}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--40
 }
 xm_intermediate_products_recipes["science-pack"] = {
@@ -346,7 +347,8 @@ xm_production_recipes["smelting-machine"] = {
 	{"xm-furnace-stone", "basic-crafting", 1, true, {{"stone-brick", 5}}, {{"xm-furnace-stone", 1}}},--5
 	{"xm-furnace-brick", "crafting", 2, true, {{"brick-clay", 8}, {"stock-bronze", 4}}, {{"xm-furnace-brick", 1}}},--12
 	{"xm-furnace-steel", "crafting", 4, false, {{"brick-clay", 12}, {"steel-plate", 4}, {"pipe", 4}}, {{"xm-furnace-steel", 1}}},--24
-	{"xm-furnace-electric", "crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 10}, {"graphite", 20}, {"stock-cupronickel", 18}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}}--100
+	{"xm-furnace-electric", "crafting", 4, false, {{"coil-2", 6}, {"brick-magnesia", 20}, {"stock-cupronickel", 10}, {"electronic-circuit", 2}, {"xm-furnace-steel", 1}}, {{"xm-furnace-electric", 1}}},--100
+	{"xm-furnace-plasma", "advanced-crafting", 4, false, {{"coil-3", 10}, {"graphite", 60}, {"stock-stainless", 24}, {"advanced-circuit", 4}, {"xm-furnace-electric", 1}}, {{"xm-furnace-plasma", 1}}},--288
 }
 
 xm_production_recipes["chemical-machine"] = {

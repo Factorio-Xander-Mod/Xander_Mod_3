@@ -36,6 +36,7 @@ data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_category = nil
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["xm-furnace-electric"].fluid_boxes = assembler_1_fluid_boxes
+data.raw["assembling-machine"]["xm-furnace-plasma"].fluid_boxes = assembler_1_fluid_boxes
 
 --chemical-machine
 data.raw["assembling-machine"]["chemical-plant"].icon = "__xander-mod__/graphics/item/production/chemical-machine/chemical-plant.png"

@@ -275,6 +275,17 @@ xm_production_entities["smelting-machine"] = {
 		crafting_speed = 2,
 		ingredient_count = 5
 	},
+	{
+		type = "assembling-machine",
+		name = "xm-furnace-plasma",
+		parent_type = "furnace",
+		parent_name = "electric-furnace",
+		crafting_categories = {"refining", "refining-electric"},
+		energy_usage = "1.5MW",
+		emissions_per_minute = 0.4,
+		crafting_speed = 3,
+		ingredient_count = 6
+	},
 	--order placeholder
 	{
 		type = "furnace",

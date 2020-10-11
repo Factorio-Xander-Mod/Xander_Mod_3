@@ -98,6 +98,7 @@ xm_intermediate_products_technologies["mechanical"] = {
 xm_intermediate_products_technologies["electrical"] = {
 	{"electricity", 20, {"crude-science-pack"}, 10, {"copper-cable", "coil-1-0", "electric-engine-unit", "steam-engine", "small-electric-pole", "inserter"}, {"glass0"}},
 	{"motor2", 60, {"automation-science-pack", "logistic-science-pack"}, 30, {"coil-1-1", "coil-2-0", "motor-1-1", "motor-2-0"}, {"parts1", "plastics"}},
+	{"motor3", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"coil-2-1", "coil-3", "motor-3"}, {"parts2", "plastics-2"}},
 	{"battery", 180, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"tin-lead1", "electrolysis1", "logistic-science-pack"}},
 }
 
@@ -144,7 +145,8 @@ xm_production_technologies["extraction-machine"] = {
 
 xm_production_technologies["smelting-machine"] = {
 	{"advanced-material-processing", 80, {"automation-science-pack"}, 30, {"xm-furnace-steel", "steel-plate-1", "copper-plate-1", "stock-cast-iron-1"}, {"iron-refining1"}},
-	{"advanced-material-processing-2", 240, {"automation-science-pack", "logistic-science-pack"}, 45, {"xm-furnace-electric", "raw-iron-1", "steel-plate-2", "fiber-glass"}, {"nickel", "ceramics1", "optics", "electrolysis1"}}
+	{"advanced-material-processing-2", 240, {"automation-science-pack", "logistic-science-pack"}, 45, {"xm-furnace-electric", "raw-iron-1", "steel-plate-2", "fiber-glass"}, {"nickel", "ceramics1", "optics", "electrolysis1"}},
+	{"advanced-material-processing-3", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"xm-furnace-plasma"}, {"chromium", "motor3", "electrolysis2", "production-science-pack"}},
 }
 
 xm_production_technologies["chemical-machine"] = {
