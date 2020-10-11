@@ -71,6 +71,14 @@ xm_production_entities["extraction-machine"] = {
 		name = "pumpjack"
 	},
 	{
+		type = "mining-drill",
+		name = "electric-mining-drill-2",
+		parent_type = "mining-drill",
+		parent_name = "electric-mining-drill",
+		mining_speed = 1,
+		energy_usage = "120kW",
+	},
+	{
 		type = "assembling-machine",
 		name = "ore-processor-0",
 		parent_type = "assembling-machine",

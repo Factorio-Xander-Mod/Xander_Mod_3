@@ -11,6 +11,12 @@ data.raw.recipe["raw-copper"].icon_size = 64
 data.raw.recipe["raw-copper"].icon_mipmaps = 4
 data.raw.recipe["raw-copper"].main_product = ""
 
+data.raw.recipe["lead-oxide"].localised_name = {"recipe-name.lead-oxide"}
+data.raw.recipe["lead-oxide"].icon = "__xander-mod__/graphics/recipe/material/oxide/lead-oxide.png"
+data.raw.recipe["lead-oxide"].icon_size = 64
+data.raw.recipe["lead-oxide"].icon_mipmaps = 4
+data.raw.recipe["lead-oxide"].main_product = ""
+
 data.raw.recipe["nickel-1"].localised_name = {"recipe-name.nickel-1"}
 data.raw.recipe["nickel-1"].icon = "__xander-mod__/graphics/recipe/material/ingot/nickel-1.png"
 data.raw.recipe["nickel-1"].icon_size = 64
