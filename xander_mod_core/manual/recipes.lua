@@ -219,12 +219,15 @@ data.raw.recipe["copper-cable-1"].icon = "__base__/graphics/icons/copper-cable.p
 data.raw.recipe["copper-cable-1"].icon_size = 64
 data.raw.recipe["copper-cable-1"].icon_mipmaps = 4
 data.raw.recipe["copper-cable-1"].main_product = ""
+
 data.raw.recipe["battery"].normal = nil
 data.raw.recipe["battery"].expensive = nil
 data.raw.recipe["electronic-circuit"].normal = nil
 data.raw.recipe["electronic-circuit"].expensive = nil
 data.raw.recipe["advanced-circuit"].normal = nil
 data.raw.recipe["advanced-circuit"].expensive = nil
+data.raw.recipe["low-density-structure"].normal = nil
+data.raw.recipe["low-density-structure"].expensive = nil
 
 
 --==========  PRODUCTION  ==========

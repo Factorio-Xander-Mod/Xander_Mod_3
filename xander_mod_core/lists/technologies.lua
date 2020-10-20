@@ -98,7 +98,7 @@ xm_intermediate_products_technologies["mechanical"] = {
 xm_intermediate_products_technologies["electrical"] = {
 	{"electricity", 20, {"crude-science-pack"}, 10, {"copper-cable", "coil-1-0", "electric-engine-unit", "steam-engine", "small-electric-pole", "inserter"}, {"glass0"}},
 	{"motor2", 60, {"automation-science-pack", "logistic-science-pack"}, 30, {"coil-1-1", "coil-2-0", "motor-1-1", "motor-2-0"}, {"parts1", "plastics"}},
-	{"motor3", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"coil-2-1", "coil-3", "motor-3"}, {"parts2", "plastics-2"}},
+	{"motor3", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"copper-cable-2", "coil-2-1", "coil-3", "motor-3"}, {"parts2", "plastics-2"}},
 	{"battery", 180, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"tin-lead1", "electrolysis1", "logistic-science-pack"}},
 }
 
@@ -109,11 +109,17 @@ xm_intermediate_products_technologies["data"] = {
 	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"semiconductors", "plastics-2", "electrolysis2"}},
 }
 
+xm_intermediate_products_technologies["intermediate-product"] = {
+	{"robotics", 200, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"flying-robot-frame"}, {"battery", "automation-2", "aluminum"}},
+	{"low-density-structure", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"low-density-structure"}, {"parts2", "plastics-2", "aluminum"}},
+}
+
 xm_intermediate_products_technologies["science-pack"] = {
 	{"automation-science-pack", 40, {"crude-science-pack"}, 15, {"automation-science-pack"}, {"electricity"}},
 	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {}, {"electric-engine", "automation"}},
 	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {}, {"engine", "boron", "fluorine"}},
 	{"production-science-pack", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"productivity-module", "railway-2"}},
+	{"utility-science-pack", 550, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"motor3", "robotics", "advanced-electronics-2", "low-density-structure"}},
 }
 
 xm_all_technologies_to_impose["intermediate-products"] = xm_intermediate_products_technologies

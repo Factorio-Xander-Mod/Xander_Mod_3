@@ -245,14 +245,13 @@ xm_intermediate_products_recipes["mechanical"] = {
 
 xm_intermediate_products_recipes["electrical"] = {
 	{"copper-cable", "basic-machine", 1, false, {{"copper-plate", 1}}, {{"copper-cable", 1}}},--1
-	--**Copper cable gets both kinds of insulation**
-	{"copper-cable-1", "machine", 0.5, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 2}}, {{"copper-cable", 2}}},--0.6
-	--{"copper-cable-2", "machine", 2, false, {{"copper-plate", 5}, {type = "fluid", name = "uncured-epoxy", amount = 2}}, {{"copper-cable", 10}}},--0.52
+	{"copper-cable-1", "machine", 1, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 2}}, {{"copper-cable", 2}}},--0.6
+	{"copper-cable-2", "machine", 10, false, {{"copper-plate", 18}, {"rubber-vulcanized", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}}, {{"copper-cable", 40}}},--0.5
 	{"coil-1-0", "basic-crafting", 1.5, false, {{"iron-stick", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-1-1", "crafting", 1, false, {{"steel-rod", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
 	{"coil-2-1", "crafting-with-fluid", 1.25, false, {{"steel-rod", 2}, {"copper-cable", 3}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-2", 1}}},--3
-	{"coil-3", "crafting-with-fluid", 1.6, false, {{"steel-rod", 3}, {"copper-cable", 4}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-3", 1}}},--4
+	{"coil-3", "crafting-with-fluid", 3.2, false, {{"steel-rod", 4}, {"copper-cable", 8}, {"wafer-0", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}}, {{"coil-3", 2}}},--4
 	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
 	{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
@@ -293,7 +292,14 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	{"motor-1-1", "crafting", 2, false, {{"coil-1", 1}, {"rubber-vulcanized", 1}, {"iron-gear-wheel", 1}}, {{"electric-engine-unit", 1}}},--4
 	{"motor-2-0", "crafting", 3, false, {{"coil-2", 1}, {"plastic-bar", 1}, {"parts-steel", 2}}, {{"motor-2", 1}}},--6
 	{"motor-3", "advanced-crafting", 6, false, {{"coil-3", 2}, {"stock-duralumin", 2}, {"parts-alloy", 1}}, {{"motor-3", 2}}},--8
-	--{"flying-robot-frame", "advanced-crafting", 20, false, {{"motor-3", 1}, {"battery", 4}, {"stock-duralumin", 3}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--40
+	{"flying-robot-frame", "crafting", 16, false, {{"motor-2", 1}, {"battery", 3}, {"stock-duralumin", 4}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--36
+	--{"flying-robot-frame-2", "advanced-crafting", 28, false, {{"motor-3", 2}, {"battery-2", 3}, {"low-density-structure", 4}, {"processing-unit", 1}}, {{"flying-robot-frame-2", 1}}},--80
+	{"low-density-structure", "machine", 20, false, {{"stock-alloy", 5}, {"stock-duralumin", 8}, {"fiber-glass", 12}, {type = "fluid", name = "uncured-epoxy", amount = 40}}, {{"low-density-structure", 1}}},--36, base 37.6
+	--{"rocket-fuel", "chemistry", 30, false, {{type = "fluid", name = "methane", amount = 80}, {type = "fluid", name = "oxygen", amount = 160}}, {{"rocket-fuel", 1}}},--24, base 11
+	--{"rocket-control-unit", "advanced-crafting", 20, false, {{"copper-cable", 32}, {"advanced-circuit", 4}, {"processing-unit", 1}}, {{"rocket-control-unit", 1}}},--120, base 123
+	--{"rocket-mechanics", "advanced-crafting", 20, false, {{"stock-stainless", 32}, {"tungsten", 4}, {"parts-alloy", 1}, {"motor-3", 1}}, {{"rocket-mechanics", 1}}},--60
+	--{"rocket-part", "rocket-building", 12, false, {{"low-density-structure", 10}, {"rocket-fuel", 20}, {"rocket-control-unit", 5}, {"rocket-mechanics", 5}}, {{"rocket-part", 1}}},--1800, base 1715
+	--{"satellite", "advanced-crafting", 12, false, {{"low-density-structure", 100}, {"solar-panel", 100}, {"accumulator", 100}, {"radar", 5}, {"processing-unit", 100}, {"rocket-fuel", 50}}, {{"satellite", 1}}},--
 }
 xm_intermediate_products_recipes["science-pack"] = {
 	{"crude-science-pack", "basic-crafting", 2, true, {{"stone-brick", 1}, {"stock-bronze", 1}}, {{"crude-science-pack", 1}}},--2
@@ -301,7 +307,7 @@ xm_intermediate_products_recipes["science-pack"] = {
 	{"logistic-science-pack", "crafting", 6, false, {{"transport-belt", 1}, {"inserter", 1}}, {{"logistic-science-pack", 1}}},--8
 	{"chemical-science-pack", "chemistry", 12, false, {{"engine-unit", 2}, {"glass", 4}, {type = "fluid", name = "hydrogen-fluoride", amount = 20}, {"phenol", 8}}, {{"chemical-science-pack", 1}}},--24
 	{"production-science-pack", "advanced-crafting", 24, false, {{"xm-furnace-electric", 1}, {"productivity-module", 2}, {"rail", 20}}, {{"production-science-pack", 3}}},--96 (288 per 3)
-	--{"utility-science-pack", "advanced-crafting", 24, false, {{"low-density-structure", (80 unit)}, {"processing-unit", 2}, {"flying-robot-frame", 2}}, {{"utility-science-pack", 3}}},--96 (288 per 3)
+	{"utility-science-pack", "advanced-crafting", 24, false, {{"low-density-structure", 2}, {"processing-unit", 2}, {"flying-robot-frame", 2}, {"coil-3", 4}}, {{"utility-science-pack", 3}}},--96 (288 per 3)
 }
 
 xm_all_recipes_to_impose["intermediate-products"] = xm_intermediate_products_recipes
@@ -322,9 +328,9 @@ xm_production_recipes["energy"] = {
 	--{"heat-exchanger", "crafting", 1, false, {{"boiler", 1}, {"stock-cupronickel", 8}, {"steel-plate", 4}}, {{"boiler-1", 1}}},--32
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
 	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
-	--{"steam-turbine-2", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
+	--{"steam-turbine-2", "crafting", 1, false, {{"stock-stainless", 16}, {"pipe", 8}, {"parts-alloy", 24}, {"motor-3", 4}}, {{"steam-turbine", 1}}},--72
 	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 10}, {"copper-cable", 16}, {"wafer-solar", 12}, {"glass", 8}}, {{"solar-panel", 1}}},--72
-	--{"solar-panel-2", "crafting", 16, false, {{"stock-stainless", 12}, {"copper-cable", 16}, {"advanced-circuit", 2}, {"wafer-solar", 12}, {"glass", 20}}, {{"solar-panel", 1}}},--108
+	{"solar-panel-2", "advanced-crafting", 32, false, {{"stock-stainless", 8}, {"glass", 24}, {"coil-3", 3}, {"advanced-circuit", 2}, {"solar-panel", 3}}, {{"solar-panel-2", 2}}},--144
 	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
 	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 3}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--6(1/72) --> 8
 	{"small-lamp-1", "crafting", 1, false, {{"stock-cast-iron", 2}, {"glass", 1}, {"tungsten", 1}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--5
