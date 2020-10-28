@@ -38,7 +38,7 @@ xm_production_entities["energy"] = {
 		type = "generator",
 		name = "steam-turbine",
 	},
-	--high-temperature steam turbine
+	--high-pressure steam turbine
 	{
 		type = "generator",
 		name = "steam-turbine-1",
@@ -46,6 +46,14 @@ xm_production_entities["energy"] = {
 		parent_name = "steam-turbine",
 		graphics_from = {"__base__/graphics/entity/steam-turbine/steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/steam-turbine-V.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V-hr.png"}
+	},
+	--concentrating solar panel
+	{
+		type = "solar-panel",
+		name = "solar-panel-2",
+		parent_type = "solar-panel",
+		parent_name = "solar-panel",
+		production = "100kW"
 	},
 }
 

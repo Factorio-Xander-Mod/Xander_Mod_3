@@ -20,7 +20,7 @@ xm_material_items["ceramic"] = {"brick-clay", "brick-magnesia", "silicon-carbide
 xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite"}
 xm_material_items["fluid-recipes"] = {}
 xm_material_items["organic"] = {"wood", "charcoal", "resin", "phenol", "aromatic", "surfactant", "nitrated-organics"}
-xm_material_items["polymer"] = {"plastic-pellets", "plastic-bar", "rubber-raw", "rubber-sbr", "rubber-vulcanized"}
+xm_material_items["polymer"] = {"pellets-polyethylene", "pellets-nylon", "plastic-bar", "rubber-raw", "rubber-sbr", "rubber-vulcanized"}
 xm_material_items["energetic"] = {"coke", "solid-fuel", "gunpowder", "explosives"}
 
 xm_all_items_to_impose["material"] = xm_material_items

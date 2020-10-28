@@ -56,8 +56,8 @@ xm_material_technologies["fluid-recipes"] = {
 
 xm_material_technologies["polymer"] = {
 	{"phenolic", 40, {"automation-science-pack"}, 20, {"phenol-0", "formaldehyde-0", "uncured-phenolic", "copper-cable-1"}, {"sulfur-processing"}},
-	{"plastics", 200, {"automation-science-pack", "logistic-science-pack"}, 30, {"plastic-pellets", "plastic-bar", "rubber-sbr", "rubber-vulcanized-1"}, {"oil-processing"}},
-	{"plastics-2", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"aromatic", "epichlorohydrin", "epoxide", "amine", "uncured-epoxy"}, {"advanced-oil-processing"}},
+	{"plastics", 200, {"automation-science-pack", "logistic-science-pack"}, 30, {"pellets-polyethylene", "plastic-bar", "rubber-sbr", "rubber-vulcanized-1"}, {"oil-processing"}},
+	{"plastics-2", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"aromatic", "epichlorohydrin", "epoxide", "amine", "uncured-epoxy", "pellets-nylon", "plastic-bar-2"}, {"advanced-oil-processing"}},
 }
 
 xm_material_technologies["energetic"] = {
@@ -119,7 +119,7 @@ xm_intermediate_products_technologies["science-pack"] = {
 	{"logistic-science-pack", 100, {"automation-science-pack"}, 40, {}, {"electric-engine", "automation"}},
 	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {}, {"engine", "boron", "fluorine"}},
 	{"production-science-pack", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"productivity-module", "railway-2"}},
-	{"utility-science-pack", 550, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"motor3", "robotics", "advanced-electronics-2", "low-density-structure"}},
+	{"utility-science-pack", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"motor3", "robotics", "advanced-electronics-2", "low-density-structure"}},
 }
 
 xm_all_technologies_to_impose["intermediate-products"] = xm_intermediate_products_technologies
@@ -138,6 +138,7 @@ xm_production_technologies["energy"] = {
 	{"optics", 30, {"automation-science-pack"}, 20, {}, {"washing1"}},
 	{"electric-gen2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"boiler-1", "steam-turbine"}, {"motor2", "advanced-material-processing-2", "chemical-science-pack"}},
 	{"solar-energy", 480, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"wafer-solar", "solar-panel"}, {"semiconductors", "aluminum", "nobles"}},
+	{"solar-energy-2", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"solar-panel-2"}, {"solar-energy", "chromium", "motor3"}},
 	{"electric-energy-accumulators", 200, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"battery", "electric-energy-distribution-1"}},
 }
 
@@ -215,6 +216,10 @@ xm_logistics_technologies["transport"] = {
 	{"rail-signals", 100, {"automation-science-pack", "logistic-science-pack"}, 40, {}, {"automated-rail-transportation", "electronics", "optics"}},
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"engine"}},
 	{"cliff-explosives", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"explosives", "military-2", "logistics-2"}},
+}
+xm_logistics_technologies["logistic-network"] = {
+	{"construction-robotics", 250, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},
+	{"logistic-robotics", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},
 }
 --circuit network
 

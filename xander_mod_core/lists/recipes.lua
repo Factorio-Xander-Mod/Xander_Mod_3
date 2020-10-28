@@ -146,8 +146,10 @@ xm_material_recipes["organic"] = {
 xm_material_recipes["polymer"] = {
 	{"rubber-vulcanized-0", "chemistry", 5, false, {{"rubber-raw", 3}, {"sulfur", 1}}, {{"rubber-vulcanized", 4}}},--0.25(1/16)
 	{"rubber-vulcanized-1", "chemistry", 3, false, {{"rubber-sbr", 4}, {"sulfur", 1}, {"graphite", 1}}, {{"rubber-vulcanized", 6}}},--1
-	{"plastic-pellets", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"plastic-pellets", 1}}},--0.5
-	{"plastic-bar", "machine", 0.8, false, {{"plastic-pellets", 2}}, {{"plastic-bar", 1}}}--1
+	{"pellets-polyethylene", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"pellets-polyethylene", 1}}},--0.5
+	{"pellets-nylon", "chemistry", 2, false, {{"aromatic", 1}, {type = "fluid", name = "amine", amount = 5}}, {{"pellets-nylon", 3}}},--0.5
+	{"plastic-bar", "machine", 0.8, false, {{"pellets-polyethylene", 2}}, {{"plastic-bar", 1}}},--1
+	{"plastic-bar-2", "machine", 1.25, false, {{"pellets-nylon", 3}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
 }
 
 xm_material_recipes["energetic"] = {
@@ -276,8 +278,8 @@ xm_intermediate_products_recipes["data"] = {
 	{"components-1-0", "basic-crafting", 1.5, false, {{"coil-1", 1}, {"coke", 1}, {"glass", 1}}, {{"components-1", 1}}},--4 --> 2.5
 	{"components-1-1", "crafting-with-fluid", 2, false, {{"coil-1", 1}, {"graphite", 2}, {type = "fluid", name = "uncured-phenolic", amount = 10}}, {{"components-1", 2}}},--2.5
 	{"components-2-0", "crafting", 3, false, {{"copper-cable", 3}, {"tungsten", 1}, {"glass", 1}}, {{"components-2", 1}}},--3.5
-	{"components-2-1", "advanced-crafting", 2, false, {{"wafer-data-1", 1}, {"aluminum", 1}, {"wire-gold", 1}, {"plastic-pellets", 1}}, {{"components-2", 1}}},--3.5
-	{"components-3-0", "advanced-crafting", 3, false, {{"wafer-data-2", 1}, {"copper-plate", 2}, {"wire-gold", 6}, {"plastic-pellets", 6}}, {{"components-3", 1}}},--14
+	{"components-2-1", "advanced-crafting", 2, false, {{"wafer-data-1", 1}, {"aluminum", 1}, {"wire-gold", 1}, {"pellets-polyethylene", 1}}, {{"components-2", 1}}},--3.5
+	{"components-3-0", "advanced-crafting", 3, false, {{"wafer-data-2", 1}, {"copper-plate", 2}, {"wire-gold", 6}, {"pellets-nylon", 6}}, {{"components-3", 1}}},--14
 	{"electronic-circuit", "crafting", 2, false, {{"board-1", 1}, {"components-1", 1}, {"wire-solder", 1}}, {{"electronic-circuit", 1}}},--5.5(1/4) --> 4
 	{"advanced-circuit", "crafting", 6, false, {{"board-2", 1}, {"components-1", 1}, {"components-2", 1}, {"wire-solder", 2}}, {{"advanced-circuit", 1}}},--10 (3 + 2.5 + 3.5 + 1)
 	{"processing-unit", "advanced-crafting", 12, false, {{"board-3", 2}, {"components-1", 4}, {"components-2", 4}, {"components-3", 2}, {"wire-solder", 8}}, {{"advanced-circuit", 1}}},--64 (3, 2.5, 3.5, 14, 0.5)
@@ -374,7 +376,7 @@ xm_production_recipes["production-machine"] = {
 	{"assembling-machine-0", "basic-crafting", 1, false, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"burner-inserter", 2}, {"iron-gear-wheel", 4}}, {{"assembling-machine-0", 2}}},--18
 	{"assembling-machine-1", "crafting", 2, false, {{"electric-engine-unit", 1}, {"inserter", 1}, {"iron-gear-wheel", 3}, {"electronic-circuit", 3}}, {{"assembling-machine-1", 1}}},--28
 	{"assembling-machine-2", "crafting", 4, false, {{"assembling-machine-1", 1}, {"fast-inserter", 1}, {"motor-2", 2}, {"parts-steel", 8}, {"advanced-circuit", 2}}, {{"assembling-machine-2", 1}}},--80
-	--{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 2}}, {{"assembling-machine-3", 1}}},--n = ? --stack filter inserter?
+	--{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 1}, {"stack-filter-inserter", 1}, {"stock-stainless", 10}, {"parts-alloy", 5}, {"motor-3", 2}, {"processing-unit", 2}}, {{"assembling-machine-3", 1}}},--360
 	{"lab-burner", "basic-crafting", 1, true, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"crude-transport-belt", 8}, {"copper-plate", 4}}, {{"lab-burner", 1}}},--36
 	{"lab", "crafting", 2, false, {{"electric-engine-unit", 2}, {"steel-plate", 4}, {"iron-gear-wheel", 4}, {"transport-belt", 6}, {"electronic-circuit", 3}}, {{"lab", 1}}}--48
 }
@@ -449,6 +451,12 @@ xm_logistics_recipes["transport"] = {
 	{"car", "crafting", 4, false, {{"engine-unit", 8}, {"iron-gear-wheel", 8}, {"steel-plate", 20}, {"rubber-vulcanized", 8}, {"glass", 8}, {"electronic-circuit", 2}}, {{"car", 1}}},--120
 }
 
+xm_logistics_recipes["logistic-network"] = {
+	{"roboport", "crafting", 8, false, {{"stock-duralumin", 88}, {"parts-steel", 100}, {"coil-2", 32}, {"radar", 4}, {"advanced-circuit", 30}}, {{"roboport", 1}}},--800
+	{"construction-robot", "crafting", 1, false, {{"flying-robot-frame", 1}, {"stock-alloy", 2}}, {{"construction-robot", 1}}},--40
+	{"logistic-robot", "crafting", 1, false, {{"flying-robot-frame", 1}, {"plastic-bar", 4}}, {{"logistic-robot", 1}}},--40
+}
+
 xm_all_recipes_to_impose["logistics"] = xm_logistics_recipes
 
 
@@ -478,7 +486,7 @@ xm_combat_recipes["capsule"] = {
 	{"grenade", "crafting", 8, false, {{"stock-cast-iron", 8}, {"gunpowder", 8}}, {{"grenade", 1}}},--16
 	{"grenade-1", "crafting", 8, false, {{"stock-cast-iron", 8}, {"explosives", 4}}, {{"grenade", 1}}},--16
 	{"cluster-grenade", "crafting", 8, false, {{"grenade", 7}, {"explosives", 12}, {"tungsten", 12}}, {{"cluster-grenade", 1}}},--136
-	--{"antibiotics", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "water-distilled", amount = 30}}, {{"antibiotics", 1}}},
+	--{"first-aid", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "sulfuric-acid", amount = 30}}, {{"first-aid", 1}}},
 }
 
 xm_combat_recipes["armor"] = {
