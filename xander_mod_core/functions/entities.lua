@@ -148,30 +148,17 @@ assembler_1_fluid_boxes = {
 	off_when_no_fluid_recipe = true
 }
 
---List of fluid boxes: one in the middle of each side, each opposing pair has the same input/output type
+--Fluid box with 4 input pipe connections, one in the middle of each side, for machines that only have input of a single fluid
 xm_4_fluid_boxes_input = {
 	{
 		production_type = "input",
 		pipe_covers = pipecoverspictures(),
 		base_level = -1,
-		pipe_connections = {{type = "input", position = {0, 2}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {0, -2}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {2, 0}}}
-	},
-	{
-		production_type = "input",
-		pipe_covers = pipecoverspictures(),
-		base_level = 1,
-		pipe_connections = {{type = "input", position = {-2, 0}}}
+		pipe_connections = {
+			{position = {0, 2}},
+			{position = {0, -2}},
+			{position = {2, 0}},
+			{position = {-2, 0}}
+		}
 	}
 }

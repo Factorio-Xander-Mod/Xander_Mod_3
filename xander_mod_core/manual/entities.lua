@@ -67,6 +67,7 @@ data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "80kW"
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1
+
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
 data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 6
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_speed = 1.5

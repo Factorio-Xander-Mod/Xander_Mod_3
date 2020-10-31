@@ -43,7 +43,6 @@ xm_material_technologies["terrain"] = {
 
 xm_material_technologies["ceramic"] = {
 	{"ceramics1", 50, {"automation-science-pack"}, 15, {"brick-clay-1", "brick-magnesia", "porcelain"}, {"washing1", "advanced-material-processing"}},
-	--{"ceramics2", 50, {"automation-science-pack"}, 15, {"brick-clay-1", "brick-magnesia", "porcelain"}, {"washing1", "advanced-material-processing"}},
 }
 
 xm_material_technologies["fluid-recipes"] = {
