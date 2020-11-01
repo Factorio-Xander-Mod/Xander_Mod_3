@@ -303,6 +303,7 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	--{"rocket-part", "rocket-building", 12, false, {{"low-density-structure", 10}, {"rocket-fuel", 20}, {"rocket-control-unit", 5}, {"rocket-mechanics", 5}}, {{"rocket-part", 1}}},--1800, base 1715
 	--{"satellite", "advanced-crafting", 12, false, {{"low-density-structure", 100}, {"solar-panel", 100}, {"accumulator", 100}, {"radar", 5}, {"processing-unit", 100}, {"rocket-fuel", 50}}, {{"satellite", 1}}},--
 }
+
 xm_intermediate_products_recipes["science-pack"] = {
 	{"crude-science-pack", "basic-crafting", 2, true, {{"stone-brick", 1}, {"stock-bronze", 1}}, {{"crude-science-pack", 1}}},--2
 	{"automation-science-pack", "crafting", 4, false, {{"iron-gear-wheel", 1}, {"coil-1", 1}}, {{"automation-science-pack", 1}}},--4
@@ -401,19 +402,6 @@ xm_all_recipes_to_impose["production"] = xm_production_recipes
 --==========  LOGISTICS  ==========
 local xm_logistics_recipes = {}
 
-xm_logistics_recipes["energy-pipe-distribution"] = {
-	{"pipe", "basic-machine", 0.5, true, {{"iron-plate", 1}}, {{"pipe", 1}}},--1
-	{"pipe-1", "machine", 0.5, false, {{"steel-plate", 1}}, {{"pipe", 2}}},--1
-	{"pipe-to-ground", "crafting", 1, true, {{"pipe", 10}, {"stock-cast-iron", 6}}, {{"pipe-to-ground", 2}}},--16 per pair
-	{"storage-tank", "crafting", 3, false, {{"steel-plate", 10}, {"pipe", 12}}, {{"storage-tank", 1}}},--32
-	{"pump", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"pump", 1}}},--12
-	{"pump-1", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 1}, {"rubber-vulcanized", 2}}, {{"pump", 1}}},--8
-	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
-	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"porcelain", 1}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
-	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
-	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 10}, {"advanced-circuit", 4}}, {{"substation", 1}}},--94
-}
-
 xm_logistics_recipes["belt"] = {
 	{"crude-transport-belt", "basic-crafting", 1, true, {{"iron-plate", 2}, {"iron-gear-wheel", 1}}, {{"crude-transport-belt", 4}}},--1
 	{"transport-belt", "crafting", 2, false, {{"steel-plate", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"transport-belt", 4}}},--2
@@ -436,6 +424,20 @@ xm_logistics_recipes["inserter"] = {
 	{"filter-inserter", "crafting", 0.5, false, {{"fast-inserter", 1}, {"electronic-circuit", 3}}, {{"filter-inserter", 1}}},--24
 	{"stack-inserter", "crafting", 1, false, {{"fast-inserter", 1}, {"stock-duralumin", 10}, {"parts-alloy", 3}, {"advanced-circuit", 4}}, {{"stack-inserter", 1}}},--84
 	{"stack-filter-inserter", "crafting", 0.5, false, {{"stack-inserter", 1}, {"electronic-circuit", 3}}, {{"stack-filter-inserter", 1}}},--96
+}
+
+xm_logistics_recipes["energy-pipe-distribution"] = {
+	{"pipe", "basic-machine", 0.5, true, {{"iron-plate", 1}}, {{"pipe", 1}}},--1
+	{"pipe-1", "machine", 0.5, false, {{"steel-plate", 1}}, {{"pipe", 2}}},--1
+	{"pipe-to-ground", "crafting", 1, true, {{"pipe", 10}, {"stock-cast-iron", 6}}, {{"pipe-to-ground", 2}}},--16 per pair
+	{"storage-tank", "crafting", 3, false, {{"steel-plate", 10}, {"pipe", 12}}, {{"storage-tank", 1}}},--32
+	{"pump", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"pump", 1}}},--12
+	{"pump-1", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 1}, {"rubber-vulcanized", 2}}, {{"pump", 1}}},--8
+	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
+	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"glass", 2}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
+	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
+	{"big-electric-pole-2", "crafting", 2, false, {{"big-electric-pole", 1}, {"stock-stainless", 12}, {"porcelain", 4}, {"copper-cable", 16}}, {{"big-electric-pole", 1}}},--72
+	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 8}, {"porcelain", 4}, {"advanced-circuit", 4}}, {{"substation", 1}}},--96
 }
 
 xm_logistics_recipes["transport"] = {

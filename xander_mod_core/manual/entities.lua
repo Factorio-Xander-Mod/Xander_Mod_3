@@ -60,7 +60,7 @@ data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories = {"basic-crafting", "crafting", "crafting-with-fluid"}
-data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 3
+data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_speed = 0.75
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "80kW"
 --

@@ -205,7 +205,7 @@ xm_logistics_technologies["inserter"] = {
 xm_logistics_technologies["energy-pipe-distribution"] = {
 	{"fluid-handling", 30, {"automation-science-pack"}, 20, {"storage-tank", "pump", "offshore-pump-1", "pipe-1", "empty-barrel"}, {"automation-science-pack", "steel-processing"}},
 	{"electric-energy-distribution-1", 90, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"ceramics1", "parts1", "logistic-science-pack"}},
-	{"electric-energy-distribution-2", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"electric-energy-distribution-1", "chemical-science-pack", "motor2"}},
+	{"electric-energy-distribution-2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"big-electric-pole-2", "substation"}, {"electric-energy-distribution-1", "chemical-science-pack", "motor2"}},
 }
 
 xm_logistics_technologies["transport"] = {
@@ -216,6 +216,7 @@ xm_logistics_technologies["transport"] = {
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"engine"}},
 	{"cliff-explosives", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"explosives", "military-2", "logistics-2"}},
 }
+
 xm_logistics_technologies["logistic-network"] = {
 	{"construction-robotics", 250, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},
 	{"logistic-robotics", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},

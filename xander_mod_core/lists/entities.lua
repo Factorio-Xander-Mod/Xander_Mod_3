@@ -814,6 +814,16 @@ xm_logistics_entities["inserter"] = {
 	}
 }
 
+xm_logistics_entities["energy-pipe-distribution"] = {
+	{
+		type = "electric-pole",
+		name = "big-electric-pole-2",
+		parent_type = "electric-pole",
+		parent_name = "big-electric-pole",
+		maximum_wire_distance = 60,
+	}
+}
+
 xm_logistics_entities["transport"] = {
 	{
 		type = "locomotive",

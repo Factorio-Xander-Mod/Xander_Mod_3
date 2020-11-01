@@ -5,6 +5,7 @@ local function on_init()
 		starting["stone-furnace"] = nil
 		starting["wood"] = 12
 		starting["stock-bronze"] = 8
+		starting["iron-gear-wheel"] = 6
 		starting["mechanical-steam-engine"] = 2
 		starting["xm-furnace-stone"] = 1
 		remote.call("freeplay", "set_created_items", starting)

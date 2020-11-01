@@ -35,7 +35,7 @@ table.remove(data.raw.technology["inserter-capacity-bonus-2"].effects, 1)
 
 data.raw.technology["military-science-pack"].unit.count = 100
 data.raw.technology["land-mine"].unit.count = 240
---[[
+
 table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
 table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
 table.insert(data.raw.technology["physical-projectile-damage-3"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.2})
@@ -43,4 +43,3 @@ table.insert(data.raw.technology["physical-projectile-damage-4"].effects, {type 
 table.insert(data.raw.technology["physical-projectile-damage-5"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.2})
 table.insert(data.raw.technology["physical-projectile-damage-6"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.4})
 table.insert(data.raw.technology["physical-projectile-damage-7"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.7})
-]]--
