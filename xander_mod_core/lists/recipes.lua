@@ -9,62 +9,62 @@ xm_all_recipes_to_impose = {}
 local xm_material_recipes = {}
 
 xm_material_recipes["raw-material"] = {
-	{"raw-chromate-slag", "refining-electric", 4, false, {{"conc-chromite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "oxygen", amount = 5}}, {{"raw-chromate-slag", 2}}},
+	{"raw-chromate-slag", "smelting-3", 4, false, {{"conc-chromite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "oxygen", amount = 5}}, {{"raw-chromate-slag", 2}}},
 	{"raw-iron-0", "smelting", 27, false, {{"iron-ore", 6}, {"limestone", 1}}, {{"raw-iron", 9}}},
-	{"raw-iron-1", "refining-electric", 36, false, {{"iron-ore", 6}, {"coke", 6}, {"limestone", 1}}, {{"raw-iron", 12}}},
-	--XX{"raw-iron-2", "refining-electric", 4, false, {{"conc-hematite", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}, {{"raw-iron", 1}, {type = "fluid", name = "carbon-dioxide", amount = 10}}},
-	{"raw-nickel", "refining-electric", 8, false, {{"conc-millerite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-nickel", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
-	{"raw-copper", "refining-electric", 6, false, {{"conc-chalcocite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-copper", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
-	{"raw-silver-0", "refining-electric", 4, false, {{"igneous-sulfide", 4}, {"lead", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{"raw-silver", 1}}},--1
-	{"raw-platinum-0", "washing", 6, false, {{"magnetic", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-platinum", 1}}},--1
-	{"raw-gold-0", "washing", 5, false, {{"skarn", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-gold", 1}}},--1
+	{"raw-iron-1", "smelting-3", 36, false, {{"iron-ore", 6}, {"coke", 6}, {"limestone", 1}}, {{"raw-iron", 12}}},
+	--XX{"raw-iron-2", "smelting-3", 4, false, {{"conc-hematite", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}, {{"raw-iron", 1}, {type = "fluid", name = "carbon-dioxide", amount = 10}}},
+	{"raw-nickel", "smelting-3", 8, false, {{"conc-millerite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-nickel", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
+	{"raw-copper", "smelting-3", 6, false, {{"conc-chalcocite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-copper", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
+	{"raw-silver-0", "smelting-3", 4, false, {{"igneous-sulfide", 4}, {"lead", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{"raw-silver", 1}}},--1
+	{"raw-platinum-0", "washing-1", 6, false, {{"magnetic", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-platinum", 1}}},--1
+	{"raw-gold-0", "washing-1", 5, false, {{"skarn", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-gold", 1}}},--1
 }
 
 xm_material_recipes["concentrate"] = {
-	{"conc-chalcocite", "washing", 15, false, {{"copper-ore", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-chalcocite", 10}}},
-	{"conc-borax", "washing", 1.25, false, {{"evaporites", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"conc-borax", 1}}},
-	{"conc-millerite-0", "washing", 4, false, {{"igneous-sulfide", 3}, {type = "fluid", name = "water", amount = 30}}, {{"conc-millerite", 1}}},
-	{"conc-millerite-1", "washing", 20, false, {{"igneous-sulfide", 15}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-millerite", 10}}},
+	{"conc-chalcocite", "washing-2", 15, false, {{"copper-ore", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-chalcocite", 10}}},
+	{"conc-borax", "washing-1", 1.25, false, {{"evaporites", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"conc-borax", 1}}},
+	{"conc-millerite-0", "washing-1", 4, false, {{"igneous-sulfide", 3}, {type = "fluid", name = "water", amount = 30}}, {{"conc-millerite", 1}}},
+	{"conc-millerite-1", "washing-2", 20, false, {{"igneous-sulfide", 15}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-millerite", 10}}},
 	{"clay-0", "hand", 0.5, true, {{"laterite", 1}}, {{"clay", 1}}},--1
-	{"clay-1", "washing", 1, false, {{"laterite", 1}, {type = "fluid", name = "water", amount = 20}}, {{"clay", 1}}},--1
+	{"clay-1", "washing-0", 1, false, {{"laterite", 1}, {type = "fluid", name = "water", amount = 20}}, {{"clay", 1}}},--1
 	{"kaolin", "chemistry", 2, false, {{"clay", 2}, {type = "fluid", name = "steam", amount = 5}}, {{"kaolin", 1}}},--1
-	{"conc-bauxite", "washing", 2, false, {{"laterite", 2}, {type = "fluid", name = "water", amount = 20}}, {{"conc-bauxite", 1}}},
-	{"conc-chromite", "washing", 12, false, {{"magnetic", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-chromite", 10}}},
-	{"conc-galena", "washing", 8, false, {{"massive-sulfide", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-galena", 10}}},
-	{"conc-fluorite-0", "washing", 3, false, {{"phosphorite", 3}, {type = "fluid", name = "water", amount = 20}}, {{"conc-fluorite", 1}}},
+	{"conc-bauxite", "washing-1", 2, false, {{"laterite", 2}, {type = "fluid", name = "water", amount = 20}}, {{"conc-bauxite", 1}}},
+	{"conc-chromite", "washing-2", 12, false, {{"magnetic", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-chromite", 10}}},
+	{"conc-galena", "washing-2", 8, false, {{"massive-sulfide", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-galena", 10}}},
+	{"conc-fluorite-0", "washing-1", 3, false, {{"phosphorite", 3}, {type = "fluid", name = "water", amount = 20}}, {{"conc-fluorite", 1}}},
 	--XX{"conc-fluorite-1", "washing", 12, false, {{"phosphorite", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 20}}, {{"conc-fluorite", 12}}},
-	{"sand-0", "washing", 1, false, {{"sand-heavy", 1}, {type = "fluid", name = "water", amount = 10}}, {{"sand", 1}}},
-	{"conc-cassiterite", "washing", 8, false, {{"skarn", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-cassiterite", 10}}},
-	{"conc-scheelite-0", "washing", 6, false, {{"skarn", 6}, {type = "fluid", name = "water", amount = 40}}, {{"conc-scheelite", 1}}},
-	{"conc-scheelite-1", "washing", 16, false, {{"skarn", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-scheelite", 4}}},
-	{"gravel", "washing", 1, false, {{"stone", 1}}, {{"gravel", 1}}},
-	{"limestone-0", "washing", 2, false, {{"stone", 4}}, {{"limestone", 3}}},
-	{"magnesite", "washing", 4, false, {{"stone", 3}, {type = "fluid", name = "water", amount = 10}}, {{"magnesite", 1}}},
+	{"sand-0", "washing-0", 1, false, {{"sand-heavy", 1}, {type = "fluid", name = "water", amount = 10}}, {{"sand", 1}}},
+	{"conc-cassiterite", "washing-2", 8, false, {{"skarn", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-cassiterite", 10}}},
+	{"conc-scheelite-0", "washing-1", 6, false, {{"skarn", 6}, {type = "fluid", name = "water", amount = 40}}, {{"conc-scheelite", 1}}},
+	{"conc-scheelite-1", "washing-2", 16, false, {{"skarn", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-scheelite", 4}}},
+	{"gravel", "washing-0", 1, false, {{"stone", 1}}, {{"gravel", 1}}},
+	{"limestone-0", "washing-0", 2, false, {{"stone", 4}}, {{"limestone", 3}}},
+	{"magnesite", "washing-1", 4, false, {{"stone", 3}, {type = "fluid", name = "water", amount = 10}}, {{"magnesite", 1}}},
 }
 
 xm_material_recipes["oxide"] = {
 	{"aluminum-hydroxide", "chemistry", 4, false, {{"conc-bauxite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"aluminum-hydroxide", 2}}},
-	{"chromium-oxide", "chemistry", 3, false, {{"raw-chromate-slag", 2}, {type = "fluid", name = "sulfuric-acid", amount = 4}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{"chromium-oxide", 1}}},
+	{"chromium-oxide", "chemistry-2", 3, false, {{"raw-chromate-slag", 2}, {type = "fluid", name = "sulfuric-acid", amount = 4}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{"chromium-oxide", 1}}},
 	{"tungsten-oxide", "chemistry", 3, false, {{"conc-scheelite", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"tungsten-oxide", 1}}},
-	{"lead-oxide", "refining-electric", 4, false, {{"conc-galena", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"lead-oxide", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
+	{"lead-oxide", "smelting-3", 4, false, {{"conc-galena", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"lead-oxide", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
 }
 
 xm_material_recipes["ingot"] = {
-	{"aluminum", "refining-electric", 120, false, {{"aluminum-hydroxide", 23}, {"cryolite", 1}, {"graphite", 12}}, {{"aluminum", 24}, {type = "fluid", name = "carbon-monoxide", amount = 240}}},--1
-	{"chromium", "refining-electric", 4, false, {{"chromium-oxide", 1}, {"aluminum", 2}}, {{"chromium", 2}}},--1
-	{"nickel-0", "refining", 5, false, {{"conc-millerite", 1}}, {{"nickel", 1}}},--1
-	{"nickel-1", "electrolysis", 16, false, {{"raw-nickel", 8}, {type = "fluid", name = "sulfuric-acid", amount = 4}}, {{"nickel", 8}, {"raw-platinum", 1}}},--1
+	{"aluminum", "smelting-3", 120, false, {{"aluminum-hydroxide", 23}, {"cryolite", 1}, {"graphite", 12}}, {{"aluminum", 24}, {type = "fluid", name = "carbon-monoxide", amount = 240}}},--1
+	{"chromium", "smelting-3", 4, false, {{"chromium-oxide", 1}, {"aluminum", 2}}, {{"chromium", 2}}},--1
+	{"nickel-0", "smelting-2", 5, false, {{"conc-millerite", 1}}, {{"nickel", 1}}},--1
+	{"nickel-1", "electrolysis-2", 16, false, {{"raw-nickel", 8}, {type = "fluid", name = "sulfuric-acid", amount = 4}}, {{"nickel", 8}, {"raw-platinum", 1}}},--1
 	--XX{"nickel-1", "chemistry", 2, false, {{"oxide-nickel", 1}, {type = "fluid", name = "carbon-monoxide", amount = 15}}, {{"nickel", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}},--1
-	{"silver", "electrolysis", 4, false, {{"raw-silver", 1}, {type = "fluid", name = "nitric-acid", amount = 1}}, {{"silver", 1}}},--1
+	{"silver", "electrolysis-1", 4, false, {{"raw-silver", 1}, {type = "fluid", name = "nitric-acid", amount = 1}}, {{"silver", 1}}},--1
 	{"tin-0", "smelting", 4, true, {{"skarn", 2}}, {{"tin", 1}}},--1
-	{"tin-1", "refining", 24, false, {{"skarn", 12}, {"evaporites", 1}}, {{"tin", 8}}},--1
-	{"tin-2", "refining-electric", 2, false, {{"conc-cassiterite", 1}, {"coke", 1}}, {{"tin", 1}}},--1
-	{"tungsten", "refining-electric", 2, false, {{"tungsten-oxide", 1}, {type = "fluid", name = "hydrogen", amount = 30}}, {{"tungsten", 1}}},--1
-	{"platinum", "chemistry", 4, false, {{"raw-platinum", 1}, {type = "fluid", name = "chlorine", amount = 4}, {type = "fluid", name = "hydrogen", amount = 1}}, {{"platinum", 1}}},--1
-	{"gold", "chemistry", 5, false, {{"raw-gold", 1}, {type = "fluid", name = "chlorine", amount = 2}, {type = "fluid", name = "sulfur-dioxide", amount = 2}}, {{"gold", 1}}},--1
+	{"tin-1", "smelting-2", 24, false, {{"skarn", 12}, {"evaporites", 1}}, {{"tin", 8}}},--1
+	{"tin-2", "smelting-3", 2, false, {{"conc-cassiterite", 1}, {"coke", 1}}, {{"tin", 1}}},--1
+	{"tungsten", "smelting-3", 2, false, {{"tungsten-oxide", 1}, {type = "fluid", name = "hydrogen", amount = 30}}, {{"tungsten", 1}}},--1
+	{"platinum", "chemistry-2", 4, false, {{"raw-platinum", 1}, {type = "fluid", name = "chlorine", amount = 4}, {type = "fluid", name = "hydrogen", amount = 1}}, {{"platinum", 1}}},--1
+	{"gold", "chemistry-2", 5, false, {{"raw-gold", 1}, {type = "fluid", name = "chlorine", amount = 2}, {type = "fluid", name = "sulfur-dioxide", amount = 2}}, {{"gold", 1}}},--1
 	{"lead-0", "smelting", 4, true, {{"massive-sulfide", 2}}, {{"lead", 1}}},--1
-	{"lead-1", "refining", 24, false, {{"massive-sulfide", 12}, {"evaporites", 1}}, {{"lead", 8}}},--1
-	{"lead-2", "refining-electric", 2, false, {{"lead-oxide", 1}, {"coke", 1}}, {{"lead", 1}}},--1
+	{"lead-1", "smelting-2", 24, false, {{"massive-sulfide", 12}, {"evaporites", 1}}, {{"lead", 8}}},--1
+	{"lead-2", "smelting-3", 2, false, {{"lead-oxide", 1}, {"coke", 1}}, {{"lead", 1}}},--1
 	{"solder-0", "smelting", 5, false, {{"tin", 3}, {"lead", 2}}, {{"solder", 5}}}--1
 }
 
@@ -72,74 +72,75 @@ xm_material_recipes["stock"] = {
 	{"iron-plate", "smelting", 6, true, {{"iron-ore", 1}}, {{"iron-plate", 1}}},--1
 	{"iron-plate-1", "smelting", 2, false, {{"raw-iron", 1}}, {{"iron-plate", 1}}},
 	{"stock-cast-iron-0", "smelting", 4, true, {{"iron-ore", 1}}, {{"stock-cast-iron", 1}}},--1
-	{"stock-cast-iron-1", "refining", 1, false, {{"raw-iron", 1}}, {{"stock-cast-iron", 1}}},--1
-	--XX{"stock-cast-iron-2", "refining-electric", 12, false, {{"raw-iron", 7}, {"silicon", 1}}, {{"stock-cast-iron", 8}}},
+	{"stock-cast-iron-1", "smelting-2", 1, false, {{"raw-iron", 1}}, {{"stock-cast-iron", 1}}},--1
+	--XX{"stock-cast-iron-2", "smelting-3", 12, false, {{"raw-iron", 7}, {"silicon", 1}}, {{"stock-cast-iron", 8}}},
 	{"steel-plate", "smelting", 8, false, {{"iron-plate", 4}}, {{"steel-plate", 1}}},--4
-	{"steel-plate-1", "refining", 24, false, {{"raw-iron", 18}, {"clay", 1}}, {{"steel-plate", 6}}},--3 --> final version = 2
-	{"steel-plate-2", "refining-electric", 18, false, {{"raw-iron", 12}, {"magnesite", 1}, {type = "fluid", name = "oxygen", amount = 12}}, {{"steel-plate", 6}}},--2
-	{"stock-alloy-0", "refining-electric", 12, false, {{"steel-plate", 2}, {"tungsten", 1}, {"nickel", 1}}, {{"stock-alloy", 3}}},--2
-	{"stock-stainless", "refining-electric", 18, false, {{"steel-plate", 2}, {"chromium", 1}, {"nickel", 1}}, {{"stock-stainless", 3}}},--2
+	{"steel-plate-1", "smelting-2", 24, false, {{"raw-iron", 18}, {"clay", 1}}, {{"steel-plate", 6}}},--3 --> final version = 2
+	{"steel-plate-2", "smelting-3", 18, false, {{"raw-iron", 12}, {"magnesite", 1}, {type = "fluid", name = "oxygen", amount = 12}}, {{"steel-plate", 6}}},--2
+	{"stock-alloy-0", "smelting-3", 12, false, {{"steel-plate", 2}, {"tungsten", 1}, {"nickel", 1}}, {{"stock-alloy", 3}}},--2
+	{"stock-stainless", "smelting-3", 18, false, {{"steel-plate", 2}, {"chromium", 1}, {"nickel", 1}}, {{"stock-stainless", 3}}},--2
 	
 	{"copper-plate", "smelting", 4, true, {{"copper-ore", 1}}, {{"copper-plate", 1}}},--1
-	{"copper-plate-1", "refining", 36, false, {{"copper-ore", 6}, {"limestone", 1}}, {{"copper-plate", 9}}},
-	{"copper-plate-2", "electrolysis", 16, false, {{"raw-copper", 8}, {type = "fluid", name = "sulfuric-acid", amount = 4}}, {{"copper-plate", 8}, {"raw-gold", 1}}},
-	{"stock-bronze-0", "kiln", 20, true, {{"copper-ore", 5}, {"skarn", 2}}, {{"stock-bronze", 4}}},--1.5
+	{"copper-plate-1", "smelting-2", 36, false, {{"copper-ore", 6}, {"limestone", 1}}, {{"copper-plate", 9}}},
+	{"copper-plate-2", "electrolysis-2", 16, false, {{"raw-copper", 8}, {type = "fluid", name = "sulfuric-acid", amount = 4}}, {{"copper-plate", 8}, {"raw-gold", 1}}},
+	{"stock-bronze-0", "smelting-0", 20, true, {{"copper-ore", 5}, {"skarn", 2}}, {{"stock-bronze", 4}}},--1.5
 	{"stock-bronze-1", "smelting", 16, false, {{"copper-plate", 8}, {"tin", 1}}, {{"stock-bronze", 8}}},--1.125
-	{"stock-bronze-2", "refining-electric", 12, false, {{"copper-plate", 6}, {"nickel", 1}, {"aluminum", 1}}, {{"stock-bronze", 8}}},--1
-	{"stock-cupronickel", "refining", 7.5, false, {{"copper-plate", 3}, {"nickel", 2}}, {{"stock-cupronickel", 5}}},--1
-	{"stock-duralumin", "refining-electric", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
-	--{"stock-titanium", "refining", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 20}}},--1
-	--XX{"silicon-boule", "refining-electric", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
+	{"stock-bronze-2", "smelting-3", 12, false, {{"copper-plate", 6}, {"nickel", 1}, {"aluminum", 1}}, {{"stock-bronze", 8}}},--1
+	{"stock-cupronickel", "smelting-2", 7.5, false, {{"copper-plate", 3}, {"nickel", 2}}, {{"stock-cupronickel", 5}}},--1
+	{"stock-duralumin", "smelting-3", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
+	--{"stock-titanium", "smelting-2", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 20}}},--1
+	--XX{"silicon-boule", "smelting-3", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
 }
 
 xm_material_recipes["nonmetal"] = {
-	{"coke", "smelting", 8, false, {{"coal", 4}}, {{"coke", 9}}},--1
+	{"coke", "smelting", 8, false, {{"coal", 4}}, {{"coke", 8}}},--1
+	--{"coke-1", "smelting-3", 8, false, {{"coal", 4}}, {{"coke", 8}, {type = "fluid", name = "heavy-oil", amount = 10}}},--1
 	{"sulfur-0", "chemistry", 1, false, {{"evaporites", 1}, {type = "fluid", name = "steam", amount = 5}}, {{"sulfur", 1}}},--1
-	{"sulfur", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}, {{"sulfur", 1}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
-	{"graphite-0", "washing", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
-	{"graphite-1", "refining-electric", 2, false, {{"coke", 1}}, {{"graphite", 1}}},--1
-	{"silicon", "refining-electric", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
-	{"silicon-boule", "refining-electric", 192, false, {{"silicon", 23}, {"phosphorus", 1}, {type = "fluid", name = "chlorine", amount = 24}}, {{"silicon-boule", 2}}},--12
-	{"phosphorus", "refining-electric", 10, false, {{"phosphorite", 1}, {"coke", 5}}, {{"phosphorus", 2}, {type = "fluid", name = "carbon-monoxide", amount = 100}}},--1
+	{"sulfur", "chemistry-2", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 20}, {type = "fluid", name = "sulfur-dioxide", amount = 10}}, {{"sulfur", 1}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
+	{"graphite-0", "washing-1", 2, false, {{"stone", 3}, {type = "fluid", name = "sulfuric-acid", amount = 5}}, {{"graphite", 1}}},--1
+	{"graphite-1", "smelting-3", 2, false, {{"coke", 1}}, {{"graphite", 1}}},--1
+	{"silicon", "smelting-3", 3, false, {{"sand", 1}, {"coke", 2}}, {{"silicon", 1}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
+	{"silicon-boule", "smelting-3", 192, false, {{"silicon", 23}, {"phosphorus", 1}, {type = "fluid", name = "chlorine", amount = 24}}, {{"silicon-boule", 2}}},--12
+	{"phosphorus", "smelting-3", 10, false, {{"phosphorite", 1}, {"coke", 5}}, {{"phosphorus", 2}, {type = "fluid", name = "carbon-monoxide", amount = 100}}},--1
 }
 
 xm_material_recipes["terrain"] = {
-	{"stone-brick", "basic-machine", 2, true, {{"stone", 2}}, {{"stone-brick", 1}}},--2
-	{"landfill", "washing", 3, false, {{"stone", 12}, {"gravel", 6}}, {{"landfill", 1}}},--18
-	{"cement", "refining", 9, false, {{"limestone", 2}, {"sand", 1}}, {{"cement", 3}}},--1
+	{"stone-brick", "machine-0", 2, true, {{"stone", 2}}, {{"stone-brick", 1}}},--2
+	{"landfill", "washing-1", 3, false, {{"stone", 12}, {"gravel", 6}}, {{"landfill", 1}}},--18
+	{"cement", "smelting-2", 9, false, {{"limestone", 2}, {"sand", 1}}, {{"cement", 3}}},--1
 	{"concrete", "crafting-with-fluid", 10, false, {{"gravel", 5}, {"cement", 4}, {"steel-rod", 2}, {type = "fluid", name = "water", amount = 20}}, {{"concrete", 10}}},--1
 	{"refined-concrete", "crafting-with-fluid", 15, false, {{"gravel", 3}, {"fiber-glass", 2}, {"cement", 4}, {"steel-rod", 4}, {type = "fluid", name = "water", amount = 10}}, {{"refined-concrete", 5}}}--2
 }
 
 xm_material_recipes["ceramic"] = {
-	{"brick-clay-0", "kiln", 3, true, {{"clay", 1}}, {{"brick-clay", 1}}},--1
-	{"brick-clay-1", "refining", 4, false, {{"clay", 1}, {"kaolin", 1}}, {{"brick-clay", 2}}},--1
-	{"brick-magnesia", "refining", 6, false, {{"magnesite", 1}, {"graphite", 1}}, {{"brick-magnesia", 1}}},--2
-	{"silicon-carbide", "refining-electric", 8, false, {{"sand", 1}, {"coke", 3}}, {{"silicon-carbide", 2}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
+	{"brick-clay-0", "smelting-0", 3, true, {{"clay", 1}}, {{"brick-clay", 1}}},--1
+	{"brick-clay-1", "smelting-2", 4, false, {{"clay", 1}, {"kaolin", 1}}, {{"brick-clay", 2}}},--1
+	{"brick-magnesia", "smelting-2", 6, false, {{"magnesite", 1}, {"graphite", 1}}, {{"brick-magnesia", 1}}},--2
+	{"silicon-carbide", "smelting-3", 8, false, {{"sand", 1}, {"coke", 3}}, {{"silicon-carbide", 2}, {type = "fluid", name = "carbon-monoxide", amount = 40}}},--1
 	
 	{"glass-0", "smelting", 24, false, {{"sand", 6}, {"potash", 1}, {"limestone", 1}}, {{"glass", 6}}},--1.333(1/72)
-	{"glass-1", "refining", 24, false, {{"sand", 6}, {"conc-borax", 1}, {"limestone", 1}}, {{"glass", 8}}},--1
-	{"fiber-glass", "refining", 2, false, {{"glass", 1}}, {{"fiber-glass", 2}}},--0.5
-	{"porcelain", "refining", 12, false, {{"kaolin", 1}, {"sand", 1}}, {{"porcelain", 2}}}--2
+	{"glass-1", "smelting-2", 24, false, {{"sand", 6}, {"conc-borax", 1}, {"limestone", 1}}, {{"glass", 8}}},--1
+	{"fiber-glass", "smelting-2", 2, false, {{"glass", 1}}, {{"fiber-glass", 2}}},--0.5
+	{"porcelain", "smelting-2", 12, false, {{"kaolin", 1}, {"sand", 1}}, {{"porcelain", 2}}}--2
 }
 
 xm_material_recipes["salt"] = {
-	{"potash", "kiln", 3, false, {{"charcoal", 1}}, {{"potash", 3}}},
-	{"saltpeter", "washing", 2, false, {{"evaporites", 3}, {type = "fluid", name = "water", amount = 10}}, {{"saltpeter", 2}}},--1
+	{"potash", "smelting-0", 3, false, {{"charcoal", 1}}, {{"potash", 3}}},
+	{"saltpeter", "washing-0", 2, false, {{"evaporites", 3}, {type = "fluid", name = "water", amount = 10}}, {{"saltpeter", 2}}},--1
 	--XX{"sodium-carbonate", "washing", 4, false, {{"evaporites", 2}, {type = "fluid", name = "water", amount = 30}}, {{"sodium-carbonate", 1}}},--1
 	{"cryolite", "chemistry", 6, false, {{"sodium-hydroxide", 3}, {"aluminum-hydroxide", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 60}}, {{"cryolite", 12}}},--1
 }
 
 xm_material_recipes["organic"] = {
-	{"charcoal", "kiln", 4, true, {{"wood", 2}}, {{"charcoal", 8}}},--(1/4)
-	{"resin", "kiln", 2, false, {{"wood", 1}}, {{"resin", 4}}},--(1/4)
-	{"rubber-raw", "basic-machine", 8, false, {{"wood", 1}}, {{"rubber-raw", 12}}},--(1/12)
+	{"charcoal", "smelting-0", 4, true, {{"wood", 2}}, {{"charcoal", 8}}},--(1/4)
+	{"resin", "smelting-0", 2, false, {{"wood", 1}}, {{"resin", 4}}},--(1/4)
+	{"rubber-raw", "machine-0", 8, false, {{"wood", 1}}, {{"rubber-raw", 12}}},--(1/12)
 	{"rubber-sbr", "chemistry", 9, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "ethylene", amount = 20}}, {{"rubber-sbr", 3}}},--1
 	{"phenol-0", "chemistry", 2, false, {{"coal", 1}, {type = "fluid", name = "water", amount = 10}}, {{"phenol", 1}}},--1
 	{"phenol-1", "chemistry", 2, false, {{"sodium-hydroxide", 1}, {type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}, {{"phenol", 2}, {type = "fluid", name = "water-brine", amount = 10}}},--1
-	{"aromatic", "chemistry", 4.5, false, {{type = "fluid", name = "btx", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}, {{"aromatic", 3}}},--1
+	{"aromatic", "chemistry-2", 4.5, false, {{type = "fluid", name = "btx", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}, {{"aromatic", 3}}},--1
 	{"surfactant-0", "chemistry", 2, false, {{"sulfur", 1}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"surfactant", 1}}},--2
-	{"surfactant-1", "chemistry", 2, false, {{"nitrated-organics", 1}, {"sodium-hydroxide", 1}, {"sulfur", 1}, {type = "fluid", name = "water-distilled", amount = 50}}, {{"surfactant", 3}}},--1
+	{"surfactant-1", "chemistry-2", 2, false, {{"nitrated-organics", 1}, {"sodium-hydroxide", 1}, {"sulfur", 1}, {type = "fluid", name = "water-distilled", amount = 50}}, {{"surfactant", 3}}},--1
 	{"nitrated-organics", "chemistry", 3, false, {{type = "fluid", name = "btx", amount = 10}, {type = "fluid", name = "nitric-acid", amount = 20}}, {{"nitrated-organics", 1}}},--1
 }
 
@@ -147,17 +148,17 @@ xm_material_recipes["polymer"] = {
 	{"rubber-vulcanized-0", "chemistry", 5, false, {{"rubber-raw", 3}, {"sulfur", 1}}, {{"rubber-vulcanized", 4}}},--0.25(1/16)
 	{"rubber-vulcanized-1", "chemistry", 3, false, {{"rubber-sbr", 4}, {"sulfur", 1}, {"graphite", 1}}, {{"rubber-vulcanized", 6}}},--1
 	{"pellets-polyethylene", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"pellets-polyethylene", 1}}},--0.5
-	{"pellets-nylon", "chemistry", 2, false, {{"aromatic", 1}, {type = "fluid", name = "amine", amount = 5}}, {{"pellets-nylon", 3}}},--0.5
-	{"plastic-bar", "machine", 0.8, false, {{"pellets-polyethylene", 2}}, {{"plastic-bar", 1}}},--1
-	{"plastic-bar-2", "machine", 1.25, false, {{"pellets-nylon", 3}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
+	{"pellets-nylon", "chemistry-2", 2, false, {{"aromatic", 1}, {type = "fluid", name = "amine", amount = 5}}, {{"pellets-nylon", 3}}},--0.5
+	{"plastic-bar", "machine-1", 0.8, false, {{"pellets-polyethylene", 2}}, {{"plastic-bar", 1}}},--1
+	{"plastic-bar-2", "machine-1", 1.25, false, {{"pellets-nylon", 3}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
 }
 
 xm_material_recipes["energetic"] = {
 	{"diesel-1", "crafting-with-fluid", 0.5, false, {{type = "fluid", name = "heavy-oil", amount = 15}}, {{"solid-fuel", 1}}},--1
-	{"diesel-2", "chemistry", 1.5, false, {{type = "fluid", name = "heavy-oil", amount = 10}, {type = "fluid", name = "light-aliphatic", amount = 20}}, {{"solid-fuel", 3}}},--1
-	{"powder-black-0", "basic-machine", 4, false, {{"charcoal", 1}, {"evaporites", 4}}, {{"gunpowder", 4}}},--1(1/24)
-	{"powder-black-1", "machine", 6, false, {{"coal", 1}, {"sulfur", 1}, {"saltpeter", 6}}, {{"gunpowder", 8}}},--1
-	{"powder-smokeless", "machine", 10, false, {{"nitrated-organics", 3}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"gunpowder", 4}}},--1
+	{"diesel-2", "chemistry-2", 1.5, false, {{type = "fluid", name = "heavy-oil", amount = 10}, {type = "fluid", name = "light-aliphatic", amount = 20}}, {{"solid-fuel", 3}}},--1
+	{"powder-black-0", "machine-0", 4, false, {{"charcoal", 1}, {"evaporites", 4}}, {{"gunpowder", 4}}},--1(1/24)
+	{"powder-black-1", "machine-1", 6, false, {{"coal", 1}, {"sulfur", 1}, {"saltpeter", 6}}, {{"gunpowder", 8}}},--1
+	{"powder-smokeless", "machine-1", 10, false, {{"nitrated-organics", 3}, {type = "fluid", name = "heavy-oil", amount = 10}}, {{"gunpowder", 4}}},--1
 	{"explosives", "chemistry", 1, false, {{"nitrated-organics", 1}, {type = "fluid", name = "nitric-acid", amount = 10}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"explosives", 1}}},-- ~ 2
 }
 
@@ -171,12 +172,12 @@ local xm_fluids_recipes = {}
 
 xm_fluids_recipes["fluid-element"] = {
 	{"distillation-air", "oil-processing", 10, false, {}, {{type = "fluid", name = "nitrogen", amount = 40}, {type = "fluid", name = "oxygen", amount = 10}}},--1
-	{"solid-fuel-from-heavy-oil", "refining-electric", 0.5, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
-	{"solid-fuel-from-light-oil", "refining-electric", 0.5, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
-	{"solid-fuel-from-petroleum-gas", "refining-electric", 0.5, false, {{type = "fluid", name = "petroleum-gas", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 36}}},
-	{"electrolysis-acid", "electrolysis", 6, false, {{type = "fluid", name = "water", amount = 30}, {type = "fluid", name = "sulfuric-acid", amount = 1}}, {{type = "fluid", name = "hydrogen", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}},--1
-	{"electrolysis-base", "electrolysis", 30, false, {{type = "fluid", name = "water-distilled", amount = 300}, {"sodium-hydroxide", 1}}, {{type = "fluid", name = "hydrogen", amount = 200}, {type = "fluid", name = "oxygen", amount = 100}}},--1
-	{"electrolysis-brine", "electrolysis", 12, false, {{type = "fluid", name = "water-brine", amount = 20}}, {{"sodium-hydroxide", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}},--1
+	{"solid-fuel-from-heavy-oil", "smelting-3", 0.5, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
+	{"solid-fuel-from-light-oil", "smelting-3", 0.5, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
+	{"solid-fuel-from-petroleum-gas", "smelting-3", 0.5, false, {{type = "fluid", name = "petroleum-gas", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 36}}},
+	{"electrolysis-acid", "electrolysis-1", 6, false, {{type = "fluid", name = "water", amount = 30}, {type = "fluid", name = "sulfuric-acid", amount = 1}}, {{type = "fluid", name = "hydrogen", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}},--1
+	{"electrolysis-base", "electrolysis-2", 30, false, {{type = "fluid", name = "water-distilled", amount = 300}, {"sodium-hydroxide", 1}}, {{type = "fluid", name = "hydrogen", amount = 200}, {type = "fluid", name = "oxygen", amount = 100}}},--1
+	{"electrolysis-brine", "electrolysis-1", 12, false, {{type = "fluid", name = "water-brine", amount = 20}}, {{"sodium-hydroxide", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}},--1
 }
 
 xm_fluids_recipes["fluid-hydrogenated"] = {
@@ -189,42 +190,43 @@ xm_fluids_recipes["fluid-oxide"] = {
 	{"carbon-fwd", "chemistry", 1, false, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}},
 	{"carbon-rvs", "chemistry", 1, false, {{"coke", 1}, {type = "fluid", name = "water-distilled", amount = 30}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}, {type = "fluid", name = "hydrogen", amount = 20}}},
 	--XX{"carbon-monoxide", "chemistry", 0.5, false, {{"coke", 1}, {type = "fluid", name = "oxygen", amount = 10}}, {{type = "fluid", name = "carbon-monoxide", amount = 20}}},--1
-	{"sulfur-dioxide-direct", "chemistry", 1, false, {{"sulfur", 1}, {type = "fluid", name = "oxygen", amount = 20}, {type = "fluid", name = "water-distilled", amount = 10}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
-	{"sulfur-dioxide-h2s", "chemistry", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 30}, {type = "fluid", name = "oxygen", amount = 30}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 30, temperature = 315}}},--1
+	{"sulfur-dioxide-direct", "chemistry-2", 1, false, {{"sulfur", 1}, {type = "fluid", name = "oxygen", amount = 20}, {type = "fluid", name = "water-distilled", amount = 10}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 315}}},--1
+	{"sulfur-dioxide-h2s", "chemistry-2", 1, false, {{type = "fluid", name = "hydrogen-sulfide", amount = 30}, {type = "fluid", name = "oxygen", amount = 30}}, {{type = "fluid", name = "sulfur-dioxide", amount = 30}, {type = "fluid", name = "steam", amount = 30, temperature = 315}}},--1
 }
 
 xm_fluids_recipes["fluid"] = {
 	{"distillation-water", "oil-processing", 5, false, {{type = "fluid", name = "water", amount = 50}}, {{type = "fluid", name = "water-brine", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "water-distilled", amount = 40, fluidbox_index = 2}}},
 	{"sulfuric-acid", "chemistry", 5, false, {{"sulfur", 1}, {"saltpeter", 2}, {type = "fluid", name = "water", amount = 20}}, {{type = "fluid", name = "sulfuric-acid", amount = 10}}},--1
-	{"sulfuric-acid-1", "chemistry", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 315}}},--1 --, {type = "fluid", name = "water-distilled", amount = 6}
+	{"sulfuric-acid-1", "chemistry-2", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 315}}},--1 --, {type = "fluid", name = "water-distilled", amount = 6}
 	{"nitric-acid", "chemistry", 6, false, {{type = "fluid", name = "ammonia", amount = 10}, {type = "fluid", name = "oxygen", amount = 20}}, {{type = "fluid", name = "nitric-acid", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 165}}},--1
 }
 
 xm_fluids_recipes["fluid-hydrocarbon"] = {
-	{"crude-oil-desulf", "chemistry", 4, false, {{type = "fluid", name = "crude-oil", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "crude-oil-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
-	{"natural-gas-desulf", "chemistry", 4, false, {{type = "fluid", name = "natural-gas", amount = 100}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "natural-gas-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
+	{"crude-oil-desulf", "chemistry-2", 4, false, {{type = "fluid", name = "crude-oil", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "crude-oil-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
+	{"natural-gas-desulf", "chemistry-2", 4, false, {{type = "fluid", name = "natural-gas", amount = 100}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "natural-gas-desulf", amount = 100}, {type = "fluid", name = "hydrogen-sulfide", amount = 15}}},--1
 	{"basic-oil-processing", "oil-processing", 10, false, {{type = "fluid", name = "crude-oil", amount = 100}}, {{type = "fluid", name = "heavy-oil", amount = 40, fluidbox_index = 1}, {type = "fluid", name = "btx", amount = 25, fluidbox_index = 2}, {type = "fluid", name = "ethylene", amount = 15, fluidbox_index = 3}}},
 	{"advanced-oil-processing", "oil-processing", 8, false, {{type = "fluid", name = "crude-oil-desulf", amount = 100}, {type = "fluid", name = "water-distilled", amount = 50}}, {{type = "fluid", name = "heavy-oil", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "light-oil", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "petroleum-gas", amount = 30, fluidbox_index = 3}}},
+	{"coal-liquefaction", "oil-processing", 10, false, {{"coal", 10}, {type = "fluid", name = "heavy-oil", amount = 25}, {type = "fluid", name = "steam", amount = 50}}, {{type = "fluid", name = "heavy-oil", amount = 90, fluidbox_index = 1}, {type = "fluid", name = "btx", amount = 20, fluidbox_index = 2}, {type = "fluid", name = "light-oil", amount = 10, fluidbox_index = 3}}},
 	{"natural-gas-distillation", "oil-processing", 12, false, {{type = "fluid", name = "natural-gas-desulf", amount = 100}}, {{type = "fluid", name = "light-oil", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "ethylene", amount = 40, fluidbox_index = 2}, {type = "fluid", name = "methane", amount = 50, fluidbox_index = 3}}},
 	{"light-oil-distillation", "oil-processing", 6, false, {{type = "fluid", name = "light-oil", amount = 50}}, {{type = "fluid", name = "btx", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "light-aliphatic", amount = 20, fluidbox_index = 2}}},
 	{"petroleum-gas-distillation", "oil-processing", 6, false, {{type = "fluid", name = "petroleum-gas", amount = 50}}, {{type = "fluid", name = "ethylene", amount = 30, fluidbox_index = 1}, {type = "fluid", name = "methane", amount = 20, fluidbox_index = 2}}},
-	{"heavy-oil-cracking", "chemistry", 4, false, {{type = "fluid", name = "heavy-oil", amount = 80}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1--{"aluminum-hydroxide", 1}, 
-	{"light-oil-cracking", "chemistry", 4, false, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "petroleum-gas", amount = 40}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1--{"aluminum-hydroxide", 1}, 
-	{"reform-btx", "chemistry", 5, false, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "light-aliphatic", amount = 40}}},--1
-	{"reform-light-aliphatic", "chemistry", 5, false, {{type = "fluid", name = "light-aliphatic", amount = 40}}, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
-	{"reform-ethylene", "chemistry", 5, false, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "methane", amount = 40}}},--1
-	{"reform-methane", "chemistry", 5, false, {{type = "fluid", name = "methane", amount = 40}}, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
+	{"heavy-oil-cracking", "chemistry-2", 4, false, {{type = "fluid", name = "heavy-oil", amount = 80}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1--{"aluminum-hydroxide", 1}, 
+	{"light-oil-cracking", "chemistry-2", 4, false, {{type = "fluid", name = "light-oil", amount = 60}, {type = "fluid", name = "water-distilled", amount = 60}}, {{type = "fluid", name = "petroleum-gas", amount = 40}, {type = "fluid", name = "steam", amount = 40, temperature = 315}}},--1--{"aluminum-hydroxide", 1}, 
+	{"reform-btx", "chemistry-2", 5, false, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "light-aliphatic", amount = 40}}},--1
+	{"reform-light-aliphatic", "chemistry-2", 5, false, {{type = "fluid", name = "light-aliphatic", amount = 40}}, {{type = "fluid", name = "btx", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
+	{"reform-ethylene", "chemistry-2", 5, false, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "methane", amount = 40}}},--1
+	{"reform-methane", "chemistry-2", 5, false, {{type = "fluid", name = "methane", amount = 40}}, {{type = "fluid", name = "ethylene", amount = 30}, {type = "fluid", name = "hydrogen", amount = 10}}},--1
 	{"lubricant", "chemistry", 6, false, {{type = "fluid", name = "heavy-oil", amount = 30}, {"graphite", 1}}, {{type = "fluid", name = "lubricant", amount = 40}}},--1
 }
 
 xm_fluids_recipes["fluid-organic"] = {
 	{"formaldehyde-0", "chemistry", 2, false, {{"coke", 1}, {type = "fluid", name = "steam", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 10}}},
 	{"formaldehyde-1", "chemistry", 2, false, {{type = "fluid", name = "carbon-monoxide", amount = 10}, {type = "fluid", name = "hydrogen", amount = 10}}, {{type = "fluid", name = "formaldehyde", amount = 20}}},
-	{"epichlorohydrin", "chemistry", 4, false, {{type = "fluid", name = "ethylene", amount = 40}, {type = "fluid", name = "chlorine", amount = 10}}, {{type = "fluid", name = "epichlorohydrin", amount = 50}}},
-	{"amine", "chemistry", 10, false, {{type = "fluid", name = "ethylene", amount = 10}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "amine", amount = 20}}},
-	{"epoxide", "chemistry", 4, false, {{"aromatic", 1}, {type = "fluid", name = "epichlorohydrin", amount = 5}}, {{type = "fluid", name = "epoxide", amount = 15}}},
+	{"epichlorohydrin", "chemistry-2", 4, false, {{type = "fluid", name = "ethylene", amount = 40}, {type = "fluid", name = "chlorine", amount = 10}}, {{type = "fluid", name = "epichlorohydrin", amount = 50}}},
+	{"amine", "chemistry-2", 10, false, {{type = "fluid", name = "ethylene", amount = 10}, {type = "fluid", name = "ammonia", amount = 10}}, {{type = "fluid", name = "amine", amount = 20}}},
+	{"epoxide", "chemistry-2", 4, false, {{"aromatic", 1}, {type = "fluid", name = "epichlorohydrin", amount = 5}}, {{type = "fluid", name = "epoxide", amount = 15}}},
 	{"uncured-phenolic", "chemistry", 1, false, {{"phenol", 1}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{type = "fluid", name = "uncured-phenolic", amount = 20}}},--1
-	{"uncured-epoxy", "chemistry", 2.25, false, {{type = "fluid", name = "epoxide", amount = 20}, {type = "fluid", name = "amine", amount = 10}}, {{type = "fluid", name = "uncured-epoxy", amount = 30}}},--1
+	{"uncured-epoxy", "chemistry-2", 2.25, false, {{type = "fluid", name = "epoxide", amount = 20}, {type = "fluid", name = "amine", amount = 10}}, {{type = "fluid", name = "uncured-epoxy", amount = 30}}},--1
 }
 
 xm_all_recipes_to_impose["fluids"] = xm_fluids_recipes
@@ -236,42 +238,42 @@ xm_all_recipes_to_impose["fluids"] = xm_fluids_recipes
 local xm_intermediate_products_recipes = {}
 
 xm_intermediate_products_recipes["mechanical"] = {
-	{"iron-stick", "basic-machine", 1, true, {{"iron-plate", 1}}, {{"iron-stick", 2}}},--0.5
-	{"steel-rod", "machine", 1, false, {{"steel-plate", 1}}, {{"steel-rod", 4}}},--0.5
-	{"iron-gear-wheel", "basic-machine", 2, true, {{"stock-cast-iron", 3}}, {{"iron-gear-wheel", 1}}},--2
-	{"iron-gear-1", "machine", 2, false, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
-	{"parts-steel", "machine", 7.5, false, {{"steel-plate", 2}, {"stock-bronze", 1}}, {{"parts-steel", 5}}},--1
-	{"parts-alloy", "machine", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
-	--XX{"parts-ceramic", "machine", 5, false, {{"stock-alloy", 1}, {"silicon-nitride", 8}, {"plastic-bar", 2}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-ceramic", 2}}},--6
+	{"iron-stick", "machine-0", 1, true, {{"iron-plate", 1}}, {{"iron-stick", 2}}},--0.5
+	{"steel-rod", "machine-1", 1, false, {{"steel-plate", 1}}, {{"steel-rod", 4}}},--0.5
+	{"iron-gear-wheel", "machine-0", 2, true, {{"stock-cast-iron", 3}}, {{"iron-gear-wheel", 1}}},--2
+	{"iron-gear-1", "machine-1", 2, false, {{"stock-cast-iron", 2}}, {{"iron-gear-wheel", 1}}},--2
+	{"parts-steel", "machine-1", 7.5, false, {{"steel-plate", 2}, {"stock-bronze", 1}}, {{"parts-steel", 5}}},--1
+	{"parts-alloy", "machine-1", 8, false, {{"stock-alloy", 3}, {"rubber-vulcanized", 1}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-alloy", 2}}},--4
+	--XX{"parts-ceramic", "machine-1", 5, false, {{"stock-alloy", 1}, {"silicon-nitride", 8}, {"plastic-bar", 2}, {type = "fluid", name = "lubricant", amount = 10}}, {{"parts-ceramic", 2}}},--6
 }
 
 xm_intermediate_products_recipes["electrical"] = {
-	{"copper-cable", "basic-machine", 1, false, {{"copper-plate", 1}}, {{"copper-cable", 1}}},--1
-	{"copper-cable-1", "machine", 1, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 2}}, {{"copper-cable", 2}}},--0.6
-	{"copper-cable-2", "machine", 10, false, {{"copper-plate", 18}, {"rubber-vulcanized", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}}, {{"copper-cable", 40}}},--0.5
+	{"copper-cable", "machine-0", 1, false, {{"copper-plate", 1}}, {{"copper-cable", 1}}},--1
+	{"copper-cable-1", "machine-1", 1, false, {{"copper-plate", 1}, {type = "fluid", name = "uncured-phenolic", amount = 2}}, {{"copper-cable", 2}}},--0.6
+	{"copper-cable-2", "machine-1", 10, false, {{"copper-plate", 18}, {"rubber-vulcanized", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}}, {{"copper-cable", 40}}},--0.5
 	{"coil-1-0", "basic-crafting", 1.5, false, {{"iron-stick", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-1-1", "crafting", 1, false, {{"steel-rod", 1}, {"copper-cable", 3}}, {{"coil-1", 1}}},--2
 	{"coil-2-0", "crafting", 1.5, false, {{"steel-rod", 2}, {"copper-cable", 4}}, {{"coil-2", 1}}},--3
 	{"coil-2-1", "crafting-with-fluid", 1.25, false, {{"steel-rod", 2}, {"copper-cable", 3}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"coil-2", 1}}},--3
 	{"coil-3", "crafting-with-fluid", 3.2, false, {{"steel-rod", 4}, {"copper-cable", 8}, {"wafer-0", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}}, {{"coil-3", 2}}},--4
-	{"wire-solder-0", "basic-machine", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
-	{"wire-solder-1", "machine", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
-	{"wire-gold", "machine", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
+	{"wire-solder-0", "machine-0", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
+	{"wire-solder-1", "machine-1", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
+	{"wire-gold", "machine-1", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
 	{"battery", "crafting-with-fluid", 4, false, {{"lead", 2}, {"glass", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 1}}},--4
 }
 
 xm_intermediate_products_recipes["data"] = {
-	{"laminate-1", "machine", 1, false, {{"copper-plate", 1}, {"fiber-glass", 1}, {type = "fluid", name = "uncured-phenolic", amount = 5}}, {{"laminate-1", 2}}},--1
-	{"laminate-2", "machine", 0.8, false, {{"copper-plate", 2}, {"fiber-glass", 1}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"laminate-2", 1}}},--3
-	{"board-1-0", "basic-machine", 2, false, {{"wood", 1}, {"copper-cable", 12}}, {{"board-1", 4}}},--1.5(1/4)
-	{"board-1-1", "machine", 3, false, {{"steel-plate", 1}, {"copper-cable", 4}, {"porcelain", 1}}, {{"board-1", 4}}},--1.25
+	{"laminate-1", "machine-1", 1, false, {{"copper-plate", 1}, {"fiber-glass", 1}, {type = "fluid", name = "uncured-phenolic", amount = 5}}, {{"laminate-1", 2}}},--1
+	{"laminate-2", "machine-1", 0.8, false, {{"copper-plate", 2}, {"fiber-glass", 1}, {type = "fluid", name = "uncured-epoxy", amount = 5}}, {{"laminate-2", 1}}},--3
+	{"board-1-0", "machine-0", 2, false, {{"wood", 1}, {"copper-cable", 12}}, {{"board-1", 4}}},--1.5(1/4)
+	{"board-1-1", "machine-1", 3, false, {{"steel-plate", 1}, {"copper-cable", 4}, {"porcelain", 1}}, {{"board-1", 4}}},--1.25
 	{"board-1-2", "chemistry", 0.75, false, {{"laminate-1", 1}, {type = "fluid", name = "sulfuric-acid", amount = 1}}, {{"board-1", 1}}},--1.1 ~= 1
-	{"board-2-0", "electrolysis", 1, false, {{"laminate-1", 2}, {"solder", 1}, {type = "fluid", name = "nitric-acid", amount = 3}}, {{"board-2", 1}}},--3.3 ~= 3
-	{"board-3-0", "electrolysis", 3, false, {{"laminate-2", 2}, {"nickel", 1}, {"gold", 1}, {type = "fluid", name = "chlorine", amount = 6}}, {{"board-3", 2}}},--4
-	{"wafer-0", "machine", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 12}}, {{"wafer-0", 12}}},--1
+	{"board-2-0", "electrolysis-1", 1, false, {{"laminate-1", 2}, {"solder", 1}, {type = "fluid", name = "nitric-acid", amount = 3}}, {{"board-2", 1}}},--3.3 ~= 3
+	{"board-3-0", "electrolysis-2", 3, false, {{"laminate-2", 2}, {"nickel", 1}, {"gold", 1}, {type = "fluid", name = "chlorine", amount = 6}}, {{"board-3", 2}}},--4
+	{"wafer-0", "machine-1", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 12}}, {{"wafer-0", 12}}},--1
 	{"wafer-data-1", "crafting-with-fluid", 10, false, {{"wafer-0", 2}, {"tungsten", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "nitric-acid", amount = 10}}, {{"wafer-data-1", 2}}},--1.5
-	{"wafer-data-2", "chemistry", 10, false, {{"wafer-data-1", 2}, {"silicon", 1}, {"chromium", 1}, {type = "fluid", name = "carbon-monoxide", amount = 8}, {type = "fluid", name = "hydrogen-fluoride", amount = 12}}, {{"wafer-data-2", 1}}},--6
-	{"wafer-solar", "machine", 4, false, {{"wafer-0", 2}, {"silver", 1}, {type = "fluid", name = "nitric-acid", amount = 5}}, {{"wafer-solar", 1}}},--3
+	{"wafer-data-2", "chemistry-2", 10, false, {{"wafer-data-1", 2}, {"silicon", 1}, {"chromium", 1}, {type = "fluid", name = "carbon-monoxide", amount = 8}, {type = "fluid", name = "hydrogen-fluoride", amount = 12}}, {{"wafer-data-2", 1}}},--6
+	{"wafer-solar", "machine-1", 4, false, {{"wafer-0", 2}, {"silver", 1}, {type = "fluid", name = "nitric-acid", amount = 5}}, {{"wafer-solar", 1}}},--3
 	--XX{"wafer-doped", "chemistry", 2, false, {{"silicon-boule", 1}, {type = "fluid", name = "sulfuric-acid", amount = 3}, {type = "fluid", name = "uncured-epoxy", amount = 2}}, {{"wafer-doped", 2}}},--2.25 ~= 2
 	--XX{"wafer-solar", "chemistry", 16, false, {{"wafer-doped", 4}, {"silver", 1}, {type = "fluid", name = "nitric-acid", amount = 8}}, {{"wafer-solar", 4}}},--2.25 ~= 2
 	--XX{"wafer-integrated", "chemistry", 16, false, {{"wafer-doped", 3}, {"copper-plate", 1}, {"tungsten", 1}, {type = "fluid", name = "phosphine", amount = 3}, {type = "fluid", name = "hydrogen-fluoride", amount = 3}}, {{"wafer-integrated", 1}}},--8.6 ~= 8
@@ -296,8 +298,8 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	{"motor-3", "advanced-crafting", 6, false, {{"coil-3", 2}, {"stock-duralumin", 2}, {"parts-alloy", 1}}, {{"motor-3", 2}}},--8
 	{"flying-robot-frame", "crafting", 16, false, {{"motor-2", 1}, {"battery", 3}, {"stock-duralumin", 4}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--36
 	--{"flying-robot-frame-2", "advanced-crafting", 28, false, {{"motor-3", 2}, {"battery-2", 3}, {"low-density-structure", 4}, {"processing-unit", 1}}, {{"flying-robot-frame-2", 1}}},--80
-	{"low-density-structure", "machine", 20, false, {{"stock-alloy", 5}, {"stock-duralumin", 8}, {"fiber-glass", 12}, {type = "fluid", name = "uncured-epoxy", amount = 40}}, {{"low-density-structure", 1}}},--36, base 37.6
-	--{"rocket-fuel", "chemistry", 30, false, {{type = "fluid", name = "methane", amount = 80}, {type = "fluid", name = "oxygen", amount = 160}}, {{"rocket-fuel", 1}}},--24, base 11
+	{"low-density-structure", "machine-1", 20, false, {{"stock-alloy", 5}, {"stock-duralumin", 8}, {"fiber-glass", 12}, {type = "fluid", name = "uncured-epoxy", amount = 40}}, {{"low-density-structure", 1}}},--36, base 37.6
+	{"rocket-fuel", "chemistry", 30, false, {{type = "fluid", name = "methane", amount = 80}, {type = "fluid", name = "oxygen", amount = 160}}, {{"rocket-fuel", 1}}},--24, base 11
 	--{"rocket-control-unit", "advanced-crafting", 20, false, {{"copper-cable", 32}, {"advanced-circuit", 4}, {"processing-unit", 1}}, {{"rocket-control-unit", 1}}},--120, base 123
 	--{"rocket-mechanics", "advanced-crafting", 20, false, {{"stock-stainless", 32}, {"tungsten", 4}, {"parts-alloy", 1}, {"motor-3", 1}}, {{"rocket-mechanics", 1}}},--60
 	--{"rocket-part", "rocket-building", 12, false, {{"low-density-structure", 10}, {"rocket-fuel", 20}, {"rocket-control-unit", 5}, {"rocket-mechanics", 5}}, {{"rocket-part", 1}}},--1800, base 1715
@@ -331,11 +333,11 @@ xm_production_recipes["energy"] = {
 	--{"heat-exchanger", "crafting", 1, false, {{"boiler", 1}, {"stock-cupronickel", 8}, {"steel-plate", 4}}, {{"boiler-1", 1}}},--32
 	{"steam-engine", "crafting", 1, false, {{"mechanical-steam-engine", 3}, {"electric-engine-unit", 3}}, {{"steam-engine", 1}}},--36
 	{"steam-turbine", "crafting", 1, false, {{"stock-cast-iron", 16}, {"pipe", 8}, {"parts-steel", 24}, {"motor-2", 4}}, {{"steam-turbine", 1}}},--72
-	--{"steam-turbine-2", "crafting", 1, false, {{"stock-stainless", 16}, {"pipe", 8}, {"parts-alloy", 24}, {"motor-3", 4}}, {{"steam-turbine", 1}}},--72
+	--{"steam-turbine-2", "advanced-crafting", 1, false, {{"stock-stainless", 16}, {"pipe", 8}, {"parts-alloy", 24}, {"motor-3", 4}}, {{"steam-turbine", 1}}},--72
 	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 10}, {"copper-cable", 16}, {"wafer-solar", 12}, {"glass", 8}}, {{"solar-panel", 1}}},--72
 	{"solar-panel-2", "advanced-crafting", 32, false, {{"stock-stainless", 8}, {"glass", 24}, {"coil-3", 3}, {"advanced-circuit", 2}, {"solar-panel", 3}}, {{"solar-panel-2", 2}}},--144
 	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
-	{"small-lamp", "crafting", 1, false, {{"stock-cast-iron", 3}, {"glass", 2}, {"graphite", 2}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--6(1/72) --> 8
+	{"small-lamp", "crafting", 1, false, {{"iron-gear-wheel", 2}, {"glass", 2}, {"graphite", 3}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--10
 	{"small-lamp-1", "crafting", 1, false, {{"stock-cast-iron", 2}, {"glass", 1}, {"tungsten", 1}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--5
 }
 
@@ -363,10 +365,10 @@ xm_production_recipes["smelting-machine"] = {
 xm_production_recipes["chemical-machine"] = {
 	{"chemical-plant", "crafting", 3, false, {{"pump", 2}, {"copper-cable", 8}, {"glass", 8}, {"steel-plate", 2}}, {{"chemical-plant", 1}}},--32
 	{"chem-reactor-2", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 8}, {"advanced-circuit", 2}}, {{"chem-reactor-2", 1}}},--80
-	--{"chem-reactor-3", "crafting", 4, false, {{"chem-reactor-2", 1}, {"motor-2", 2}, {"porcelain", 8}, {"platinum", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-3", 1}}},--160
 	{"electrolyzer-1", "crafting", 4, false, {{"pump", 1}, {"coil-1", 2}, {"lead", 8}, {"glass", 4}}, {{"electrolyzer-1", 1}}},--24
 	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"gold", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
 	{"oil-refinery", "crafting", 8, false, {{"chemical-plant", 1}, {"xm-furnace-steel", 1}, {"pump", 3}, {"pipe", 32}, {"electronic-circuit", 8}}, {{"oil-refinery", 1}}}--144
+	--{"chem-reactor-3", "advanced-crafting", 4, false, {{"chem-reactor-2", 1}, {"motor-2", 2}, {"porcelain", 8}, {"platinum", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-3", 1}}},--160
 }
 
 xm_production_recipes["production-machine"] = {
@@ -427,8 +429,8 @@ xm_logistics_recipes["inserter"] = {
 }
 
 xm_logistics_recipes["energy-pipe-distribution"] = {
-	{"pipe", "basic-machine", 0.5, true, {{"iron-plate", 1}}, {{"pipe", 1}}},--1
-	{"pipe-1", "machine", 0.5, false, {{"steel-plate", 1}}, {{"pipe", 2}}},--1
+	{"pipe", "machine-0", 0.5, true, {{"iron-plate", 1}}, {{"pipe", 1}}},--1
+	{"pipe-1", "machine-1", 0.5, false, {{"steel-plate", 1}}, {{"pipe", 2}}},--1
 	{"pipe-to-ground", "crafting", 1, true, {{"pipe", 10}, {"stock-cast-iron", 6}}, {{"pipe-to-ground", 2}}},--16 per pair
 	{"storage-tank", "crafting", 3, false, {{"steel-plate", 10}, {"pipe", 12}}, {{"storage-tank", 1}}},--32
 	{"pump", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"pump", 1}}},--12

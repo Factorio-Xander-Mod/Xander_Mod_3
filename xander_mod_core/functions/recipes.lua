@@ -44,7 +44,7 @@ function xm_simple_recipe_impose(group_no, subgroup_no, recipe_no, recipe_entry)
 	--end
 end
 
---
+--Add a new recipe in the XM waste dump structure
 function xm_add_waste_recipe(group_no, subgroup_no, substance_no, substance_group_name, substance_subgroup_name, substance_name, recipe_no)
 
 	--Construct order strings

@@ -10,7 +10,7 @@ data.raw.item["copper-plate"].icon = "__xander-mod__/graphics/item/material/stoc
 
 data.raw.item["wood"].fuel_category = "crude"
 data.raw.item["coal"].fuel_category = "crude"
-data.raw.item["coal"].fuel_value = "4MJ"
+data.raw.item["coal"].fuel_value = "8MJ"
 data.raw.item["charcoal"].fuel_category = "chemical"
 data.raw.item["charcoal"].fuel_value = "2MJ"
 data.raw.item["coke"].fuel_category = "chemical"
