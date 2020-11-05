@@ -10,6 +10,11 @@ data.raw.recipe["raw-copper"].icon = "__xander-mod__/graphics/recipe/material/ra
 data.raw.recipe["raw-copper"].icon_size = 64
 data.raw.recipe["raw-copper"].icon_mipmaps = 4
 data.raw.recipe["raw-copper"].main_product = ""
+data.raw.recipe["raw-zirconium"].localised_name = {"recipe-name.raw-zirconium"}
+data.raw.recipe["raw-zirconium"].icon = "__xander-mod__/graphics/recipe/material/raw-material/raw-zirconium.png"
+data.raw.recipe["raw-zirconium"].icon_size = 64
+data.raw.recipe["raw-zirconium"].icon_mipmaps = 4
+data.raw.recipe["raw-zirconium"].main_product = ""
 
 data.raw.recipe["lead-oxide"].localised_name = {"recipe-name.lead-oxide"}
 data.raw.recipe["lead-oxide"].icon = "__xander-mod__/graphics/recipe/material/oxide/lead-oxide.png"

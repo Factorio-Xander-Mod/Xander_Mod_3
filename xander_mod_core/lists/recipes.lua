@@ -15,6 +15,7 @@ xm_material_recipes["raw-material"] = {
 	--XX{"raw-iron-2", "smelting-3", 4, false, {{"conc-hematite", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}, {{"raw-iron", 1}, {type = "fluid", name = "carbon-dioxide", amount = 10}}},
 	{"raw-nickel", "smelting-3", 8, false, {{"conc-millerite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-nickel", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
 	{"raw-copper", "smelting-3", 6, false, {{"conc-chalcocite", 2}, {"coke", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"raw-copper", 4}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
+	{"raw-zirconium", "smelting-3", 60, false, {{"conc-zircon", 10}, {"coke", 20}, {"magnesium-chloride", 1}}, {{"raw-zirconium", 10}, {type = "fluid", name = "carbon-monoxide", amount = 400}}},
 	{"raw-silver-0", "smelting-3", 4, false, {{"igneous-sulfide", 4}, {"lead", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{"raw-silver", 1}}},--1
 	{"raw-platinum-0", "washing-1", 6, false, {{"magnetic", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-platinum", 1}}},--1
 	{"raw-gold-0", "washing-1", 5, false, {{"skarn", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-gold", 1}}},--1
@@ -34,9 +35,10 @@ xm_material_recipes["concentrate"] = {
 	{"conc-fluorite-0", "washing-1", 3, false, {{"phosphorite", 3}, {type = "fluid", name = "water", amount = 20}}, {{"conc-fluorite", 1}}},
 	--XX{"conc-fluorite-1", "washing", 12, false, {{"phosphorite", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 20}}, {{"conc-fluorite", 12}}},
 	{"sand-0", "washing-0", 1, false, {{"sand-heavy", 1}, {type = "fluid", name = "water", amount = 10}}, {{"sand", 1}}},
+	{"conc-zircon", "washing-2", 15, false, {{"sand-heavy", 24}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 120}}, {{"conc-zircon", 6}}},
 	{"conc-cassiterite", "washing-2", 8, false, {{"skarn", 10}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-cassiterite", 10}}},
 	{"conc-scheelite-0", "washing-1", 6, false, {{"skarn", 6}, {type = "fluid", name = "water", amount = 40}}, {{"conc-scheelite", 1}}},
-	{"conc-scheelite-1", "washing-2", 16, false, {{"skarn", 12}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 100}}, {{"conc-scheelite", 4}}},
+	{"conc-scheelite-1", "washing-2", 24, false, {{"skarn", 18}, {"surfactant", 1}, {type = "fluid", name = "water", amount = 120}}, {{"conc-scheelite", 6}}},
 	{"gravel", "washing-0", 1, false, {{"stone", 1}}, {{"gravel", 1}}},
 	{"limestone-0", "washing-0", 2, false, {{"stone", 4}}, {{"limestone", 3}}},
 	{"magnesite", "washing-1", 4, false, {{"stone", 3}, {type = "fluid", name = "water", amount = 10}}, {{"magnesite", 1}}},
@@ -88,7 +90,8 @@ xm_material_recipes["stock"] = {
 	{"stock-bronze-2", "smelting-3", 12, false, {{"copper-plate", 6}, {"nickel", 1}, {"aluminum", 1}}, {{"stock-bronze", 8}}},--1
 	{"stock-cupronickel", "smelting-2", 7.5, false, {{"copper-plate", 3}, {"nickel", 2}}, {{"stock-cupronickel", 5}}},--1
 	{"stock-duralumin", "smelting-3", 20, false, {{"aluminum", 19}, {"copper-plate", 1}}, {{"stock-duralumin", 10}}},--2
-	--{"stock-titanium", "smelting-2", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 20}}},--1
+	{"stock-zircalloy", "smelting-3", 32, false, {{"raw-zirconium", 14}, {"raw-iron", 1}, {"tin", 1}}, {{"stock-zircalloy", 8}}},--2
+	--{"stock-titanium", "smelting-2", 40, false, {{"titanium", 18}, {"aluminum", 1}, {"vanadium", 1}}, {{"stock-titanium", 10}}},--2
 	--XX{"silicon-boule", "smelting-3", 20, false, {{"silicon", 4}, {type = "fluid", name = "chlorine", amount = 10}}, {{"silicon-boule", 1}}},--4
 }
 
@@ -129,6 +132,7 @@ xm_material_recipes["salt"] = {
 	{"saltpeter", "washing-0", 2, false, {{"evaporites", 3}, {type = "fluid", name = "water", amount = 10}}, {{"saltpeter", 2}}},--1
 	--XX{"sodium-carbonate", "washing", 4, false, {{"evaporites", 2}, {type = "fluid", name = "water", amount = 30}}, {{"sodium-carbonate", 1}}},--1
 	{"cryolite", "chemistry", 6, false, {{"sodium-hydroxide", 3}, {"aluminum-hydroxide", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 60}}, {{"cryolite", 12}}},--1
+	{"magnesium-chloride", "chemistry", 1.5, false, {{type = "fluid", name = "water-brine", amount = 20}}, {{"magnesium-chloride", 1}}},--1
 }
 
 xm_material_recipes["organic"] = {

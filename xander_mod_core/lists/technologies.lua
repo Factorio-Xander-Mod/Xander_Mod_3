@@ -23,6 +23,7 @@ xm_material_technologies["ingot"] = {
 	{"nickel2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"conc-millerite-1", "raw-nickel", "nickel-1"}, {"electrolysis2", "washing3"}},
 	{"copper2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"conc-chalcocite", "raw-copper", "copper-plate-2"}, {"electrolysis2", "washing3"}},
 	--XX{"zinc", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-sphalerite-0", "zinc-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
+	{"zirconium", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"magnesium-chloride", "conc-zircon", "raw-zirconium", "stock-zircalloy"}, {"electrolysis2", "washing3"}},
 	{"nobles", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"raw-silver-0", "raw-platinum-0", "raw-gold-0", "silver", "platinum", "gold"}, {"tin-lead1", "chemistry2", "chemical-science-pack"}},
 	{"tin-lead1", 50, {"automation-science-pack"}, 15, {"tin-1", "lead-1"}, {"solder", "washing1", "advanced-material-processing"}},
 	{"tin-lead2", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"conc-cassiterite", "conc-galena", "lead-oxide", "tin-2", "lead-2"}, {"tin-lead1", "washing3"}},

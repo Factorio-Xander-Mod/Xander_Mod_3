@@ -7,17 +7,17 @@ xm_all_items_to_impose = {}
 --==========  MATERIAL  ==========
 local xm_material_items = {}
 
-xm_material_items["raw-material"] = {"raw-chromate-slag", "raw-iron", "raw-nickel", "raw-copper", "raw-silver", "raw-platinum", "raw-gold"}--, "raw-titanium", "raw-zirconium"
+xm_material_items["raw-material"] = {"raw-chromate-slag", "raw-iron", "raw-nickel", "raw-copper", "raw-zirconium", "raw-silver", "raw-platinum", "raw-gold"}
 xm_material_items["raw-resource"] = {"coal", "copper-ore", "evaporites", "igneous-sulfide", "iron-ore", "laterite", "magnetic", "massive-sulfide", "phosphorite", "sand-heavy", "skarn", "stone", "uranium-ore"}
 xm_material_items["milled-resource"] = {}
-xm_material_items["concentrate"] = {"conc-chalcocite", "conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-chromite", "conc-galena", "conc-fluorite", "sand", "conc-cassiterite", "conc-scheelite", "gravel", "limestone", "magnesite"}
+xm_material_items["concentrate"] = {"conc-chalcocite", "conc-borax", "conc-millerite", "clay", "kaolin", "conc-bauxite", "conc-chromite", "conc-galena", "conc-fluorite", "sand", "conc-zircon", "conc-cassiterite", "conc-scheelite", "gravel", "limestone", "magnesite"}
 xm_material_items["oxide"] = {"sodium-hydroxide", "aluminum-hydroxide", "chromium-oxide", "tungsten-oxide", "lead-oxide"}
-xm_material_items["ingot"] = {"aluminum", "chromium", "nickel", "silver", "tin", "tungsten", "platinum", "gold", "lead", "solder"}--, "titanium",
-xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "stock-stainless", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin"}--, "stock-titanium"
+xm_material_items["ingot"] = {"aluminum", "chromium", "nickel", "silver", "tin", "tungsten", "platinum", "gold", "lead", "solder"}
+xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "stock-stainless", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin", "stock-zircalloy"}
 xm_material_items["nonmetal"] = {"graphite", "silicon", "silicon-boule", "phosphorus", "sulfur"}
 xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete"}
 xm_material_items["ceramic"] = {"brick-clay", "brick-magnesia", "silicon-carbide", "glass", "fiber-glass", "porcelain"}
-xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite"}
+xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite", "magnesium-chloride"}
 xm_material_items["fluid-recipes"] = {}
 xm_material_items["organic"] = {"wood", "charcoal", "resin", "phenol", "aromatic", "surfactant", "nitrated-organics"}
 xm_material_items["polymer"] = {"pellets-polyethylene", "pellets-nylon", "plastic-bar", "rubber-raw", "rubber-sbr", "rubber-vulcanized"}
