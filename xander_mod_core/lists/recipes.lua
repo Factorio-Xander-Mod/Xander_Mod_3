@@ -19,6 +19,17 @@ xm_material_recipes["raw-material"] = {
 	{"raw-silver-0", "smelting-3", 4, false, {{"igneous-sulfide", 4}, {"lead", 1}, {type = "fluid", name = "oxygen", amount = 20}}, {{"raw-silver", 1}}},--1
 	{"raw-platinum-0", "washing-1", 6, false, {{"magnetic", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-platinum", 1}}},--1
 	{"raw-gold-0", "washing-1", 5, false, {{"skarn", 4}, {type = "fluid", name = "sulfuric-acid", amount = 20}}, {{"raw-gold", 1}}},--1
+	
+	{"recycle-wrought-iron", "smelting-2", 2, false, {{"iron-plate", 1}}, {{"raw-iron", 1}}},
+	{"recycle-burner-drill", "smelting-2", 14, false, {{"burner-mining-drill", 1}}, {{"raw-iron", 7}}},
+	{"recycle-burner-ore-processor", "smelting-2", 10, false, {{"ore-processor-0", 1}}, {{"raw-iron", 5}}},
+	{"recycle-burner-machine-tool", "smelting-2", 16, false, {{"machine-tool-0", 1}}, {{"raw-iron", 8}}},
+	{"recycle-burner-assembling-machine", "smelting-2", 26, false, {{"assembling-machine-0", 1}}, {{"raw-iron", 13}}},
+	{"recycle-crude-belt", "smelting-2", 2, false, {{"crude-transport-belt", 1}}, {{"raw-iron", 1}}},
+	{"recycle-crude-underground", "smelting-2", 8, false, {{"crude-underground-belt", 1}}, {{"raw-iron", 4}}},
+	{"recycle-crude-splitter", "smelting-2", 10, false, {{"crude-splitter", 1}}, {{"raw-iron", 5}}},
+	{"recycle-burner-inserter", "smelting-2", 6, false, {{"burner-inserter", 1}}, {{"raw-iron", 3}}},
+	{"recycle-small-electric-pole", "smelting-2", 2, false, {{"small-electric-pole", 2}}, {{"copper-plate", 1}}},
 }
 
 xm_material_recipes["concentrate"] = {

@@ -11,7 +11,8 @@ local xm_material_technologies = {}
 xm_material_technologies["raw-material"] = {
 	{"earthen0", 10, {"crude-science-pack"}, 5, {"sand-0", "clay-1", "saltpeter"}, {"washing0"}},
 	{"fuels0", 5, {"crude-science-pack"}, 5, {"coke", "potash"}, nil},
-	{"glass0", 10, {"crude-science-pack"}, 5, {"glass-0"}, {"earthen0", "fuels0"}}
+	{"glass0", 10, {"crude-science-pack"}, 5, {"glass-0"}, {"earthen0", "fuels0"}},
+	{"recycling", 120, {"automation-science-pack", "logistic-science-pack"}, 30, {"recycle-wrought-iron", "recycle-burner-drill", "recycle-burner-ore-processor", "recycle-burner-machine-tool", "recycle-burner-assembling-machine", "recycle-crude-belt", "recycle-crude-underground", "recycle-crude-splitter", "recycle-burner-inserter", "recycle-small-electric-pole"}, {"landfill", "advanced-material-processing"}},
 }
 
 xm_material_technologies["ingot"] = {
