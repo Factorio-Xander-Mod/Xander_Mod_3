@@ -106,6 +106,8 @@ for i = 1, 8 do
 	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[(2 * i) - 1] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
 end
 
+data.raw.locomotive["locomotive-1"].burner.fuel_category = nil
+data.raw.locomotive["locomotive-1"].burner.fuel_categories = {"crude", "chemical"}
 
 --==========  COMBAT  ==========
 
