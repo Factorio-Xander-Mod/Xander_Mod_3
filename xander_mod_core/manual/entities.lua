@@ -77,6 +77,8 @@ data.raw.lab["lab-burner"].fast_replaceable_group = "lab"
 data.raw.lab["lab"].fast_replaceable_group = "lab"
 
 
+
+
 --==========  LOGISTICS  ==========
 
 data.raw["transport-belt"]["express-transport-belt"].speed = 0.125
@@ -108,6 +110,13 @@ end
 
 data.raw.locomotive["locomotive-1"].burner.fuel_category = nil
 data.raw.locomotive["locomotive-1"].burner.fuel_categories = {"crude", "chemical"}
+data.raw.car["car"].burner.fuel_category = nil
+data.raw.car["car"].burner.fuel_categories = {"crude", "chemical"}
+data.raw.car["tank"].burner.fuel_category = nil
+data.raw.car["tank"].burner.fuel_categories = {"crude", "chemical"}
+
+
+
 
 --==========  COMBAT  ==========
 

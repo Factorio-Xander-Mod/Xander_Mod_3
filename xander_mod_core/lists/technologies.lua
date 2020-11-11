@@ -197,7 +197,8 @@ local xm_logistics_technologies = {}
 xm_logistics_technologies["belt"] = {
 	{"logistics", 40, {"automation-science-pack"}, 15, {"transport-belt", "underground-belt", "splitter"}, {"automation-science-pack", "steel-processing"}},
 	{"logistics-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"logistic-science-pack", "concrete"}},
-	--{"logistics-3", 240, {"automation-science-pack"}, 30, {"express-transport-belt", "express-underground-belt", "express-splitter"}, {"concrete-2"}},
+	{"logistics-3", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"expedited-transport-belt", "expedited-underground-belt", "expedited-splitter"}, {"logistics-2", "concrete-2", "aluminum", "advanced-electronics"}},
+	{"logistics-4", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"express-transport-belt", "express-underground-belt", "express-splitter"}, {"logistics-3", "chromium", "advanced-electronics-2"}},
 }
 
 xm_logistics_technologies["inserter"] = {
@@ -213,7 +214,7 @@ xm_logistics_technologies["energy-pipe-distribution"] = {
 
 xm_logistics_technologies["transport"] = {
 	{"railway", 80, {"automation-science-pack"}, 30, {}, {"logistics", "parts1"}},
-	{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1"}, {"rail-signals", "chemical-science-pack", "automation-2", "parts2"}},
+	{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1"}, {"rail-signals", "braking-force-1", "chemical-science-pack", "automation-2", "parts2"}},
 	{"automated-rail-transportation", 120, {"automation-science-pack"}, 30, {}, {"railway", "parts1"}},
 	{"rail-signals", 100, {"automation-science-pack", "logistic-science-pack"}, 40, {}, {"automated-rail-transportation", "electronics", "optics"}},
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"engine"}},

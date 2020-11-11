@@ -30,6 +30,7 @@ xm_material_recipes["raw-material"] = {
 	{"recycle-crude-splitter", "smelting-2", 10, false, {{"crude-splitter", 1}}, {{"raw-iron", 5}}},
 	{"recycle-burner-inserter", "smelting-2", 6, false, {{"burner-inserter", 1}}, {{"raw-iron", 3}}},
 	{"recycle-small-electric-pole", "smelting-2", 2, false, {{"small-electric-pole", 2}}, {{"copper-plate", 1}}},
+	{"recycle-firearm-magazine", "smelting-2", 2, false, {{"firearm-magazine", 1}}, {{"stock-bronze", 1}}},
 }
 
 xm_material_recipes["concentrate"] = {
@@ -120,7 +121,7 @@ xm_material_recipes["nonmetal"] = {
 
 xm_material_recipes["terrain"] = {
 	{"stone-brick", "machine-0", 2, true, {{"stone", 2}}, {{"stone-brick", 1}}},--2
-	{"landfill", "washing-1", 3, false, {{"stone", 12}, {"gravel", 6}}, {{"landfill", 1}}},--18
+	{"landfill", "washing-1", 3, false, {{"stone", 12}, {"gravel", 6}, {"clay", 2}}, {{"landfill", 1}}},--20
 	{"cement", "smelting-2", 9, false, {{"limestone", 2}, {"sand", 1}}, {{"cement", 3}}},--1
 	{"concrete", "crafting-with-fluid", 10, false, {{"gravel", 5}, {"cement", 4}, {"steel-rod", 2}, {type = "fluid", name = "water", amount = 20}}, {{"concrete", 10}}},--1
 	{"refined-concrete", "crafting-with-fluid", 15, false, {{"gravel", 3}, {"fiber-glass", 2}, {"cement", 4}, {"steel-rod", 4}, {type = "fluid", name = "water", amount = 10}}, {{"refined-concrete", 5}}}--2
@@ -164,7 +165,7 @@ xm_material_recipes["polymer"] = {
 	{"rubber-vulcanized-1", "chemistry", 3, false, {{"rubber-sbr", 4}, {"sulfur", 1}, {"graphite", 1}}, {{"rubber-vulcanized", 6}}},--1
 	{"pellets-polyethylene", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"pellets-polyethylene", 1}}},--0.5
 	{"pellets-nylon", "chemistry-2", 2, false, {{"aromatic", 1}, {type = "fluid", name = "amine", amount = 5}}, {{"pellets-nylon", 3}}},--0.5
-	{"plastic-bar", "machine-1", 0.8, false, {{"pellets-polyethylene", 2}}, {{"plastic-bar", 1}}},--1
+	{"plastic-bar", "machine-1", 0.8, false, {{"pellets-polyethylene", 3}}, {{"plastic-bar", 1}}},--1.5
 	{"plastic-bar-2", "machine-1", 1.25, false, {{"pellets-nylon", 3}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
 }
 
@@ -421,14 +422,20 @@ local xm_logistics_recipes = {}
 
 xm_logistics_recipes["belt"] = {
 	{"crude-transport-belt", "basic-crafting", 1, true, {{"iron-plate", 2}, {"iron-gear-wheel", 1}}, {{"crude-transport-belt", 4}}},--1
-	{"transport-belt", "crafting", 2, false, {{"steel-plate", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"transport-belt", 4}}},--2
+	{"transport-belt", "crafting", 1, false, {{"steel-plate", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"transport-belt", 4}}},--2
 	{"fast-transport-belt", "crafting", 1.5, false, {{"transport-belt", 1}, {"parts-steel", 4}, {"rubber-vulcanized", 2}}, {{"fast-transport-belt", 1}}},--8
+	{"expedited-transport-belt", "crafting", 2, false, {{"fast-transport-belt", 1}, {"stock-duralumin", 3}, {"plastic-bar", 4}}, {{"expedited-transport-belt", 1}}},--18
+	{"express-transport-belt", "advanced-crafting", 2, false, {{"expedited-transport-belt", 1}, {"parts-alloy", 2}, {"stock-stainless", 3}}, {{"express-transport-belt", 1}}},--32
 	{"crude-underground-belt", "basic-crafting", 1, true, {{"crude-transport-belt", 4}, {"stone-brick", 4}}, {{"crude-underground-belt", 2}}},--8 per pair
-	{"underground-belt", "crafting", 1, false, {{"transport-belt", 6}, {"brick-clay", 4}, {"stock-bronze", 4}}, {{"underground-belt", 2}}},--20 per pair
-	{"fast-underground-belt", "crafting", 3, false, {{"underground-belt", 2}, {"fast-transport-belt", 8}, {"concrete", 8}, {"steel-plate", 4}}, {{"fast-underground-belt", 2}}},--100 per pair
+	{"underground-belt", "crafting", 1, false, {{"transport-belt", 6}, {"brick-clay", 3}, {"stock-bronze", 3}}, {{"underground-belt", 2}}},--18 per pair
+	{"fast-underground-belt", "crafting", 2, false, {{"underground-belt", 2}, {"fast-transport-belt", 8}, {"concrete", 8}, {"stock-cast-iron", 8}}, {{"fast-underground-belt", 2}}},--80 per pair
+	{"expedited-underground-belt", "crafting", 3, false, {{"fast-underground-belt", 2}, {"expedited-transport-belt", 10}, {"refined-concrete", 10}, {"stock-alloy", 5}}, {{"expedited-underground-belt", 2}}},--280 per pair
+	{"express-underground-belt", "advanced-crafting", 3, false, {{"expedited-underground-belt", 2}, {"express-transport-belt", 12}, {"refined-concrete", 20}, {"stock-stainless", 8}}, {{"express-underground-belt", 2}}},--700 per pair
 	{"crude-splitter", "basic-crafting", 1, true, {{"crude-transport-belt", 3}, {"iron-gear-wheel", 1}, {"stock-bronze", 1}}, {{"crude-splitter", 1}}},--6
 	{"splitter", "crafting", 1, false, {{"transport-belt", 4}, {"iron-gear-wheel", 4}, {"stock-bronze", 4}}, {{"splitter", 1}}},--20
-	{"fast-splitter", "crafting", 3, false, {{"splitter", 1}, {"fast-transport-belt", 4}, {"parts-steel", 8}, {"electronic-circuit", 3}}, {{"fast-splitter", 1}}},--72
+	{"fast-splitter", "crafting", 2, false, {{"splitter", 1}, {"fast-transport-belt", 4}, {"parts-steel", 8}, {"electronic-circuit", 3}}, {{"fast-splitter", 1}}},--72
+	{"expedited-splitter", "crafting", 3, false, {{"fast-splitter", 1}, {"expedited-transport-belt", 2}, {"stock-duralumin", 8}, {"advanced-circuit", 3}}, {{"expedited-splitter", 1}}},--154
+	{"express-splitter", "crafting", 3, false, {{"expedited-splitter", 1}, {"express-transport-belt", 2}, {"parts-alloy", 5}, {"processing-unit", 1}}, {{"express-splitter", 1}}},--302
 }
 
 xm_logistics_recipes["inserter"] = {

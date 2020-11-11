@@ -23,6 +23,7 @@ data.raw.technology["research-speed-1"].prerequisites = {"electronics", "electri
 --==========  LOGISTICS  ==========
 
 data.raw.technology["toolbelt"].unit.count = 150
+data.raw.technology["logistics-3"].icon = "__xander-mod__/graphics/technology/logistics/belt/logistics-3.png"
 data.raw.technology["landfill"].prerequisites = {"washing1", "logistic-science-pack"}
 data.raw.technology["circuit-network"].unit.count = 150
 data.raw.technology["circuit-network"].unit.time = 30

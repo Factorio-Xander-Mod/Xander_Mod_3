@@ -102,6 +102,8 @@ data.raw.recipe["diesel-2"].icon_mipmaps = 4
 data.raw.recipe["diesel-2"].main_product = ""
 
 
+
+
 --==========  FLUID  ==========
 
 data.raw.recipe["distillation-air"].localised_name = {"recipe-name.distillation-air"}
@@ -215,6 +217,8 @@ data.raw.recipe["reform-methane"].icon_mipmaps = 4
 data.raw.recipe["reform-methane"].main_product = ""
 
 
+
+
 --==========  INTERMEDIATE PRODUCTS  ==========
 
 data.raw.recipe["iron-gear-wheel"].normal = nil
@@ -235,6 +239,8 @@ data.raw.recipe["low-density-structure"].normal = nil
 data.raw.recipe["low-density-structure"].expensive = nil
 
 
+
+
 --==========  PRODUCTION  ==========
 
 data.raw.recipe["steam-engine"].normal = nil
@@ -249,9 +255,17 @@ data.raw.recipe["assembling-machine-2"].expensive = nil
 data.raw.recipe["lab"].enabled = false
 
 
+
+
 --==========  LOGISTICS  ==========
 
 data.raw.recipe["iron-chest"].ingredients = {{"stock-cast-iron", 8}}
+data.raw.recipe["express-transport-belt"].normal = nil
+data.raw.recipe["express-transport-belt"].expensive = nil
+data.raw.recipe["express-underground-belt"].normal = nil
+data.raw.recipe["express-underground-belt"].expensive = nil
+data.raw.recipe["express-splitter"].normal = nil
+data.raw.recipe["express-splitter"].expensive = nil
 data.raw.recipe["pipe"].normal = nil
 data.raw.recipe["pipe"].expensive = nil
 data.raw.recipe["small-electric-pole"].enabled = false
