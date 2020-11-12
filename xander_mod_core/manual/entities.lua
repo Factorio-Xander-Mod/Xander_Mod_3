@@ -1,5 +1,12 @@
---==========  PRODUCTION  ==========
+--==========  TREES  ==========
+for i, entry in pairs(data.raw.tree) do
+	data.raw.tree[entry.name].minable.count = 24
+end
 
+
+
+
+--==========  PRODUCTION  ==========
 
 --energy
 data.raw.boiler["boiler-1"].fast_replaceable_group = "boiler"
