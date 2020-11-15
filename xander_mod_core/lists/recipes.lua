@@ -188,9 +188,9 @@ local xm_fluids_recipes = {}
 
 xm_fluids_recipes["fluid-element"] = {
 	{"distillation-air", "oil-processing", 10, false, {}, {{type = "fluid", name = "nitrogen", amount = 40}, {type = "fluid", name = "oxygen", amount = 10}}},--1
-	{"solid-fuel-from-heavy-oil", "smelting-3", 0.5, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
-	{"solid-fuel-from-light-oil", "smelting-3", 0.5, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
-	{"solid-fuel-from-petroleum-gas", "smelting-3", 0.5, false, {{type = "fluid", name = "petroleum-gas", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 36}}},
+	{"solid-fuel-from-heavy-oil", "smelting-3", 1, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
+	{"solid-fuel-from-light-oil", "smelting-3", 1, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
+	{"solid-fuel-from-petroleum-gas", "smelting-3", 1, false, {{type = "fluid", name = "petroleum-gas", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 36}}},
 	{"electrolysis-acid", "electrolysis-1", 6, false, {{type = "fluid", name = "water", amount = 30}, {type = "fluid", name = "sulfuric-acid", amount = 1}}, {{type = "fluid", name = "hydrogen", amount = 20}, {type = "fluid", name = "oxygen", amount = 10}}},--1
 	{"electrolysis-base", "electrolysis-2", 30, false, {{type = "fluid", name = "water-distilled", amount = 300}, {"sodium-hydroxide", 1}}, {{type = "fluid", name = "hydrogen", amount = 200}, {type = "fluid", name = "oxygen", amount = 100}}},--1
 	{"electrolysis-brine", "electrolysis-1", 12, false, {{type = "fluid", name = "water-brine", amount = 20}}, {{"sodium-hydroxide", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "chlorine", amount = 10}}},--1
