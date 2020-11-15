@@ -460,7 +460,7 @@ xm_logistics_recipes["energy-pipe-distribution"] = {
 	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
 	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"glass", 2}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
 	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
-	{"big-electric-pole-2", "crafting", 2, false, {{"big-electric-pole", 1}, {"stock-stainless", 12}, {"porcelain", 4}, {"copper-cable", 16}}, {{"big-electric-pole", 1}}},--72
+	{"big-electric-pole-2", "crafting", 2, false, {{"big-electric-pole", 1}, {"stock-stainless", 12}, {"porcelain", 4}, {"copper-cable", 16}}, {{"big-electric-pole-2", 1}}},--72
 	{"substation", "crafting", 2, false, {{"medium-electric-pole", 2}, {"coil-2", 8}, {"porcelain", 4}, {"advanced-circuit", 4}}, {{"substation", 1}}},--96
 }
 
