@@ -235,6 +235,8 @@ data.raw.recipe["electronic-circuit"].normal = nil
 data.raw.recipe["electronic-circuit"].expensive = nil
 data.raw.recipe["advanced-circuit"].normal = nil
 data.raw.recipe["advanced-circuit"].expensive = nil
+data.raw.recipe["processing-unit"].normal = nil
+data.raw.recipe["processing-unit"].expensive = nil
 data.raw.recipe["low-density-structure"].normal = nil
 data.raw.recipe["low-density-structure"].expensive = nil
 
