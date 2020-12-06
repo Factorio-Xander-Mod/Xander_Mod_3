@@ -7,6 +7,7 @@ data.raw.technology["concrete-2"].icon = "__base__/graphics/technology/concrete.
 
 data.raw.technology["advanced-electronics"].localised_description = {"technology-description.advanced-electronics"}
 data.raw.technology["advanced-electronics-2"].localised_description = {"technology-description.advanced-electronics-2"}
+data.raw.technology["laser"].unit.count = 300
 
 
 --==========  PRODUCTION  ==========
@@ -28,8 +29,8 @@ data.raw.technology["landfill"].prerequisites = {"washing1", "logistic-science-p
 data.raw.technology["circuit-network"].unit.count = 150
 data.raw.technology["circuit-network"].unit.time = 30
 data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric-energy-distribution-1"}
-table.insert(data.raw.technology["stack-inserter"].effects, data.raw.technology["inserter-capacity-bonus-2"].effects[1])
-table.remove(data.raw.technology["inserter-capacity-bonus-2"].effects, 1)
+--table.insert(data.raw.technology["inserter-capacity-bonus-1"].effects, data.raw.technology["inserter-capacity-bonus-2"].effects[1])
+--table.remove(data.raw.technology["inserter-capacity-bonus-2"].effects, 1)
 
 
 --==========  COMBAT  ==========

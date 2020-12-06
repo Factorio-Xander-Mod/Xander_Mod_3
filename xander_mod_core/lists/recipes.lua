@@ -275,7 +275,7 @@ xm_intermediate_products_recipes["electrical"] = {
 	{"wire-solder-0", "machine-0", 3, false, {{"solder", 3}, {"resin", 1}}, {{"wire-solder", 6}}},--0.5(1/24)
 	{"wire-solder-1", "machine-1", 2, false, {{"solder", 2}, {"phenol", 1}}, {{"wire-solder", 4}}},--0.5
 	{"wire-gold", "machine-1", 1, false, {{"gold", 1}}, {{"wire-gold", 2}}},--0.5
-	{"battery", "crafting-with-fluid", 4, false, {{"lead", 2}, {"glass", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 1}}},--4
+	{"battery", "crafting-with-fluid", 4, false, {{"lead", 2}, {"plastic-bar", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"battery", 1}}},--4
 }
 
 xm_intermediate_products_recipes["data"] = {
@@ -496,6 +496,7 @@ xm_combat_recipes["gun"] = {
 	{"submachine-gun", "crafting", 10, false, {{"steel-plate", 8}, {"iron-gear-wheel", 6}, {"stock-bronze", 8}}, {{"submachine-gun", 1}}},--36
 	{"shotgun", "crafting", 10, false, {{"steel-plate", 6}, {"iron-gear-wheel", 4}, {"stock-bronze", 16}}, {{"shotgun", 1}}},--36
 	{"combat-shotgun", "crafting", 10, false, {{"parts-steel", 24}, {"parts-alloy", 12}, {"plastic-bar", 24}}, {{"combat-shotgun", 1}}},--96
+	{"rocket-launcher", "crafting", 10, false, {{"parts-steel", 20}, {"plastic-bar", 8}, {"electronic-circuit", 5}}, {{"rocket-launcher", 1}}},--48
 	{"flamethrower", "crafting", 10, false, {{"parts-steel", 24}, {"stock-cupronickel", 12}}, {{"flamethrower", 1}}},--36
 	{"land-mine", "crafting", 5, false, {{"steel-plate", 2}, {"explosives", 2}}, {{"land-mine", 4}}},--2 (8 per recipe)
 }
@@ -504,7 +505,8 @@ xm_combat_recipes["ammo"] = {
 	{"firearm-magazine", "crafting", 1, false, {{"stock-bronze", 1}, {"lead", 1}, {"gunpowder", 1}}, {{"firearm-magazine", 1}}},--3(1/24) -> 3
 	{"piercing-rounds-magazine", "crafting", 3, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"gunpowder", 3}}, {{"piercing-rounds-magazine", 1}}},--12
 	{"shotgun-shell", "crafting", 3, false, {{"stock-bronze", 1}, {"lead", 2}, {"gunpowder", 1}}, {{"shotgun-shell", 1}}},--4(1/24) -> 4
-	{"piercing-shotgun-shell", "crafting", 8, false, {{"stock-bronze", 5}, {"steel-plate", 5}, {"gunpowder", 5}}, {{"piercing-shotgun-shell", 1}}},--20
+	{"piercing-shotgun-shell", "crafting", 8, false, {{"stock-bronze", 5}, {"stock-alloy", 5}, {"gunpowder", 5}}, {{"piercing-shotgun-shell", 1}}},--20
+	{"rocket", "crafting", 8, false, {{"steel-plate", 1}, {"explosives", 1}, {"electronic-circuit", 1}}, {{"rocket", 1}}},--6
 	{"flamethrower-ammo", "crafting-with-fluid", 6, false, {{"steel-plate", 8}, {type = "fluid", name = "crude-oil", amount = 200}}, {{"flamethrower-ammo", 1}}},--36
 }
 
@@ -525,6 +527,7 @@ xm_combat_recipes["defensive-structure"] = {
 	{"gun-turret", "crafting", 8, false, {{"iron-plate", 8}, {"iron-gear-wheel", 10}, {"stock-bronze", 8}}, {{"gun-turret", 1}}},--36
 	{"gun-turret-2", "crafting", 20, false, {{"iron-gear-wheel", 15}, {"parts-steel", 48}, {"plastic-bar", 18}}, {{"gun-turret-2", 1}}},--96
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
+	{"laser-turret", "crafting", 20, false, {{"parts-alloy", 16}, {"battery", 8}, {"glass", 20}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}}--32
 }
 

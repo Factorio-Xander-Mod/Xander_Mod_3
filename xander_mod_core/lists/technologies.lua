@@ -100,14 +100,14 @@ xm_intermediate_products_technologies["electrical"] = {
 	{"electricity", 20, {"crude-science-pack"}, 10, {"copper-cable", "coil-1-0", "electric-engine-unit", "steam-engine", "small-electric-pole", "inserter"}, {"glass0"}},
 	{"motor2", 60, {"automation-science-pack", "logistic-science-pack"}, 30, {"coil-1-1", "coil-2-0", "motor-1-1", "motor-2-0"}, {"parts1", "plastics"}},
 	{"motor3", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"copper-cable-2", "coil-2-1", "coil-3", "motor-3"}, {"parts2", "plastics-2"}},
-	{"battery", 180, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"tin-lead1", "electrolysis1", "logistic-science-pack"}},
+	{"battery", 180, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"tin-lead1", "electrolysis1", "plastics"}},
 }
 
 xm_intermediate_products_technologies["data"] = {
 	{"circuit0", 20, {"automation-science-pack"}, 15, {"board-1-0", "components-1-0", "electronic-circuit", "inserter-1"}, {"solder", "automation-science-pack"}},
 	{"electronics", 80, {"automation-science-pack"}, 30, {"wire-solder-1", "board-1-1", "components-1-1"}, {"phenolic", "ceramics1", "automation"}},
 	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "nitrogen", "electronics"}},
-	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"semiconductors", "plastics-2", "electrolysis2"}},
+	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"laser", "semiconductors", "plastics-2", "electrolysis2"}},
 }
 
 xm_intermediate_products_technologies["intermediate-product"] = {
@@ -170,7 +170,8 @@ xm_production_technologies["production-machine"] = {
 	{"machines0", 20, {"crude-science-pack"}, 5, {"machine-tool-0", "assembling-machine-0", "rubber-raw"}, nil},
 	{"electric-engine", 20, {"automation-science-pack"}, 10, {"lab", "electric-mining-drill"}, {"circuit0", "logistics"}},
 	{"automation", 30, {"automation-science-pack"}, 15, {"machine-tool-1", "assembling-machine-1", "long-handed-inserter"}, {"steel-processing", "machines0", "circuit0"}},
-	{"automation-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"machine-tool-2", "assembling-machine-2"}, {"advanced-electronics", "motor2", "fast-inserter"}}
+	{"automation-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"machine-tool-2", "assembling-machine-2"}, {"advanced-electronics", "motor2", "fast-inserter"}},
+	--{"automation-3", {"laser"}}
 }
 
 xm_production_technologies["module"] = {
@@ -241,6 +242,7 @@ xm_combat_technologies["gun"] = {
 	{"military-2", 80, {"automation-science-pack", "logistic-science-pack"}, 20, {}, {"military", "advanced-material-processing"}},
 	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}},
 	{"military-4", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {"piercing-shotgun-shell", "cluster-grenade"}, {"utility-science-pack", "military-3"}},
+	{"rocketry", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "explosives", "plastics"}},
 	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
 }
 
@@ -253,6 +255,7 @@ xm_combat_technologies["defensive-structure"] = {
 	{"stone-walls", 10, {"crude-science-pack"}, 5, {}, nil},
 	{"turrets", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
 	{"turrets-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
+	{"laser-turrets", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 60, {"laser-turret"}, {"military-science-pack", "laser", "advanced-electronics"}},
 }
 
 xm_all_technologies_to_impose["combat"] = xm_combat_technologies
