@@ -37,6 +37,8 @@ data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric
 
 data.raw.technology["military-science-pack"].unit.count = 100
 data.raw.technology["land-mine"].unit.count = 240
+data.raw.technology["explosive-rocketry"].unit.count = 250
+data.raw.technology["tanks"].unit.count = 400
 
 table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
 table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})

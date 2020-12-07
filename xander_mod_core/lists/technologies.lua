@@ -241,7 +241,7 @@ xm_combat_technologies["gun"] = {
 	{"military", 40, {"automation-science-pack"}, 15, {"submachine-gun", "shotgun", "powder-black-1", "shotgun-shell", "radar"}, {"stone-walls", "turrets", "sulfur-processing", "electric-engine"}},
 	{"military-2", 80, {"automation-science-pack", "logistic-science-pack"}, 20, {}, {"military", "advanced-material-processing"}},
 	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}},
-	{"military-4", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {"piercing-shotgun-shell", "cluster-grenade"}, {"utility-science-pack", "military-3"}},
+	{"military-4", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {"piercing-shotgun-shell", "cluster-grenade"}, {"utility-science-pack", "military-3"}},
 	{"rocketry", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "explosives", "plastics"}},
 	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
 }
@@ -255,7 +255,7 @@ xm_combat_technologies["defensive-structure"] = {
 	{"stone-walls", 10, {"crude-science-pack"}, 5, {}, nil},
 	{"turrets", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
 	{"turrets-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
-	{"laser-turrets", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 60, {"laser-turret"}, {"military-science-pack", "laser", "advanced-electronics"}},
+	{"laser-turrets", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 60, {"laser-turret"}, {"military-3", "laser", "advanced-electronics"}},
 }
 
 xm_all_technologies_to_impose["combat"] = xm_combat_technologies

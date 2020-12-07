@@ -166,7 +166,7 @@ xm_material_recipes["polymer"] = {
 	{"pellets-polyethylene", "chemistry", 2, false, {{type = "fluid", name = "ethylene", amount = 5}}, {{"pellets-polyethylene", 1}}},--0.5
 	{"pellets-nylon", "chemistry-2", 2, false, {{"aromatic", 1}, {type = "fluid", name = "amine", amount = 5}}, {{"pellets-nylon", 3}}},--0.5
 	{"plastic-bar", "machine-1", 0.8, false, {{"pellets-polyethylene", 3}}, {{"plastic-bar", 1}}},--1.5
-	{"plastic-bar-2", "machine-1", 1.25, false, {{"pellets-nylon", 3}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
+	{"plastic-bar-2", "machine-1", 1.25, false, {{"pellets-polyethylene", 1}, {"pellets-nylon", 2}, {"fiber-glass", 1}}, {{"plastic-bar", 2}}},--1
 }
 
 xm_material_recipes["energetic"] = {
@@ -187,7 +187,7 @@ xm_all_recipes_to_impose["material"] = xm_material_recipes
 local xm_fluids_recipes = {}
 
 xm_fluids_recipes["fluid-element"] = {
-	{"distillation-air", "oil-processing", 10, false, {}, {{type = "fluid", name = "nitrogen", amount = 40}, {type = "fluid", name = "oxygen", amount = 10}}},--1
+	{"distillation-air", "oil-processing", 5, false, {}, {{type = "fluid", name = "nitrogen", amount = 40}, {type = "fluid", name = "oxygen", amount = 10}}},--1
 	{"solid-fuel-from-heavy-oil", "smelting-3", 1, false, {{type = "fluid", name = "heavy-oil", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 15}}},
 	{"solid-fuel-from-light-oil", "smelting-3", 1, false, {{type = "fluid", name = "light-oil", amount = 10}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 24}}},
 	{"solid-fuel-from-petroleum-gas", "smelting-3", 1, false, {{type = "fluid", name = "petroleum-gas", amount = 20}}, {{"coke", 3}, {type = "fluid", name = "hydrogen", amount = 36}}},
@@ -352,7 +352,7 @@ xm_production_recipes["energy"] = {
 	--{"steam-turbine-2", "advanced-crafting", 1, false, {{"stock-stainless", 16}, {"pipe", 8}, {"parts-alloy", 24}, {"motor-3", 4}}, {{"steam-turbine", 1}}},--72
 	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 10}, {"copper-cable", 16}, {"wafer-solar", 12}, {"glass", 8}}, {{"solar-panel", 1}}},--72
 	{"solar-panel-2", "advanced-crafting", 32, false, {{"stock-stainless", 8}, {"glass", 24}, {"coil-3", 3}, {"advanced-circuit", 2}, {"solar-panel", 3}}, {{"solar-panel-2", 2}}},--144
-	{"accumulator", "crafting", 10, false, {{"stock-cast-iron", 2}, {"battery", 5}, {"copper-cable", 4}}, {{"accumulator", 1}}},--24
+	{"accumulator", "crafting", 10, false, {{"iron-gear-wheel", 2}, {"battery", 6}, {"coil-1", 2}}, {{"accumulator", 1}}},--32
 	{"small-lamp", "crafting", 1, false, {{"iron-gear-wheel", 2}, {"glass", 2}, {"graphite", 3}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--10
 	{"small-lamp-1", "crafting", 1, false, {{"stock-cast-iron", 2}, {"glass", 1}, {"tungsten", 1}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--5
 }
@@ -384,7 +384,8 @@ xm_production_recipes["chemical-machine"] = {
 	{"electrolyzer-1", "crafting", 4, false, {{"pump", 1}, {"coil-1", 2}, {"lead", 8}, {"glass", 4}}, {{"electrolyzer-1", 1}}},--24
 	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"gold", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
 	{"oil-refinery", "crafting", 8, false, {{"chemical-plant", 1}, {"xm-furnace-steel", 1}, {"pump", 3}, {"pipe", 32}, {"electronic-circuit", 8}}, {{"oil-refinery", 1}}}--144
-	--{"chem-reactor-3", "advanced-crafting", 4, false, {{"chem-reactor-2", 1}, {"motor-2", 2}, {"porcelain", 8}, {"platinum", 10}, {"advanced-circuit", 1}}, {{"chem-reactor-3", 1}}},--160
+	--{"chem-reactor-3", "advanced-crafting", 4, false, {{"chem-reactor-2", 2}, {"motor-2", 4}, {"aluminum-hydroxide", 14}, {"platinum", 20}, {"advanced-circuit", 3}}, {{"chem-reactor-3", 1}}},--282
+	--{"centrifuge", "advanced-crafting", 4, false, {{"chem-reactor-2", 2}, {"motor-2", 40}, {"stock-duralumin", 200}, {"stock-cupronickel", 400}, {"advanced-circuit", 40}}, {{"chem-reactor-3", 1}}},--1600
 }
 
 xm_production_recipes["production-machine"] = {
@@ -475,6 +476,7 @@ xm_logistics_recipes["transport"] = {
 	{"rail-chain-signal", "crafting", 1, false, {{"electronic-circuit", 1}, {"small-lamp", 1}}, {{"rail-chain-signal", 2}}},--8
 	{"train-stop", "crafting", 2, false, {{"stock-cast-iron", 10}, {"steel-rod", 16}, {"parts-steel", 6}, {"electronic-circuit", 3}}, {{"train-stop", 1}}},--36
 	{"car", "crafting", 4, false, {{"engine-unit", 8}, {"iron-gear-wheel", 8}, {"steel-plate", 20}, {"rubber-vulcanized", 8}, {"glass", 8}, {"electronic-circuit", 2}}, {{"car", 1}}},--120
+	{"tank", "crafting", 8, false, {{"engine-unit", 32}, {"parts-alloy", 25}, {"stock-alloy", 100}, {"motor-2", 10}, {"plastic-bar", 80}, {"advanced-circuit", 10}}, {{"tank", 1}}},--700
 }
 
 xm_logistics_recipes["logistic-network"] = {
@@ -506,6 +508,8 @@ xm_combat_recipes["ammo"] = {
 	{"piercing-rounds-magazine", "crafting", 3, false, {{"stock-bronze", 3}, {"steel-plate", 3}, {"gunpowder", 3}}, {{"piercing-rounds-magazine", 1}}},--12
 	{"shotgun-shell", "crafting", 3, false, {{"stock-bronze", 1}, {"lead", 2}, {"gunpowder", 1}}, {{"shotgun-shell", 1}}},--4(1/24) -> 4
 	{"piercing-shotgun-shell", "crafting", 8, false, {{"stock-bronze", 5}, {"stock-alloy", 5}, {"gunpowder", 5}}, {{"piercing-shotgun-shell", 1}}},--20
+	{"cannon-shell", "crafting", 8, false, {{"stock-bronze", 2}, {"steel-plate", 3}, {"explosives", 2}, {"gunpowder", 4}}, {{"cannon-shell", 1}}},--14
+	{"explosive-cannon-shell", "crafting", 8, false, {{"stock-bronze", 2}, {"steel-plate", 2}, {"explosives", 6}, {"gunpowder", 4}}, {{"explosive-cannon-shell", 1}}},--16
 	{"rocket", "crafting", 8, false, {{"steel-plate", 1}, {"explosives", 1}, {"electronic-circuit", 1}}, {{"rocket", 1}}},--6
 	{"flamethrower-ammo", "crafting-with-fluid", 6, false, {{"steel-plate", 8}, {type = "fluid", name = "crude-oil", amount = 200}}, {{"flamethrower-ammo", 1}}},--36
 }
@@ -527,7 +531,7 @@ xm_combat_recipes["defensive-structure"] = {
 	{"gun-turret", "crafting", 8, false, {{"iron-plate", 8}, {"iron-gear-wheel", 10}, {"stock-bronze", 8}}, {{"gun-turret", 1}}},--36
 	{"gun-turret-2", "crafting", 20, false, {{"iron-gear-wheel", 15}, {"parts-steel", 48}, {"plastic-bar", 18}}, {{"gun-turret-2", 1}}},--96
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
-	{"laser-turret", "crafting", 20, false, {{"parts-alloy", 16}, {"battery", 8}, {"glass", 20}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
+	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"glass", 20}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}}--32
 }
 
