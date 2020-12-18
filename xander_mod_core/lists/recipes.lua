@@ -467,7 +467,7 @@ xm_logistics_recipes["energy-pipe-distribution"] = {
 
 xm_logistics_recipes["transport"] = {
 	{"rail", "crafting", 0.5, false, {{"gravel", 2}, {"wood", 1}, {"steel-plate", 1}}, {{"rail", 1}}},--4 + (1)
-	{"rail-1", "crafting", 0.5, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
+	{"rail-1", "crafting", 1, false, {{"gravel", 2}, {"concrete", 1}, {"steel-plate", 2}}, {{"rail", 2}}},--4
 	{"locomotive", "crafting", 8, false, {{"boiler", 1}, {"piston-unit", 8}, {"iron-gear-wheel", 12}, {"pipe", 28}, {"steel-plate", 12}, {"electronic-circuit", 3}}, {{"locomotive", 1}}},--120
 	{"locomotive-1", "crafting", 8, false, {{"engine-unit", 16}, {"motor-2", 8}, {"parts-alloy", 10}, {"steel-plate", 15}, {"advanced-circuit", 5}}, {{"locomotive-1", 1}}},--248
 	{"cargo-wagon", "crafting", 4, false, {{"iron-gear-wheel", 12}, {"parts-steel", 12}, {"steel-plate", 8}}, {{"cargo-wagon", 1}}},--60
@@ -518,6 +518,9 @@ xm_combat_recipes["capsule"] = {
 	{"grenade", "crafting", 8, false, {{"stock-cast-iron", 8}, {"gunpowder", 8}}, {{"grenade", 1}}},--16
 	{"grenade-1", "crafting", 8, false, {{"stock-cast-iron", 8}, {"explosives", 4}}, {{"grenade", 1}}},--16
 	{"cluster-grenade", "crafting", 8, false, {{"grenade", 7}, {"explosives", 12}, {"tungsten", 12}}, {{"cluster-grenade", 1}}},--136
+	{"defender-capsule", "crafting", 8, false, {{"piercing-rounds-magazine", 3}, {"electronic-circuit", 3}, {"parts-steel", 12}}, {{"defender-capsule", 1}}},--60
+	{"distractor-capsule", "crafting", 12, false, {{"defender-capsule", 4}, {"advanced-circuit", 4}, {"battery", 5}}, {{"distractor-capsule", 1}}},--300
+	{"destroyer-capsule", "crafting", 16, false, {{"distractor-capsule", 4}, {"speed-module", 1}, {"processing-unit", 1}}, {{"destroyer-capsule", 1}}},--1320
 	--{"first-aid", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "sulfuric-acid", amount = 30}}, {{"first-aid", 1}}},
 }
 
@@ -531,7 +534,7 @@ xm_combat_recipes["defensive-structure"] = {
 	{"gun-turret", "crafting", 8, false, {{"iron-plate", 8}, {"iron-gear-wheel", 10}, {"stock-bronze", 8}}, {{"gun-turret", 1}}},--36
 	{"gun-turret-2", "crafting", 20, false, {{"iron-gear-wheel", 15}, {"parts-steel", 48}, {"plastic-bar", 18}}, {{"gun-turret-2", 1}}},--96
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
-	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"glass", 20}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
+	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"small-lamp", 4}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}}--32
 }
 

@@ -246,9 +246,15 @@ xm_combat_technologies["gun"] = {
 	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
 }
 
+xm_combat_technologies["capsule"] = {
+	{"combat-robotics", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"military-science-pack"}},
+	{"combat-robotics-2", 350, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"combat-robotics", "military-3", "laser", "advanced-electronics"}},
+	{"combat-robotics-3", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "combat-robotics-2", "speed-module"}},
+}
+
 xm_combat_technologies["armor"] = {
 	{"heavy-armor", 45, {"automation-science-pack"}, 30, {}, {"military"}},
-	{"modular-armor", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"modular-armor"}, {"aluminum", "parts2", "advanced-electronics"}}
+	{"modular-armor", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"modular-armor"}, {"aluminum", "parts2", "advanced-electronics"}},
 }
 
 xm_combat_technologies["defensive-structure"] = {
