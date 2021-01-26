@@ -29,6 +29,10 @@ data.raw.item["advanced-circuit"].icon = "__xander-mod__/graphics/item/intermedi
 data.raw.item["processing-unit"].icon = "__xander-mod__/graphics/item/intermediate-products/data/processing-unit.png"
 data.raw.item["electric-engine-unit"].icon = "__xander-mod__/graphics/item/intermediate-products/intermediate-product/electric-engine-unit.png"
 data.raw.tool["space-science-pack"].stack_size = 2000
+data.raw.item["uranium-fuel-cell"].fuel_value = "24GJ"
+data.raw.item["kovarex-fuel-cell"].fuel_category = "nuclear"
+data.raw.item["kovarex-fuel-cell"].burnt_result = "enriched-kovarex-fuel-cell"
+data.raw.item["kovarex-fuel-cell"].fuel_value = "4GJ"
 
 
 --==========  PRODUCTION  ==========

@@ -58,9 +58,9 @@ data.raw["assembling-machine"]["chemical-plant"].energy_usage = "180kW"
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
 data.raw["assembling-machine"]["chem-reactor-2"].fast_replaceable_group = "chemical-plant"
 data.raw["assembling-machine"]["chem-reactor-3"].fast_replaceable_group = "chemical-plant"
-
 data.raw["assembling-machine"]["chem-reactor-3"].next_upgrade = nil
 data.raw["assembling-machine"]["electrolyzer-2"].next_upgrade = nil
+data.raw["assembling-machine"]["centrifuge"].fluid_boxes = data.raw["assembling-machine"]["chemical-plant"].fluid_boxes
 
 --production-machine
 data.raw["assembling-machine"]["machine-tool-0"].fluid_boxes = xm_4_fluid_boxes_input

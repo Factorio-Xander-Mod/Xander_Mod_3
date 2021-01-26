@@ -35,6 +35,10 @@ xm_all_fluids_to_impose["fluid"] = {
 	{"steam", {r = 1/2, g = 5/8, b = 5/8}, {r = 1, g = 1, b = 1}},
 	{"sulfuric-acid", {r = 7/8, g = 1/2, b = 0}, {r = 1, g = 1, b = 0}},
 	{"nitric-acid", {r = 7/8, g = 1/8, b = 0}, {r = 1, g = 5/8, b = 0}},
+	{"uranium-depleted-hexafluoride", {r = 1/2, g = 5/8, b = 0}, {r = 3/8, g = 0, b = 3/8}},
+	{"uranium-natural-hexafluoride", {r = 1/2, g = 3/4, b = 0}, {r = 1/2, g = 0, b = 1/2}},
+	{"uranium-fuel-hexafluoride", {r = 1/2, g = 1, b = 0}, {r = 3/4, g = 0, b = 3/4}},
+	{"uranium-weapons-hexafluoride", {r = 3/4, g = 1, b = 1/8}, {r = 1, g = 0, b = 1}},
 }
 
 xm_all_fluids_to_impose["fluid-hydrocarbon"] = {

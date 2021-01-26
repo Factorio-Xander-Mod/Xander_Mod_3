@@ -22,17 +22,27 @@ data.raw.recipe["lead-oxide"].icon_size = 64
 data.raw.recipe["lead-oxide"].icon_mipmaps = 4
 data.raw.recipe["lead-oxide"].main_product = ""
 
-data.raw.recipe["nickel-1"].localised_name = {"recipe-name.nickel-1"}
-data.raw.recipe["nickel-1"].icon = "__xander-mod__/graphics/recipe/material/ingot/nickel-1.png"
-data.raw.recipe["nickel-1"].icon_size = 64
-data.raw.recipe["nickel-1"].icon_mipmaps = 4
-data.raw.recipe["nickel-1"].main_product = ""
-
 data.raw.recipe["aluminum"].localised_name = {"recipe-name.aluminum"}
 data.raw.recipe["aluminum"].icon = "__xander-mod__/graphics/item/material/ingot/aluminum.png"
 data.raw.recipe["aluminum"].icon_size = 64
 data.raw.recipe["aluminum"].icon_mipmaps = 4
 data.raw.recipe["aluminum"].main_product = ""
+data.raw.recipe["nickel-1"].localised_name = {"recipe-name.nickel-1"}
+data.raw.recipe["nickel-1"].icon = "__xander-mod__/graphics/recipe/material/ingot/nickel-1.png"
+data.raw.recipe["nickel-1"].icon_size = 64
+data.raw.recipe["nickel-1"].icon_mipmaps = 4
+data.raw.recipe["nickel-1"].main_product = ""
+data.raw.recipe["uranium-238"].localised_name = {"recipe-name.uranium-238"}
+data.raw.recipe["uranium-238"].icon = "__xander-mod__/graphics/recipe/material/ingot/uranium-238.png"
+data.raw.recipe["uranium-238"].icon_size = 64
+data.raw.recipe["uranium-238"].icon_mipmaps = 4
+data.raw.recipe["uranium-238"].main_product = ""
+data.raw.recipe["uranium-235"].localised_name = {"recipe-name.uranium-235"}
+data.raw.recipe["uranium-235"].icon = "__xander-mod__/graphics/recipe/material/ingot/uranium-235.png"
+data.raw.recipe["uranium-235"].icon_size = 64
+data.raw.recipe["uranium-235"].icon_mipmaps = 4
+data.raw.recipe["uranium-235"].main_product = ""
+
 data.raw.recipe["steel-plate"].normal = nil
 data.raw.recipe["steel-plate"].expensive = nil
 data.raw.recipe["steel-plate-1"].localised_name = {"recipe-name.steel-plate-1"}
@@ -169,6 +179,12 @@ data.raw.recipe["nitric-acid"].icon = "__xander-mod__/graphics/recipe/fluid/flui
 data.raw.recipe["nitric-acid"].icon_size = 64
 data.raw.recipe["nitric-acid"].icon_mipmaps = 4
 data.raw.recipe["nitric-acid"].main_product = ""
+data.raw.recipe["uranium-processing"].icon = "__xander-mod__/graphics/recipe/fluid/fluid/uranium-processing.png"
+data.raw.recipe["uranium-weapons-enrichment"].localised_name = {"recipe-name.uranium-weapons-enrichment"}
+data.raw.recipe["uranium-weapons-enrichment"].icon = "__xander-mod__/graphics/recipe/fluid/fluid/uranium-weapons-enrichment.png"
+data.raw.recipe["uranium-weapons-enrichment"].icon_size = 64
+data.raw.recipe["uranium-weapons-enrichment"].icon_mipmaps = 4
+data.raw.recipe["uranium-weapons-enrichment"].main_product = ""
 
 data.raw.recipe["crude-oil-desulf"].localised_name = {"recipe-name.crude-oil-desulf"}
 data.raw.recipe["crude-oil-desulf"].icon = "__xander-mod__/graphics/recipe/fluid/fluid-hydrocarbon/crude-oil-desulf.png"
@@ -239,6 +255,14 @@ data.raw.recipe["processing-unit"].normal = nil
 data.raw.recipe["processing-unit"].expensive = nil
 data.raw.recipe["low-density-structure"].normal = nil
 data.raw.recipe["low-density-structure"].expensive = nil
+
+data.raw.recipe["uranium-fuel-pellet"].localised_name = {"recipe-name.uranium-fuel-pellet"}
+data.raw.recipe["uranium-fuel-pellet"].icon = "__xander-mod__/graphics/recipe/intermediate-products/nuclear/uranium-fuel-pellet.png"
+data.raw.recipe["uranium-fuel-pellet"].icon_size = 64
+data.raw.recipe["uranium-fuel-pellet"].icon_mipmaps = 4
+data.raw.recipe["uranium-fuel-pellet"].main_product = ""
+data.raw.recipe["nuclear-fuel-reprocessing"].icon = "__xander-mod__/graphics/recipe/intermediate-products/nuclear/nuclear-fuel-reprocessing.png"
+data.raw.recipe["kovarex-enrichment-process"].icon = "__xander-mod__/graphics/recipe/intermediate-products/nuclear/kovarex-enrichment-process.png"
 
 
 

@@ -862,6 +862,19 @@ xm_combat_entities["defensive-structure"] = {
 		cooldown = 4,
 		range = 24,
 		inventory_size = 2
+	},
+	--high-intensity laser turret
+	{
+		type = "electric-turret",
+		name = "laser-turret-2",
+		parent_type = "electric-turret",
+		parent_name = "laser-turret",
+		max_health = 2000,
+		preparing_speed = 0.02,
+		damage_modifier = 4,
+		energy_consumption = "1MJ",
+		range = 28,
+		max_length = 28
 	}
 }
 

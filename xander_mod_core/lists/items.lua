@@ -15,7 +15,7 @@ xm_material_items["oxide"] = {"sodium-hydroxide", "aluminum-hydroxide", "chromiu
 xm_material_items["ingot"] = {"aluminum", "chromium", "nickel", "silver", "tin", "tungsten", "platinum", "gold", "lead", "solder"}
 xm_material_items["stock"] = {"iron-plate", "stock-cast-iron", "steel-plate", "stock-alloy", "stock-stainless", "copper-plate", "stock-bronze", "stock-cupronickel", "stock-duralumin", "stock-zircalloy"}
 xm_material_items["nonmetal"] = {"graphite", "silicon", "silicon-boule", "phosphorus", "sulfur"}
-xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete"}
+xm_material_items["terrain"] = {"stone-brick", "cement", "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete", "landfill"}
 xm_material_items["ceramic"] = {"brick-clay", "brick-magnesia", "silicon-carbide", "glass", "fiber-glass", "porcelain"}
 xm_material_items["salt"] = {"potash", "saltpeter", "sodium-carbonate", "cryolite", "magnesium-chloride"}
 xm_material_items["fluid-recipes"] = {}
@@ -34,7 +34,8 @@ local xm_intermediate_products_items = {}
 xm_intermediate_products_items["mechanical"] = {"iron-stick", "steel-rod", "iron-gear-wheel", "parts-steel", "parts-alloy"}
 xm_intermediate_products_items["electrical"] = {"copper-cable", "coil-1", "coil-2", "coil-3", "wire-solder", "wire-gold", "battery"}
 xm_intermediate_products_items["data"] = {"laminate-1", "laminate-2", "board-1", "board-2", "board-3", "wafer-0", "wafer-data-1", "wafer-data-2", "wafer-solar", "components-1", "components-2", "components-3", "electronic-circuit", "advanced-circuit", "processing-unit"}
-xm_intermediate_products_items["intermediate-product"] = {"piston-unit", "mechanical-steam-engine", "engine-unit", "electric-engine-unit", "motor-2", "motor-3", "flying-robot-frame", "low-density-structure", "rocket-fuel", "rocket-control-unit"}
+xm_intermediate_products_items["intermediate-product"] = {"empty-barrel", "piston-unit", "mechanical-steam-engine", "engine-unit", "electric-engine-unit", "motor-2", "motor-3", "flying-robot-frame", "low-density-structure", "rocket-fuel", "rocket-control-unit"}
+xm_intermediate_products_items["nuclear"] = {"uranium-238", "uranium-235", "uranium-fuel-pellet", "uranium-fuel-cell", "kovarex-fuel-cell", "used-up-uranium-fuel-cell", "enriched-kovarex-fuel-cell", "nuclear-fuel"}
 xm_intermediate_products_items["science-pack"] = {"crude-science-pack", "automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack", "space-science-pack"}
 
 xm_all_items_to_impose["intermediate-products"] = xm_intermediate_products_items
@@ -76,9 +77,10 @@ local xm_combat_items = {}
 
 --xm_combat_items["gun"] = {"pistol", "submachine-gun"} --Types other than "item"
 --xm_combat_items["ammo"] = {"firearm-magazine", "piercing-reounds-magazine"} --Types other than "item"
---xm_combat_items["capsule"] = {"grenade"} --Types other than "item"
+--xm_combat_items["capsule"] = {"grenade", "cluster-grenade"} --Types other than "item"
 --xm_combat_items["armor"] = {"light-armor", "heavy-armor"} --Types other than "item"
-xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "artillery-turret", "stone-wall", "gate", "radar"}
+--xm_combat_items["equipment"] = {"solar-panel-equipment", "battery-equipment"} --Types other than "item"
+xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "laser-turret-2", "artillery-turret", "stone-wall", "gate", "radar"}
 
 xm_all_items_to_impose["combat"] = xm_combat_items
 
