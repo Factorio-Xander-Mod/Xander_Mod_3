@@ -170,6 +170,7 @@ xm_production_technologies["smelting-machine"] = {
 xm_production_technologies["chemical-machine"] = {
 	{"sulfur-processing", 40, {"automation-science-pack"}, 20, {"chemical-plant", "sulfur-0", "sulfuric-acid", "rubber-vulcanized-0"}, {"fluid-handling", "machines0"}},
 	{"chemistry2", 280, {"automation-science-pack", "logistic-science-pack"}, 30, {"chem-reactor-2", "sulfur-dioxide-direct", "sulfur-dioxide-h2s", "sulfur", "sulfuric-acid-1"}, {"advanced-electronics", "motor2", "chlorine"}},
+	{"chemistry3", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"chem-reactor-3"}, {"advanced-electronics-2", "motor3", "chromium"}},
 	{"oil-processing", 90, {"automation-science-pack", "logistic-science-pack"}, 25, {"pumpjack", "oil-refinery", "basic-oil-processing"}, {"sulfur-processing", "advanced-material-processing", "logistic-science-pack"}},
 	{"electrolysis1", 90, {"automation-science-pack"}, 20, {"electrolyzer-1", "electrolysis-acid"}, {"sulfur-processing"}},
 	{"electrolysis2", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"electrolyzer-2", "electrolysis-base"}, {"nobles"}},
@@ -181,7 +182,7 @@ xm_production_technologies["production-machine"] = {
 	{"electric-engine", 20, {"automation-science-pack"}, 10, {"lab", "electric-mining-drill"}, {"circuit0", "logistics"}},
 	{"automation", 30, {"automation-science-pack"}, 15, {"machine-tool-1", "assembling-machine-1", "long-handed-inserter"}, {"steel-processing", "machines0", "circuit0"}},
 	{"automation-2", 240, {"automation-science-pack", "logistic-science-pack"}, 30, {"machine-tool-2", "assembling-machine-2"}, {"advanced-electronics", "motor2", "fast-inserter"}},
-	--{"automation-3", {"laser"}}
+	{"automation-3", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {}, {"advanced-electronics-2", "motor3", "stack-inserter", "chromium"}},
 }
 
 xm_production_technologies["module"] = {
@@ -226,7 +227,7 @@ xm_logistics_technologies["energy-pipe-distribution"] = {
 
 xm_logistics_technologies["transport"] = {
 	{"railway", 80, {"automation-science-pack"}, 30, {}, {"logistics", "parts1"}},
-	{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1"}, {"rail-signals", "braking-force-1", "chemical-science-pack", "automation-2", "parts2"}},
+	{"railway-2", 240, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"rail-1", "locomotive-1"}, {"rail-signals", "braking-force-1", "automation-2", "parts2"}},
 	{"automated-rail-transportation", 120, {"automation-science-pack"}, 30, {}, {"railway", "parts1"}},
 	{"rail-signals", 100, {"automation-science-pack", "logistic-science-pack"}, 40, {}, {"automated-rail-transportation", "electronics", "optics"}},
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"engine"}},
@@ -236,7 +237,6 @@ xm_logistics_technologies["logistic-network"] = {
 	{"construction-robotics", 250, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},
 	{"logistic-robotics", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {}, {"robotics"}},
 }
---circuit network
 
 xm_all_technologies_to_impose["logistics"] = xm_logistics_technologies
 
@@ -261,6 +261,7 @@ xm_combat_technologies["ammo"] = {
 }
 
 xm_combat_technologies["capsule"] = {
+	{"first-aid", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 30, {"first-aid"}, {"military-2", "explosives", "chemical-science-pack"}},
 	{"combat-robotics", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"military-science-pack"}},
 	{"combat-robotics-2", 350, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"combat-robotics", "military-3", "laser", "advanced-electronics"}},
 	{"combat-robotics-3", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "combat-robotics-2", "speed-module"}},

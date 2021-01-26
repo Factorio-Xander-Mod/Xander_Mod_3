@@ -401,9 +401,9 @@ xm_production_recipes["chemical-machine"] = {
 	{"chemical-plant", "crafting", 3, false, {{"pump", 2}, {"copper-cable", 8}, {"glass", 8}, {"steel-plate", 2}}, {{"chemical-plant", 1}}},--32
 	{"chem-reactor-2", "crafting", 4, false, {{"chemical-plant", 1}, {"motor-2", 2}, {"porcelain", 8}, {"stock-cupronickel", 8}, {"advanced-circuit", 2}}, {{"chem-reactor-2", 1}}},--80
 	{"electrolyzer-1", "crafting", 4, false, {{"pump", 1}, {"coil-1", 2}, {"lead", 8}, {"glass", 4}}, {{"electrolyzer-1", 1}}},--24
-	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"gold", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
+	{"electrolyzer-2", "crafting", 6, false, {{"electrolyzer-1", 1}, {"coil-2", 4}, {"platinum", 10}, {"plastic-bar", 16}, {"advanced-circuit", 1}}, {{"electrolyzer-2", 1}}},--72
 	{"oil-refinery", "crafting", 8, false, {{"chemical-plant", 1}, {"xm-furnace-steel", 1}, {"pump", 3}, {"pipe", 32}, {"electronic-circuit", 8}}, {{"oil-refinery", 1}}},--144
-	--{"chem-reactor-3", "advanced-crafting", 4, false, {{"chem-reactor-2", 2}, {"motor-2", 4}, {"aluminum-hydroxide", 14}, {"platinum", 20}, {"advanced-circuit", 3}}, {{"chem-reactor-3", 1}}},--282
+	{"chem-reactor-3", "advanced-crafting", 10, false, {{"chem-reactor-2", 2}, {"motor-3", 4}, {"stock-stainless", 15}, {"tungsten-oxide", 10}, {"platinum", 40}, {"processing-unit", 2}}, {{"chem-reactor-3", 1}}},--400
 	{"centrifuge", "advanced-crafting", 4, false, {{"chem-reactor-2", 2}, {"motor-2", 40}, {"stock-duralumin", 200}, {"stock-cupronickel", 400}, {"advanced-circuit", 40}}, {{"centrifuge", 1}}},--1600
 }
 
@@ -415,7 +415,7 @@ xm_production_recipes["production-machine"] = {
 	{"assembling-machine-0", "basic-crafting", 1, false, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"burner-inserter", 2}, {"iron-gear-wheel", 4}}, {{"assembling-machine-0", 2}}},--18
 	{"assembling-machine-1", "crafting", 2, false, {{"electric-engine-unit", 1}, {"inserter", 1}, {"iron-gear-wheel", 3}, {"electronic-circuit", 3}}, {{"assembling-machine-1", 1}}},--28
 	{"assembling-machine-2", "crafting", 4, false, {{"assembling-machine-1", 1}, {"fast-inserter", 1}, {"motor-2", 2}, {"parts-steel", 8}, {"advanced-circuit", 2}}, {{"assembling-machine-2", 1}}},--80
-	--{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 1}, {"stack-filter-inserter", 1}, {"stock-stainless", 10}, {"parts-alloy", 5}, {"motor-3", 2}, {"processing-unit", 2}}, {{"assembling-machine-3", 1}}},--360
+	{"assembling-machine-3", "advanced-crafting", 6, false, {{"assembling-machine-2", 1}, {"stack-filter-inserter", 1}, {"stock-stainless", 14}, {"parts-alloy", 5}, {"motor-3", 2}, {"processing-unit", 2}}, {{"assembling-machine-3", 1}}},--360
 	{"lab-burner", "basic-crafting", 1, true, {{"boiler", 1}, {"mechanical-steam-engine", 1}, {"crude-transport-belt", 8}, {"copper-plate", 4}}, {{"lab-burner", 1}}},--36
 	{"lab", "crafting", 2, false, {{"electric-engine-unit", 2}, {"steel-plate", 4}, {"iron-gear-wheel", 4}, {"transport-belt", 6}, {"electronic-circuit", 3}}, {{"lab", 1}}}--48
 }
@@ -542,7 +542,7 @@ xm_combat_recipes["capsule"] = {
 	{"defender-capsule", "crafting", 8, false, {{"piercing-rounds-magazine", 3}, {"electronic-circuit", 3}, {"parts-steel", 12}}, {{"defender-capsule", 1}}},--60
 	{"distractor-capsule", "crafting", 12, false, {{"defender-capsule", 4}, {"advanced-circuit", 4}, {"battery", 5}}, {{"distractor-capsule", 1}}},--300
 	{"destroyer-capsule", "crafting", 16, false, {{"distractor-capsule", 4}, {"speed-module", 1}, {"processing-unit", 1}}, {{"destroyer-capsule", 1}}},--1320
-	--{"first-aid", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "sulfuric-acid", amount = 30}}, {{"first-aid", 1}}},
+	{"first-aid", "chemistry", 6, false, {{"phenol", 1}, {"nitrated-organics", 1}, {type = "fluid", name = "hydrogen", amount = 10}, {type = "fluid", name = "sulfuric-acid", amount = 30}}, {{"first-aid", 1}}},
 }
 
 xm_combat_recipes["armor"] = {
