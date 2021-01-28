@@ -9,7 +9,7 @@ xm_all_recipes_to_impose = {}
 local xm_material_recipes = {}
 
 xm_material_recipes["raw-material"] = {
-	{"raw-chromate-slag", "smelting-3", 4, false, {{"conc-chromite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "oxygen", amount = 5}}, {{"raw-chromate-slag", 2}}},
+	{"raw-chromate-slag", "smelting-3", 8, false, {{"conc-chromite", 2}, {"sodium-hydroxide", 1}}, {{"raw-chromate-slag", 4}}},
 	{"raw-iron-0", "smelting", 27, false, {{"iron-ore", 6}, {"limestone", 1}}, {{"raw-iron", 9}}},
 	{"raw-iron-1", "smelting-3", 36, false, {{"iron-ore", 6}, {type = "fluid", name = "carbon-monoxide", amount = 60}}, {{"raw-iron", 12}}},
 	--XX{"raw-iron-2", "smelting-3", 4, false, {{"conc-hematite", 1}, {type = "fluid", name = "carbon-monoxide", amount = 10}}, {{"raw-iron", 1}, {type = "fluid", name = "carbon-dioxide", amount = 10}}},
@@ -58,7 +58,7 @@ xm_material_recipes["concentrate"] = {
 
 xm_material_recipes["oxide"] = {
 	{"aluminum-hydroxide", "chemistry", 4, false, {{"conc-bauxite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"aluminum-hydroxide", 2}}},
-	{"chromium-oxide", "chemistry-2", 3, false, {{"raw-chromate-slag", 2}, {type = "fluid", name = "sulfuric-acid", amount = 4}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{"chromium-oxide", 1}}},
+	{"chromium-oxide", "chemistry-2", 3, false, {{"raw-chromate-slag", 2}, {type = "fluid", name = "sulfuric-acid", amount = 2}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{"chromium-oxide", 1}}},
 	{"tungsten-oxide", "chemistry", 3, false, {{"conc-scheelite", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"tungsten-oxide", 1}}},
 	{"lead-oxide", "smelting-3", 4, false, {{"conc-galena", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"lead-oxide", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
 }
@@ -215,7 +215,7 @@ xm_fluids_recipes["fluid-oxide"] = {
 }
 
 xm_fluids_recipes["fluid"] = {
-	{"distillation-water", "oil-processing", 5, false, {{type = "fluid", name = "water", amount = 50}}, {{type = "fluid", name = "water-brine", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "water-distilled", amount = 40, fluidbox_index = 2}}},
+	{"distillation-water", "oil-processing", 2.5, false, {{type = "fluid", name = "water", amount = 50}}, {{type = "fluid", name = "water-brine", amount = 10, fluidbox_index = 1}, {type = "fluid", name = "water-distilled", amount = 40, fluidbox_index = 2}}},
 	{"sulfuric-acid", "chemistry", 5, false, {{"sulfur", 1}, {"saltpeter", 2}, {type = "fluid", name = "water", amount = 20}}, {{type = "fluid", name = "sulfuric-acid", amount = 10}}},--1
 	{"sulfuric-acid-1", "chemistry-2", 1, false, {{type = "fluid", name = "sulfur-dioxide", amount = 3}, {type = "fluid", name = "oxygen", amount = 1}}, {{type = "fluid", name = "sulfuric-acid", amount = 5}, {type = "fluid", name = "steam", amount = 3, temperature = 315}}},--1
 	{"nitric-acid", "chemistry", 6, false, {{type = "fluid", name = "ammonia", amount = 10}, {type = "fluid", name = "oxygen", amount = 20}}, {{type = "fluid", name = "nitric-acid", amount = 30}, {type = "fluid", name = "steam", amount = 10, temperature = 165}}},--1
