@@ -439,13 +439,13 @@ xm_production_entities["chemical-machine"] = {
 			}
 		},
 		animation = {layers = { {
-			filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1.png",
+			filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-2.png",
 			priority = "high",
 			width = 113,
 			height = 113,
 			frame_count = 1,
 			hr_version = {
-				filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-1-hr.png",
+				filename = "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/electrolyzer-2-hr.png",
 				priority = "high",
 				width = 227,
 				height = 227,
