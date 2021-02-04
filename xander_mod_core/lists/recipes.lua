@@ -321,13 +321,13 @@ xm_intermediate_products_recipes["intermediate-product"] = {
 	{"motor-2-0", "crafting", 3, false, {{"coil-2", 1}, {"plastic-bar", 1}, {"parts-steel", 2}}, {{"motor-2", 1}}},--6
 	{"motor-3", "advanced-crafting", 6, false, {{"coil-3", 2}, {"stock-duralumin", 2}, {"parts-alloy", 1}}, {{"motor-3", 2}}},--8
 	{"flying-robot-frame", "crafting", 16, false, {{"motor-2", 1}, {"battery", 3}, {"stock-duralumin", 4}, {"advanced-circuit", 1}}, {{"flying-robot-frame", 1}}},--36
-	--{"flying-robot-frame-2", "advanced-crafting", 28, false, {{"motor-3", 2}, {"battery-2", 3}, {"low-density-structure", 4}, {"processing-unit", 1}}, {{"flying-robot-frame-2", 1}}},--80
-	{"low-density-structure", "machine-1", 20, false, {{"stock-alloy", 5}, {"stock-duralumin", 8}, {"fiber-glass", 12}, {type = "fluid", name = "uncured-epoxy", amount = 40}}, {{"low-density-structure", 1}}},--36, base 37.6
-	{"rocket-fuel", "chemistry", 30, false, {{type = "fluid", name = "methane", amount = 80}, {type = "fluid", name = "oxygen", amount = 160}}, {{"rocket-fuel", 1}}},--24, base 11
-	--{"rocket-control-unit", "advanced-crafting", 20, false, {{"copper-cable", 32}, {"advanced-circuit", 4}, {"processing-unit", 1}}, {{"rocket-control-unit", 1}}},--120, base 123
-	--{"rocket-mechanics", "advanced-crafting", 20, false, {{"stock-stainless", 32}, {"tungsten", 4}, {"parts-alloy", 1}, {"motor-3", 1}}, {{"rocket-mechanics", 1}}},--60
-	--{"rocket-part", "rocket-building", 12, false, {{"low-density-structure", 10}, {"rocket-fuel", 20}, {"rocket-control-unit", 5}, {"rocket-mechanics", 5}}, {{"rocket-part", 1}}},--1800, base 1715
-	--{"satellite", "advanced-crafting", 12, false, {{"low-density-structure", 100}, {"solar-panel", 100}, {"accumulator", 100}, {"radar", 5}, {"processing-unit", 100}, {"rocket-fuel", 50}}, {{"satellite", 1}}},--
+	--XX{"flying-robot-frame-2", "advanced-crafting", 28, false, {{"motor-3", 2}, {"battery-2", 3}, {"low-density-structure", 4}, {"processing-unit", 1}}, {{"flying-robot-frame-2", 1}}},--80
+	{"low-density-structure", "machine-1", 25, false, {{"stock-alloy", 5}, {"stock-duralumin", 8}, {"fiber-glass", 12}, {type = "fluid", name = "uncured-epoxy", amount = 40}}, {{"low-density-structure", 1}}},--36, base 37.5
+	{"rocket-fuel", "chemistry", 20, false, {{type = "fluid", name = "methane", amount = 80}, {type = "fluid", name = "oxygen", amount = 160}}, {{"rocket-fuel", 1}}},--24, base 11
+	{"rocket-control-unit", "advanced-crafting", 30, false, {{"copper-cable", 20}, {"parts-alloy", 5}, {"advanced-circuit", 5}, {"processing-unit", 1}}, {{"rocket-control-unit", 1}}},--144, base 133
+	--XX{"rocket-mechanics", "advanced-crafting", 20, false, {{"stock-stainless", 32}, {"tungsten", 4}, {"parts-alloy", 1}, {"motor-3", 1}}, {{"rocket-mechanics", 1}}},--60
+	{"rocket-part", "rocket-building", 4, false, {{"low-density-structure", 14}, {"rocket-fuel", 24}, {"rocket-control-unit", 5}}, {{"rocket-part", 1}}},--1800, base 1815
+	{"satellite", "advanced-crafting", 12, false, {{"low-density-structure", 100}, {"rocket-fuel", 100}, {"processing-unit", 100}, {"solar-panel", 100}, {"accumulator", 100}, {"radar", 5}}, {{"satellite", 1}}},--22,960, base 20,462.5
 }
 
 xm_intermediate_products_recipes["nuclear"] = {
@@ -577,7 +577,8 @@ xm_combat_recipes["defensive-structure"] = {
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
 	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"small-lamp", 4}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"laser-turret-2", "crafting", 20, false, {{"laser-turret", 1}, {"battery", 16}, {"glass", 28}, {"processing-unit", 3}}, {{"laser-turret-2", 1}}},--480
-	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}}--32
+	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}},--32
+	{"rocket-silo", "crafting", 30, false, {{"concrete", 1000}, {"stock-stainless", 2000}, {"motor-3", 400}, {"pump", 100}, {"parts-alloy", 500}, {"processing-unit", 200}}, {{"rocket-silo", 1}}},--23,800, base 23,300
 }
 
 xm_all_recipes_to_impose["combat"] = xm_combat_recipes

@@ -80,7 +80,7 @@ local xm_combat_items = {}
 --xm_combat_items["capsule"] = {"grenade", "cluster-grenade"} --Types other than "item"
 --xm_combat_items["armor"] = {"light-armor", "heavy-armor"} --Types other than "item"
 --xm_combat_items["equipment"] = {"solar-panel-equipment", "battery-equipment"} --Types other than "item"
-xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "laser-turret-2", "artillery-turret", "stone-wall", "gate", "radar"}
+xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "laser-turret-2", "artillery-turret", "stone-wall", "gate", "radar", "rocket-silo"}
 
 xm_all_items_to_impose["combat"] = xm_combat_items
 

@@ -120,6 +120,7 @@ xm_intermediate_products_technologies["intermediate-product"] = {
 	{"robotics", 200, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"flying-robot-frame"}, {"battery", "automation-2", "aluminum"}},
 	{"low-density-structure", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"low-density-structure"}, {"parts2", "plastics-2", "aluminum"}},
 	{"rocket-fuel", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"electrolysis2", "natural-gas", "refined-flammables-3"}},
+	{"rocket-control-unit", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "utility-science-pack"}, 60, {}, {"utility-science-pack", "automation-3"}},
 }
 
 xm_intermediate_products_technologies["science-pack"] = {
@@ -128,6 +129,7 @@ xm_intermediate_products_technologies["science-pack"] = {
 	{"chemical-science-pack", 360, {"automation-science-pack", "logistic-science-pack"}, 60, {}, {"engine", "boron", "fluorine"}},
 	{"production-science-pack", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"productivity-module", "railway-2"}},
 	{"utility-science-pack", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {}, {"motor3", "robotics", "advanced-electronics-2", "low-density-structure"}},
+	{"space-science-pack", 2500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack"}, 60, {}, {"rocket-silo", "electric-energy-accumulators", "solar-energy"}},
 }
 
 xm_all_technologies_to_impose["intermediate-products"] = xm_intermediate_products_technologies
@@ -297,6 +299,7 @@ xm_combat_technologies["defensive-structure"] = {
 	{"turrets-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
 	{"laser-turrets", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"military-3", "laser", "advanced-electronics"}},
 	{"laser-turrets-2", 700, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {"laser-turret-2"}, {"military-4", "laser-turrets"}},
+	{"rocket-silo", 1500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack"}, 60, {}, {"rocket-control-unit", "rocket-fuel", "speed-module-3", "productivity-module-3", "effectivity-module-3"}},
 }
 
 xm_all_technologies_to_impose["combat"] = xm_combat_technologies
