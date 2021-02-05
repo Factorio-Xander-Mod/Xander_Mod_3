@@ -57,7 +57,7 @@ xm_material_recipes["concentrate"] = {
 }
 
 xm_material_recipes["oxide"] = {
-	{"aluminum-hydroxide", "chemistry", 4, false, {{"conc-bauxite", 1}, {"sodium-hydroxide", 1}, {type = "fluid", name = "water-distilled", amount = 10}}, {{"aluminum-hydroxide", 2}}},
+	{"aluminum-hydroxide", "chemistry", 12, false, {{"conc-bauxite", 3}, {"sodium-hydroxide", 1}, {type = "fluid", name = "water-distilled", amount = 30}}, {{"aluminum-hydroxide", 6}}},
 	{"chromium-oxide", "chemistry-2", 3, false, {{"raw-chromate-slag", 2}, {type = "fluid", name = "sulfuric-acid", amount = 2}, {type = "fluid", name = "formaldehyde", amount = 10}}, {{"chromium-oxide", 1}}},
 	{"tungsten-oxide", "chemistry", 3, false, {{"conc-scheelite", 1}, {type = "fluid", name = "sulfuric-acid", amount = 10}}, {{"tungsten-oxide", 1}}},
 	{"lead-oxide", "smelting-3", 4, false, {{"conc-galena", 2}, {type = "fluid", name = "oxygen", amount = 10}}, {{"lead-oxide", 2}, {type = "fluid", name = "sulfur-dioxide", amount = 15}}},
