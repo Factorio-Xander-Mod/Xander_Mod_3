@@ -233,6 +233,7 @@ xm_logistics_technologies["transport"] = {
 	{"automated-rail-transportation", 120, {"automation-science-pack"}, 30, {}, {"railway", "parts1"}},
 	{"rail-signals", 100, {"automation-science-pack", "logistic-science-pack"}, 40, {}, {"automated-rail-transportation", "electronics", "optics"}},
 	{"automobilism", 150, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"engine"}},
+	{"spidertron", 3000, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack"}, 60, {}, {"fusion-reactor-equipment", "exoskeleton-equipment", "effectivity-module-3", "rocket-control-unit", "military-4", "rocketry"}},
 }
 
 xm_logistics_technologies["logistic-network"] = {
