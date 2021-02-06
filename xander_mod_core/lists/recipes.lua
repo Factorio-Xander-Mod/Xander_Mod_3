@@ -497,6 +497,7 @@ xm_logistics_recipes["transport"] = {
 	{"train-stop", "crafting", 2, false, {{"stock-cast-iron", 10}, {"steel-rod", 16}, {"parts-steel", 6}, {"electronic-circuit", 3}}, {{"train-stop", 1}}},--36
 	{"car", "crafting", 4, false, {{"engine-unit", 8}, {"iron-gear-wheel", 8}, {"steel-plate", 20}, {"rubber-vulcanized", 8}, {"glass", 8}, {"electronic-circuit", 2}}, {{"car", 1}}},--120
 	{"tank", "crafting", 8, false, {{"engine-unit", 32}, {"parts-alloy", 25}, {"stock-alloy", 100}, {"motor-2", 10}, {"plastic-bar", 80}, {"advanced-circuit", 10}}, {{"tank", 1}}},--700
+	{"artillery-wagon", "crafting", 40, false, {{"motor-3", 20}, {"stock-alloy", 160}, {"parts-alloy", 80}, {"advanced-circuit", 20}}, {{"artillery-wagon", 1}}},--1000
 }
 
 xm_logistics_recipes["logistic-network"] = {
@@ -530,6 +531,7 @@ xm_combat_recipes["ammo"] = {
 	{"piercing-shotgun-shell", "crafting", 8, false, {{"stock-bronze", 5}, {"stock-alloy", 5}, {"gunpowder", 5}}, {{"piercing-shotgun-shell", 1}}},--20
 	{"cannon-shell", "crafting", 8, false, {{"stock-bronze", 2}, {"steel-plate", 3}, {"explosives", 2}, {"gunpowder", 4}}, {{"cannon-shell", 1}}},--14
 	{"explosive-cannon-shell", "crafting", 8, false, {{"stock-bronze", 2}, {"steel-plate", 2}, {"explosives", 6}, {"gunpowder", 4}}, {{"explosive-cannon-shell", 1}}},--16
+	{"artillery-shell", "advanced-crafting", 16, false, {{"explosive-cannon-shell", 3}, {"explosives", 20}, {"battery", 3}, {"advanced-circuit", 2}}, {{"artillery-shell", 1}}},--100
 	{"rocket", "crafting", 8, false, {{"steel-plate", 1}, {"explosives", 2}, {"gunpowder", 2}}, {{"rocket", 1}}},--6
 	{"explosive-rocket", "crafting", 8, false, {{"rocket", 1}, {"explosives", 2}}, {{"explosive-rocket", 1}}},--6
 	{"flamethrower-ammo", "crafting-with-fluid", 6, false, {{"steel-plate", 8}, {type = "fluid", name = "crude-oil", amount = 200}}, {{"flamethrower-ammo", 1}}},--36
@@ -577,6 +579,7 @@ xm_combat_recipes["defensive-structure"] = {
 	{"flamethrower-turret", "crafting", 20, false, {{"parts-steel", 160}, {"engine-unit", 8}, {"pipe", 20}, {"stock-cupronickel", 20}}, {{"flamethrower-turret", 1}}},--240
 	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"small-lamp", 4}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"laser-turret-2", "crafting", 20, false, {{"laser-turret", 1}, {"battery", 16}, {"glass", 28}, {"processing-unit", 3}}, {{"laser-turret-2", 1}}},--480
+	{"artillery-turret", "crafting", 40, false, {{"concrete", 100}, {"stock-alloy", 110}, {"parts-alloy", 30}, {"advanced-circuit", 20}}, {{"artillery-turret", 1}}},--640
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}},--32
 	{"rocket-silo", "crafting", 30, false, {{"concrete", 1000}, {"stock-stainless", 2000}, {"motor-3", 400}, {"pump", 100}, {"parts-alloy", 500}, {"processing-unit", 200}}, {{"rocket-silo", 1}}},--23,800, base 23,300
 }

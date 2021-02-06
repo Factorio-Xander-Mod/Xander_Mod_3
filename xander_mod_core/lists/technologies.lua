@@ -256,6 +256,7 @@ xm_combat_technologies["gun"] = {
 	{"military-4", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {"piercing-shotgun-shell", "cluster-grenade"}, {"utility-science-pack", "military-3"}},
 	{"rocketry", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "explosives", "plastics"}},
 	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
+	{"artillery", 2000, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "tanks", "railway-2"}},
 }
 
 xm_combat_technologies["ammo"] = {
