@@ -71,16 +71,16 @@ data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories = {"basic-crafting", "crafting", "crafting-with-fluid"}
-data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
+--data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_speed = 0.75
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "80kW"
 --
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
-data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
+--data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1
 
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
-data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 6
+--data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 6
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_speed = 1.5
 --
 data.raw.lab["lab-burner"].module_specification = nil

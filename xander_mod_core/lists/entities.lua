@@ -93,7 +93,6 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-1",
 		crafting_categories = {"washing-0"},
 		crafting_speed = 0.5,
-		--ingredient_count = 6,
 		next_upgrade = "ore-processor-1",
 		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "50kW",
@@ -121,7 +120,6 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-1",
 		crafting_categories = {"washing-0", "washing-1"},
 		crafting_speed = 1,
-		--ingredient_count = 6,
 		next_upgrade = "ore-processor-2",
 		emissions_per_minute = 1,
 		energy_usage = "70kW",
@@ -149,7 +147,6 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-2",
 		crafting_categories = {"washing-0", "washing-1", "washing-2"},
 		crafting_speed = 1.5,
-		--ingredient_count = 6,
 		next_upgrade = "ore-processor-2",--3
 		emissions_per_minute = 1.5,
 		energy_usage = "120kW",
@@ -240,7 +237,6 @@ xm_production_entities["smelting-machine"] = {
 		energy_usage = "250kW",
 		crafting_speed = 0.5,
 		emissions_per_minute = 0.5,
-		--ingredient_count = 6,
 		next_upgrade = "xm-furnace-brick",
 		graphics_from = {"__base__/graphics/entity/stone-furnace/stone-furnace.png", "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-stone.png", "__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-stone-hr.png"}
@@ -255,7 +251,6 @@ xm_production_entities["smelting-machine"] = {
 		crafting_speed = 1,
 		emissions_per_minute = 1,
 		fuel_category = "chemical",
-		--ingredient_count = 6,
 		next_upgrade = "xm-furnace-steel",
 		graphics_from = {"__base__/graphics/entity/stone-furnace/stone-furnace.png", "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-brick.png", "__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-brick-hr.png"}
@@ -269,8 +264,7 @@ xm_production_entities["smelting-machine"] = {
 		energy_usage = "1MW",
 		crafting_speed = 1.5,
 		emissions_per_minute = 2,
-		fuel_category = "chemical",
-		--ingredient_count = 6
+		fuel_category = "chemical"
 	},
 	{
 		type = "assembling-machine",
@@ -280,8 +274,7 @@ xm_production_entities["smelting-machine"] = {
 		crafting_categories = {"smelting-2", "smelting-3"},
 		energy_usage = "1MW",
 		emissions_per_minute = 0.8,
-		crafting_speed = 2,
-		--ingredient_count = 6
+		crafting_speed = 2
 	},
 	{
 		type = "assembling-machine",
@@ -291,8 +284,7 @@ xm_production_entities["smelting-machine"] = {
 		crafting_categories = {"smelting-2", "smelting-3"},
 		energy_usage = "1.5MW",
 		emissions_per_minute = 0.5,
-		crafting_speed = 3,
-		--ingredient_count = 6
+		crafting_speed = 3
 	},
 	--order placeholder
 	{
@@ -325,7 +317,6 @@ xm_production_entities["chemical-machine"] = {
 		crafting_categories = {"chemistry", "chemistry-2"},
 		crafting_speed = 1.5,
 		emissions_per_minute = 4,
-		--ingredient_count = 6,
 		energy_usage = "360kW",
 		next_upgrade = "chem-reactor-3",
 		fast_replaceable_group = "chemical-plant"
@@ -339,7 +330,6 @@ xm_production_entities["chemical-machine"] = {
 		module_slots = 4,
 		crafting_speed = 2.5,
 		emissions_per_minute = 5,
-		--ingredient_count = 6,
 		energy_usage = "1.2MW",
 		fast_replaceable_group = "chemical-plant",
 		graphics_from = {"__base__/graphics/entity/oil-refinery/oil-refinery.png", "__base__/graphics/entity/oil-refinery/hr-oil-refinery.png"},
@@ -353,7 +343,6 @@ xm_production_entities["chemical-machine"] = {
 		crafting_categories = {"electrolysis-1"},
 		emissions_per_minute = 0.75,
 		crafting_speed = 0.75,
-		--ingredient_count = 6,
 		fluid_boxes = {
 			{
 				production_type = "input",
@@ -411,7 +400,6 @@ xm_production_entities["chemical-machine"] = {
 		crafting_categories = {"electrolysis-1", "electrolysis-2"},
 		emissions_per_minute = 1.5,
 		crafting_speed = 1.5,
-		--ingredient_count = 6,
 		fluid_boxes = {
 			{
 				production_type = "input",
@@ -458,7 +446,6 @@ xm_production_entities["chemical-machine"] = {
 			idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
 			apparent_volume = 1.5
 		},
-		--next_upgrade = "electrolyzer-3",
 		fast_replaceable_group = "electrolyzer"
 	},
 	--order placeholder
@@ -482,7 +469,6 @@ xm_production_entities["production-machine"] = {
 		next_upgrade = "machine-tool-1",
 		crafting_categories = {"machine-0"},
 		crafting_speed = 0.5,
-		--ingredient_count = 2,
 		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "60kW",
 		animation = {layers = { {
@@ -510,7 +496,6 @@ xm_production_entities["production-machine"] = {
 		next_upgrade = "machine-tool-2",
 		crafting_categories = {"machine-0", "machine-1"},
 		crafting_speed = 0.75,
-		--ingredient_count = 2,
 		emissions_per_minute = 0.75,
 		energy_usage = "80kW",
 		animation = {layers = { {
@@ -538,7 +523,6 @@ xm_production_entities["production-machine"] = {
 		next_upgrade = "machine-tool-2",--3
 		crafting_categories = {"machine-1"},--, "advanced-machine"
 		crafting_speed = 1.5,
-		--ingredient_count = 4,
 		emissions_per_minute = 1.5,
 		energy_usage = "160kW",
 		animation = {layers = { {
@@ -566,7 +550,6 @@ xm_production_entities["production-machine"] = {
 		next_upgrade = "assembling-machine-1",
 		crafting_categories = {"basic-crafting", "crafting"},
 		crafting_speed = 0.5,
-		--ingredient_count = 2,
 		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "60kW",
 		graphics_from = {"__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png", "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png"},

@@ -23,7 +23,6 @@ xm_material_technologies["ingot"] = {
 	{"nickel", 80, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-millerite-0", "nickel-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
 	{"nickel2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"conc-millerite-1", "raw-nickel", "nickel-1"}, {"electrolysis2", "washing3"}},
 	{"copper2", 440, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"conc-chalcocite", "raw-copper", "copper-plate-2"}, {"electrolysis2", "washing3"}},
-	--XX{"zinc", 100, {"automation-science-pack", "logistic-science-pack"}, 30, {"conc-sphalerite-0", "zinc-0", "stock-cupronickel"}, {"railway", "washing1", "advanced-material-processing", "logistic-science-pack"}},
 	{"zirconium", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"magnesium-chloride", "conc-zircon", "raw-zirconium", "stock-zircalloy"}, {"electrolysis2", "washing3"}},
 	{"nobles", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"raw-silver-0", "raw-platinum-0", "raw-gold-0", "silver", "platinum", "gold"}, {"tin-lead1", "chemistry2", "chemical-science-pack"}},
 	{"tin-lead1", 50, {"automation-science-pack"}, 15, {"tin-1", "lead-1"}, {"solder", "washing1", "advanced-material-processing"}},
@@ -251,13 +250,13 @@ local xm_combat_technologies = {}
 
 xm_combat_technologies["gun"] = {
 	{"firearms", 10, {"crude-science-pack"}, 5, {"powder-black-0", "firearm-magazine", "pistol", "light-armor"}},
-	{"military", 40, {"automation-science-pack"}, 15, {"submachine-gun", "shotgun", "powder-black-1", "shotgun-shell", "radar"}, {"stone-walls", "turrets", "sulfur-processing", "electric-engine"}},
+	{"military", 40, {"automation-science-pack"}, 15, {"submachine-gun", "shotgun", "powder-black-1", "shotgun-shell", "radar"}, {"stone-wall", "gun-turret", "sulfur-processing", "electric-engine"}},
 	{"military-2", 80, {"automation-science-pack", "logistic-science-pack"}, 20, {}, {"military", "advanced-material-processing"}},
 	{"military-3", 360, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {"powder-smokeless", "grenade-1", "poison-capsule", "slowdown-capsule", "combat-shotgun"}, {"military-science-pack", "chemical-science-pack", "explosives", "parts2"}},
 	{"military-4", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {"piercing-shotgun-shell", "cluster-grenade"}, {"utility-science-pack", "military-3"}},
 	{"rocketry", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "explosives", "plastics"}},
 	{"flamethrower", 150, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"flammables", "military-science-pack", "nickel"}},
-	{"artillery", 2000, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "tanks", "railway-2"}},
+	{"artillery", 2000, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "tank", "railway-2"}},
 }
 
 xm_combat_technologies["ammo"] = {
@@ -266,9 +265,9 @@ xm_combat_technologies["ammo"] = {
 
 xm_combat_technologies["capsule"] = {
 	{"first-aid", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 30, {"first-aid"}, {"military-2", "explosives", "chemical-science-pack"}},
-	{"combat-robotics", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"military-science-pack"}},
-	{"combat-robotics-2", 350, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"combat-robotics", "military-3", "laser", "advanced-electronics"}},
-	{"combat-robotics-3", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "combat-robotics-2", "speed-module"}},
+	{"defender", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {}, {"military-science-pack"}},
+	{"distractor", 350, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"defender", "military-3", "laser", "advanced-electronics"}},
+	{"destroyer", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {}, {"military-4", "distractor", "speed-module"}},
 }
 
 xm_combat_technologies["armor"] = {
@@ -291,16 +290,16 @@ xm_combat_technologies["equipment"] = {
 	
 	{"energy-shield-equipment", 300, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 30, {}, {"solar-panel-equipment"}},
 	{"energy-shield-mk2-equipment", 600, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {}, {"energy-shield-equipment", "power-armor", "advanced-material-processing-3", "utility-science-pack"}},
-	{"personal-laser-defense-equipment", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {}, {"solar-panel-equipment", "power-armor", "utility-science-pack", "laser-turrets"}},
-	{"discharge-defense-equipment", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {}, {"solar-panel-equipment", "power-armor", "laser-turrets"}},
+	{"personal-laser-defense-equipment", 400, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack", "utility-science-pack"}, 45, {}, {"solar-panel-equipment", "power-armor", "utility-science-pack", "laser-turret"}},
+	{"discharge-defense-equipment", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 45, {}, {"solar-panel-equipment", "power-armor", "laser-turret"}},
 }
 
 xm_combat_technologies["defensive-structure"] = {
-	{"stone-walls", 10, {"crude-science-pack"}, 5, {}, nil},
-	{"turrets", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
-	{"turrets-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
-	{"laser-turrets", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"military-3", "laser", "advanced-electronics"}},
-	{"laser-turrets-2", 700, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {"laser-turret-2"}, {"military-4", "laser-turrets"}},
+	{"stone-wall", 10, {"crude-science-pack"}, 5, {}, nil},
+	{"gun-turret", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
+	{"gun-turret-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
+	{"laser-turret", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"military-3", "laser", "advanced-electronics"}},
+	{"laser-turret-2", 700, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack", "utility-science-pack"}, 60, {"laser-turret-2"}, {"military-4", "laser-turret"}},
 	{"rocket-silo", 1500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack"}, 60, {}, {"rocket-control-unit", "rocket-fuel", "speed-module-3", "productivity-module-3", "effectivity-module-3"}},
 }
 

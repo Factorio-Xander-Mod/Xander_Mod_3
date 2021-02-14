@@ -14,23 +14,25 @@ data.raw.technology["laser"].unit.count = 300
 
 data.raw.technology["mining-productivity-1"].prerequisites = {"washing1", "logistic-science-pack"}
 data.raw.technology["mining-productivity-2"].prerequisites = {"washing2", "mining-productivity-1", "chemical-science-pack"}
-data.raw.technology["advanced-material-processing"].icon = "__xander-mod__/graphics/technology/production/smelting-machine/xm-furnace-steel.png"
+data.raw.technology["advanced-material-processing"].icon = "__xander-mod__/graphics/technology/production/smelting-machine/advanced-material-processing.png"
 data.raw.technology["advanced-material-processing-2"].localised_name = {"technology-name.advanced-material-processing-2"}
 data.raw.technology["advanced-material-processing-2"].localised_description = {"technology-description.advanced-material-processing-2"}
 data.raw.technology["advanced-material-processing-3"].localised_name = {"technology-name.advanced-material-processing-3"}
 data.raw.technology["advanced-material-processing-3"].localised_description = {"technology-description.advanced-material-processing-3"}
 data.raw.technology["research-speed-1"].prerequisites = {"electronics", "electric-engine"}
 
+
 --==========  LOGISTICS  ==========
 
 data.raw.technology["toolbelt"].unit.count = 150
 data.raw.technology["logistics-3"].icon = "__xander-mod__/graphics/technology/logistics/belt/logistics-3.png"
+data.raw.technology["logistics-4"].icon = "__base__/graphics/technology/logistics-3.png"
+data.raw.technology["logistics-4"].icon_size = 256
+data.raw.technology["logistics-4"].icon_mipmaps = 4
 data.raw.technology["landfill"].prerequisites = {"washing1", "logistic-science-pack"}
 data.raw.technology["circuit-network"].unit.count = 150
 data.raw.technology["circuit-network"].unit.time = 30
 data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric-energy-distribution-1"}
---table.insert(data.raw.technology["inserter-capacity-bonus-1"].effects, data.raw.technology["inserter-capacity-bonus-2"].effects[1])
---table.remove(data.raw.technology["inserter-capacity-bonus-2"].effects, 1)
 
 
 --==========  COMBAT  ==========
@@ -38,7 +40,11 @@ data.raw.technology["circuit-network"].prerequisites = {"electronics", "electric
 data.raw.technology["military-science-pack"].unit.count = 100
 data.raw.technology["land-mine"].unit.count = 240
 data.raw.technology["explosive-rocketry"].unit.count = 250
-data.raw.technology["tanks"].unit.count = 400
+data.raw.technology["tank"].unit.count = 400
+data.raw.technology["gun-turret-2"].icon_size = 256
+data.raw.technology["gun-turret-2"].icon_mipmaps = 4
+data.raw.technology["laser-turret-2"].icon_size = 256
+data.raw.technology["laser-turret-2"].icon_mipmaps = 4
 
 table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
 table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
