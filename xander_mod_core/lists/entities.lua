@@ -597,20 +597,27 @@ xm_logistics_entities["belt"] = {
 		name = "crude-transport-belt",
 		parent_type = "transport-belt",
 		parent_name = "transport-belt",
+		max_health = 100,
+		related_underground_belt = "crude-underground-belt",
 		next_upgrade = "transport-belt",
 		speed = 0.015625,--1/64, half of the 1/32 for the base transport-belt
-		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png"}
+		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png",
+			"__base__/graphics/entity/transport-belt/hr-transport-belt.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png"}
 	},
-	--order placeholder
+	--standard belt
 	{
 		type = "transport-belt",
-		name = "transport-belt"
+		name = "transport-belt",
+		max_health = 120
 	},
-	--order placeholder
+	--fast belt
 	{
 		type = "transport-belt",
-		name = "fast-transport-belt"
+		name = "fast-transport-belt",
+		max_health = 140,
+		next_upgrade = "expedited-transport-belt"
 	},
 	--expedited belt
 	{
@@ -618,15 +625,21 @@ xm_logistics_entities["belt"] = {
 		name = "expedited-transport-belt",
 		parent_type = "transport-belt",
 		parent_name = "express-transport-belt",
+		max_health = 160,
+		related_underground_belt = "expedited-underground-belt",
 		next_upgrade = "express-transport-belt",
 		speed = 0.09375,--3/32, same as the base express-transport-belt
-		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png", "__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png"}
+		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png",
+			"__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png"}
 	},
-	--order placeholder
+	--express belt
 	{
 		type = "transport-belt",
-		name = "express-transport-belt"
+		name = "express-transport-belt",
+		max_health = 180,
+		speed = 0.125
 	},
 	--crude underground
 	{
@@ -634,21 +647,31 @@ xm_logistics_entities["belt"] = {
 		name = "crude-underground-belt",
 		parent_type = "underground-belt",
 		parent_name = "underground-belt",
+		max_health = 100,
 		max_distance = 3,
 		next_upgrade = "underground-belt",
 		speed = 0.015625,--1/64, half of the 1/32 for the base transport-belt
-		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png", "__base__/graphics/entity/transport-belt/hr-transport-belt.png", "__base__/graphics/entity/underground-belt/underground-belt-structure.png", "__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
+		graphics_from = {"__base__/graphics/entity/transport-belt/transport-belt.png",
+			"__base__/graphics/entity/transport-belt/hr-transport-belt.png",
+			"__base__/graphics/entity/underground-belt/underground-belt-structure.png",
+			"__base__/graphics/entity/underground-belt/hr-underground-belt-structure.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-transport-belt-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-underground-belt-hr.png"}
 	},
-	--order placeholder
+	--standard underground
 	{
 		type = "underground-belt",
-		name = "underground-belt"
+		name = "underground-belt",
+		max_health = 120
 	},
-	--order placeholder
+	--fast underground
 	{
 		type = "underground-belt",
-		name = "fast-underground-belt"
+		name = "fast-underground-belt",
+		max_health = 140,
+		next_upgrade = "expedited-underground-belt"
 	},
 	--expedited underground
 	{
@@ -656,16 +679,26 @@ xm_logistics_entities["belt"] = {
 		name = "expedited-underground-belt",
 		parent_type = "underground-belt",
 		parent_name = "express-underground-belt",
+		max_health = 160,
 		max_distance = 9,
 		next_upgrade = "express-underground-belt",
 		speed = 0.09375,--3/32, same as the base express-transport-belt
-		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png", "__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png", "__base__/graphics/entity/express-underground-belt/express-underground-belt-structure.png", "__base__/graphics/entity/express-underground-belt/hr-express-underground-belt-structure.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt.png", "__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt-hr.png"}
+		graphics_from = {"__base__/graphics/entity/express-transport-belt/express-transport-belt.png",
+			"__base__/graphics/entity/express-transport-belt/hr-express-transport-belt.png",
+			"__base__/graphics/entity/express-underground-belt/express-underground-belt-structure.png",
+			"__base__/graphics/entity/express-underground-belt/hr-express-underground-belt-structure.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-transport-belt-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt.png",
+			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-underground-belt-hr.png"}
 	},
-	--order placeholder
+	--express underground
 	{
 		type = "underground-belt",
-		name = "express-underground-belt"
+		name = "express-underground-belt",
+		max_health = 180,
+		max_distance = 11,
+		speed = 0.125
 	},
 	--crude splitter
 	{
@@ -673,6 +706,7 @@ xm_logistics_entities["belt"] = {
 		name = "crude-splitter",
 		parent_type = "splitter",
 		parent_name = "splitter",
+		max_health = 150,
 		structure_animation_speed_coefficient = 0.35,
 		next_upgrade = "splitter",
 		speed = 0.015625,--1/64, half of the 1/32 for the base transport-belt
@@ -709,15 +743,18 @@ xm_logistics_entities["belt"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/crude-splitter-west-top-hr.png"
 		}
 	},
-	--order placeholder
+	--standard splitter
 	{
 		type = "splitter",
-		name = "splitter"
+		name = "splitter",
+		max_health = 180
 	},
-	--order placeholder
+	--fast splitter
 	{
 		type = "splitter",
-		name = "fast-splitter"
+		name = "fast-splitter",
+		max_health = 210,
+		next_upgrade = "expedited-splitter"
 	},
 	--expedited splitter
 	{
@@ -725,6 +762,7 @@ xm_logistics_entities["belt"] = {
 		name = "expedited-splitter",
 		parent_type = "splitter",
 		parent_name = "express-splitter",
+		max_health = 240,
 		structure_animation_speed_coefficient = 0.35,
 		next_upgrade = "express-splitter",
 		speed = 0.09375,--3/32, same as the base express-transport-belt
@@ -761,23 +799,55 @@ xm_logistics_entities["belt"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/belt/expedited-splitter-west-top-hr.png"
 		}
 	},
-	--order placeholder
+	--express splitter
 	{
 		type = "splitter",
-		name = "express-splitter"
+		name = "express-splitter",
+		max_health = 270,
+		speed = 0.125
 	},
 }
 
 xm_logistics_entities["inserter"] = {
+	--burner inserter
+	{
+		type = "inserter",
+		name = "burner-inserter"
+	},
+	--standard inserter
+	{
+		type = "inserter",
+		name = "inserter",
+		max_health = 140
+	},
+	--long handed inserter
+	{
+		type = "inserter",
+		name = "long-handed-inserter",
+		max_health = 150,
+		energy_per_movement = "6kJ",
+		energy_per_rotation = "6kJ",
+		next_upgrade = "long-fast-inserter"
+	},
+	--fast inserter
+	{
+		type = "inserter",
+		name = "fast-inserter",
+		energy_per_movement = "6kJ",
+		energy_per_rotation = "6kJ",
+	},
+	--long fast inserter
 	{
 		type = "inserter",
 		name = "long-fast-inserter",
 		parent_type = "inserter",
 		parent_name = "long-handed-inserter",
+		max_health = 160,
+		energy_per_movement = "7kJ",
+		energy_per_rotation = "7kJ",
 		extension_speed = 0.07,
-		rotation_speed = 0.04,
-		energy_per_movement = "7KJ",
-		energy_per_rotation = "7KJ",
+		rotation_speed = 0.08,
+		working_sound = data.raw.inserter["fast-inserter"].working_sound,
 		graphics_from = {
 			"__base__/graphics/entity/long-handed-inserter/long-handed-inserter-hand-base.png",
 			"__base__/graphics/entity/long-handed-inserter/hr-long-handed-inserter-hand-base.png",
@@ -798,29 +868,204 @@ xm_logistics_entities["inserter"] = {
 			"__xander-mod-graphics-1__/graphics/entity/logistics/inserter/long-fast-platform.png",
 			"__xander-mod-graphics-1__/graphics/entity/logistics/inserter/long-fast-platform-hr.png"
 		}
-	}
+	},
+	--filter inserter
+	{
+		type = "inserter",
+		name = "filter-inserter",
+		max_health = 160,
+		energy_per_movement = "7kJ",
+		energy_per_rotation = "7kJ"
+	},
+	--stack inserter
+	{
+		type = "inserter",
+		name = "stack-inserter",
+		max_health = 180,
+		energy_per_movement = "18kJ",
+		energy_per_rotation = "18kJ"
+	},
+	--stack filter inserter
+	{
+		type = "inserter",
+		name = "stack-filter-inserter",
+		max_health = 180
+	},
 }
 
 xm_logistics_entities["energy-pipe-distribution"] = {
+	--pipe
+	{
+		type = "pipe",
+		name = "pipe"
+	},
+	--pipe to ground
+	{
+		type = "pipe-to-ground",
+		name = "pipe-to-ground"
+	},
+	--storage tank
+	{
+		type = "storage-tank",
+		name = "storage-tank"
+	},
+	--pump
+	{
+		type = "pump",
+		name = "pump"
+	},
+	--small electric pole
+	{
+		type = "electric-pole",
+		name = "small-electric-pole"
+	},
+	--medium electric-pole
+	{
+		type = "electric-pole",
+		name = "medium-electric-pole",
+		max_health = 150
+	},
+	--big electric pole
+	{
+		type = "electric-pole",
+		name = "big-electric-pole",
+		max_health = 200
+	},
+	--big electric pole 2
 	{
 		type = "electric-pole",
 		name = "big-electric-pole-2",
 		parent_type = "electric-pole",
 		parent_name = "big-electric-pole",
-		maximum_wire_distance = 60,
-	}
+		max_health = 300,
+		maximum_wire_distance = 60
+	},
+	--substation
+	{
+		type = "electric-pole",
+		name = "substation",
+		max_health = 300
+	},
 }
 
-xm_logistics_entities["transport"] = {
+xm_logistics_entities["train-transport"] = {
+	--straight rail
+	{
+		type = "straight-rail",
+		name = "straight-rail",
+		max_health = 200
+	},
+	--curved rail
+	{
+		type = "curved-rail",
+		name = "curved-rail",
+		max_health = 400
+	},
+	--train stop
+	{
+		type = "train-stop",
+		name = "train-stop",
+		max_health = 400
+	},
+	--rail signal
+	{
+		type = "rail-signal",
+		name = "rail-signal"
+	},
+	--rail chain signal
+	{
+		type = "rail-chain-signal",
+		name = "rail-chain-signal"
+	},
+	--locomotive
+	{
+		type = "locomotive",
+		name = "locomotive",
+		icon = "__xander-mod__/graphics/item/logistics/train-transport/locomotive-0.png",
+		max_speed = 0.6,
+		max_power = "400kW",
+		braking_force = 8,
+		friction_force = 0.75,
+		effectivity = 0.8,
+		fuel_inventory_size = 2,
+		sound_minimum_speed = 0.2
+	},
+	--locomotive 1
 	{
 		type = "locomotive",
 		name = "locomotive-1",
 		parent_type = "locomotive",
 		parent_name = "locomotive",
-		icon = data.raw.locomotive["locomotive"].icon,
 		max_health = 1500,
+		max_speed = 1.2,
+		max_power = "600kW",
+		braking_force = 10,
+		friction_force = 0.5,
+		effectivity = 1,
+		fuel_inventory_size = 3,
 		sound_minimum_speed = 0.5
-	}
+	},
+	--cargo wagon
+	{
+		type = "cargo-wagon",
+		name = "cargo-wagon"
+	},
+	--fluid wagon
+	{
+		type = "fluid-wagon",
+		name = "fluid-wagon"
+	},
+	--artillery wagon
+	{
+		type = "artillery-wagon",
+		name = "artillery-wagon"
+	},
+}
+
+xm_logistics_entities["logistic-network"] = {
+	--logistic robot
+	{
+		type = "logistic-robot",
+		name = "logistic-robot"
+	},
+	--construction robot
+	{
+		type = "construction-robot",
+		name = "construction-robot",
+		max_health = 180,
+		speed = 0.04
+	},
+	--logistic chest passive provider
+	{
+		type = "logistic-container",
+		name = "logistic-chest-passive-provider"
+	},
+	--logistic chest active provider
+	{
+		type = "logistic-container",
+		name = "logistic-chest-active-provider"
+	},
+	--logistic chest storage
+	{
+		type = "logistic-container",
+		name = "logistic-chest-storage"
+	},
+	--logistic chest buffer
+	{
+		type = "logistic-container",
+		name = "logistic-chest-buffer"
+	},
+	--logistic chest requester
+	{
+		type = "logistic-container",
+		name = "logistic-chest-requester"
+	},
+	--roboport
+	{
+		type = "roboport",
+		name = "roboport",
+		max_health = 600
+	},
 }
 
 xm_all_entities_to_impose["logistics"] = xm_logistics_entities

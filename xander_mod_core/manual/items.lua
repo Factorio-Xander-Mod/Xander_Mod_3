@@ -56,7 +56,7 @@ data.raw.item["fast-transport-belt"].stack_size = 100
 data.raw.item["express-transport-belt"].stack_size = 100
 
 data.raw.item["locomotive-1"].icon = data.raw["item-with-entity-data"]["locomotive"].icon
-data.raw["item-with-entity-data"]["locomotive"].icon = "__xander-mod__/graphics/item/logistics/transport/locomotive-1.png"
+data.raw["item-with-entity-data"]["locomotive"].icon = "__xander-mod__/graphics/item/logistics/train-transport/locomotive-0.png"
 
 
 --==========  COMBAT  ==========

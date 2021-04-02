@@ -65,7 +65,8 @@ xm_logistics_items["storage"] = {"wooden-chest", "iron-chest", "steel-chest"}
 xm_logistics_items["belt"] = {"crude-transport-belt", "transport-belt", "fast-transport-belt", "expedited-transport-belt", "express-transport-belt", "crude-underground-belt", "underground-belt", "fast-underground-belt", "expedited-underground-belt", "express-underground-belt", "crude-splitter", "splitter", "fast-splitter", "expedited-splitter", "express-splitter"}
 xm_logistics_items["inserter"] = {"burner-inserter", "inserter", "long-handed-inserter", "fast-inserter", "long-fast-inserter", "filter-inserter", "stack-inserter", "stack-filter-inserter"}
 xm_logistics_items["energy-pipe-distribution"] = {"pipe", "pipe-to-ground", "storage-tank", "pump", "small-electric-pole", "medium-electric-pole", "big-electric-pole", "big-electric-pole-2", "substation"}
-xm_logistics_items["transport"] = {"rail", "train-stop", "rail-signal", "rail-chain-signal", "locomotive", "locomotive-1", "cargo-wagon", "fluid-wagon", "artillery-wagon", "car", "tank"}
+xm_logistics_items["train-transport"] = {"rail", "train-stop", "rail-signal", "rail-chain-signal", "locomotive", "locomotive-1", "cargo-wagon", "fluid-wagon", "artillery-wagon"}
+xm_logistics_items["transport"] = {"car", "tank"}
 
 xm_all_items_to_impose["logistics"] = xm_logistics_items
 

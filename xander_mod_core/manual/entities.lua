@@ -71,16 +71,13 @@ data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 --
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories = {"basic-crafting", "crafting", "crafting-with-fluid"}
---data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_speed = 0.75
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "80kW"
 --
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
---data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1
 
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
---data.raw["assembling-machine"]["assembling-machine-3"].ingredient_count = 6
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_speed = 1.5
 --
 data.raw.lab["lab-burner"].module_specification = nil
@@ -92,23 +89,11 @@ data.raw.lab["lab"].fast_replaceable_group = "lab"
 
 --==========  LOGISTICS  ==========
 
-data.raw["transport-belt"]["express-transport-belt"].speed = 0.125
-data.raw["underground-belt"]["express-underground-belt"].speed = 0.125
-data.raw["underground-belt"]["express-underground-belt"].max_distance = 11
-data.raw["splitter"]["express-splitter"].speed = 0.125
-
-data.raw.inserter["burner-inserter"].energy_source.fuel_category = nil
+local logistics_entities_fuel_switch = {{type = "locomotive", name = "locomotive"}, {type = "locomotive", name = "locomotive-1"}, {type = "car", name = "car"}, {type = "car", name = "tank"}}
+for _, entry in pairs(logistics_entities_fuel_switch) do
+	data.raw[entry.type][entry.name].burner.fuel_categories = {"crude", "chemical"}
+end
 data.raw.inserter["burner-inserter"].energy_source.fuel_categories = {"crude", "chemical"}
-
-data.raw.locomotive["locomotive"].icon = "__xander-mod__/graphics/item/logistics/transport/locomotive-1.png"
-data.raw.locomotive["locomotive"].max_speed = 0.6
-data.raw.locomotive["locomotive"].max_power = "400kW"
-data.raw.locomotive["locomotive"].braking_force = 8
-data.raw.locomotive["locomotive"].friction_force = 1
-data.raw.locomotive["locomotive"].burner.effectivity = 0.5
-data.raw.locomotive["locomotive"].burner.fuel_category = nil
-data.raw.locomotive["locomotive"].burner.fuel_categories = {"crude", "chemical"}
-data.raw.locomotive["locomotive"].sound_minimum_speed = 0.2
 
 for i = 1, 8 do
 	data.raw.locomotive["locomotive"].pictures.layers[1].filenames[i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-" .. i .. ".png"
@@ -118,13 +103,6 @@ for i = 1, 8 do
 	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[2 * i] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
 	data.raw.locomotive["locomotive"].pictures.layers[2].hr_version.filenames[(2 * i) - 1] = "__xander-mod-graphics-1__/graphics/entity/logistics/transport/locomotive-mask-hr.png"
 end
-
-data.raw.locomotive["locomotive-1"].burner.fuel_category = nil
-data.raw.locomotive["locomotive-1"].burner.fuel_categories = {"crude", "chemical"}
-data.raw.car["car"].burner.fuel_category = nil
-data.raw.car["car"].burner.fuel_categories = {"crude", "chemical"}
-data.raw.car["tank"].burner.fuel_category = nil
-data.raw.car["tank"].burner.fuel_categories = {"crude", "chemical"}
 
 
 

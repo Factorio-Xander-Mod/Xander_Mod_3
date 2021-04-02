@@ -49,6 +49,14 @@ function xm_entity_change(group_no, subgroup_no, entity_no, params)
 	
 	--Instate changes
 	data.raw[params.type][params.name].order = group_str .. "-" .. subgroup_str .. "-" .. entity_str
+	
+	local counter = 0
+	for key, value in pairs(params) do
+		counter = counter + 1
+		if counter > 2 then
+			find_replace_param(data.raw[params.type][params.name], key, value)
+		end
+	end
 end
 
 
