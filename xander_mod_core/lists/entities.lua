@@ -6,86 +6,168 @@ xm_all_entities_to_impose = {}
 local xm_production_entities = {}
 
 xm_production_entities["energy"] = {
-	--order placeholder
+	--boiler
 	{
 		type = "boiler",
-		name = "boiler"
+		name = "boiler",
+		icon = "__xander-mod__/graphics/item/production/energy/boiler.png",
+		graphics_from = {
+			"__base__/graphics/entity/boiler/boiler-E-idle.png",
+			"__base__/graphics/entity/boiler/boiler-N-idle.png",
+			"__base__/graphics/entity/boiler/boiler-S-idle.png",
+			"__base__/graphics/entity/boiler/boiler-W-idle.png",
+			"__base__/graphics/entity/boiler/hr-boiler-E-idle.png",
+			"__base__/graphics/entity/boiler/hr-boiler-N-idle.png",
+			"__base__/graphics/entity/boiler/hr-boiler-S-idle.png",
+			"__base__/graphics/entity/boiler/hr-boiler-W-idle.png"
+		},
+		graphics_to = {
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"
+		}
 	},
+	--boiler 1
 	{
 		type = "boiler",
 		name = "boiler-1",
 		parent_type = "boiler",
 		parent_name = "boiler",
+		max_health = 300,
 		target_temperature = 315,
 		energy_consumption = "3.6MW",
-		--effectivity = 0.8,
 		emissions_per_minute = 40,
-		graphics_from = {"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W-hr.png"}
+		graphics_from = {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-E-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-N-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-S-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-1-W-hr.png"}
 	},
-	--order placeholder
+	--heat exchanger
 	{
 		type = "boiler",
 		name = "heat-exchanger",
+		max_health = 300
 	},
-	--order placeholder
+	--steam engine
 	{
 		type = "generator",
-		name = "steam-engine",
+		name = "steam-engine"
 	},
-	--order placeholder
+	--steam turbine
 	{
 		type = "generator",
 		name = "steam-turbine",
+		max_health = 500,
+		maximum_temperature = 315,
+		fluid_usage_per_tick = 0.5
 	},
-	--high-pressure steam turbine
+	--steam turbine 1
 	{
 		type = "generator",
 		name = "steam-turbine-1",
 		parent_type = "generator",
 		parent_name = "steam-turbine",
-		graphics_from = {"__base__/graphics/entity/steam-turbine/steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/steam-turbine-V.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png", "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png"},
-		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V-hr.png"}
+		max_health = 500,
+		maximum_temperature = 500,
+		fluid_usage_per_tick = 1,
+		graphics_from = {"__base__/graphics/entity/steam-turbine/steam-turbine-H.png",
+		"__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
+		"__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png",
+		"__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H.png",
+		"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V.png",
+		"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-H-hr.png",
+		"__xander-mod-graphics-1__/graphics/entity/production/energy/steam-turbine-1-V-hr.png"}
 	},
-	--concentrating solar panel
+	--heat pipe
+	{
+		type = "heat-pipe",
+		name = "heat-pipe",
+		max_health = 150
+	},
+	--nuclear reactor
+	{
+		type = "reactor",
+		name = "nuclear-reactor"
+	},
+	--solar-panel
+	{
+		type = "solar-panel",
+		name = "solar-panel"
+	},
+	--solar-panel-2
 	{
 		type = "solar-panel",
 		name = "solar-panel-2",
 		parent_type = "solar-panel",
 		parent_name = "solar-panel",
+		max_health = 300,
 		production = "100kW"
+	},
+	--accumulator
+	{
+		type = "accumulator",
+		name = "accumulator"
+	},
+	--small-lamp
+	{
+		type = "lamp",
+		name = "small-lamp"
 	},
 }
 
 xm_production_entities["extraction-machine"] = {
-	--order placeholder
+	--offshore pump
 	{
 		type = "offshore-pump",
 		name = "offshore-pump"
 	},
-	--order placeholder
+	--burner mining drill
 	{
 		type = "mining-drill",
-		name = "burner-mining-drill"
+		name = "burner-mining-drill",
+		max_health = 200
 	},
-	--order placeholder
+	--electric mining drill
 	{
 		type = "mining-drill",
 		name = "electric-mining-drill"
 	},
-	--order placeholder
-	{
-		type = "mining-drill",
-		name = "pumpjack"
-	},
+	--electric mining drill 2
 	{
 		type = "mining-drill",
 		name = "electric-mining-drill-2",
 		parent_type = "mining-drill",
 		parent_name = "electric-mining-drill",
-		mining_speed = 1,
-		energy_usage = "120kW",
+		max_health = 350,
+		mining_speed = 0.8,
+		emissions_per_minute = 8,
+		energy_usage = "120kW"
 	},
+	--pumpjack
+	{
+		type = "mining-drill",
+		name = "pumpjack",
+		max_health = 300
+	},
+	--ore processor 0
 	{
 		type = "assembling-machine",
 		name = "ore-processor-0",
@@ -93,8 +175,9 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-1",
 		crafting_categories = {"washing-0"},
 		crafting_speed = 0.5,
+		fast_replaceable_group = "ore-processor",
 		next_upgrade = "ore-processor-1",
-		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
+		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 3, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "50kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-0.png",
@@ -110,9 +193,9 @@ xm_production_entities["extraction-machine"] = {
 				frame_count = 1,
 				scale = 0.5
 			}
-		} }},
-		fast_replaceable_group = "ore-processor"
+		} }}
 	},
+	--ore processor 1
 	{
 		type = "assembling-machine",
 		name = "ore-processor-1",
@@ -120,8 +203,9 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-1",
 		crafting_categories = {"washing-0", "washing-1"},
 		crafting_speed = 1,
+		fast_replaceable_group = "ore-processor",
 		next_upgrade = "ore-processor-2",
-		emissions_per_minute = 1,
+		emissions_per_minute = 2.5,
 		energy_usage = "70kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-1.png",
@@ -137,9 +221,9 @@ xm_production_entities["extraction-machine"] = {
 				frame_count = 1,
 				scale = 0.5
 			}
-		} }},
-		fast_replaceable_group = "ore-processor"
+		} }}
 	},
+	--ore processor 2
 	{
 		type = "assembling-machine",
 		name = "ore-processor-2",
@@ -147,8 +231,9 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "assembling-machine-2",
 		crafting_categories = {"washing-0", "washing-1", "washing-2"},
 		crafting_speed = 1.5,
+		fast_replaceable_group = "ore-processor",
 		next_upgrade = "ore-processor-2",--3
-		emissions_per_minute = 1.5,
+		emissions_per_minute = 2,
 		energy_usage = "120kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/extraction-machine/ore-processor-2.png",
@@ -164,9 +249,9 @@ xm_production_entities["extraction-machine"] = {
 				frame_count = 1,
 				scale = 0.5
 			}
-		} }},
-		fast_replaceable_group = "ore-processor"
+		} }}
 	},
+	--waste dump
 	{
 		type = "assembling-machine",
 		name = "waste-dump",
@@ -228,6 +313,7 @@ xm_production_entities["extraction-machine"] = {
 }
 
 xm_production_entities["smelting-machine"] = {
+	--xm furnace stone
 	{
 		type = "assembling-machine",
 		name = "xm-furnace-stone",
@@ -241,11 +327,13 @@ xm_production_entities["smelting-machine"] = {
 		graphics_from = {"__base__/graphics/entity/stone-furnace/stone-furnace.png", "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-stone.png", "__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-stone-hr.png"}
 	},
+	--xm furnace brick
 	{
 		type = "assembling-machine",
 		name = "xm-furnace-brick",
 		parent_type = "furnace",
 		parent_name = "stone-furnace",
+		max_health = 250,
 		crafting_categories = {"smelting-0", "smelting"},
 		energy_usage = "500kW",
 		crafting_speed = 1,
@@ -255,6 +343,7 @@ xm_production_entities["smelting-machine"] = {
 		graphics_from = {"__base__/graphics/entity/stone-furnace/stone-furnace.png", "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-brick.png", "__xander-mod-graphics-1__/graphics/entity/production/smelting-machine/xm-furnace-brick-hr.png"}
 	},
+	--xm furnace steel
 	{
 		type = "assembling-machine",
 		name = "xm-furnace-steel",
@@ -266,6 +355,7 @@ xm_production_entities["smelting-machine"] = {
 		emissions_per_minute = 2,
 		fuel_category = "chemical"
 	},
+	--xm furnace electric
 	{
 		type = "assembling-machine",
 		name = "xm-furnace-electric",
@@ -276,27 +366,29 @@ xm_production_entities["smelting-machine"] = {
 		emissions_per_minute = 0.8,
 		crafting_speed = 2
 	},
+	--xm furnace plasma
 	{
 		type = "assembling-machine",
 		name = "xm-furnace-plasma",
 		parent_type = "furnace",
 		parent_name = "electric-furnace",
+		max_health = 400,
 		crafting_categories = {"smelting-2", "smelting-3"},
 		energy_usage = "1.5MW",
 		emissions_per_minute = 0.5,
 		crafting_speed = 3
 	},
-	--order placeholder
+	--stone furnace
 	{
 		type = "furnace",
 		name = "stone-furnace"
 	},
-	--order placeholder
+	--steel furnace
 	{
 		type = "furnace",
 		name = "steel-furnace"
 	},
-	--order placeholder
+	--electric furnace
 	{
 		type = "furnace",
 		name = "electric-furnace"
@@ -304,11 +396,13 @@ xm_production_entities["smelting-machine"] = {
 }
 
 xm_production_entities["chemical-machine"] = {
-	--order placeholder
+	--chemical plant
 	{
 		type = "assembling-machine",
-		name = "chemical-plant"
+		name = "chemical-plant",
+		max_health = 250
 	},
+	--chem reactor 2
 	{
 		type = "assembling-machine",
 		name = "chem-reactor-2",
@@ -321,11 +415,13 @@ xm_production_entities["chemical-machine"] = {
 		next_upgrade = "chem-reactor-3",
 		fast_replaceable_group = "chemical-plant"
 	},
+	--chem reactor 3
 	{
 		type = "assembling-machine",
 		name = "chem-reactor-3",
 		parent_type = "assembling-machine",
 		parent_name = "oil-refinery",
+		max_health = 450,
 		crafting_categories = {"chemistry", "chemistry-2", "oil-processing"},
 		module_slots = 4,
 		crafting_speed = 2.5,
@@ -335,11 +431,13 @@ xm_production_entities["chemical-machine"] = {
 		graphics_from = {"__base__/graphics/entity/oil-refinery/oil-refinery.png", "__base__/graphics/entity/oil-refinery/hr-oil-refinery.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chem-reactor-3.png", "__xander-mod-graphics-1__/graphics/entity/production/chemical-machine/chem-reactor-3-hr.png"}
 	},
+	--electrolyzer 1
 	{
 		type = "assembling-machine",
 		name = "electrolyzer-1",
 		parent_type = "assembling-machine",
 		parent_name = "assembling-machine-2",
+		max_health = 250,
 		crafting_categories = {"electrolysis-1"},
 		emissions_per_minute = 0.75,
 		crafting_speed = 0.75,
@@ -392,6 +490,7 @@ xm_production_entities["chemical-machine"] = {
 		next_upgrade = "electrolyzer-2",
 		fast_replaceable_group = "electrolyzer"
 	},
+	--electrolyzer 2
 	{
 		type = "assembling-machine",
 		name = "electrolyzer-2",
@@ -448,28 +547,31 @@ xm_production_entities["chemical-machine"] = {
 		},
 		fast_replaceable_group = "electrolyzer"
 	},
-	--order placeholder
+	--oil refinery
 	{
 		type = "assembling-machine",
 		name = "oil-refinery"
 	},
-	--order placeholder
+	--centrifuge
 	{
 		type = "assembling-machine",
-		name = "centrifuge"
+		name = "centrifuge",
+		max_health = 400
 	}
 }
 
 xm_production_entities["production-machine"] = {
+	--machine tool 0
 	{
 		type = "assembling-machine",
 		name = "machine-tool-0",
 		parent_type = "assembling-machine",
 		parent_name = "assembling-machine-1",
 		next_upgrade = "machine-tool-1",
+		max_health = 200,
 		crafting_categories = {"machine-0"},
 		crafting_speed = 0.5,
-		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
+		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 1, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "60kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-0.png",
@@ -488,6 +590,7 @@ xm_production_entities["production-machine"] = {
 		} }},
 		fast_replaceable_group = "machine-tool"
 	},
+	--machine tool 1
 	{
 		type = "assembling-machine",
 		name = "machine-tool-1",
@@ -496,8 +599,8 @@ xm_production_entities["production-machine"] = {
 		next_upgrade = "machine-tool-2",
 		crafting_categories = {"machine-0", "machine-1"},
 		crafting_speed = 0.75,
-		emissions_per_minute = 0.75,
-		energy_usage = "80kW",
+		emissions_per_minute = 1.5,
+		energy_usage = "95kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-1.png",
 			priority = "high",
@@ -515,15 +618,16 @@ xm_production_entities["production-machine"] = {
 		} }},
 		fast_replaceable_group = "machine-tool"
 	},
+	--machine tool 2
 	{
 		type = "assembling-machine",
 		name = "machine-tool-2",
 		parent_type = "assembling-machine",
 		parent_name = "assembling-machine-2",
-		next_upgrade = "machine-tool-2",--3
-		crafting_categories = {"machine-1"},--, "advanced-machine"
+		next_upgrade = "machine-tool-2",
+		crafting_categories = {"machine-1"},
 		crafting_speed = 1.5,
-		emissions_per_minute = 1.5,
+		emissions_per_minute = 2,
 		energy_usage = "160kW",
 		animation = {layers = { {
 			filename = "__xander-mod-graphics-1__/graphics/entity/production/production-machine/machine-tool-2.png",
@@ -542,34 +646,37 @@ xm_production_entities["production-machine"] = {
 		} }},
 		fast_replaceable_group = "machine-tool"
 	},
+	--assembling machine 0
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-0",
 		parent_type = "assembling-machine",
 		parent_name = "assembling-machine-1",
 		next_upgrade = "assembling-machine-1",
+		max_health = 250,
 		crafting_categories = {"basic-crafting", "crafting"},
 		crafting_speed = 0.5,
-		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.5, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
+		energy_source = {type = "burner", fuel_categories = {"crude", "chemical"}, effectivity = 1, fuel_inventory_size = 1, emissions_per_minute = 0.75, smoke = data.raw["mining-drill"]["burner-mining-drill"].energy_source.smoke},
 		energy_usage = "60kW",
 		graphics_from = {"__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png", "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/production-machine/assembling-machine-0.png", "__xander-mod-graphics-1__/graphics/entity/production/production-machine/assembling-machine-0-hr.png"}
 	},
-	--order placeholder
+	--assembling machine 1
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-1"
 	},
-	--order placeholder
+	--assembling machine 2
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-2"
 	},
-	--order placeholder
+	--assembling machine 3
 	{
 		type = "assembling-machine",
 		name = "assembling-machine-3"
 	},
+	--lab burner
 	{
 		type = "lab",
 		name = "lab-burner",
@@ -582,6 +689,11 @@ xm_production_entities["production-machine"] = {
 		inputs = {"crude-science-pack", "automation-science-pack"},
 		graphics_from = {"__base__/graphics/entity/lab/lab.png", "__base__/graphics/entity/lab/hr-lab.png"},
 		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/production-machine/lab-red.png", "__xander-mod-graphics-1__/graphics/entity/production/production-machine/lab-red-hr.png"}
+	},
+	--lab
+	{
+		type = "lab",
+		name = "lab"
 	}
 }
 

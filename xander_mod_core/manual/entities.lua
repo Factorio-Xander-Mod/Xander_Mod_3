@@ -1,4 +1,5 @@
 --==========  TREES  ==========
+--Increase wood yield to 24 per tree
 for i, entry in pairs(data.raw.tree) do
 	data.raw.tree[entry.name].minable.count = 24
 end
@@ -9,24 +10,13 @@ end
 --==========  PRODUCTION  ==========
 
 --energy
-data.raw.boiler["boiler-1"].fast_replaceable_group = "boiler"
-data.raw.boiler["boiler"].icon = "__xander-mod__/graphics/item/production/energy/boiler.png"
 data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
 data.raw.boiler["boiler"].next_upgrade = "boiler-1"
-data.raw.boiler["boiler"].energy_source.fuel_category = nil
 data.raw.boiler["boiler"].energy_source.fuel_categories = {"crude", "chemical"}
---data.raw.boiler["boiler"].energy_source.effectivity = 0.6
-find_replace_graphics(data.raw.boiler["boiler"],
-{"__base__/graphics/entity/boiler/boiler-E-idle.png", "__base__/graphics/entity/boiler/boiler-N-idle.png", "__base__/graphics/entity/boiler/boiler-S-idle.png", "__base__/graphics/entity/boiler/boiler-W-idle.png", "__base__/graphics/entity/boiler/hr-boiler-E-idle.png", "__base__/graphics/entity/boiler/hr-boiler-N-idle.png", "__base__/graphics/entity/boiler/hr-boiler-S-idle.png", "__base__/graphics/entity/boiler/hr-boiler-W-idle.png"},
-{"__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-E-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-N-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-S-hr.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/boiler-W-hr.png"}
-)
-data.raw.boiler["boiler-1"].energy_source.fuel_category = nil
+data.raw.boiler["boiler-1"].fast_replaceable_group = "boiler"
 data.raw.boiler["boiler-1"].energy_source.fuel_categories = {"crude", "chemical"}
-data.raw.generator["steam-turbine"].maximum_temperature = 315
-data.raw.generator["steam-turbine"].fluid_usage_per_tick = 0.5
 
 --extraction-machine
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = nil
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["ore-processor-0"].fluid_boxes = xm_4_fluid_boxes_input
 data.raw["assembling-machine"]["ore-processor-0"].working_sound = data.raw["mining-drill"]["electric-mining-drill"].working_sound
@@ -42,7 +32,6 @@ data.raw["assembling-machine"]["waste-dump"].working_sound = data.raw["mining-dr
 data.raw.furnace["stone-furnace"].crafting_categories = {"empty"}
 data.raw.furnace["steel-furnace"].crafting_categories = {"empty"}
 data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
-data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_category = nil
 data.raw["assembling-machine"]["xm-furnace-stone"].energy_source.fuel_categories = {"crude", "chemical"}
 data.raw["assembling-machine"]["xm-furnace-electric"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["xm-furnace-plasma"].fluid_boxes = assembler_1_fluid_boxes
@@ -72,7 +61,6 @@ data.raw["assembling-machine"]["assembling-machine-0"].ingredient_count = 2
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = assembler_1_fluid_boxes
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories = {"basic-crafting", "crafting", "crafting-with-fluid"}
 data.raw["assembling-machine"]["assembling-machine-1"].crafting_speed = 0.75
-data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "80kW"
 --
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories = {"crafting", "advanced-crafting", "crafting-with-fluid"}
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1

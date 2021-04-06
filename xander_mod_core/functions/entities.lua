@@ -37,7 +37,7 @@ function xm_entity_add(group_no, subgroup_no, entity_no, params)
 	data.raw.item[params.name].place_result = params.name
 end
 
---Changes the ordering string of a pre-existing entity to the XM format
+--Alters a pre-existing entity, including the order string and any other supplied parameters
 function xm_entity_change(group_no, subgroup_no, entity_no, params)
 	--Arrange ordering strings
 	local group_str = "" .. group_no
@@ -47,7 +47,7 @@ function xm_entity_change(group_no, subgroup_no, entity_no, params)
 	local entity_str = "" .. entity_no
 	if entity_no < 10 then entity_str = "0" .. entity_no end
 	
-	--Instate changes
+	--Modify general parameters
 	data.raw[params.type][params.name].order = group_str .. "-" .. subgroup_str .. "-" .. entity_str
 	
 	local counter = 0
@@ -56,6 +56,11 @@ function xm_entity_change(group_no, subgroup_no, entity_no, params)
 		if counter > 2 then
 			find_replace_param(data.raw[params.type][params.name], key, value)
 		end
+	end
+	
+	--Modify graphics
+	if params.graphics_from and params.graphics_to then
+		find_replace_graphics(data.raw[params.type][params.name], params.graphics_from, params.graphics_to)
 	end
 end
 
