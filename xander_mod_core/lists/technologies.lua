@@ -112,7 +112,7 @@ xm_intermediate_products_technologies["data"] = {
 	{"circuit0", 20, {"automation-science-pack"}, 15, {"board-1-0", "components-1-0", "electronic-circuit", "inserter-1"}, {"solder", "automation-science-pack"}},
 	{"electronics", 80, {"automation-science-pack"}, 30, {"wire-solder-1", "board-1-1", "components-1-1"}, {"phenolic", "ceramics1", "automation"}},
 	{"advanced-electronics", 300, {"automation-science-pack", "logistic-science-pack"}, 45, {"laminate-1", "board-1-2", "board-2-0", "components-2-0", "advanced-circuit"}, {"tungsten", "nitrogen", "electronics"}},
-	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"laser", "semiconductors", "plastics-2", "electrolysis2"}},--"wire-gold", 
+	{"advanced-electronics-2", 660, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"wire-gold", "laminate-2", "board-3-0", "wafer-data-1", "wafer-data-2", "components-2-1", "components-3-0", "processing-unit"}, {"laser", "semiconductors", "plastics-2", "electrolysis2"}},
 }
 
 xm_intermediate_products_technologies["intermediate-product"] = {
@@ -222,6 +222,7 @@ xm_logistics_technologies["inserter"] = {
 
 xm_logistics_technologies["energy-pipe-distribution"] = {
 	{"fluid-handling", 30, {"automation-science-pack"}, 20, {"storage-tank", "pump", "offshore-pump-1", "pipe-1", "empty-barrel"}, {"automation-science-pack", "steel-processing"}},
+	{"fluid-handling-2", 300, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 45, {"pipe-to-ground-2", "storage-tank-2", "pump-2"}, {"chromium"}},
 	{"electric-energy-distribution-1", 90, {"automation-science-pack", "logistic-science-pack"}, 30, {}, {"ceramics1", "parts1", "logistic-science-pack"}},
 	{"electric-energy-distribution-2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"big-electric-pole-2", "substation"}, {"electric-energy-distribution-1", "chemical-science-pack", "motor2"}},
 }

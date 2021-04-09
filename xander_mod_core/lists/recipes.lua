@@ -460,9 +460,12 @@ xm_logistics_recipes["energy-pipe-distribution"] = {
 	{"pipe", "machine-0", 0.5, true, {{"iron-plate", 1}}, {{"pipe", 1}}},--1
 	{"pipe-1", "machine-1", 0.5, false, {{"steel-plate", 1}}, {{"pipe", 2}}},--1
 	{"pipe-to-ground", "crafting", 1, true, {{"pipe", 10}, {"stock-cast-iron", 6}}, {{"pipe-to-ground", 2}}},--16 per pair
+	{"pipe-to-ground-2", "crafting", 1, true, {{"pipe-to-ground", 2}, {"stock-stainless", 8}}, {{"pipe-to-ground-2", 2}}},--32 per pair
 	{"storage-tank", "crafting", 3, false, {{"steel-plate", 10}, {"pipe", 12}}, {{"storage-tank", 1}}},--32
+	{"storage-tank-2", "crafting", 3, false, {{"storage-tank", 1}, {"stock-stainless", 12}}, {{"storage-tank-2", 1}}},--56
 	{"pump", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 2}, {"iron-gear-wheel", 1}, {"stock-bronze", 2}}, {{"pump", 1}}},--12
 	{"pump-1", "crafting", 1, false, {{"electric-engine-unit", 1}, {"piston-unit", 1}, {"rubber-vulcanized", 2}}, {{"pump", 1}}},--8
+	{"pump-2", "crafting", 1, false, {{"pump", 1}, {"motor-2", 2}, {"stock-stainless", 4}}, {{"pump-2", 1}}},--28
 	{"small-electric-pole", "basic-crafting", 1, false, {{"wood", 1}, {"glass", 2}, {"copper-cable", 4}}, {{"small-electric-pole", 4}}},--1(13/48)
 	{"medium-electric-pole", "crafting", 1, false, {{"steel-plate", 3}, {"steel-rod", 4}, {"glass", 2}, {"copper-cable", 4}}, {{"medium-electric-pole", 1}}},--12
 	{"big-electric-pole", "crafting", 2, false, {{"steel-plate", 8}, {"steel-rod", 8}, {"porcelain", 3}, {"copper-cable", 12}}, {{"big-electric-pole", 1}}},--32
