@@ -136,6 +136,19 @@ xm_production_entities["energy"] = {
 		type = "accumulator",
 		name = "accumulator"
 	},
+	--accumulator 2
+	{
+		type = "accumulator",
+		name = "accumulator-2",
+		parent_type = "accumulator",
+		parent_name = "accumulator",
+		max_health = 200,
+		buffer_capacity = "10MJ",
+		input_flow_limit = "500kW",
+		output_flow_limit = "500kW",
+		graphics_from = {"__base__/graphics/entity/accumulator/accumulator.png", "__base__/graphics/entity/accumulator/hr-accumulator.png"},
+		graphics_to = {"__xander-mod-graphics-1__/graphics/entity/production/energy/accumulator-2.png", "__xander-mod-graphics-1__/graphics/entity/production/energy/accumulator-2-hr.png"}
+	},
 	--small-lamp
 	{
 		type = "lamp",
@@ -1366,10 +1379,118 @@ xm_combat_entities["defensive-structure"] = {
 		type = "wall",
 		name = "stone-wall"
 	},
+	--concrete wall
+	{
+		type = "wall",
+		name = "concrete-wall",
+		parent_type = "wall",
+		parent_name = "stone-wall",
+		max_health = 600,
+		resistances = {
+			{type = "physical", decrease = 6, percent = 40},
+			{type = "impact", decrease = 90, percent = 80},
+			{type = "explosion", decrease = 20, percent = 60},
+			{type = "fire", percent = 100},
+			{type = "acid", percent = 90},
+			{type = "laser", percent = 80}
+		},
+		graphics_from = {
+			"__base__/graphics/entity/wall/wall-corner-left.png",
+			"__base__/graphics/entity/wall/hr-wall-corner-left.png",
+			"__base__/graphics/entity/wall/wall-corner-right.png",
+			"__base__/graphics/entity/wall/hr-wall-corner-right.png",
+			"__base__/graphics/entity/wall/wall-ending-left.png",
+			"__base__/graphics/entity/wall/hr-wall-ending-left.png",
+			"__base__/graphics/entity/wall/wall-ending-right.png",
+			"__base__/graphics/entity/wall/hr-wall-ending-right.png",
+			"__base__/graphics/entity/wall/wall-filling.png",
+			"__base__/graphics/entity/wall/hr-wall-filling.png",
+			"__base__/graphics/entity/wall/wall-horizontal.png",
+			"__base__/graphics/entity/wall/hr-wall-horizontal.png",
+			"__base__/graphics/entity/wall/wall-patch.png",
+			"__base__/graphics/entity/wall/hr-wall-patch.png",
+			"__base__/graphics/entity/wall/wall-single.png",
+			"__base__/graphics/entity/wall/hr-wall-single.png",
+			"__base__/graphics/entity/wall/wall-t.png",
+			"__base__/graphics/entity/wall/hr-wall-t.png",
+			"__base__/graphics/entity/wall/wall-vertical.png",
+			"__base__/graphics/entity/wall/hr-wall-vertical.png"
+		},
+		graphics_to = {
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-corner-left.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-corner-left-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-corner-right.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-corner-right-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-ending-left.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-ending-left-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-ending-right.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-ending-right-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-filling.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-filling-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-horizontal.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-horizontal-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-patch.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-patch-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-single.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-single-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-t.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-t-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-vertical.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/stone-wall/stone-wall-vertical-hr.png"
+		}
+	},
 	--gate
 	{
 		type = "gate",
 		name = "gate"
+	},
+	--alloy gate
+	{
+		type = "gate",
+		name = "alloy-gate",
+		parent_type = "gate",
+		parent_name = "gate",
+		max_health = 600,
+		resistances = {
+			{type = "physical", decrease = 6, percent = 40},
+			{type = "impact", decrease = 90, percent = 80},
+			{type = "explosion", decrease = 20, percent = 60},
+			{type = "fire", percent = 100},
+			{type = "acid", percent = 90},
+			{type = "laser", percent = 80}
+		},
+		graphics_from = {
+			"__base__/graphics/entity/gate/gate-horizontal.png",
+			"__base__/graphics/entity/gate/hr-gate-horizontal.png",
+			"__base__/graphics/entity/gate/gate-rail-horizontal-left.png",
+			"__base__/graphics/entity/gate/hr-gate-rail-horizontal-left.png",
+			"__base__/graphics/entity/gate/gate-rail-horizontal-right.png",
+			"__base__/graphics/entity/gate/hr-gate-rail-horizontal-right.png",
+			"__base__/graphics/entity/gate/gate-rail-vertical-left.png",
+			"__base__/graphics/entity/gate/hr-gate-rail-vertical-left.png",
+			"__base__/graphics/entity/gate/gate-rail-vertical-right.png",
+			"__base__/graphics/entity/gate/hr-gate-rail-vertical-right.png",
+			"__base__/graphics/entity/gate/gate-vertical.png",
+			"__base__/graphics/entity/gate/hr-gate-vertical.png",
+			"__base__/graphics/entity/gate/gate-wall-patch.png",
+			"__base__/graphics/entity/gate/hr-gate-wall-patch.png"
+		},
+		graphics_to = {
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-horizontal.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-horizontal-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-horizontal-left.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-horizontal-left-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-horizontal-right.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-horizontal-right-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-vertical-left.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-vertical-left-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-vertical-right.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-rail-vertical-right-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-vertical.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-vertical-hr.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-wall-patch.png",
+			"__xander-mod-graphics-1__/graphics/entity/combat/defensive-structure/alloy-gate/alloy-gate-wall-patch-hr.png"
+		}
 	},
 	--radar
 	{

@@ -47,7 +47,7 @@ xm_all_items_to_impose["intermediate-products"] = xm_intermediate_products_items
 local xm_production_items = {}
 
 --xm_production_items["tool"] = {"repair-pack", "repair-pack-2"} --Types other than "item"
-xm_production_items["energy"] = {"boiler", "boiler-1", "heat-exchanger", "steam-engine", "steam-turbine", "steam-turbine-1", "heat-pipe", "nuclear-reactor", "solar-panel", "solar-panel-2", "accumulator", "small-lamp"}
+xm_production_items["energy"] = {"boiler", "boiler-1", "heat-exchanger", "steam-engine", "steam-turbine", "steam-turbine-1", "heat-pipe", "nuclear-reactor", "solar-panel", "solar-panel-2", "accumulator", "accumulator-2", "small-lamp"}
 xm_production_items["extraction-machine"] = {"offshore-pump", "burner-mining-drill", "electric-mining-drill", "electric-mining-drill-2", "pumpjack", "ore-processor-0", "ore-processor-1", "ore-processor-2", "waste-dump"}
 xm_production_items["smelting-machine"] = {"xm-furnace-stone", "xm-furnace-brick", "xm-furnace-steel", "xm-furnace-electric", "xm-furnace-plasma", "stone-furnace", "steel-furnace", "electric-furnace"}
 xm_production_items["chemical-machine"] = {"chemical-plant", "chem-reactor-2", "chem-reactor-3", "electrolyzer-1", "electrolyzer-2", "oil-refinery", "centrifuge"}
@@ -81,7 +81,7 @@ local xm_combat_items = {}
 --xm_combat_items["capsule"] = {"grenade", "cluster-grenade"} --Types other than "item"
 --xm_combat_items["armor"] = {"light-armor", "heavy-armor"} --Types other than "item"
 --xm_combat_items["equipment"] = {"solar-panel-equipment", "battery-equipment"} --Types other than "item"
-xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "laser-turret-2", "artillery-turret", "stone-wall", "gate", "radar", "rocket-silo"}
+xm_combat_items["defensive-structure"] = {"gun-turret", "gun-turret-2", "flamethrower-turret", "laser-turret", "laser-turret-2", "artillery-turret", "stone-wall", "concrete-wall", "gate", "alloy-gate", "radar", "rocket-silo"}
 
 xm_all_items_to_impose["combat"] = xm_combat_items
 

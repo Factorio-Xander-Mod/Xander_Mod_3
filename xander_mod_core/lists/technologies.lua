@@ -149,6 +149,7 @@ xm_production_technologies["energy"] = {
 	{"solar-energy", 480, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 60, {"wafer-solar", "solar-panel"}, {"semiconductors", "aluminum", "nobles"}},
 	{"solar-energy-2", 600, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"solar-panel-2"}, {"solar-energy", "chromium", "motor3"}},
 	{"electric-energy-accumulators", 200, {"automation-science-pack", "logistic-science-pack"}, 45, {}, {"battery", "electric-energy-distribution-1"}},
+	{"electric-energy-accumulators-2", 400, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"}, 45, {"accumulator-2"}, {"electric-energy-accumulators", "aluminum", "motor2"}},
 	{"nuclear-power", 800, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {"nuclear-reactor", "uranium-fuel-pellet", "uranium-fuel-cell", "heat-pipe", "heat-exchanger", "steam-turbine-1"}, {"uranium-processing", "chromium", "zirconium"}},
 	{"nuclear-fuel-reprocessing", 500, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack"}, 60, {}, {"nuclear-power", "advanced-material-processing-3"}},
 	{"kovarex-enrichment-process", 2000, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "production-science-pack", "utility-science-pack"}, 60, {"kovarex-fuel-cell", "kovarex-enrichment-process", "nuclear-fuel"}, {"uranium-weapons-enrichment", "nuclear-fuel-reprocessing", "utility-science-pack"}},
@@ -297,6 +298,8 @@ xm_combat_technologies["equipment"] = {
 
 xm_combat_technologies["defensive-structure"] = {
 	{"stone-wall", 10, {"crude-science-pack"}, 5, {}, nil},
+	{"concrete-wall", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 30, {"concrete-wall"}, {"stone-wall", "concrete-2"}},
+	{"alloy-gate", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack", "chemical-science-pack"}, 30, {"alloy-gate"}, {"concrete-wall", "gate", "advanced-electronics"}},
 	{"gun-turret", 15, {"automation-science-pack"}, 10, {}, {"firearms", "automation-science-pack"}},
 	{"gun-turret-2", 200, {"automation-science-pack", "logistic-science-pack", "military-science-pack"}, 30, {"gun-turret-2"}, {"military-science-pack", "parts1", "plastics"}},
 	{"laser-turret", 360, {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "military-science-pack"}, 45, {}, {"military-3", "laser", "advanced-electronics"}},

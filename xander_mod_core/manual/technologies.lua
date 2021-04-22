@@ -1,6 +1,7 @@
 --==========  MATERIAL  ==========
 
-data.raw.technology["concrete-2"].icon = "__base__/graphics/technology/concrete.png"
+data.raw.technology["concrete-2"].icon_size = 256
+data.raw.technology["concrete-2"].icon_mipmaps = 4
 
 
 --==========  INTERMEDIATE PRODUCTS  ==========
@@ -12,6 +13,12 @@ data.raw.technology["laser"].unit.count = 300
 
 --==========  PRODUCTION  ==========
 
+data.raw.technology["solar-energy-2"].icon_size = 256
+data.raw.technology["solar-energy-2"].icon_mipmaps = 4
+data.raw.technology["electric-energy-accumulators-2"].icon_size = 256
+data.raw.technology["electric-energy-accumulators-2"].icon_mipmaps = 4
+data.raw.technology["electric-energy-accumulators-2"].localised_name = {"technology-name.electric-energy-accumulators-2"}
+data.raw.technology["electric-energy-accumulators-2"].localised_description = {"technology-description.electric-energy-accumulators-2"}
 data.raw.technology["mining-productivity-1"].prerequisites = {"washing1", "logistic-science-pack"}
 data.raw.technology["mining-productivity-2"].prerequisites = {"washing2", "mining-productivity-1", "chemical-science-pack"}
 data.raw.technology["advanced-material-processing"].icon = "__xander-mod__/graphics/technology/production/smelting-machine/advanced-material-processing.png"
@@ -47,6 +54,10 @@ data.raw.technology["gun-turret-2"].icon_size = 256
 data.raw.technology["gun-turret-2"].icon_mipmaps = 4
 data.raw.technology["laser-turret-2"].icon_size = 256
 data.raw.technology["laser-turret-2"].icon_mipmaps = 4
+data.raw.technology["concrete-wall"].icon_size = 256
+data.raw.technology["concrete-wall"].icon_mipmaps = 4
+data.raw.technology["alloy-gate"].icon_size = 256
+data.raw.technology["alloy-gate"].icon_mipmaps = 4
 
 table.insert(data.raw.technology["physical-projectile-damage-1"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})
 table.insert(data.raw.technology["physical-projectile-damage-2"].effects, {type = "turret-attack", turret_id = "gun-turret-2", modifier = 0.1})

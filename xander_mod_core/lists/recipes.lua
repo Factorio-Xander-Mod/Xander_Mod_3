@@ -357,6 +357,7 @@ xm_production_recipes["energy"] = {
 	{"solar-panel", "crafting", 10, false, {{"stock-duralumin", 10}, {"copper-cable", 16}, {"wafer-solar", 12}, {"glass", 8}}, {{"solar-panel", 1}}},--72
 	{"solar-panel-2", "advanced-crafting", 32, false, {{"stock-stainless", 8}, {"glass", 24}, {"coil-3", 3}, {"advanced-circuit", 2}, {"solar-panel", 3}}, {{"solar-panel-2", 2}}},--144
 	{"accumulator", "crafting", 10, false, {{"iron-gear-wheel", 2}, {"battery", 6}, {"coil-1", 2}}, {{"accumulator", 1}}},--32
+	{"accumulator-2", "crafting", 10, false, {{"accumulator", 1}, {"stock-duralumin", 2}, {"battery", 10}, {"coil-2", 2}}, {{"accumulator-2", 1}}},--82
 	{"small-lamp", "crafting", 1, false, {{"iron-gear-wheel", 2}, {"glass", 2}, {"graphite", 3}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--10
 	{"small-lamp-1", "crafting", 1, false, {{"stock-cast-iron", 2}, {"glass", 1}, {"tungsten", 1}, {"copper-cable", 2}}, {{"small-lamp", 1}}},--5
 }
@@ -568,6 +569,8 @@ xm_combat_recipes["defensive-structure"] = {
 	{"laser-turret", "crafting", 20, false, {{"stock-alloy", 8}, {"parts-alloy", 12}, {"battery", 8}, {"small-lamp", 4}, {"advanced-circuit", 8}}, {{"laser-turret", 1}}},--196
 	{"laser-turret-2", "crafting", 20, false, {{"laser-turret", 1}, {"battery", 16}, {"glass", 28}, {"processing-unit", 3}}, {{"laser-turret-2", 1}}},--480
 	{"artillery-turret", "crafting", 40, false, {{"concrete", 100}, {"stock-alloy", 110}, {"parts-alloy", 30}, {"advanced-circuit", 20}}, {{"artillery-turret", 1}}},--640
+	{"concrete-wall", "crafting", 1.2, false, {{"refined-concrete", 6}, {"steel-plate", 2}}, {{"concrete-wall", 1}}},--16
+	{"alloy-gate", "crafting", 1.2, false, {{"concrete-wall", 1}, {"stock-alloy", 4}, {"advanced-circuit", 1}}, {{"alloy-gate", 1}}},--34
 	{"radar", "crafting", 1, false, {{"steel-plate", 4}, {"iron-gear-wheel", 4}, {"copper-cable", 16}, {"electronic-circuit", 2}}, {{"radar", 1}}},--32
 	{"rocket-silo", "crafting", 30, false, {{"concrete", 1000}, {"stock-stainless", 2000}, {"motor-3", 400}, {"pump", 100}, {"parts-alloy", 500}, {"processing-unit", 200}}, {{"rocket-silo", 1}}},--23,800, base 23,300
 }
