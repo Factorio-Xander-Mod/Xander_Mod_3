@@ -171,7 +171,8 @@ xm_production_entities["extraction-machine"] = {
 	--electric mining drill
 	{
 		type = "mining-drill",
-		name = "electric-mining-drill"
+		name = "electric-mining-drill",
+		emissions_per_minute = 8
 	},
 	--electric mining drill 2
 	{
@@ -181,14 +182,15 @@ xm_production_entities["extraction-machine"] = {
 		parent_name = "electric-mining-drill",
 		max_health = 350,
 		mining_speed = 0.8,
-		emissions_per_minute = 8,
+		emissions_per_minute = 6,
 		energy_usage = "120kW"
 	},
 	--pumpjack
 	{
 		type = "mining-drill",
 		name = "pumpjack",
-		max_health = 300
+		max_health = 300,
+		emissions_per_minute = 8
 	},
 	--ore processor 0
 	{
@@ -423,7 +425,8 @@ xm_production_entities["chemical-machine"] = {
 	{
 		type = "assembling-machine",
 		name = "chemical-plant",
-		max_health = 250
+		max_health = 250,
+		emissions_per_minute = 2
 	},
 	--chem reactor 2
 	{
@@ -433,7 +436,7 @@ xm_production_entities["chemical-machine"] = {
 		parent_name = "chemical-plant",
 		crafting_categories = {"chemistry", "chemistry-2"},
 		crafting_speed = 1.5,
-		emissions_per_minute = 4,
+		emissions_per_minute = 3,
 		energy_usage = "360kW",
 		next_upgrade = "chem-reactor-3",
 		fast_replaceable_group = "chemical-plant"
@@ -448,7 +451,7 @@ xm_production_entities["chemical-machine"] = {
 		crafting_categories = {"chemistry", "chemistry-2", "oil-processing"},
 		module_slots = 4,
 		crafting_speed = 2.5,
-		emissions_per_minute = 5,
+		emissions_per_minute = 4,
 		energy_usage = "1.2MW",
 		fast_replaceable_group = "chemical-plant",
 		graphics_from = {"__base__/graphics/entity/oil-refinery/oil-refinery.png", "__base__/graphics/entity/oil-refinery/hr-oil-refinery.png"},
@@ -579,7 +582,8 @@ xm_production_entities["chemical-machine"] = {
 	{
 		type = "assembling-machine",
 		name = "centrifuge",
-		max_health = 400
+		max_health = 400,
+		emissions_per_minute = 5
 	}
 }
 
